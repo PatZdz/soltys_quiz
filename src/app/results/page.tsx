@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { QuizQuestion, getQuestionsFromRanges } from '@/data/questions';
+import Link from 'next/link';
+import { getQuestionsFromRanges } from '@/data/questions';
 
 interface AnswerResult {
   question: string;
@@ -198,6 +199,7 @@ export default function Results() {
           </div>
         </div>
 
+        // Update the desktop buttons section
         <div className="hidden sm:flex sm:flex-col gap-2">
           <button
             onClick={handleRestart}
@@ -211,12 +213,12 @@ export default function Results() {
           >
             Practice Mistakes
           </button>
-          <a
+          <Link
             href="/"
             className="w-full py-2 px-4 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors text-center"
           >
             Back to Home
-          </a>
+          </Link>
         </div>
 
         {/* Mobile buttons - fixed to bottom */}
@@ -233,12 +235,12 @@ export default function Results() {
           >
             Practice Mistakes
           </button>
-          <a
+          <Link
             href="/"
             className="w-full py-2 px-4 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors text-center"
           >
             Back to Home
-          </a>
+          </Link>
         </div>
       </div>
     </div>

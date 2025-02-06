@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-import { QuestionRange } from '@/data/questions';
+// Remove or comment out the unused import
+// import { QuestionRange } from '@/data/questions';
 
 interface RangeOption {
   id: number;
