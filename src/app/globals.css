@@ -3,14 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #F6F4F2;
   --foreground: #171717;
+  --card-background: #FFFFFF;
+  --button-color: #294A8D;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #F6F4F2;
+    --foreground: #171717;
+    --card-background: #FFFFFF;
+    --button-color: #294A8D;
   }
 }
 
@@ -18,4 +22,28 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .page-container {
+    @apply flex flex-col min-h-screen;
+  }
+  
+  .page-content {
+    @apply flex flex-col gap-8 row-start-2 items-center sm:items-start;
+  }
+
+  /* Add card and button styles */
+  .card {
+    background-color: var(--card-background);
+  }
+
+  .btn {
+    background-color: var(--button-color);
+    color: white;
+  }
+}
+
+body {
+  background-color: var(--background);
 }
