@@ -32,8 +32,8 @@ export default function Results() {
 
       let userAnswers;
       try {
-        // First decode the URI component, then parse the JSON
-        const decodedAnswers = decodeURIComponent(answersParam);
+        // Podwójne dekodowanie dla bezpieczeństwa
+        const decodedAnswers = decodeURIComponent(decodeURIComponent(answersParam));
         userAnswers = JSON.parse(decodedAnswers);
       } catch (error) {
         console.error('Error processing answers:', error);
@@ -96,7 +96,9 @@ export default function Results() {
 
       let userAnswers;
       try {
-        userAnswers = JSON.parse(decodeURIComponent(answersParam));
+        // Dodajemy podwójne dekodowanie, tak jak w useEffect
+        const decodedAnswers = decodeURIComponent(decodeURIComponent(answersParam));
+        userAnswers = JSON.parse(decodedAnswers);
       } catch (error) {
         console.error('Error processing answers for restart:', error);
         router.push('/');
