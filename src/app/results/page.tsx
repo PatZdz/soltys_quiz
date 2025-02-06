@@ -198,8 +198,6 @@ export default function Results() {
             </div>
           </div>
         </div>
-
-        // Update the desktop buttons section
         <div className="hidden sm:flex sm:flex-col gap-2">
           <button
             onClick={handleRestart}
