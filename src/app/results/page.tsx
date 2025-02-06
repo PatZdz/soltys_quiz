@@ -221,6 +221,28 @@ export default function Results() {
           </Link>
         </div>
 
+        {/* Desktop buttons section */}
+        <div className="hidden sm:flex sm:flex-col gap-2">
+          <button
+            onClick={handleRestart}
+            className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Try Again
+          </button>
+          <button
+            onClick={handleRepeatMistakes}
+            className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Practice Mistakes
+          </button>
+          <Link
+            href="/"
+            className="w-full py-2 px-4 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors text-center"
+          >
+            Back to Home
+          </Link>
+        </div>
+
         {/* Mobile buttons - fixed to bottom */}
         <div className="fixed bottom-0 left-0 right-0 flex flex-col gap-2 p-4 bg-white border-t sm:hidden">
           <button
