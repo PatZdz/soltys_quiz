@@ -22,27 +22,40 @@ export default function Results() {
   useEffect(() => {
     try {
       const answersParam = searchParams.get('answers');
+      const rangesParam = searchParams.get('ranges');
+      
       if (!answersParam) {
+        console.error('No answers parameter provided');
         router.push('/');
         return;
       }
 
-      let decodedAnswers;
+      let userAnswers;
       try {
-        decodedAnswers = decodeURIComponent(answersParam);
-      } catch (decodeError) {
-        console.error('Error decoding answers parameter:', decodeError);
+        // First decode the URI component, then parse the JSON
+        const decodedAnswers = decodeURIComponent(answersParam);
+        userAnswers = JSON.parse(decodedAnswers);
+      } catch (error) {
+        console.error('Error processing answers:', error);
         router.push('/');
         return;
       }
 
-      const userAnswers = JSON.parse(decodedAnswers);
+      const ranges = rangesParam ? rangesParam.split(',').map(Number) : [];
       let correct = 0;
       const answersResults: AnswerResult[] = [];
       const questionIds = Object.keys(userAnswers).map(id => parseInt(id));
-      const quizQuestions = getQuestionsFromRanges([]).filter(q => questionIds.includes(q.id));
+      const quizQuestions = getQuestionsFromRanges(ranges).filter(q => questionIds.includes(q.id));
       
+      if (quizQuestions.length === 0) {
+        console.error('No questions found');
+        router.push('/');
+        return;
+      }
+
       quizQuestions.forEach(question => {
+        if (!question) return;
+        
         const answer = userAnswers[question.id];
         const isCorrect = Array.isArray(question.correctAnswer) 
           ? question.correctAnswer.includes(answer)
@@ -52,7 +65,7 @@ export default function Results() {
 
         answersResults.push({
           question: question.question,
-          userAnswer: answer,
+          userAnswer: answer || 'No answer provided',
           correctAnswer: Array.isArray(question.correctAnswer) 
             ? question.correctAnswer[0] 
             : question.correctAnswer,
@@ -74,11 +87,24 @@ export default function Results() {
     try {
       setIsLoading(true);
       const answersParam = searchParams.get('answers');
-      if (!answersParam) return;
+      const rangesParam = searchParams.get('ranges');
+      
+      if (!answersParam || !rangesParam) {
+        router.push('/');
+        return;
+      }
 
-      const userAnswers = JSON.parse(decodeURIComponent(answersParam));
+      let userAnswers;
+      try {
+        userAnswers = JSON.parse(decodeURIComponent(answersParam));
+      } catch (error) {
+        console.error('Error processing answers for restart:', error);
+        router.push('/');
+        return;
+      }
+
       const questionIds = Object.keys(userAnswers).map(id => parseInt(id));
-      router.push(`/quiz?questions=${questionIds.join(',')}`);
+      router.push(`/quiz?questions=${questionIds.join(',')}&ranges=${rangesParam}`);
     } catch (error) {
       console.error('Error restarting quiz:', error);
       router.push('/');
@@ -87,16 +113,28 @@ export default function Results() {
 
   const handleRepeatMistakes = () => {
     try {
+      if (results.length === 0) {
+        router.push('/');
+        return;
+      }
+
+      const rangesParam = searchParams.get('ranges');
+      if (!rangesParam) {
+        router.push('/');
+        return;
+      }
+
+      const ranges = rangesParam.split(',').map(Number);
       const wrongQuestions = results
         .filter(r => !r.isCorrect)
         .map(r => {
-          const question = getQuestionsFromRanges([]).find(q => q.question === r.question);
+          const question = getQuestionsFromRanges(ranges).find(q => q.question === r.question);
           return question?.id;
         })
         .filter((id): id is number => id !== undefined);
       
       if (wrongQuestions.length > 0) {
-        router.push(`/quiz?questions=${wrongQuestions.join(',')}`);
+        router.push(`/quiz?questions=${wrongQuestions.join(',')}&ranges=${rangesParam}`);
       } else {
         router.push('/');
       }

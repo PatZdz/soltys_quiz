@@ -63,7 +63,8 @@ export default function Quiz() {
       setCurrentQuestionIndex(prev => prev + 1);
     } else {
       const params = new URLSearchParams();
-      params.set('answers', JSON.stringify(newAnswers));
+      // Encode the answers properly before adding to URL
+      params.set('answers', encodeURIComponent(JSON.stringify(newAnswers)));
       
       const rangesParam = searchParams.get('ranges');
       if (rangesParam) {
