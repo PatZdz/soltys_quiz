@@ -13,7 +13,19 @@ interface AnswerResult {
   isCorrect: boolean;
 }
 
-export default function Results() {
+export default function ResultsPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-2xl text-gray-600">Loading...</div>
+      </div>
+    }>
+      <Results />
+    </Suspense>
+  );
+}
+
+function Results() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [score, setScore] = useState<number>(0);
@@ -198,26 +210,6 @@ export default function Results() {
               ))}
             </div>
           </div>
-        </div>
-        <div className="hidden sm:flex sm:flex-col gap-2">
-          <button
-            onClick={handleRestart}
-            className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Try Again
-          </button>
-          <button
-            onClick={handleRepeatMistakes}
-            className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Practice Mistakes
-          </button>
-          <Link
-            href="/"
-            className="w-full py-2 px-4 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors text-center"
-          >
-            Back to Home
-          </Link>
         </div>
 
         {/* Desktop buttons section */}
