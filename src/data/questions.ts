@@ -118,7 +118,7 @@ export interface QuizQuestion {
         "Żadne"
       ],
       // Dwie poprawne odpowiedzi:
-      correctAnswer: ["Koszt materiałów", "Amortyzację"]
+      correctAnswer: ["Amortyzację"]
     },
     {
       id: 10,
@@ -553,11 +553,8 @@ export interface QuizQuestion {
         "Konkurencji doskonałej",
         "Żadne"
       ],
-      // Trzy poprawne odpowiedzi:
       correctAnswer: [
         "Konkurencji monopolistycznej",
-        "Monopolu",
-        "Oligopolu"
       ]
     },
     {
@@ -786,7 +783,7 @@ export interface QuizQuestion {
         "Linia ograniczenia budżetowego przesuwa się równolegle w prawo",
         "Żadne"
       ],
-      correctAnswer: "Krzywa obojętności przesuwa się równolegle w lewo"
+      correctAnswer: "Linia ograniczenia budżetowego przesuwa się równolegle w lewo"
     },
     {
       id: 66,
@@ -799,8 +796,7 @@ export interface QuizQuestion {
         "Dorosłej ludności poza zakładami zamkniętymi",
         "Żadne z powyższych"
       ],
-      // Żadna z podanych opcji nie oddaje definicji stopy bezrobocia
-      correctAnswer: "Żadne z powyższych"
+      correctAnswer: "Aktywnych zawodowo"
     },
     {
       id: 67,
@@ -859,7 +855,7 @@ export interface QuizQuestion {
         "0,40",
         "Żadne z powyższych"
       ],
-      correctAnswer: "0,40"
+      correctAnswer: "–0,80"
     },
     {
       id: 72,
@@ -915,7 +911,7 @@ export interface QuizQuestion {
         "180",
         "Żadne z powyższych"
       ],
-      correctAnswer: "Żadne z powyższych"
+      correctAnswer: "80"
     },
     {
       id: 77,
@@ -927,7 +923,7 @@ export interface QuizQuestion {
         "–33,3",
         "Żadne z powyższych"
       ],
-      correctAnswer: "Żadne z powyższych"
+      correctAnswer: "–0,25"
     },
     {
       id: 78,
@@ -950,7 +946,7 @@ export interface QuizQuestion {
         "1200",
         "Żadne z powyższych"
       ],
-      correctAnswer: "Żadne z powyższych"
+      correctAnswer: "4800"
     },
     {
       id: 80,
