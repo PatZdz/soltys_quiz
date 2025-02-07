@@ -329,7 +329,7 @@ export interface QuizQuestion {
         "Pragnienie nabycia dobra nie poparte możliwościami dochodowymi",
         "Żadne"
       ],
-      correctAnswer: "Pragnienie nabycia dobra nie poparte możliwościami dochodowymi"
+      correctAnswer: "Popyt wynikający z oddziaływania efektów zewnętrznych na użyteczność"
     },
     {
       id: 28,
