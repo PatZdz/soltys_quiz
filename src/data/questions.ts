@@ -118,7 +118,7 @@ export interface QuizQuestion {
         "Żadne"
       ],
       // Dwie poprawne odpowiedzi:
-      correctAnswer: ["Amortyzację"]
+      correctAnswer: ["Koszt materiałów"]
     },
     {
       id: 10,
@@ -855,7 +855,7 @@ export interface QuizQuestion {
         "0,40",
         "Żadne z powyższych"
       ],
-      correctAnswer: "–0,80"
+      correctAnswer: "0,40"
     },
     {
       id: 72,
