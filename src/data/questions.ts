@@ -911,7 +911,7 @@ export interface QuizQuestion {
         "180",
         "Żadne z powyższych"
       ],
-      correctAnswer: "80"
+      correctAnswer: "Żadne z powyższych"
     },
     {
       id: 77,
