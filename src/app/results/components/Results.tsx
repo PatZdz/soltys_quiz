@@ -167,7 +167,7 @@ export default function Results() {
               </p>
             </div>
             
-            <div className="space-y-4 mb-32 sm:mb-0">
+            <div className="space-y-4 mb-48 sm:mb-0">
               {results.map((result, index) => (
                 <div 
                   key={index} 
