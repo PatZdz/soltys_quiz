@@ -162,9 +162,14 @@ export default function Results() {
           <div className="p-4 sm:p-0">
             <h1 className="text-xl font-semibold text-center mb-4">Wyniki Quizu</h1>
             <div className="text-center mb-6">
-              <p className="text-lg">
-                Wynik: {score} z {totalQuestions} ({Math.round((score / totalQuestions) * 100)}%)
-              </p>
+              <div className="flex items-center justify-center gap-2">
+                <p className="text-lg">
+                  Wynik: {score} z {totalQuestions} ({Math.round((score / totalQuestions) * 100)}%)
+                </p>
+                {score === 86 && totalQuestions === 86 && (
+                  <img src="/easter.jpg" alt="" className="h-20 w-20 object-contain" />
+                )}
+              </div>
             </div>
             
             <div className="space-y-4 mb-48 sm:mb-0">
