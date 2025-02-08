@@ -36,13 +36,13 @@ export default function QuestionRangeSelector() {
   };
 
   return (
-    <div className="w-full bg-[#FFFFFF] rounded-none sm:rounded-lg shadow-lg p-10 sm:p-10 min-h-screen sm:min-h-0">
-      <h1 className="text-xl font-medium text-gray-700 mb-4 sm:mb-6">Wybierz zakres pytań</h1>
-      <div className="space-y-2 sm:space-y-3">
+    <div className="w-full bg-[#FFFFFF] rounded-none sm:rounded-lg shadow-lg p-10 sm:p-8 min-h-screen sm:min-h-0">
+      <h1 className="text-xl font-medium text-gray-700 mb-4">Wybierz zakres pytań</h1>
+      <div className="space-y-2">
         {questionRanges.map((range) => (
           <label
             key={range.id}
-            className={`flex items-center p-2 sm:p-4 rounded-lg border ${
+            className={`flex items-center p-2 sm:p-3 rounded-lg border ${
               selectedRanges.includes(range.id)
                 ? 'border-blue-500 bg-blue-50'
                 : 'border-gray-200 hover:bg-gray-50'
