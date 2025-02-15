@@ -13,13 +13,8 @@ export default function SliderContent() {
   useEffect(() => {
     if (selectedRangesParam) {
       const ranges = selectedRangesParam.split(',').map(Number);
-      const totalQuestions = ranges.reduce((sum, rangeId) => {
-        // Ostatnia paczka (id=9) ma 6 pytań, reszta po 10
-        return sum + (rangeId === 9 ? 6 : 10);
-      }, 0);
-      
-      setMaxQuestions(totalQuestions);
-      setSelectedQuestions(Math.min(selectedQuestions, totalQuestions));
+      setMaxQuestions(83);
+      setSelectedQuestions(Math.min(selectedQuestions, 83));
     } else {
       router.push('/range');
     }

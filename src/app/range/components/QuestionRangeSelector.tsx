@@ -11,6 +11,7 @@ interface RangeOption {
   label: string;
 }
 
+// Make sure to add the default export
 export default function QuestionRangeSelector() {
   const [selectedRanges, setSelectedRanges] = useState<number[]>([]);
   const router = useRouter();
@@ -24,7 +25,7 @@ export default function QuestionRangeSelector() {
     { id: 6, label: 'Pytania 51 - 60' },
     { id: 7, label: 'Pytania 61 - 70' },
     { id: 8, label: 'Pytania 71 - 80' },
-    { id: 9, label: 'Pytania 81 - 86' },
+    { id: 9, label: 'Pytania 81 - 83' },
   ];
 
   const handleRangeSelect = (rangeId: number) => {

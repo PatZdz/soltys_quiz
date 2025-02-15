@@ -8,7 +8,7 @@ export default function Quiz() {
   const searchParams = useSearchParams();
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
-  const [userAnswers, setUserAnswers] = useState<{ [key: number]: string }>({});
+  const [userAnswers, setUserAnswers] = useState<{ [key: number]: string[] }>({});
 
   useEffect(() => {
     const rangesParam = searchParams.get('ranges');
@@ -53,31 +53,48 @@ export default function Quiz() {
   };
 
   const handleAnswerSelect = (answer: string) => {
-    const newAnswers = {
-      ...userAnswers,
-      [questions[currentQuestionIndex].id]: answer
-    };
-    setUserAnswers(newAnswers);
-
-    if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(prev => prev + 1);
+    const currentQuestion = questions[currentQuestionIndex];
+    const isMultipleChoice = Array.isArray(currentQuestion.correctAnswer);
+    const currentAnswers = userAnswers[currentQuestion.id] || [];
+    
+    let newAnswers: string[];
+    if (isMultipleChoice) {
+      if (currentAnswers.includes(answer)) {
+        newAnswers = currentAnswers.filter(a => a !== answer);
+      } else {
+        newAnswers = [...currentAnswers, answer];
+      }
     } else {
-      const params = new URLSearchParams();
-      // Podwójne kodowanie dla bezpieczeństwa
-      const encodedAnswers = encodeURIComponent(encodeURIComponent(JSON.stringify(newAnswers)));
-      params.set('answers', encodedAnswers);
-      
-      const rangesParam = searchParams.get('ranges');
-      if (rangesParam) {
-        params.set('ranges', rangesParam);
-      }
-      
-      const questionsParam = searchParams.get('questions');
-      if (questionsParam) {
-        params.set('questions', questionsParam);
-      }
+      newAnswers = [answer]; // Always use array, even for single answers
+    }
 
-      window.location.href = `/results?${params.toString()}`;
+    const updatedAnswers = {
+      ...userAnswers,
+      [currentQuestion.id]: newAnswers // Remove the ternary operator and always use array
+    };
+    setUserAnswers(updatedAnswers);
+
+    // Move to next question for single-choice answers or when all required answers are selected
+    if (!isMultipleChoice || (isMultipleChoice && newAnswers.length === currentQuestion.correctAnswer.length)) {
+      if (currentQuestionIndex < questions.length - 1) {
+        setCurrentQuestionIndex(prev => prev + 1);
+      } else {
+        const params = new URLSearchParams();
+        const encodedAnswers = encodeURIComponent(encodeURIComponent(JSON.stringify(updatedAnswers)));
+        params.set('answers', encodedAnswers);
+        
+        const rangesParam = searchParams.get('ranges');
+        if (rangesParam) {
+          params.set('ranges', rangesParam);
+        }
+        
+        const questionsParam = searchParams.get('questions');
+        if (questionsParam) {
+          params.set('questions', questionsParam);
+        }
+    
+        window.location.href = `/results?${params.toString()}`;
+      }
     }
   };
 
@@ -93,6 +110,11 @@ export default function Quiz() {
         <div className="text-sm text-gray-500">
           Question {currentQuestionIndex + 1} / {questions.length}
         </div>
+        {Array.isArray(currentQuestion.correctAnswer) && (
+          <div className="text-sm text-blue-600 mt-2">
+            Select {currentQuestion.correctAnswer.length} answers
+          </div>
+        )}
       </div>
 
       <div className="space-y-6">
@@ -101,15 +123,20 @@ export default function Quiz() {
         </p>
 
         <div className="space-y-3">
-          {currentQuestion.options.map((option, index) => (
-            <button
-              key={index}
-              onClick={() => handleAnswerSelect(option)}
-              className="w-full text-left flex items-center p-3 sm:p-4 rounded-lg border border-gray-200 bg-blue-50 hover:bg-blue-100 cursor-pointer transition-colors"
-            >
-              <span className="ml-3 text-gray-700">{option}</span>
-            </button>
-          ))}
+          {currentQuestion.options.map((option, index) => {
+            const currentAnswers = userAnswers[currentQuestion.id] || [];
+            return (
+              <button
+                key={index}
+                onClick={() => handleAnswerSelect(option)}
+                className={`w-full text-left flex items-center p-3 sm:p-4 rounded-lg border border-gray-200 
+                  ${currentAnswers.includes(option) ? 'bg-blue-200' : 'bg-blue-50'} 
+                  hover:bg-blue-100 cursor-pointer transition-colors`}
+              >
+                <span className="ml-3 text-gray-700">{option}</span>
+              </button>
+            )
+          })}
         </div>
       </div>
 

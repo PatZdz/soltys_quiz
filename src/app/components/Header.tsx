@@ -7,7 +7,7 @@ export default function Header() {
         <Image src="/test.png" alt="Quiz header image" width={150} height={150} priority />
       </div>
       <h1 className="text-3xl font-bold text-gray-900">Sołtys Quiz</h1>
-      <p className="mt-2 text-gray-600">Sprawdź swoją wiedzę z zakresu ekonomii</p>
+      <p className="mt-2 text-gray-600">Sprawdź swoją wiedzę</p>
     </header>
   );
 }

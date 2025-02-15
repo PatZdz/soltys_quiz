@@ -1,1064 +1,1032 @@
 // quiz.ts
 
 export interface QuizQuestion {
-    id: number;
-    question: string;
-    options: string[];
-    // Jeśli jest jedna poprawna odpowiedź – string,
-    // jeśli więcej – tablica stringów.
-    correctAnswer: string | string[];
+  id: number;
+  question: string;
+  options: string[];
+  // Jeśli jest jedna poprawna odpowiedź – string,
+  // jeśli więcej – tablica stringów.
+  correctAnswer: string | string[];
+}
+
+export const questions: QuizQuestion[] = [
+  {
+    id: 1,
+    question: "„Right to be left alone”, czyli prawo do pozostawienia w spokoju (samemu sobie), to…?",
+    options: [
+      "Definicja prywatności o nadal silnym wpływie na opinię publiczną",
+      "Definicja marketingu opartego na danych behawioralnych",
+      "Definicja koncepcji Big Data w organizacjach",
+      "Definicja postępu technologicznego w transformacji cyfrowej"
+    ],
+    correctAnswer: "Definicja prywatności o nadal silnym wpływie na opinię publiczną"
+  },
+  {
+    id: 2,
+    question: "Która z innowacji spośród prezentowanych w „innovation matrix” określa wysoki wpływ na rynek i niską nowość technologiczną?",
+    options: [
+      "Innowacja przyrostowa",
+      "Innowacja radykalna",
+      "Innowacja zakłócająca",
+      "Innowacja zrównoważona"
+    ],
+    correctAnswer: "Innowacja zakłócająca"
+  },
+  {
+    id: 3,
+    question: "Autonomiczne samochody będą zasilać bazy danych o informacjach z otoczenia (sensorach), dotyczących użytkowników (preferencje, zainteresowania) i wspierających kwestie etyczne. O jakim zjawisku tu mówimy?",
+    options: [
+      "Gromadzeniu danych przez pojazdy autonomiczne",
+      "Gromadzeniu danych tylko o wypadkach drogowych",
+      "Gromadzeniu danych wyłącznie o kosztach paliwa",
+      "Gromadzeniu danych z tylko jednego źródła (GPS)"
+    ],
+    correctAnswer: "Gromadzeniu danych przez pojazdy autonomiczne"
+  },
+  {
+    id: 4,
+    question: "Ciągłe zwiększanie konkurencyjności istniejących produktów/usług poprzez obniżanie kosztów i ulepszanie/dodawanie funkcji to…?",
+    options: [
+      "Innowacja radykalna",
+      "Innowacja przyrostowa",
+      "Innowacja zakłócająca",
+      "Efekt sieciowy"
+    ],
+    correctAnswer: "Innowacja przyrostowa"
+  },
+  {
+    id: 5,
+    question: "Pomiar dojrzałości cyfrowej organizacji służy…?",
+    options: [
+      "Przeprowadzeniu audytu podatkowego",
+      "Wskazaniu stanu zaawansowania cyfrowej transformacji w danej firmie",
+      "Tylko selekcji pracowników do zwolnień",
+      "Analizie łańcucha dostaw wyłącznie w aspekcie logistycznym"
+    ],
+    correctAnswer: "Wskazaniu stanu zaawansowania cyfrowej transformacji w danej firmie"
+  },
+  {
+    id: 6,
+    question: "Pogląd na sztuczną inteligencję jako technologię produkcyjną, usprawniającą zadania związane z danymi, wywodzi się z idei…?",
+    options: [
+      "„Dane jako siła robocza”",
+      "„Ludzie jako kapitał najważniejszy”",
+      "„Technologia jako zasób ograniczony”",
+      "„Marketing jako główne źródło przewagi”"
+    ],
+    correctAnswer: "„Dane jako siła robocza”"
+  },
+  {
+    id: 7,
+    question: "Czym jest efektywny insight konsumencki, jeśli dotyczy m.in. oczekiwań i poglądów klientów oraz opisuje go zasada 4R?",
+    options: [
+      "Ogólną charakterystyką trendów rynkowych w mediach społecznościowych",
+      "Powierzchowną analizą nawyków zakupowych",
+      "Dogłębną analizą motywacji i preferencji klientów",
+      "Zbiorem reguł etycznych dotyczących prywatności"
+    ],
+    correctAnswer: "Dogłębną analizą motywacji i preferencji klientów"
+  },
+  {
+    id: 8,
+    question: "Jednym z najpopularniejszych rozwiązań w produkcji z udziałem AI, służącym do oceny stanu sprzętu i przewidywania napraw lub awarii, jest…?",
+    options: [
+      "Predykcyjne utrzymanie ruchu",
+      "E-commerce",
+      "Marketing automation",
+      "Druk 3D"
+    ],
+    correctAnswer: "Predykcyjne utrzymanie ruchu"
+  },
+  {
+    id: 9,
+    question: "Jakie kluczowe technologie napędzają rozwój Przemysłu 4.0? (3 odpowiedzi poprawne)",
+    options: [
+      "Internet Rzeczy (IoT), druk 3D, AR, VR, rozwiązania mobilne, chmura",
+      "Technologie wspierające procesy cyfrowej transformacji",
+      "Roboty współpracujące, narzędzia do wirtualnej symulacji (cyfrowy bliźniak)",
+      "Książki w wersji papierowej zamiast narzędzi cyfrowych"
+    ],
+    correctAnswer: [
+      "Internet Rzeczy (IoT), druk 3D, AR, VR, rozwiązania mobilne, chmura",
+      "Technologie wspierające procesy cyfrowej transformacji",
+      "Roboty współpracujące, narzędzia do wirtualnej symulacji (cyfrowy bliźniak)"
+    ]
+  },
+  {
+    id: 10,
+    question: "Do technologicznych fundamentów cyfrowej transformacji można zaliczyć…? (2 odpowiedzi poprawne)",
+    options: [
+      "Wykładniczy wzrost mocy obliczeniowej",
+      "Coraz szybsze połączenia internetowe",
+      "Zmniejszanie znaczenia analityki danych",
+      "Całkowitą rezygnację z danych jakościowych"
+    ],
+    correctAnswer: [
+      "Wykładniczy wzrost mocy obliczeniowej",
+      "Coraz szybsze połączenia internetowe"
+    ]
+  },
+  {
+    id: 11,
+    question: "Czym jest Przemysł 4.0? (3 odpowiedzi poprawne)",
+    options: [
+      "Zmianą paradygmatu z produkcji masowej na kastomizowaną",
+      "Koncepcją zmian organizacyjnych/technologicznych (łańcuch wartości, modele biznesowe)",
+      "Dogłębną reorganizacją łańcucha wartości, produktów i modelu biznesowego",
+      "Wyłącznie automatyzacją procesów pakowania towarów"
+    ],
+    correctAnswer: [
+      "Zmianą paradygmatu z produkcji masowej na kastomizowaną",
+      "Koncepcją zmian organizacyjnych/technologicznych (łańcuch wartości, modele biznesowe)",
+      "Dogłębną reorganizacją łańcucha wartości, produktów i modelu biznesowego"
+    ]
+  },
+  {
+    id: 12,
+    question: "Kogo nazywamy „digital natives”?",
+    options: [
+      "Osoby przyzwyczajone do płatności wyłącznie gotówką",
+      "Osoby urodzone w czasie powszechnego stosowania Internetu i nowoczesnych urządzeń",
+      "Osoby stroniące od technologii w życiu codziennym",
+      "Wszystkich użytkowników komputerów powyżej 70. roku życia"
+    ],
+    correctAnswer: "Osoby urodzone w czasie powszechnego stosowania Internetu i nowoczesnych urządzeń"
+  },
+  {
+    id: 13,
+    question: "Firma oferująca streaming filmów online rozpoczyna zbieranie danych od klientów w celu analizy, rekomendacji i ofert. Jaki to przykład?",
+    options: [
+      "Przykład cyfryzacji magazynu",
+      "Przykład transformacji analogowej",
+      "Przykład e-handlu B2B",
+      "Przykład cyfrowej transformacji"
+    ],
+    correctAnswer: "Przykład cyfrowej transformacji"
+  },
+  {
+    id: 14,
+    question: "Jakie są zasady projektowania Przemysłu 4.0? (wiele odpowiedzi poprawne)",
+    options: [
+      "Interoperacyjność, wirtualizacja, decentralizacja",
+      "Praca w czasie rzeczywistym, orientacja na usługi, modularność",
+      "Wyłącznie proste czynności manualne",
+      "Brak dostosowania do potrzeb klienta"
+    ],
+    correctAnswer: [
+      "Interoperacyjność, wirtualizacja, decentralizacja",
+      "Praca w czasie rzeczywistym, orientacja na usługi, modularność"
+    ]
+  },
+  {
+    id: 15,
+    question: "Marketing 5.0 wg Kotlera skupia się głównie na…?",
+    options: [
+      "Rozwoju technologicznym",
+      "Drukowaniu ulotek w dużej ilości",
+      "Telemarketingu z wykorzystaniem list papierowych",
+      "Rezygnacji z analityki cyfrowej"
+    ],
+    correctAnswer: "Rozwoju technologicznym"
+  },
+  {
+    id: 16,
+    question: "Cyfrowy bliźniak (Digital Twin) to…? (2 odpowiedzi poprawne)",
+    options: [
+      "Wirtualne odwzorowanie świata fizycznego w czasie rzeczywistym",
+      "Wirtualna kopia obiektów z możliwością symulacji procesów",
+      "System obsługi wyłącznie faktur papierowych",
+      "Metoda inwentaryzacji ręcznej"
+    ],
+    correctAnswer: [
+      "Wirtualne odwzorowanie świata fizycznego w czasie rzeczywistym",
+      "Wirtualna kopia obiektów z możliwością symulacji procesów"
+    ]
+  },
+  {
+    id: 17,
+    question: "Cyfrowa transformacja nie dokonałaby się, gdyby nie rozwój w obszarze…? (3 odpowiedzi poprawne)",
+    options: [
+      "Gromadzenia i przechowywania danych",
+      "Zwiększenia mocy obliczeniowej",
+      "Poprawy szybkości i przepustowości łączy",
+      "Migracji wyłącznie na system faksów"
+    ],
+    correctAnswer: [
+      "Gromadzenia i przechowywania danych",
+      "Zwiększenia mocy obliczeniowej",
+      "Poprawy szybkości i przepustowości łączy"
+    ]
+  },
+  {
+    id: 18,
+    question: "Do celów cyfryzacji NIE należy…? (2 odpowiedzi poprawne)",
+    options: [
+      "Rozbudowa wewnętrznego działu IT",
+      "Konwersja wszystkich informacji do formatu cyfrowego",
+      "Poprawa efektywności procesów biznesowych w środowisku cyfrowym",
+      "Zwiększenie innowacyjności oraz konkurencyjności dzięki technologiom"
+    ],
+    correctAnswer: [
+      "Rozbudowa wewnętrznego działu IT",
+      "Konwersja wszystkich informacji do formatu cyfrowego"
+    ]
+  },
+  {
+    id: 19,
+    question: "Marketing 5.0 jest najbardziej skoncentrowany na…?",
+    options: [
+      "Wycofaniu się z kampanii internetowych",
+      "Zastosowaniu nowych technologii",
+      "Zmniejszeniu roli marketerów w organizacji",
+      "Unikaniu analizy big data"
+    ],
+    correctAnswer: "Zastosowaniu nowych technologii"
+  },
+  {
+    id: 20,
+    question: "Czy sztuczną inteligencję można wykorzystać do tworzenia treści (opisy, logo, posty itd.)?",
+    options: [
+      "Nie, ponieważ AI służy wyłącznie do analizowania danych sprzedażowych",
+      "Tak",
+      "Tylko w obszarze zdjęć profilowych",
+      "Wyłącznie do raportów finansowych"
+    ],
+    correctAnswer: "Tak"
+  },
+  {
+    id: 21,
+    question: "Czym jest Blockchain?",
+    options: [
+      "Zcentralizowaną bazą danych",
+      "Bazą danych o charakterze zdecentralizowanym i rozproszonym",
+      "Systemem do tworzenia stron internetowych",
+      "Jedynie formatem pliku tekstowego"
+    ],
+    correctAnswer: "Bazą danych o charakterze zdecentralizowanym i rozproszonym"
+  },
+  {
+    id: 22,
+    question: "„Jakość danych ma kluczowe znaczenie; brudne dane mają małą wartość i jest ona kluczowa dla oceny gospodarczej pozycji regionów/krajów.” To definicja danych jako…?",
+    options: [
+      "Paliwa",
+      "Waluty",
+      "Złota",
+      "Zbędnego zasobu"
+    ],
+    correctAnswer: "Złota"
+  },
+  {
+    id: 23,
+    question: "Czym jest transformacja cyfrowa?",
+    options: [
+      "Procesem przejścia organizacji na nowe sposoby myślenia/działania przy wsparciu technologii cyfrowych",
+      "Zastąpieniem wszystkich ludzi robotami",
+      "Wdrożeniem prostego systemu komputerowego do archiwizacji dokumentów",
+      "Migracją firm do formatu open space"
+    ],
+    correctAnswer: "Procesem przejścia organizacji na nowe sposoby myślenia/działania przy wsparciu technologii cyfrowych"
+  },
+  {
+    id: 24,
+    question: "Czy celem implementacji AI i IoT w przedsiębiorstwach jest całkowite zastąpienie pracy ludzkiej?",
+    options: [
+      "Tak, ponieważ roboty są zawsze wydajniejsze",
+      "Nie, technologie mają wspierać pracowników",
+      "Tak, dotyczy to wszystkich branż bez wyjątku",
+      "Nie, celem jest wyłącznie optymalizacja magazynów"
+    ],
+    correctAnswer: "Nie, technologie mają wspierać pracowników"
+  },
+  {
+    id: 25,
+    question: "Wzrost popularności interfejsu głosowego (Amazon Echo, Siri, Google Home) i sieciowej kooperacji (współpraca na żądanie) pojawiły się wraz z rozwojem…?",
+    options: [
+      "Web 1.0",
+      "Web 2.0",
+      "Web 3.0",
+      "Telemarketingu"
+    ],
+    correctAnswer: "Web 3.0"
+  },
+  {
+    id: 26,
+    question: "Jakim mianem określamy połączenie produktu, aplikacji, analityki i internetu/sieci?",
+    options: [
+      "Interconnected",
+      "Offline-Only",
+      "Monolityczna architektura",
+      "System papierowych zgłoszeń"
+    ],
+    correctAnswer: "Interconnected"
+  },
+  {
+    id: 27,
+    question: "Jakie są zalety sieci 5G dla społeczeństwa i biznesu? (2 odpowiedzi poprawne)",
+    options: [
+      "Większa przepustowość (obsługa wielu urządzeń jednocześnie)",
+      "Ultra stabilność",
+      "Wolniejsze przesyłanie danych",
+      "Konieczność cofnięcia się do starszych protokołów"
+    ],
+    correctAnswer: [
+      "Większa przepustowość (obsługa wielu urządzeń jednocześnie)",
+      "Ultra stabilność"
+    ]
+  },
+  {
+    id: 28,
+    question: "Najważniejszy (służący) punkt wyjścia w marketingu 5.0 to…?",
+    options: [
+      "Data-driven marketing",
+      "Drukowanie ulotek w dużej ilości",
+      "Losowe testowanie produktów w pustych magazynach",
+      "Ignorowanie analiz rynkowych"
+    ],
+    correctAnswer: "Data-driven marketing"
+  },
+  {
+    id: 29,
+    question: "Jak określamy cyfrową transformację (z punktu widzenia organizacji)?",
+    options: [
+      "Przejściem wyłącznie na telemarketing",
+      "Sposobem wdrażania nowych technologii do modeli biznesowych, procesów i obsługi klienta",
+      "Kupowaniem zawsze najnowszych komputerów bez zmiany procesów",
+      "Wdrożeniem godzin pracy zdalnej bez żadnych innych działań"
+    ],
+    correctAnswer: "Sposobem wdrażania nowych technologii do modeli biznesowych, procesów i obsługi klienta"
+  },
+  {
+    id: 30,
+    question: "Jakie podejście do budowania relacji z klientem jest właściwe dla cyfrowej transformacji marketingu?",
+    options: [
+      "Nastawienie na 3P (people, product, promotion)",
+      "Wyłącznie redukcja kosztów komunikacji",
+      "Zastąpienie działu marketingu działem telefonicznej infolinii",
+      "Koncentracja na jednym kanale offline"
+    ],
+    correctAnswer: "Nastawienie na 3P (people, product, promotion)"
+  },
+  {
+    id: 31,
+    question: "Organizacja dojrzała cyfrowo to taka, w której…? (2 odpowiedzi poprawne)",
+    options: [
+      "Pracownicy mają wysokie kompetencje cyfrowe",
+      "Automatyzacja procesów stosowana jest wszędzie, gdzie to możliwe",
+      "Unika się wszelkich innowacji cyfrowych",
+      "Nie ma działu IT"
+    ],
+    correctAnswer: [
+      "Pracownicy mają wysokie kompetencje cyfrowe",
+      "Automatyzacja procesów stosowana jest wszędzie, gdzie to możliwe"
+    ]
+  },
+  {
+    id: 32,
+    question: "Czemu służy cel komparatywny modelu dojrzałości cyfrowej?",
+    options: [
+      "Wyłącznie redukcji liczby pracowników",
+      "Ocena aktualnego stanu organizacji i jej potencjału według określonych kryteriów",
+      "Eliminacji zadań analitycznych",
+      "Zamrożeniu środków na inwestycje"
+    ],
+    correctAnswer: "Ocena aktualnego stanu organizacji i jej potencjału według określonych kryteriów"
+  },
+  {
+    id: 33,
+    question: "Co opisuje model 5A przedstawiony przez Phillipa Kotlera? (2 odpowiedzi poprawne)",
+    options: [
+      "Proces, jaki przechodzą klienci szukający konkretnych marek",
+      "Proces pozyskiwania klientów przez marki",
+      "Schemat działań w logistyce magazynowej",
+      "Metodę rekrutacji w dziale IT"
+    ],
+    correctAnswer: [
+      "Proces, jaki przechodzą klienci szukający konkretnych marek",
+      "Proces pozyskiwania klientów przez marki"
+    ]
+  },
+  {
+    id: 34,
+    question: "„Internet, który był głównie siecią tylko do odczytu”, to Web…?",
+    options: [
+      "Web 1.0",
+      "Web 2.0",
+      "Web 3.0",
+      "Web 4.0"
+    ],
+    correctAnswer: "Web 1.0"
+  },
+  {
+    id: 35,
+    question: "„Konwergencja świata fizycznego, cyfrowego i biologicznego” to kluczowy aspekt…?",
+    options: [
+      "Trzeciej rewolucji przemysłowej",
+      "Drugiej rewolucji przemysłowej",
+      "Czwartej rewolucji przemysłowej",
+      "Wyłącznie rewolucji agrarnej"
+    ],
+    correctAnswer: "Czwartej rewolucji przemysłowej"
+  },
+  {
+    id: 36,
+    question: "WINTEL to skrót opisujący współpracę pomiędzy Windows i Intel, opierającą się na triadzie…? (2 odpowiedzi poprawne)",
+    options: [
+      "Wszechmocnej sile obliczeniowej (bardziej wymagające systemy)",
+      "Algorytmach (większa ilość danych do przetworzenia)",
+      "Nacisku na analogowe procesy zamiast cyfrowych",
+      "Stałego ograniczania mocy obliczeniowej"
+    ],
+    correctAnswer: [
+      "Wszechmocnej sile obliczeniowej (bardziej wymagające systemy)",
+      "Algorytmach (większa ilość danych do przetworzenia)"
+    ]
+  },
+  {
+    id: 37,
+    question: "Kontrola dostępu do wybranych obszarów „ja” (pojęcie prywatności) wywodzi się z…?",
+    options: [
+      "Matematyki",
+      "Psychologii",
+      "Marketingu 4.0",
+      "Przemysłu 4.0"
+    ],
+    correctAnswer: "Psychologii"
+  },
+  {
+    id: 38,
+    question: "Które czynniki przyczyniły się do rozwoju robotyki?",
+    options: [
+      "Rezygnacja z produkcji komponentów do smartfonów",
+      "Smartfony i druk 3D (tańsze i lepsze komponenty)",
+      "Zamknięcie rynków technologicznych na świat",
+      "Wyłącznie rozwój branży motoryzacyjnej"
+    ],
+    correctAnswer: "Smartfony i druk 3D (tańsze i lepsze komponenty)"
+  },
+  {
+    id: 39,
+    question: "Eliminowanie z łańcucha wartości zbędnych elementów, np. redukcja roli pośredników w wyniku cyfryzacji, to działanie innowacji…?",
+    options: [
+      "Przyrostowej",
+      "Zrównoważonej",
+      "Zakłócającej",
+      "Rynkowej"
+    ],
+    correctAnswer: "Zakłócającej"
+  },
+  {
+    id: 40,
+    question: "Wgranie dokumentu PDF z dysku twardego do chmury i udostępnienie go wielu osobom w celu analizy danych to przykład…?",
+    options: [
+      "Druk 3D",
+      "Cyfryzacji",
+      "Marketingu 5.0",
+      "Wirtualnej rzeczywistości"
+    ],
+    correctAnswer: "Cyfryzacji"
+  },
+  {
+    id: 41,
+    question: "Cyfryzacja nie dokonałaby się, gdyby nie rozwój w obszarach…?",
+    options: [
+      "Tylko w branży spożywczej",
+      "Wyłącznie w marketingu",
+      "Wszystkich wymienionych w modelu (IT, infrastruktura, łączność itp.)",
+      "Wyłącznie w obszarze logistyki"
+    ],
+    correctAnswer: "Wszystkich wymienionych w modelu (IT, infrastruktura, łączność itp.)"
+  },
+  {
+    id: 42,
+    question: "Skanowanie papierowego dokumentu i zapisanie go w formacie PDF na dysku twardym to idealny przykład…?",
+    options: [
+      "Digitalizacji",
+      "Transformacji analogowej",
+      "Radykalnej innowacji",
+      "Zero-waste marketing"
+    ],
+    correctAnswer: "Digitalizacji"
+  },
+  {
+    id: 43,
+    question: "Aplikacja wprowadzona przez NIKE, która pomaga wybrać najlepszy rodzaj buta na podstawie skanu stopy, to przykład…?",
+    options: [
+      "Cyfryzacji",
+      "Telemarketingu",
+      "Metody produkcji w czasie rzeczywistym",
+      "Analizy Big Data w biologii"
+    ],
+    correctAnswer: "Cyfryzacji"
+  },
+  {
+    id: 44,
+    question: "Udoskonalane wciąż smartfony i inne branże oparte na rozwoju technologii mobilnych (rozwijanych części do telefonów) to przykład…?",
+    options: [
+      "Innowacji przyrostowej",
+      "Innowacji radykalnej",
+      "Innowacji zrównoważonej",
+      "Metody offline"
+    ],
+    correctAnswer: "Innowacji zrównoważonej"
+  },
+  {
+    id: 45,
+    question: "Jedną z najbardziej znanych postaci w debacie o prywatności, która w 2013 r. ujawniła tajne informacje z Agencji Bezpieczeństwa Narodowego, jest…?",
+    options: [
+      "Mark Zuckerberg",
+      "Steve Jobs",
+      "Edward Snowden",
+      "Jeff Bezos"
+    ],
+    correctAnswer: "Edward Snowden"
+  },
+  {
+    id: 46,
+    question: "Czym jest dojrzałość cyfrowa? (wiele odpowiedzi poprawne)",
+    options: [
+      "Określa stan i dynamikę transformacji cyfrowej",
+      "Odzwierciedla zwinność i umiejętność organizacji do wykorzystywania rozwoju technologicznego",
+      "Jest mierzalna",
+      "Dotyczy jedynie firmy z branży odzieżowej"
+    ],
+    correctAnswer: [
+      "Określa stan i dynamikę transformacji cyfrowej",
+      "Odzwierciedla zwinność i umiejętność organizacji do wykorzystywania rozwoju technologicznego",
+      "Jest mierzalna"
+    ]
+  },
+  {
+    id: 47,
+    question: "Według raportu Deloitte Digital Transformation Executive Survey 2018, najbardziej dojrzałą cyfrowo branżą jest…?",
+    options: [
+      "Edukacja",
+      "Technologia, media i komunikacja",
+      "Rolnictwo",
+      "Budownictwo"
+    ],
+    correctAnswer: "Technologia, media i komunikacja"
+  },
+  {
+    id: 48,
+    question: "Efekt sieciowy przy platformizacji oznacza…?",
+    options: [
+      "Zmniejszanie liczby użytkowników wraz ze wzrostem wartości platformy",
+      "Pętlę sprzężenia zwrotnego – im większa wartość platformy, tym więcej użytkowników",
+      "Rezygnację z platform cyfrowych na rzecz sklepów stacjonarnych",
+      "Brak zależności między liczbą użytkowników a wartością platformy"
+    ],
+    correctAnswer: "Pętlę sprzężenia zwrotnego – im większa wartość platformy, tym więcej użytkowników"
+  },
+  {
+    id: 49,
+    question: "„Technologie tzw. next-tech” to…?",
+    options: [
+      "Zbiór tradycyjnych procesów manualnych",
+      "Grupa technologii odtwarzających możliwości ludzkie (materiały, zdolności)",
+      "Metody zarządzania zapasami w magazynie",
+      "Technologie oparte wyłącznie na maszynach parowych"
+    ],
+    correctAnswer: "Grupa technologii odtwarzających możliwości ludzkie (materiały, zdolności)"
+  },
+  {
+    id: 50,
+    question: "Zasadę 4V wykorzystuje się do…?",
+    options: [
+      "Określania cech Big Data (ilość, zmienność, różnorodność, wartość)",
+      "Projektowania fizycznej przestrzeni w fabryce",
+      "Analizy wrażeń wzrokowych w reklamie",
+      "Ustalania wizji i wartości firmy"
+    ],
+    correctAnswer: "Określania cech Big Data (ilość, zmienność, różnorodność, wartość)"
+  },
+  {
+    id: 51,
+    question: "Kim jest prosumer?",
+    options: [
+      "Konsumentem 4.0",
+      "Wyłącznie pracownikiem działu HR",
+      "Osobą obsługującą maszynę CNC",
+      "Audytorem wewnętrznym zajmującym się jakością"
+    ],
+    correctAnswer: "Konsumentem 4.0"
+  },
+  {
+    id: 52,
+    question: "Na czym polega agile marketing?",
+    options: [
+      "Na niekontrolowanym wprowadzaniu zmian bez planu",
+      "Na wykorzystaniu zdecentralizowanych, wielofunkcyjnych zespołów do szybkiego rozwoju i testowania",
+      "Na wykluczeniu testów i weryfikacji",
+      "Na ograniczeniu kreatywności w kampaniach"
+    ],
+    correctAnswer: "Na wykorzystaniu zdecentralizowanych, wielofunkcyjnych zespołów do szybkiego rozwoju i testowania"
+  },
+  {
+    id: 53,
+    question: "Co tworzy model 5A przedstawiony przez Philipa Kotlera? (2 odpowiedzi poprawne)",
+    options: [
+      "Proces, jaki przechodzą klienci w poszukiwaniu konkretnych marek",
+      "Proces pozyskiwania klientów przez marki",
+      "Metoda liczenia wynagrodzeń w dziale kadr",
+      "System monitorowania pracy maszyn"
+    ],
+    correctAnswer: [
+      "Proces, jaki przechodzą klienci w poszukiwaniu konkretnych marek",
+      "Proces pozyskiwania klientów przez marki"
+    ]
+  },
+  {
+    id: 54,
+    question: "Urządzenie oferujące śledzenie floty GPS w czasie rzeczywistym oraz monitorowanie stanu pojazdów i wydajności kierowców to przykład…?",
+    options: [
+      "Inteligentnego urządzenia (Smart Device)",
+      "Niefunkcjonalnej zabawki",
+      "Zwykłego kalkulatora",
+      "Narzędzia do analogowego pomiaru odległości"
+    ],
+    correctAnswer: "Inteligentnego urządzenia (Smart Device)"
+  },
+  {
+    id: 55,
+    question: "„Firmy z branży e-commerce przenoszą główny punkt ciężkości z PC na urządzenia mobilne, więc więcej przychodów generują platformy mobilne.” To przykład…?",
+    options: [
+      "Rezygnacji z technologii mobilnych",
+      "Cyfryzacji",
+      "Nadmiernej automatyzacji",
+      "Zastępowania kanału online kanałem offline"
+    ],
+    correctAnswer: "Cyfryzacji"
+  },
+  {
+    id: 56,
+    question: "Filarami cyfrowej transformacji są…? (2 odpowiedzi poprawne)",
+    options: [
+      "Pamięć masowa",
+      "Szerokość pasma komunikacyjnego",
+      "Wyłącznie marketing offline",
+      "Zastępowanie internetu kurierami"
+    ],
+    correctAnswer: [
+      "Pamięć masowa",
+      "Szerokość pasma komunikacyjnego"
+    ]
+  },
+  {
+    id: 57,
+    question: "Prawo do bycia pozostawionym w spokoju jest…?",
+    options: [
+      "Jedną z pierwszych i bardzo wpływowych definicji prywatności",
+      "Koncepcją związaną wyłącznie z robotyką",
+      "Metodą analizy big data",
+      "Prawem do testowania urządzeń"
+    ],
+    correctAnswer: "Jedną z pierwszych i bardzo wpływowych definicji prywatności"
+  },
+  {
+    id: 58,
+    question: "Konwersja wszelkich informacji do formatu cyfrowego to…?",
+    options: [
+      "Ręczne przepisywanie danych do zeszytu",
+      "Telepraca",
+      "Cyfryzacja",
+      "Archiwizacja analogowa"
+    ],
+    correctAnswer: "Cyfryzacja"
+  },
+  {
+    id: 59,
+    question: "Który przykład nie zalicza się do modelu biznesowego?",
+    options: [
+      "Freemium",
+      "Subskrypcja",
+      "Churn",
+      "Marketplace"
+    ],
+    correctAnswer: "Churn"
+  },
+  {
+    id: 60,
+    question: "Co oznacza termin „software is eating the world”?",
+    options: [
+      "Większość tradycyjnych branż jest transformowana przez oprogramowanie",
+      "Oprogramowanie służy tylko do gier komputerowych",
+      "Firmy przechodzą wyłącznie na ręczne procesy",
+      "To hasło promujące powrót do produkcji analogowej"
+    ],
+    correctAnswer: "Większość tradycyjnych branż jest transformowana przez oprogramowanie"
+  },
+  {
+    id: 61,
+    question: "Które z poniższych firm opierają swój model biznesowy na zasadach peer-to-peer?",
+    options: [
+      "AirBnB, Uber, eBay",
+      "Narodowe przedsiębiorstwo energetyczne",
+      "Tradycyjny sklep spożywczy",
+      "Lokalne kino studyjne"
+    ],
+    correctAnswer: "AirBnB, Uber, eBay"
+  },
+  {
+    id: 62,
+    question: "Jakie znaczenie ma pojęcie „dane jako waluta”?",
+    options: [
+      "Dane mają „narodowość” i reprezentują wartość w kontekście konkretnych regionów/krajów",
+      "Dane służą tylko do prowadzenia księgowości",
+      "Dane nie mają żadnej wartości ekonomicznej",
+      "Dane to wyłącznie pliki tekstowe niezwiązane z pieniędzmi"
+    ],
+    correctAnswer: "Dane mają „narodowość” i reprezentują wartość w kontekście konkretnych regionów/krajów"
+  },
+  {
+    id: 63,
+    question: "„Technologie cyfrowe to bardzo wyjątkowy obszar, który charakteryzuje się…”? (3 odpowiedzi poprawne)",
+    options: [
+      "Decentralizacją",
+      "Wzrostem wykładniczym",
+      "Koncentracją",
+      "Zastojem i brakiem postępu"
+    ],
+    correctAnswer: [
+      "Decentralizacją",
+      "Wzrostem wykładniczym",
+      "Koncentracją"
+    ]
+  },
+  {
+    id: 64,
+    question: "Solucjonizm w charakterze społecznym i politycznym odnosi się do przekonania, że…?",
+    options: [
+      "Wszystkie problemy da się rozwiązać technologią",
+      "Żadne problemy nie mają rozwiązania",
+      "Tylko kwestie finansowe można rozwiązać cyfrowo",
+      "Rozwiązania cyfrowe nie mają znaczenia"
+    ],
+    correctAnswer: "Wszystkie problemy da się rozwiązać technologią"
+  },
+  {
+    id: 65,
+    question: "Twierdzenie „umożliwia on zwiększenie wydajności marketerów kontaktujących się z klientami poprzez wprowadzenie technologii cyfrowych (czatboty, wirtualni asystenci)” dotyczy…?",
+    options: [
+      "Marketingu rozszerzonego",
+      "Wyłącznie reklamy zewnętrznej (billboardy)",
+      "Zakazu używania sztucznej inteligencji",
+      "Wycofania mediów społecznościowych"
+    ],
+    correctAnswer: "Marketingu rozszerzonego"
+  },
+  {
+    id: 66,
+    question: "Do trzech filarów transformacji cyfrowej NIE zalicza się…?",
+    options: [
+      "Sztucznej inteligencji",
+      "Pamięci masowej",
+      "Mocy obliczeniowej",
+      "Szybkości przesyłu danych"
+    ],
+    correctAnswer: "Sztucznej inteligencji"
+  },
+  {
+    id: 67,
+    question: "Czym jest „klick and collect”?",
+    options: [
+      "Wyłącznie programem lojalnościowym",
+      "Techniką umożliwiającą przeniesienie spersonalizowanych doświadczeń cyfrowych do świata fizycznego",
+      "Metodą zapisywania dokumentów do PDF",
+      "Kampanią mailingową"
+    ],
+    correctAnswer: "Techniką umożliwiającą przeniesienie spersonalizowanych doświadczeń cyfrowych do świata fizycznego"
+  },
+  {
+    id: 68,
+    question: "Jakie są główne cele regulacji dotyczących ochrony danych (np. RODO)? (3 odpowiedzi poprawne)",
+    options: [
+      "Wzmocnienie praw osób, których dane dotyczą",
+      "Zwiększenie przejrzystości w gromadzeniu/wykorzystywaniu danych",
+      "Ograniczenie przetwarzania danych",
+      "Bezwarunkowe udostępnienie danych każdemu"
+    ],
+    correctAnswer: [
+      "Wzmocnienie praw osób, których dane dotyczą",
+      "Zwiększenie przejrzystości w gromadzeniu/wykorzystywaniu danych",
+      "Ograniczenie przetwarzania danych"
+    ]
+  },
+  {
+    id: 69,
+    question: "Zgodnie z koncepcją New 4C, konsument postrzega produkt/usługę przez pryzmat…? (3 elementy poprawne)",
+    options: [
+      "Możliwości współtworzenia",
+      "Wygody zakupu",
+      "Wydatku kosztu",
+      "Braku personalizacji"
+    ],
+    correctAnswer: [
+      "Możliwości współtworzenia",
+      "Wygody zakupu",
+      "Wydatku kosztu"
+    ]
+  },
+  {
+    id: 70,
+    question: "Na jakie trzy grupy można podzielić technologie oferowane przez MarTech? (3 odpowiedzi poprawne)",
+    options: [
+      "Technologie stymulacyjne",
+      "Technologie obliczeniowe",
+      "Technologie analityczne",
+      "Technologie stolarskie"
+    ],
+    correctAnswer: [
+      "Technologie stymulacyjne",
+      "Technologie obliczeniowe",
+      "Technologie analityczne"
+    ]
+  },
+  {
+    id: 71,
+    question: "Internet rzeczy (IoT) umożliwia…? (2 odpowiedzi poprawne)",
+    options: [
+      "Wzrost produktywności",
+      "Ekspansję na nowe rynki",
+      "Tylko lokalny dostęp do danych bez sieci",
+      "Zastąpienie wszystkich urządzeń cyfrowych maszynami parowymi"
+    ],
+    correctAnswer: [
+      "Wzrost produktywności",
+      "Ekspansję na nowe rynki"
+    ]
+  },
+  {
+    id: 72,
+    question: "Innowacja, która jest przełomem technologicznym, uznawana za radykalną, często przekształca branże i ma zdolność tworzenia nowego rynku. Jakie ma cechy? (2 odpowiedzi poprawne)",
+    options: [
+      "Duży wpływ na rynek",
+      "Nowość w zakresie wysokich technologii",
+      "Brak wpływu na funkcjonowanie sektora",
+      "Wyłącznie drobne ulepszenia"
+    ],
+    correctAnswer: [
+      "Duży wpływ na rynek",
+      "Nowość w zakresie wysokich technologii"
+    ]
+  },
+  {
+    id: 73,
+    question: "Co umożliwia dynamiczną optymalizację cen?",
+    options: [
+      "Drukarka laserowa",
+      "Masowa wysyłka pocztowa",
+      "Machine Learning",
+      "Papierowe katalogi"
+    ],
+    correctAnswer: "Machine Learning"
+  },
+  {
+    id: 74,
+    question: "Który z elementów kampanii e‑mail marketingowej ma największe przełożenie na jej wskaźnik otwarć (OR)?",
+    options: [
+      "Tytuł (temat)",
+      "Załącznik PDF",
+      "Kolor tła wiadomości",
+      "Wielkość czcionki w stopce"
+    ],
+    correctAnswer: "Tytuł (temat)"
+  },
+  {
+    id: 75,
+    question: "Czym charakteryzuje się Marketing 5.0 wg Kotlera? (3 odpowiedzi poprawne)",
+    options: [
+      "Wykorzystaniem technologii next-tech w działaniach marketingowych",
+      "Oparciem na dwóch filarach – data-driven marketing i agile marketing",
+      "Założeniem, że nowoczesne technologie są kluczowe do zaspokajania potrzeb klientów",
+      "Całkowitą rezygnacją z analizy danych i fokusowanie się tylko na offline"
+    ],
+    correctAnswer: [
+      "Wykorzystaniem technologii next-tech w działaniach marketingowych",
+      "Oparciem na dwóch filarach – data-driven marketing i agile marketing",
+      "Założeniem, że nowoczesne technologie są kluczowe do zaspokajania potrzeb klientów"
+    ]
+  },
+  {
+    id: 76,
+    question: "Co może symbolizować szachownica w kontekście cyfrowej transformacji?",
+    options: [
+      "Strategiczne podejście do wdrażania technologii",
+      "Brak kontroli nad procesami cyfryzacji",
+      "Przestarzałe modele biznesowe",
+      "Losowe decyzje technologiczne"
+    ],
+    correctAnswer: "Strategiczne podejście do wdrażania technologii"
+  },
+  {
+    id: 77,
+    question: "Czym charakteryzuje się Marketing 6.0?",
+    options: [
+      "Wykorzystuje sztuczną inteligencję i emocje konsumentów",
+      "Skupia się tylko na mediach społecznościowych",
+      "Koncentruje się wyłącznie na produktach fizycznych",
+      "Rezygnuje z analizy danych klientów"
+    ],
+    correctAnswer: "Wykorzystuje sztuczną inteligencję i emocje konsumentów"
+  },
+  {
+    id: 78,
+    question: "Co oznacza Triada WIM w kontekście bezpieczeństwa?",
+    options: [
+      "Wartość, Innowacja, Marketing",
+      "Władza, Inwigilacja, Manipulacja",
+      "Poufność, Integralność, Dostępność",
+      "Wiedza, Inteligencja, Mechanika"
+    ],
+    correctAnswer: "Poufność, Integralność, Dostępność"
+  },
+  {
+    id: 79,
+    question: "Które z poniższych to przykład cyberzagrożenia?",
+    options: [
+      "Phishing",
+      "Legalne pobieranie oprogramowania",
+      "Otwieranie stron rządowych",
+      "Kupowanie sprzętu komputerowego"
+    ],
+    correctAnswer: "Phishing"
+  },
+  {
+    id: 80,
+    question: "Jak nazywa się wymiana dóbr/usług/pieniędzy między konsumentami?",
+    options: [
+      "Ekonomia współdzielenia",
+      "Monopol",
+      "Handel B2B (Business to Business)",
+      "Prywatyzacja"
+    ],
+    correctAnswer: "Ekonomia współdzielenia"
+  },
+  {
+    id: 81,
+    question: "Czym jest insight konsumencki?",
+    options: [
+      "Analizą głębokich potrzeb klientów",
+      "Opinią wyrażoną przez jednego klienta",
+      "Wyłącznie danymi sprzedażowymi",
+      "Sloganem reklamowym"
+    ],
+    correctAnswer: "Analizą głębokich potrzeb klientów"
+  },
+  {
+    id: 82,
+    question: "Czym jest technoutopia?",
+    options: [
+      "Wizją idealnego społeczeństwa dzięki technologii",
+      "Rzeczywistością, w której technologia jest zakazana",
+      "Formą ekologicznego życia bez technologii",
+      "Systemem, w którym technologia nie odgrywa istotnej roli"
+    ],
+    correctAnswer: "Wizją idealnego społeczeństwa dzięki technologii"
+  },
+  {
+    id: 83,
+    question: "Jaką różnicę ma VR względem AR?",
+    options: [
+      "VR przenosi użytkownika do wirtualnego świata, AR nakłada elementy na rzeczywisty",
+      "VR i AR to dokładnie to samo",
+      "VR działa tylko na smartfonach, AR tylko na komputerach",
+      "AR jest używane tylko w filmach science-fiction"
+    ],
+    correctAnswer: "VR przenosi użytkownika do wirtualnego świata, AR nakłada elementy na rzeczywisty"
   }
-  
-  export const questions: QuizQuestion[] = [
-    {
-      id: 1,
-      question: "Suma dochodów uzyskiwanych przez czynniki produkcji to:",
-      options: [
-        "Produkt narodowy netto",
-        "Produkt krajowy brutto",
-        "Dochód narodowy",
-        "Dochód do dyspozycji",
-        "Żadne"
-      ],
-      correctAnswer: "Dochód narodowy"
-    },
-    {
-      id: 2,
-      question: "Wielkość popytu na dobro normalne spada, gdy:",
-      options: [
-        "Spada dochód",
-        "Cena dobra rośnie",
-        "Cena dobra spada",
-        "Rośnie cena surowca potrzebnego do produkcji",
-        "Żadne"
-      ],
-      correctAnswer: "Spada dochód"
-    },
-    {
-      id: 3,
-      question: "Produkt homogeniczny to cecha:",
-      options: [
-        "Konkurencji monopolistycznej",
-        "Konkurencji doskonałej",
-        "Monopolu",
-        "Oligopolu",
-        "Żadne"
-      ],
-      correctAnswer: "Konkurencji doskonałej"
-    },
-    {
-      id: 4,
-      question: "Deprecjacja to:",
-      options: [
-        "Obniżanie wartości dowolnej wielkości nominalnej",
-        "Rynkowy spadek wartości waluty",
-        "Okres trwałego spadku poziomu cen",
-        "Decyzja władz monetarnych o obniżeniu wartości waluty",
-        "Żadne"
-      ],
-      correctAnswer: "Rynkowy spadek wartości waluty"
-    },
-    {
-      id: 5,
-      question: "Jeżeli PNB w cenach bieżących spada o około 1% rocznie, a indeks cen dóbr finalnych i usług rośnie o 2% rocznie, to realny PNB spada rocznie o:",
-      options: [
-        "5 %",
-        "2 %",
-        "3 %",
-        "1 %",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "3 %"
-    },
-    {
-      id: 6,
-      question: "Wysokie zbiory rzepaku w Polsce spowodują:",
-      options: [
-        "Spadek popytu na olej rzepakowy",
-        "Spadek ceny oleju rzepakowego",
-        "Obniżenie ceny oliwy z oliwek",
-        "Spadek podaży oleju rzepakowego",
-        "Żadne"
-      ],
-      correctAnswer: "Spadek ceny oleju rzepakowego"
-    },
-    {
-      id: 7,
-      question: "Które z poniższych dóbr zaliczysz do komplementarnych:",
-      options: [
-        "Masło i margaryna",
-        "Buty i sznurówki",
-        "Pióro i długopis",
-        "Śliwki i wiertarka",
-        "Żadne"
-      ],
-      correctAnswer: "Buty i sznurówki"
-    },
-    {
-      id: 8,
-      question: "Użyteczność krańcowa:",
-      options: [
-        "Rośnie ze wzrostem konsumowanego dobra",
-        "Zmniejsza się ze wzrostem ilości konsumowanego dobra",
-        "Rośnie razem ze wzrostem użyteczności całkowitej",
-        "Nie zależy od ilości konsumowanego dobra",
-        "Żadne"
-      ],
-      correctAnswer: "Zmniejsza się ze wzrostem ilości konsumowanego dobra"
-    },
-    {
-      id: 9,
-      question: "W rachunku wyników wpiszemy:",
-      options: [
-        "Koszt materiałów",
-        "Amortyzację",
-        "Zakup nieruchomości",
-        "Gotówkę w banku",
-        "Wszystkie",
-        "Żadne"
-      ],
-      // Dwie poprawne odpowiedzi:
-      correctAnswer: ["Koszt materiałów"]
-    },
-    {
-      id: 10,
-      question: "Konkurencja doskonała charakteryzuje się:",
-      options: [
-        "Rozproszeniem popytu i podaży",
-        "Jednorodnością produktu",
-        "Brakiem kontroli cen przez producentów",
-        "Wszystkie powyższe",
-        "Żadne"
-      ],
-      correctAnswer: "Wszystkie powyższe"
-    },
-    {
-      id: 11,
-      question: "Zasoby siły roboczej to:",
-      options: [
-        "Ludność w wieku produkcyjnym",
-        "Liczba zatrudnionych",
-        "Liczba niezatrudnionych",
-        "Liczba zatrudnionych i niezatrudnionych"
-      ],
-      correctAnswer: "Liczba zatrudnionych i niezatrudnionych"
-    },
-    {
-      id: 12,
-      question: "Jeśli w danej gospodarce mierzymy wartość rynkową produkcji w cenach bieżących, to otrzymamy:",
-      options: [
-        "PKB nominalne",
-        "PKB per capita",
-        "PKB realne",
-        "Żadne"
-      ],
-      correctAnswer: "PKB nominalne"
-    },
-    {
-      id: 13,
-      question: "Jeśli nominalne PKB wzrosło z 2000 bln do 2100 bln w roku następnym, podczas gdy realne PKB nie zmieniło się, to oznacza to, że:",
-      options: [
-        "Ceny nie zmieniły się",
-        "Ceny wzrosły o 5%",
-        "Ceny wzrosły o 10%",
-        "Ceny wzrosły o 25%",
-        "Żadne"
-      ],
-      correctAnswer: "Ceny wzrosły o 5%"
-    },
-    {
-      id: 14,
-      question: "Za pomocą krzywej możliwości produkcyjnych pokazujemy:",
-      options: [
-        "Zasadę maksymalizacji zysków",
-        "Minimalną możliwą do wytworzenia ilość jednego dobra przy danej wielkości produkcji drugiego dobra",
-        "Działanie prawa popytu",
-        "Najlepsze kombinacje dóbr możliwe do wytworzenia przy danych zasobach i technologii",
-        "Żadne"
-      ],
-      correctAnswer: "Najlepsze kombinacje dóbr możliwe do wytworzenia przy danych zasobach i technologii"
-    },
-    {
-      id: 15,
-      question: "Rzadkość dóbr oznacza, że:",
-      options: [
-        "Dostępna ilość wielu dóbr jest niewielka i ciągle malejąca",
-        "Większość ludzi jest zbyt uboga, by móc sobie na wszystko pozwolić",
-        "Ludzie powinni ograniczać swoje potrzeby",
-        "Ilość dóbr w gospodarce nie pozwala na zaspokojenie wszystkich potrzeb",
-        "Żadne"
-      ],
-      correctAnswer: "Ilość dóbr w gospodarce nie pozwala na zaspokojenie wszystkich potrzeb"
-    },
-    {
-      id: 16,
-      question: "Podstawą funkcjonowania mechanizmu rynkowego w gospodarce jest:",
-      options: [
-        "Dominacja wielkich przedsiębiorstw",
-        "Funkcjonowanie tzw. szarej strefy",
-        "Dominacja własności prywatnej",
-        "Żadne"
-      ],
-      correctAnswer: "Dominacja własności prywatnej"
-    },
-    {
-      id: 17,
-      question: "Bezrobocie strukturalne występuje, gdy:",
-      options: [
-        "Jest duży odsetek bezrobotnych",
-        "Popyt na pracowników o określonych kwalifikacjach nie odpowiada podaży",
-        "Wzrasta liczba bezrobotnych na skutek podwyższania zasiłków",
-        "Występuje nadwyżka popytu nad podażą siły roboczej",
-        "Pracownicy rezygnują z dotychczasowej pracy, a nie znaleźli jeszcze nowej"
-      ],
-      correctAnswer: "Popyt na pracowników o określonych kwalifikacjach nie odpowiada podaży"
-    },
-    {
-      id: 18,
-      question: "Napływ kapitału (system kursów płynnych i doskonale mobilny kapitał) w odniesieniu do waluty krajowej będzie powodował:",
-      options: [
-        "Aprecjację",
-        "Deprecjację",
-        "Dewaluację",
-        "Rewaluację",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "Aprecjację"
-    },
-    {
-      id: 19,
-      question: "Najwyższy stopień kontroli nad ceną występuje w:",
-      options: [
-        "Konkurencji monopolistycznej",
-        "Monopolu",
-        "Oligopolu",
-        "Konkurencji doskonałej",
-        "Żadne"
-      ],
-      correctAnswer: "Monopolu"
-    },
-    {
-      id: 20,
-      question: "Przedsiębiorstwo wychodzi z branży, jeśli cena nie pokrywa:",
-      options: [
-        "Kosztu jednostkowego",
-        "Kosztu zmiennego",
-        "Kosztu całkowitego",
-        "Kosztów krańcowych",
-        "Żadne"
-      ],
-      correctAnswer: "Kosztu zmiennego"
-    },
-    {
-      id: 21,
-      question: "Zakup biletu na koncert to przykład użycia pieniądza jako:",
-      options: [
-        "Jednostki rozrachunkowej",
-        "Środka tezauryzacji",
-        "Miernika odroczonych płatności",
-        "Środka wymiany",
-        "Żadne"
-      ],
-      correctAnswer: "Środka wymiany"
-    },
-    {
-      id: 22,
-      question: "Bank Centralny może zmniejszyć podaż pieniądza bankowego za pomocą:",
-      options: [
-        "Zwiększenia podatków",
-        "Zwiększenia stopy rezerw obowiązkowych",
-        "Zmniejszenia stopy dyskontowej",
-        "Podwyżki cen",
-        "Żadne"
-      ],
-      correctAnswer: "Zwiększenia stopy rezerw obowiązkowych"
-    },
-    {
-      id: 23,
-      question: "Spadek ceny o 5% powoduje wzrost popytu o 1% – to popyt jest:",
-      options: [
-        "Doskonale elastyczny",
-        "Elastyczny o elastyczności jednostkowej",
-        "Nieelastyczny",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "Nieelastyczny"
-    },
-    {
-      id: 24,
-      question: "Banki starają się trzymać jak najniższe rezerwy nadobowiązkowe, gdyż:",
-      options: [
-        "Jest to prawnie zabronione",
-        "To się im nie opłaca",
-        "Może to spowodować krytyczną reakcję Banku Centralnego",
-        "Muszą od nich płacić podatek",
-        "Boją się kradzieży przez zrewoltowane społeczeństwo (tzw. run na banki)",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "To się im nie opłaca"
-    },
-    {
-      id: 25,
-      question: "Wprowadzenie unii celnej w sytuacji braku wolnego handlu prowadzi do:",
-      options: [
-        "Wzrostu wymiany handlowej",
-        "Spadku wymiany handlowej",
-        "Braku wpływu na wymianę handlową",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "Wzrostu wymiany handlowej"
-    },
-    {
-      id: 26,
-      question: "Załamana krzywa popytu (oligopol) jest:",
-      options: [
-        "Elastyczna, jeśli cena wzrasta i nieelastyczna, jeśli cena spada",
-        "Nieelastyczna, jeśli cena wzrasta i elastyczna, jeśli cena spada",
-        "Elastyczna przy wzroście jak i spadku ceny",
-        "Nieskończenie elastyczna przy wzroście cen"
-      ],
-      correctAnswer: "Elastyczna, jeśli cena wzrasta i nieelastyczna, jeśli cena spada"
-    },
-    {
-      id: 27,
-      question: "Popyt niefunkcjonalny to:",
-      options: [
-        "Popyt wynikający z cech jakościowych wybranego dobra",
-        "Popyt wynikający z oddziaływania efektów zewnętrznych na użyteczność",
-        "Możliwość nabycia dobra po danej cenie",
-        "Pragnienie nabycia dobra nie poparte możliwościami dochodowymi",
-        "Żadne"
-      ],
-      correctAnswer: "Popyt wynikający z oddziaływania efektów zewnętrznych na użyteczność"
-    },
-    {
-      id: 28,
-      question: "Jeśli w danej gospodarce mierzymy wartość produkcji w cenach z roku bazowego, to otrzymamy:",
-      options: [
-        "PKB nominalne",
-        "PKB per capita",
-        "PKB realne",
-        "Żadne"
-      ],
-      correctAnswer: "PKB realne"
-    },
-    {
-      id: 29,
-      question: "Jeśli nominalne PKB spadło z 2000 bln do 1500 bln w roku następnym, podczas gdy realne PKB nie zmieniło się, to oznacza to, że:",
-      options: [
-        "Ceny nie zmieniły się",
-        "Ceny spadły o 5%",
-        "Ceny spadły o 10%",
-        "Ceny spadły o 25%",
-        "Żadne"
-      ],
-      correctAnswer: "Ceny spadły o 25%"
-    },
-    {
-      id: 30,
-      question: "Do czynników produkcji zaliczamy:",
-      options: [
-        "Gospodarkę rynkową i centralnie planowaną",
-        "Tylko kapitał i ziemię",
-        "Pracę, ziemię i kapitał",
-        "Dobra wolne i dobra rzadkie",
-        "Żadne"
-      ],
-      correctAnswer: "Pracę, ziemię i kapitał"
-    },
-    {
-      id: 31,
-      question: "Sądy pozytywne to:",
-      options: [
-        "Wszelkie sądy na temat gospodarki",
-        "Stwierdzenia charakteryzujące rzeczywistość gospodarczą",
-        "Zalecenia, co robić, żeby było lepiej",
-        "Stwierdzenia wartościujące",
-        "Żadne"
-      ],
-      correctAnswer: "Stwierdzenia charakteryzujące rzeczywistość gospodarczą"
-    },
-    {
-      id: 32,
-      question: "Krzywa transformacji:",
-      options: [
-        "Pokazuje główne problemy okresu transformacji",
-        "Zawiera tylko ekonomicznie nieefektywne warianty wykorzystania zasobów",
-        "Odnosi się do różnych gospodarek, ale jest zawsze położona tak samo",
-        "Nazywana jest granicą możliwości produkcyjnych",
-        "Żadne"
-      ],
-      correctAnswer: "Nazywana jest granicą możliwości produkcyjnych"
-    },
-    {
-      id: 33,
-      question: "Bezrobocie frykcyjne występuje, gdy:",
-      options: [
-        "Jest duży odsetek bezrobotnych",
-        "Popyt na pracowników o określonych kwalifikacjach nie odpowiada podaży",
-        "Wzrasta liczba bezrobotnych na skutek podwyższania zasiłków",
-        "Występuje nadwyżka popytu nad podażą siły roboczej",
-        "Pracownicy rezygnują z dotychczasowej pracy, a nie znaleźli jeszcze nowej"
-      ],
-      correctAnswer: "Pracownicy rezygnują z dotychczasowej pracy, a nie znaleźli jeszcze nowej"
-    },
-    {
-      id: 34,
-      question: "Odpływ kapitału (system kursów płynnych i doskonale mobilny kapitał) w odniesieniu do waluty krajowej będzie powodował:",
-      options: [
-        "Aprecjację",
-        "Deprecjację",
-        "Dewaluację",
-        "Rewaluację",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "Deprecjację"
-    },
-    {
-      id: 35,
-      question: "Najniższy stopień kontroli nad ceną występuje w:",
-      options: [
-        "Konkurencji monopolistycznej",
-        "Monopolu",
-        "Oligopolu",
-        "Konkurencji doskonałej",
-        "Żadne"
-      ],
-      correctAnswer: "Konkurencji doskonałej"
-    },
-    {
-      id: 36,
-      question: "W warunkach konkurencji doskonałej koszt krańcowy jest równy:",
-      options: [
-        "Kosztom jednostkowym",
-        "Pokrywa koszty zmienne",
-        "Cenie",
-        "Zyskowi netto",
-        "Żadne"
-      ],
-      correctAnswer: "Cenie"
-    },
-    {
-      id: 37,
-      question: "Trzymanie oszczędności to przykład użycia pieniądza jako:",
-      options: [
-        "Jednostki rozrachunkowej",
-        "Środka tezauryzacji",
-        "Miernika odroczonych płatności",
-        "Środka wymiany",
-        "Żadne"
-      ],
-      correctAnswer: "Środka tezauryzacji"
-    },
-    {
-      id: 38,
-      question: "Jeśli cena wzrasta z 25 do 50, zaś popyt spada z 500 do 400, to cenowa elastyczność popytu wynosi:",
-      options: [
-        "–0,07",
-        "–0,20",
-        "–0,27",
-        "–0,50",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "–0,20"
-    },
-    {
-      id: 39,
-      question: "W długim okresie czasu firma działająca na rynku doskonale konkurencyjnym będzie zawsze miała:",
-      options: [
-        "Zyski zerowe",
-        "Dodatnie zyski ekonomiczne",
-        "Zyski bądź straty",
-        "Zyski zerowe bądź straty"
-      ],
-      correctAnswer: "Zyski zerowe"
-    },
-    {
-      id: 40,
-      question: "Jeśli w danej gospodarce mierzymy wartość produkcji na jednego mieszkańca, to otrzymamy:",
-      options: [
-        "PKB nominalne",
-        "PKB per capita",
-        "PKB realne",
-        "Żadne"
-      ],
-      correctAnswer: "PKB per capita"
-    },
-    {
-      id: 41,
-      question: "Jeśli nominalne PKB wzrosło z 2000 bln do 2100 bln w roku następnym, podczas gdy realne PKB nie zmieniło się, to oznacza to, że:",
-      options: [
-        "Ceny nie zmieniły się",
-        "Ceny wzrosły o 5%",
-        "Produkcja wzrosła o 10%",
-        "Ceny wzrosły o 25%",
-        "Żadne"
-      ],
-      correctAnswer: "Ceny wzrosły o 5%"
-    },
-    {
-      id: 42,
-      question: "Dobra publiczne to:",
-      options: [
-        "Dobra produkowane przez firmy państwowe",
-        "Dobra wolne",
-        "Dobra społecznie pożądane, a prywatnie mało opłacalne",
-        "Żadne"
-      ],
-      correctAnswer: "Dobra społecznie pożądane, a prywatnie mało opłacalne"
-    },
-    {
-      id: 43,
-      question: "W gospodarce centralnie planowanej dominującym podmiotem jest:",
-      options: [
-        "Społeczeństwo",
-        "Państwo",
-        "Przedsiębiorstwo prywatne",
-        "Gospodarstwo domowe",
-        "Żadne"
-      ],
-      correctAnswer: "Państwo"
-    },
-    {
-      id: 44,
-      question: "Bezrobocie klasyczne występuje, gdy:",
-      options: [
-        "Jest duży odsetek bezrobotnych",
-        "Popyt na pracowników o określonych kwalifikacjach nie odpowiada podaży",
-        "Wzrasta liczba bezrobotnych na skutek podwyższania zasiłków",
-        "Występuje nadwyżka podaży nad popytem na siłę roboczą przy zbyt wysokiej płacy",
-        "Popyt rynkowy jest zbyt mały"
-      ],
-      correctAnswer: "Występuje nadwyżka podaży nad popytem na siłę roboczą przy zbyt wysokiej płacy"
-    },
-    {
-      id: 45,
-      question: "Napływ kapitału (system kursów stałych i doskonale mobilny kapitał) w odniesieniu do waluty krajowej będzie zmuszał do:",
-      options: [
-        "Aprecjację",
-        "Deprecjację",
-        "Dewaluację",
-        "Rewaluację",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "Aprecjację"
-    },
-    {
-      id: 46,
-      question: "Pewien stopień kontroli nad ceną występuje w:",
-      options: [
-        "Konkurencji monopolistycznej",
-        "Monopolu",
-        "Oligopolu",
-        "Konkurencji doskonałej",
-        "Żadne"
-      ],
-      correctAnswer: [
-        "Konkurencji monopolistycznej",
-      ]
-    },
-    {
-      id: 47,
-      question: "Jeśli dochód wzrasta się z 1000 do 4000, a elastyczność dochodowa popytu wynosi 0,08, przy początkowym popycie równym 400, to popyt zmieni się do:",
-      options: [
-        "500",
-        "350",
-        "180",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "500"
-    },
-    {
-      id: 48,
-      question: "Która z poniższych pozycji jest zapisana po stronie aktywów bilansu banku komercyjnego:",
-      options: [
-        "Wartość depozytów",
-        "Przyjęte wkłady terminowe",
-        "Pożyczki udzielone",
-        "Przyjęte wkłady na żądanie",
-        "b i d",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "Pożyczki udzielone"
-    },
-    {
-      id: 49,
-      question: "Efektem liberalizacji rynku dóbr i usług nie jest:",
-      options: [
-        "Wzrost konkurencyjności",
-        "Lepsza jakość",
-        "Nieefektywna alokacja zasobów",
-        "Spadek cen krajowych",
-        "Żadne"
-      ],
-      correctAnswer: "Nieefektywna alokacja zasobów"
-    },
-    {
-      id: 50,
-      question: "Zmiana poziomu wydatków konsumpcyjnych podzielona przez zmianę poziomu dochodu do dyspozycji to:",
-      options: [
-        "Krańcowa skłonność do oszczędzania",
-        "Krańcowa skłonność do konsumpcji",
-        "Przeciętna skłonność do oszczędzania",
-        "Przeciętna skłonność do konsumpcji",
-        "Żadne"
-      ],
-      correctAnswer: "Krańcowa skłonność do konsumpcji"
-    },
-    {
-      id: 51,
-      question: "Gdy współczynnik elastyczności dochodowej wynosi 1,75, to:",
-      options: [
-        "Popyt jest mało elastyczny względem dochodu",
-        "Popyt jest sztywny względem dochodu",
-        "Mamy do czynienia z dobrami wyższego rzędu",
-        "Mamy do czynienia z dobrami podrzędnymi",
-        "Żadne"
-      ],
-      correctAnswer: "Mamy do czynienia z dobrami wyższego rzędu"
-    },
-    {
-      id: 52,
-      question: "Które z problemów dotyczą mikroekonomii?",
-      options: [
-        "Zasób pieniądza w gospodarce",
-        "Sposoby minimalizowania kosztów przez firmę",
-        "Polityka podatkowa rządu",
-        "Związek między inflacją a bezrobociem",
-        "Żadne"
-      ],
-      correctAnswer: "Sposoby minimalizowania kosztów przez firmę"
-    },
-    {
-      id: 53,
-      question: "PKB w stałych cenach oznacza:",
-      options: [
-        "Poziom PKB po korekcie uwzględniającej zmiany w gustach konsumentów, dostępność towarów oraz siłę nabywczą ludności",
-        "Całkowity produkt wyrażony w cenach, po których dobra i usługi zostały faktycznie sprzedane",
-        "Poziom PKB, który nie uległ zmianie z roku na rok",
-        "PKB w cenach z roku bazowego",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "PKB w cenach z roku bazowego"
-    },
-    {
-      id: 54,
-      question: "Jeśli realne PKB wzrosło z 2000 bln do 2100 bln w roku następnym, podczas gdy nominalne PKB wzrosło o 5%, to oznacza to, że:",
-      options: [
-        "Produkcja nie zmieniła się",
-        "Ceny spadły",
-        "Produkcja wzrosła o 5%",
-        "Ceny wzrosły o 5%",
-        "Żadne"
-      ],
-      correctAnswer: "Produkcja wzrosła o 5%"
-    },
-    {
-      id: 55,
-      question: "Jeśli zakład produkcyjny sprzedaje meble o wartości 50 000 zł, zaś wartość dóbr pośrednich wykorzystanych w produkcji wynosi 30 000 zł, to wartość dodana, która zwiększy PKB, wyniesie:",
-      options: [
-        "20 000 zł",
-        "30 000 zł",
-        "40 000 zł",
-        "50 000 zł",
-        "80 000 zł"
-      ],
-      correctAnswer: "20 000 zł"
-    },
-    {
-      id: 56,
-      question: "Ekonomia zajmuje się:",
-      options: [
-        "Związkami między gospodarką i polityką",
-        "Wszelkimi działaniami ludzi",
-        "Przede wszystkim gospodarczą działalnością ludzi",
-        "Wszystkie powyższe",
-        "Żadne"
-      ],
-      correctAnswer: "Przede wszystkim gospodarczą działalnością ludzi"
-    },
-    {
-      id: 57,
-      question: "Zasoby gospodarcze to:",
-      options: [
-        "Tylko zasoby naturalne",
-        "Tylko zasoby będące wynikiem produkcji",
-        "Tylko zasoby ludzkie",
-        "Wszystkie powyższe",
-        "Żadne"
-      ],
-      correctAnswer: "Wszystkie powyższe"
-    },
-    {
-      id: 58,
-      question: "Bezrobocie keynesowskie to bezrobocie:",
-      options: [
-        "Frykcyjne",
-        "Strukturalne",
-        "Klasyczne",
-        "Wynikające z niedostatku popytu",
-        "Żadne"
-      ],
-      correctAnswer: "Wynikające z niedostatku popytu"
-    },
-    {
-      id: 59,
-      question: "Odpływ kapitału (system kursów stałych i doskonale mobilny kapitał) w odniesieniu do waluty krajowej będzie zmuszał do:",
-      options: [
-        "Aprecjację",
-        "Deprecjację",
-        "Dewaluację",
-        "Rewaluację",
-        "Żadne"
-      ],
-      correctAnswer: "Deprecjację"
-    },
-    {
-      id: 60,
-      question: "Przedsiębiorstwo osiąga maksymalną wielkość zysku, jeśli koszt krańcowy jest równy:",
-      options: [
-        "Kosztom jednostkowym",
-        "Pokrywa koszty zmienne",
-        "Cenie",
-        "Zyskowi netto",
-        "Utargowi krańcowemu",
-        "Żadne"
-      ],
-      correctAnswer: "Utargowi krańcowemu"
-    },
-    {
-      id: 61,
-      question: "Dobro normalne to takie, dla którego:",
-      options: [
-        "Elastyczność cenowa popytu jest większa od zera",
-        "Elastyczność cenowa popytu jest większa od –1",
-        "Elastyczność dochodowa jest większa od 1",
-        "Elastyczność dochodowa jest większa od zera"
-      ],
-      correctAnswer: "Elastyczność dochodowa jest większa od zera"
-    },
-    {
-      id: 62,
-      question: "Operacje otwartego rynku można określić jako sprzedaż (kupno):",
-      options: [
-        "Obligacji banku centralnego przez ministerstwo skarbu publicznego",
-        "Obligacji banku centralnego przez bank centralny rządowi",
-        "Rządowych papierów wartościowych przez bank centralny publiczności niebankowej",
-        "Rządowych papierów wartościowych przez rząd publiczności niebankowej",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "Rządowych papierów wartościowych przez bank centralny publiczności niebankowej"
-    },
-    {
-      id: 63,
-      question: "Efekt substytucyjny to:",
-      options: [
-        "Zastąpienie dóbr gorszych lepszymi jakościowo wraz ze wzrostem dochodu",
-        "Reakcja na spadek realnego dochodu przy niezmienionej relacji cen",
-        "Równoległe przesunięcie linii ograniczenia budżetowego",
-        "Reakcja na zmianę relacji cen przy zachowaniu poprzedniej stopy życiowej",
-        "Żadne"
-      ],
-      correctAnswer: "Reakcja na zmianę relacji cen przy zachowaniu poprzedniej stopy życiowej"
-    },
-    {
-      id: 64,
-      question: "W skali kraju inwestycje brutto różnią się od inwestycji netto o:",
-      options: [
-        "Wartość podatków pośrednich",
-        "Deficyt bilansu płatniczego",
-        "Inflację",
-        "Amortyzację",
-        "Żadne"
-      ],
-      correctAnswer: "Amortyzację"
-    },
-    {
-      id: 65,
-      question: "Spadek dochodu konsumenta powoduje, że:",
-      options: [
-        "Krzywa obojętności przesuwa się równolegle w lewo",
-        "Krzywa obojętności przesuwa się równolegle w prawo",
-        "Linia ograniczenia budżetowego przesuwa się równolegle w lewo",
-        "Linia ograniczenia budżetowego przesuwa się równolegle w prawo",
-        "Żadne"
-      ],
-      correctAnswer: "Linia ograniczenia budżetowego przesuwa się równolegle w lewo"
-    },
-    {
-      id: 66,
-      question: "Stopa bezrobocia jest definiowana jako stosunek liczby zatrudnionych do:",
-      options: [
-        "Ludności ogółem",
-        "Zatrudnionych, aktualnie pracujących",
-        "Zatrudnionych",
-        "Aktywnych zawodowo",
-        "Dorosłej ludności poza zakładami zamkniętymi",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "Aktywnych zawodowo"
-    },
-    {
-      id: 67,
-      question: "Paradoks Veblena to sytuacja, w której:",
-      options: [
-        "Rośnie popyt na dobra normalne, a maleje na podrzędne",
-        "Wzrost cen podstawowych dóbr konsumpcyjnych powoduje wzrost popytu na nie",
-        "Wzrost cen dóbr wyższego rzędu powoduje wzrost popytu na nie",
-        "W miarę wzrostu dochodów popyt na dobra niższego rzędu spada",
-        "Żadne"
-      ],
-      correctAnswer: "Wzrost cen dóbr wyższego rzędu powoduje wzrost popytu na nie"
-    },
-    {
-      id: 68,
-      question: "Jeśli inne czynniki pozostają niezmienione, popyt spada, kiedy:",
-      options: [
-        "Ceny substytutów wzrastają",
-        "Ceny dóbr komplementarnych wzrastają",
-        "Ceny czynników produkcji wzrastają",
-        "Ceny czynników produkcji spadają"
-      ],
-      correctAnswer: "Ceny dóbr komplementarnych wzrastają"
-    },
-    {
-      id: 69,
-      question: "Jeśli cena wzrasta z 20 do 30, a popyt spada z 500 do 400, to cenowa elastyczność popytu wynosi:",
-      options: [
-        "–0,20",
-        "–0,05",
-        "–0,40",
-        "–0,75",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "–0,40"
-    },
-    {
-      id: 70,
-      question: "Jeśli dochód wzrasta się z 3000 do 4000, a elastyczność dochodowa popytu wynosi 0,75 przy początkowym popycie równym 400, to popyt zmieni się do:",
-      options: [
-        "500",
-        "350",
-        "180",
-        "75",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "500"
-    },
-    {
-      id: 71,
-      question: "Jeśli cena dobra X wzrasta z 20 do 30, a popyt na dobro Y wzrasta z 500 do 600, to elastyczność mieszana wynosi:",
-      options: [
-        "–0,80",
-        "–0,13",
-        "0,13",
-        "0,40",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "0,40"
-    },
-    {
-      id: 72,
-      question: "Które z poniższych działań prowadzi do wzrostu utargu całkowitego?",
-      options: [
-        "Spadek ceny, jeśli ePD > –1",
-        "Wzrost ceny, jeśli ePD < –1",
-        "Wzrost lub spadek ceny, jeśli ePD = –1",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "Żadne z powyższych"
-    },
-    {
-      id: 73,
-      question: "Dobro normalne to takie, dla którego:",
-      options: [
-        "Elastyczność cenowa popytu większa od zera",
-        "Elastyczność cenowa popytu większa od –1",
-        "Elastyczność dochodowa jest większa od 1",
-        "Elastyczność dochodowa jest większa od zera"
-      ],
-      correctAnswer: "Elastyczność dochodowa jest większa od zera"
-    },
-    {
-      id: 74,
-      question: "W ostatnich latach dochody ludności spadły o 2%, podczas gdy sprzedaż produktów firmy Niewiemjakiej wzrosła o 6%. Ceny produktów w tym okresie się nie zmieniały. Można stąd wnioskować, że:",
-      options: [
-        "Dochodowa elastyczność jest ujemna",
-        "Dochodowa elastyczność jest dodatnia i mniejsza od 1",
-        "Dochodowa elastyczność jest większa od 1",
-        "Dochodowa elastyczność jest zerowa"
-      ],
-      correctAnswer: "Dochodowa elastyczność jest ujemna"
-    },
-    {
-      id: 75,
-      question: "Załóżmy, że elastyczność mieszana dwóch dóbr wynosi –0,50. Wzrost ceny pierwszego dobra będzie:",
-      options: [
-        "Powodował przesunięcie krzywej popytu dobra drugiego w prawo",
-        "Powodował przesunięcie krzywej popytu drugiego dobra w lewo",
-        "Ruch wzdłuż krzywej popytu drugiego dobra",
-        "Ma nieprzewidywalny efekt na krzywą popytu drugiego dobra"
-      ],
-      correctAnswer: "Powodował przesunięcie krzywej popytu drugiego dobra w lewo"
-    },
-    {
-      id: 76,
-      question: "Jeśli TR = 200Q – 20Q² i Q = 30, to utarg krańcowy wynosi:",
-      options: [
-        "280",
-        "80",
-        "30",
-        "180",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "Żadne z powyższych"
-    },
-    {
-      id: 77,
-      question: "Jeśli krzywa popytu jest opisana jako: P = 800 – 4Q, to przy wzroście ceny z 200 do 300 elastyczność cenowa popytu wyniesie:",
-      options: [
-        "–0,50",
-        "–0,25",
-        "–1",
-        "–33,3",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "–0,25"
-    },
-    {
-      id: 78,
-      question: "Jeśli krzywa popytu jest opisana jako: P = 800 – 4Q, to utarg krańcowy jest równy zero dla Q równego:",
-      options: [
-        "150",
-        "100",
-        "125",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "100"
-    },
-    {
-      id: 79,
-      question: "Funkcja popytu na zboże: P = 500 – 4Q, a funkcja podaży: P = –100 + 2Q. Rząd ustalił cenę na poziomie 80 i zgodził się na wykupywanie oraz niszczenie całej nadwyżkowej podaży. Wykupienie zboża będzie kosztowało:",
-      options: [
-        "7600",
-        "4800",
-        "16200",
-        "1200",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "4800"
-    },
-    {
-      id: 80,
-      question: "Jeśli płaca (za 1 godzinę) wynosi 40, a krańcowy przychód z produktu pracy (MRPL) wynosi 45, racjonalny producent powinien:",
-      options: [
-        "Zwiększyć zatrudnienie siły roboczej",
-        "Zmniejszyć zatrudnienie siły roboczej",
-        "Nie zmieniać wielkości produkcji",
-        "Zwiększyć płace"
-      ],
-      correctAnswer: "Zwiększyć zatrudnienie siły roboczej"
-    },
-    {
-      id: 81,
-      question: "W długim okresie czasu firma działająca na rynku doskonale konkurencyjnym będzie zawsze miała:",
-      options: [
-        "Zyski zerowe",
-        "Dodatnie zyski ekonomiczne",
-        "Zyski bądź straty",
-        "Zyski zerowe bądź straty"
-      ],
-      correctAnswer: "Zyski zerowe"
-    },
-    {
-      id: 82,
-      question: "W krótkim okresie firmy działające na rynku doskonale konkurencyjnym zostaną zamknięte, jeśli:",
-      options: [
-        "Koszty krańcowe są niższe od kosztów przeciętnych",
-        "Cena jest niższa od przeciętnych kosztów stałych",
-        "Cena jest niższa od przeciętnych kosztów zmiennych",
-        "Cena jest niższa od krańcowego utargu",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "Cena jest niższa od przeciętnych kosztów zmiennych"
-    },
-    {
-      id: 83,
-      question: "Utarg całkowity monopolisty wynosi TR = 400Q – 5Q², zaś koszty całkowite TC = 500 + 5Q². Wielkość produkcji maksymalizująca zyski wyniesie:",
-      options: [
-        "10",
-        "20",
-        "30",
-        "40",
-        "Żadne z powyższych"
-      ],
-      correctAnswer: "20"
-    },
-    {
-      id: 84,
-      question: "Rynek oligopolu charakteryzuje mała liczba przedsiębiorstw, które:",
-      options: [
-        "Stoją w obliczu doskonale elastycznych krzywych popytu",
-        "Stoją w obliczu doskonale nieelastycznych krzywych popytu",
-        "Wytwarzają dobra komplementarne",
-        "Podejmują decyzje cenowe i produkcyjne, uwzględniając postępowanie konkurentów"
-      ],
-      correctAnswer: "Podejmują decyzje cenowe i produkcyjne, uwzględniając postępowanie konkurentów"
-    },
-    {
-      id: 85,
-      question: "Załamana krzywa popytu (oligopol) jest:",
-      options: [
-        "Elastyczna, jeśli cena wzrasta i nieelastyczna, jeśli cena spada",
-        "Nieelastyczna, jeśli cena wzrasta i elastyczna, jeśli cena spada",
-        "Elastyczna przy wzroście jak i spadku ceny",
-        "Nieskończenie elastyczna przy wzroście cen"
-      ],
-      correctAnswer: "Elastyczna, jeśli cena wzrasta i nieelastyczna, jeśli cena spada"
-    },
-    {
-      id: 86,
-      question: "Zasoby siły roboczej to:",
-      options: [
-        "Ludność w wieku produkcyjnym",
-        "Liczba zatrudnionych",
-        "Liczba niezatrudnionych",
-        "Liczba zatrudnionych i niezatrudnionych"
-      ],
-      correctAnswer: "Liczba zatrudnionych i niezatrudnionych"
-    }
-  ];
-  
-  export interface QuestionRange {
-    id: number;
-    label: string;
-    startId: number;
-    endId: number;
-  }
-  
-  export const questionRanges: QuestionRange[] = [
-    { id: 1, label: "Questions 1 - 10", startId: 1, endId: 10 },
-    { id: 2, label: "Questions 11 - 20", startId: 11, endId: 20 },
-    { id: 3, label: "Questions 21 - 30", startId: 21, endId: 30 },
-    { id: 4, label: "Questions 31 - 40", startId: 31, endId: 40 },
-    { id: 5, label: "Questions 41 - 50", startId: 41, endId: 50 },
-    { id: 6, label: "Questions 51 - 60", startId: 51, endId: 60 },
-    { id: 7, label: "Questions 61 - 70", startId: 61, endId: 70 },
-    { id: 8, label: "Questions 71 - 80", startId: 71, endId: 80 },
-    { id: 9, label: "Questions 81 - 86", startId: 81, endId: 86 }
-  ];
-  
-  export const getQuestionsFromRanges = (selectedRangeIds: number[]): QuizQuestion[] => {
-    // Jeśli nie ma wybranych zakresów, zwróć wszystkie pytania
-    if (selectedRangeIds.length === 0) return questions;
-  
-    const selectedRanges = questionRanges.filter(range => 
-      selectedRangeIds.includes(range.id)
-    );
-  
-    return questions.filter(question =>
-      selectedRanges.some(range => 
-        question.id >= range.startId && question.id <= range.endId
-      )
-    );
-  };
+];
+
+export interface QuestionRange {
+  id: number;
+  label: string;
+  startId: number;
+  endId: number;
+}
+
+export const questionRanges: QuestionRange[] = [
+  { id: 1, label: "Questions 1 - 10", startId: 1, endId: 10 },
+  { id: 2, label: "Questions 11 - 20", startId: 11, endId: 20 },
+  { id: 3, label: "Questions 21 - 30", startId: 21, endId: 30 },
+  { id: 4, label: "Questions 31 - 40", startId: 31, endId: 40 },
+  { id: 5, label: "Questions 41 - 50", startId: 41, endId: 50 },
+  { id: 6, label: "Questions 51 - 60", startId: 51, endId: 60 },
+  { id: 7, label: "Questions 61 - 70", startId: 61, endId: 70 },
+  { id: 8, label: "Questions 71 - 80", startId: 71, endId: 80 },
+  { id: 9, label: "Questions 81 - 83", startId: 81, endId: 83 }
+];
+
+export const getQuestionsFromRanges = (selectedRangeIds: number[]): QuizQuestion[] => {
+  // Jeśli nie ma wybranych zakresów, zwróć wszystkie pytania
+  if (selectedRangeIds.length === 0) return questions;
+
+  const selectedRanges = questionRanges.filter(range =>
+    selectedRangeIds.includes(range.id)
+  );
+
+  return questions.filter(question =>
+    selectedRanges.some(range =>
+      question.id >= range.startId && question.id <= range.endId
+    )
+  );
+};

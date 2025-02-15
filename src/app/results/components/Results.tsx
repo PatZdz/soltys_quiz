@@ -57,18 +57,20 @@ export default function Results() {
       quizQuestions.forEach(question => {
         if (!question) return;
         
-        const answer = userAnswers[question.id];
-        const isCorrect = Array.isArray(question.correctAnswer) 
-          ? question.correctAnswer.includes(answer)
-          : question.correctAnswer === answer;
-
+        const userAnswer = userAnswers[question.id];
+        const isCorrect = Array.isArray(question.correctAnswer)
+          ? Array.isArray(userAnswer) && 
+            userAnswer.length === question.correctAnswer.length && 
+            userAnswer.every(a => question.correctAnswer.includes(a))
+          : question.correctAnswer === userAnswer;
+      
         if (isCorrect) correct++;
-
+      
         answersResults.push({
           question: question.question,
-          userAnswer: answer || 'No answer provided',
+          userAnswer: Array.isArray(userAnswer) ? userAnswer.join(', ') : userAnswer || 'No answer provided',
           correctAnswer: Array.isArray(question.correctAnswer) 
-            ? question.correctAnswer[0] 
+            ? question.correctAnswer.join(', ')
             : question.correctAnswer,
           isCorrect
         });
@@ -166,7 +168,7 @@ export default function Results() {
                 <p className="text-lg">
                   Wynik: {score} z {totalQuestions} ({Math.round((score / totalQuestions) * 100)}%)
                 </p>
-                {score === 86 && totalQuestions === 86 && (
+                {score === 83 && totalQuestions === 83 && (
                   <img src="/easter.jpg" alt="" className="h-20 w-20 object-contain" />
                 )}
               </div>
