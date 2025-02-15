@@ -12,7 +12,7 @@ export default function SliderContent() {
 
   useEffect(() => {
     if (selectedRangesParam) {
-      const ranges = selectedRangesParam.split(',').map(Number);
+      // We don't need to store ranges in a variable if we're not using it
       setMaxQuestions(83);
       setSelectedQuestions(Math.min(selectedQuestions, 83));
     } else {
