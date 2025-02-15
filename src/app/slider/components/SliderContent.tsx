@@ -13,7 +13,7 @@ export default function SliderContent() {
   useEffect(() => {
     if (selectedRangesParam) {
       const ranges = selectedRangesParam.split(',').map(Number);
-      const totalQuestions = ranges.reduce((sum, range) => {
+      const totalQuestions = ranges.reduce((sum, _) => {
         // Each range contains 10 questions
         return sum + 10;
       }, 0);
