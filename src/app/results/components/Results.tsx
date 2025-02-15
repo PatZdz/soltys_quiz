@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { getQuestionsFromRanges } from '@/data/questions';
+import Image from 'next/image';  // Add this import at the top with other imports
 
 interface AnswerResult {
   question: string;
@@ -169,7 +170,13 @@ export default function Results() {
                   Wynik: {score} z {totalQuestions} ({Math.round((score / totalQuestions) * 100)}%)
                 </p>
                 {score === 83 && totalQuestions === 83 && (
-                  <img src="/easter.jpg" alt="" className="h-20 w-20 object-contain" />
+                  <Image 
+                    src="/easter.jpg" 
+                    alt="" 
+                    width={80}
+                    height={80}
+                    className="object-contain"
+                  />
                 )}
               </div>
             </div>
