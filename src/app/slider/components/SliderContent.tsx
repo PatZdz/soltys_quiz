@@ -12,9 +12,14 @@ export default function SliderContent() {
 
   useEffect(() => {
     if (selectedRangesParam) {
-      // We don't need to store ranges in a variable if we're not using it
-      setMaxQuestions(83);
-      setSelectedQuestions(Math.min(selectedQuestions, 83));
+      const ranges = selectedRangesParam.split(',').map(Number);
+      const totalQuestions = ranges.reduce((sum, range) => {
+        // Each range contains 10 questions
+        return sum + 10;
+      }, 0);
+      
+      setMaxQuestions(totalQuestions);
+      setSelectedQuestions(Math.min(selectedQuestions, totalQuestions));
     } else {
       router.push('/range');
     }
