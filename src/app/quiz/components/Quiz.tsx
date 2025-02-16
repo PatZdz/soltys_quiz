@@ -9,6 +9,18 @@ export default function Quiz() {
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const [userAnswers, setUserAnswers] = useState<{ [key: number]: string[] }>({});
+  // Add new state for shuffled options
+  const [shuffledOptions, setShuffledOptions] = useState<{ [key: number]: string[] }>({});
+
+  // Add helper function for shuffling options
+  const shuffleOptions = (options: string[]): string[] => {
+    const shuffled = [...options];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
 
   useEffect(() => {
     const rangesParam = searchParams.get('ranges');
@@ -17,15 +29,20 @@ export default function Quiz() {
     
     if (questionsParam) {
       const questionIds = questionsParam.split(',').map(Number);
-      const allQuestions = getQuestionsFromRanges([]); // Teraz zwróci wszystkie pytania
+      const allQuestions = getQuestionsFromRanges([]);
       const filteredQuestions = questionIds
         .map(id => allQuestions.find(q => q.id === id))
         .filter((q): q is QuizQuestion => q !== undefined);
       
       if (filteredQuestions.length > 0) {
         setQuestions(filteredQuestions);
+        // Shuffle options for all questions
+        const shuffled = filteredQuestions.reduce((acc, question) => {
+          acc[question.id] = shuffleOptions(question.options);
+          return acc;
+        }, {} as { [key: number]: string[] });
+        setShuffledOptions(shuffled);
       } else {
-        // Jeśli nie znaleziono pytań, przekieruj do strony głównej
         window.location.href = '/';
       }
     }
@@ -40,6 +57,12 @@ export default function Quiz() {
       }
       
       setQuestions(filteredQuestions);
+      // Shuffle options for all questions
+      const shuffled = filteredQuestions.reduce((acc, question) => {
+        acc[question.id] = shuffleOptions(question.options);
+        return acc;
+      }, {} as { [key: number]: string[] });
+      setShuffledOptions(shuffled);
     }
   }, [searchParams]);
 
@@ -104,6 +127,7 @@ export default function Quiz() {
     return <div>Loading...</div>;
   }
 
+  // Update the render part to use shuffled options
   return (
     <div className="w-full h-screen sm:h-auto sm:w-[672px] sm:min-w-[672px] card rounded-none sm:rounded-lg shadow-none sm:shadow-lg p-8 sm:p-8 sm:mx-auto">
       <div className="mb-8">
@@ -123,7 +147,7 @@ export default function Quiz() {
         </p>
 
         <div className="space-y-3">
-          {currentQuestion.options.map((option, index) => {
+          {shuffledOptions[currentQuestion.id]?.map((option, index) => {
             const currentAnswers = userAnswers[currentQuestion.id] || [];
             return (
               <button
