@@ -62,14 +62,14 @@ export default function Results() {
         const isCorrect = Array.isArray(question.correctAnswer)
           ? Array.isArray(userAnswer) && 
             userAnswer.length === question.correctAnswer.length && 
-            userAnswer.every(a => question.correctAnswer.includes(a))
-          : question.correctAnswer === userAnswer;
+            userAnswer.sort().join(',') === question.correctAnswer.sort().join(',')
+          : userAnswer[0] === question.correctAnswer;
       
         if (isCorrect) correct++;
       
         answersResults.push({
           question: question.question,
-          userAnswer: Array.isArray(userAnswer) ? userAnswer.join(', ') : userAnswer || 'No answer provided',
+          userAnswer: Array.isArray(userAnswer) ? userAnswer.join(', ') : userAnswer[0] || 'No answer provided',
           correctAnswer: Array.isArray(question.correctAnswer) 
             ? question.correctAnswer.join(', ')
             : question.correctAnswer,
