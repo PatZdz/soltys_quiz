@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { questionRanges, getQuestionsFromRanges } from '@/data/questions';
+import { questionRanges } from '@/data/questions';
 
 export default function SliderContent() {
   const searchParams = useSearchParams();
