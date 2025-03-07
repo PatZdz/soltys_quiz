@@ -1,6 +1,6 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Select from "./components/Select";
+import Header from "./home/Header";
+import Footer from "./home/Footer";
+import Select from "./home/Select";
 
 
 export default function Home() {

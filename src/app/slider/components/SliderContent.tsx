@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { questionRanges, getQuestionsFromRanges } from '@/data/questions';
 
 export default function SliderContent() {
   const searchParams = useSearchParams();
@@ -12,8 +13,16 @@ export default function SliderContent() {
 
   useEffect(() => {
     if (selectedRangesParam) {
-      const ranges = selectedRangesParam.split(',').map(Number);
-      const totalQuestions = ranges.length * 10;
+      const selectedRangeIds = selectedRangesParam.split(',').map(Number);
+      
+      // Obliczamy dokładną liczbę pytań w wybranych zakresach
+      const selectedRanges = questionRanges.filter(range => 
+        selectedRangeIds.includes(range.id)
+      );
+      
+      const totalQuestions = selectedRanges.reduce((sum, range) => 
+        sum + (range.endId - range.startId + 1), 0
+      );
       
       setMaxQuestions(totalQuestions);
       setSelectedQuestions(Math.min(selectedQuestions, totalQuestions));

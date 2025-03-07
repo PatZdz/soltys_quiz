@@ -2,31 +2,22 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-
-// Remove or comment out the unused import
-// import { QuestionRange } from '@/data/questions';
+import { questionRanges } from '@/data/questions';
 
 interface RangeOption {
   id: number;
   label: string;
 }
 
-// Make sure to add the default export
 export default function QuestionRangeSelector() {
   const [selectedRanges, setSelectedRanges] = useState<number[]>([]);
   const router = useRouter();
 
-  const questionRanges: RangeOption[] = [
-    { id: 1, label: 'Pytania 1 - 10' },
-    { id: 2, label: 'Pytania 11 - 20' },
-    { id: 3, label: 'Pytania 21 - 30' },
-    { id: 4, label: 'Pytania 31 - 40' },
-    { id: 5, label: 'Pytania 41 - 50' },
-    { id: 6, label: 'Pytania 51 - 60' },
-    { id: 7, label: 'Pytania 61 - 70' },
-    { id: 8, label: 'Pytania 71 - 80' },
-    { id: 9, label: 'Pytania 81 - 83' },
-  ];
+  // Używamy zakresów pytań bezpośrednio z pliku questions.ts
+  const rangeOptions: RangeOption[] = questionRanges.map(range => ({
+    id: range.id,
+    label: `Pytania ${range.startId} - ${range.endId}`
+  }));
 
   const handleRangeSelect = (rangeId: number) => {
     setSelectedRanges(prev =>
@@ -40,7 +31,7 @@ export default function QuestionRangeSelector() {
     <div className="w-full bg-[#FFFFFF] rounded-none sm:rounded-lg shadow-lg p-10 sm:p-8 min-h-screen sm:min-h-0">
       <h1 className="text-xl font-medium text-gray-700 mb-4">Wybierz zakres pytań</h1>
       <div className="space-y-2">
-        {questionRanges.map((range) => (
+        {rangeOptions.map((range) => (
           <label
             key={range.id}
             className={`flex items-center p-2 sm:p-3 rounded-lg border ${

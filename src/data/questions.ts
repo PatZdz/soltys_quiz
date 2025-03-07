@@ -28,7 +28,7 @@ export interface QuestionRange {
 export const questions: QuizQuestion[] = [
   {
     id: 1,
-    question: "Marketing 5.0 wg Kotlera (3odp)",
+    question: "Marketing 5.0 wg Kotlera (Wielokrotny wybór)",
     options: [
       "Polega na wykorzystaniu w działaniach marketingowych możliwości jakie daje technologia tzw. next-tech",
       "Oparty jest na dwóch filarach – data-driven marketing i agile marketing",
@@ -65,7 +65,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 4,
-    question: "Innowacja, która jest przełomem technologicznym, uznawana jest za radykalną i która często przekształca branże i ma zdolność do tworzenia nowego rynku ma",
+    question: "Innowacja, która jest przełomem technologicznym, uznawana jest za radykalną i która często przekształca branże i ma zdolność do tworzenia nowego rynku ma (Wielokrotny wybór)",
     options: [
       "Duży wpływ na rynek",
       "Nowość w zakresie wysokich technologii",
@@ -79,7 +79,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 5,
-    question: "Internet rzeczy umożliwia",
+    question: "Internet rzeczy umożliwia (Wielokrotny wybór)",
     options: [
       "Wzrost produktywności",
       "Ekspansję na nowe rynki",
@@ -93,7 +93,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 6,
-    question: "Na jakie trzy grupy można podzielić technologie oferowane przez MarTech?",
+    question: "Na jakie trzy grupy można podzielić technologie oferowane przez MarTech? (Wielokrotny wybór)",
     options: [
       "Technologie stymulacyjne",
       "Technologie obliczeniowe",
@@ -108,7 +108,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 7,
-    question: "Zgodnie z koncepcją New 4c konsument postrzega produkt lub usługę jako instrument marketingu Mix poprzez pryzmat",
+    question: "Zgodnie z koncepcją New 4c konsument postrzega produkt lub usługę jako instrument marketingu Mix poprzez pryzmat (Wielokrotny wybór)",
     options: [
       "Możliwości współtworzenia",
       "Wygody zakupu",
@@ -123,7 +123,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 8,
-    question: "Jakie są główne cele regulacji dotyczących ochrony danych takich jak Rodo? (wielokrotny wybór)",
+    question: "Jakie są główne cele regulacji dotyczących ochrony danych takich jak Rodo? (Wielokrotny wybór)",
     options: [
       "Wzmocnienie propos praw osób które dane dotyczą",
       "Zwiększenie przejrzystości w gromadzeniu i wykorzystaniu danych",
@@ -182,7 +182,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 13,
-    question: "Technologie cyfrowe to bardzo wyjątkowy obszar który charakteryzuje się",
+    question: "Technologie cyfrowe to bardzo wyjątkowy obszar który charakteryzuje się (Wielokrotny wybór)",
     options: [
       "Decentralizacją",
       "Wzrostem wykładniczym",
@@ -208,7 +208,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 15,
-    question: "Które z poniższych firm opierają swój model biznesowy na zasadach peer to peer",
+    question: "Które z poniższych firm opierają swój model biznesowy na zasadach peer to peer (Wielokrotny wybór)",
     options: [
       "AirBnb",
       "Uber",
@@ -267,7 +267,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 20,
-    question: "Filarami cyfrowej transformacji są (wielokrotny wybór):",
+    question: "Filarami cyfrowej transformacji są (Wielokrotny wybór):",
     options: [
       "Pamięć masowa",
       "Szerokość pasma komunikacyjnego",
@@ -336,7 +336,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 26,
-    question: "Zasadę 4V wykorzystuje się do (wielokrotny wybór):",
+    question: "Zasadę 4V wykorzystuje się do (Wielokrotny wybór):",
     options: [
       "Określania dużej ilości danych",
       "Określania dużej zmienności danych",
@@ -384,7 +384,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 30,
-    question: "Dojrzałość cyfrowa (wielokrotny wybór):",
+    question: "Dojrzałość cyfrowa (Wielokrotny wybór):",
     options: [
       "Określa stan i dynamikę transformacji cyfrowej w organizacji",
       "Odzwierciedla zwinność i umiejętność organizacji do wykorzystywania na swoją korzyść rozwoju technologicznego",
@@ -443,7 +443,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 35,
-    question: "Cyfryzacja nie dokonała by się gdyby nie rozwój w obszarach (wielokrotny wybór):",
+    question: "Cyfryzacja nie dokonała by się gdyby nie rozwój w obszarach (Wielokrotny wybór):",
     options: [
       "Oprogramowania i systemów informatycznych",
       "Mocy obliczeniowej",
@@ -502,7 +502,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 40,
-    question: "WINTEL to skrót opisujący współpracę pomiędzy Windows i Intel. Opiera się ona na triadzie, która obejmuje (wielokrotny wybór):",
+    question: "WINTEL to skrót opisujący współpracę pomiędzy Windows i Intel. Opiera się ona na triadzie, która obejmuje (Wielokrotny wybór):",
     options: [
       "Wszechmocną siłę obliczeniową – bardziej wymagające",
       "Algorytmy – większa ilość danych do przetworzenia",
@@ -538,7 +538,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 43,
-    question: "Co opisuje model 5A przedstawiony przez Phillipa Koltera (wielokrotny wybór):",
+    question: "Co opisuje model 5A przedstawiony przez Phillipa Koltera (Wielokrotny wybór):",
     options: [
       "Proces jaki przechodzą klienci szukający konkretnych marek",
       "Proces pozyskiwania klientów przez marki",
@@ -563,7 +563,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 45,
-    question: "Organizacja dojrzała cyfrowo to taka, w której (wielokrotny wybór):",
+    question: "Organizacja dojrzała cyfrowo to taka, w której (Wielokrotny wybór):",
     options: [
       "Pracownicy mają wysokie kompetencje cyfrowe",
       "Automatyzacja procesów jest stosowana wszędzie tam, gdzie jest to możliwe",
@@ -610,7 +610,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 49,
-    question: "Jakie są zalety sieci 5G dla społeczeństwa i biznesu? (wielokrotny wybór)",
+    question: "Jakie są zalety sieci 5G dla społeczeństwa i biznesu? (Wielokrotny wybór)",
     options: [
       "Ma większą przepustowość, dzięki czemu może obsługiwać wiele wymagających aplikacji i urządzeń jednocześnie",
       "Jest ultra stabilna",
@@ -712,7 +712,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 58,
-    question: "Do celów cyfryzacji NIE należy:",
+    question: "Do celów cyfryzacji NIE należy: (Wielokrotny wybór)",
     options: [
       "Rozbudowa wewnętrznego działu IT",
       "Konwersja wszelkich informacji do formatu cyfrowego",
@@ -726,7 +726,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 59,
-    question: "Cyfrowa transformacja nie dokonała by się, gdyby nie rozwój w obszarze (wielokrotny wybór):",
+    question: "Cyfrowa transformacja nie dokonała by się, gdyby nie rozwój w obszarze (Wielokrotny wybór):",
     options: [
       "Gromadzenia i przechowywania danych",
       "Zwiększenia ilości przeprowadzanych procesów, dokonywanych dzięki wzrostowi mocy obliczeniowej",
@@ -741,7 +741,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 60,
-    question: "Cyfrowy bliźniak (Digital Twin) to:",
+    question: "Cyfrowy bliźniak (Digital Twin) to: (Wielokrotny wybór)",
     options: [
       "Wirtualne odwzorowanie świata fizycznego w czasie rzeczywistym",
       "Wirtualna kopia obiektów wraz z możliwością symulacji procesów",
@@ -799,7 +799,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 65,
-    question: "Przemysł 4.0 to (wielokrotny wybór - wszystkie są poprawne w oryginale a,b,c)",
+    question: "Przemysł 4.0 to (Wielokrotny wybór)",
     options: [
       "Zmiana paradygmatu produkcji z produkcji masowej na produkcję kastomizowaną",
       "Koncepcja zmian organizacyjnych i technologicznych wraz z integracją łańcuchów wartości i rozwojem nowych modeli biznesowych",
@@ -814,7 +814,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 66,
-    question: "Do technologicznych fundamentów cyfrowej transformacji można zaliczyć (wielokrotny wybór):",
+    question: "Do technologicznych fundamentów cyfrowej transformacji można zaliczyć (Wielokrotny wybór):",
     options: [
       "Wykładniczy wzrost mocy obliczeniowej",
       "Coraz szybsze połączenia internetowe",
@@ -828,7 +828,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 67,
-    question: "Kluczowe technologie napędzające rozwój Przemysłu 4.0 to (wielokrotny wybór)",
+    question: "Kluczowe technologie napędzające rozwój Przemysłu 4.0 to (Wielokrotny wybór)",
     options: [
       "Internet rzeczy, druk 3D, AR, VR, mobile, chmura obliczeniowa",
       "Technologie wspierające procesy cyfrowej transformacji",
@@ -854,7 +854,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 69,
-    question: "Efektywny insight konsumencki (wielokrotny wybór)",
+    question: "Efektywny insight konsumencki (Wielokrotny wybór)",
     options: [
       "To charakterystyka m.in. oczekiwań i poglądów danego segmentu klientów, które odgrywają istotną rolę w procesie zakupu",
       "Charakteryzuje zasada 4R",
@@ -901,7 +901,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 73,
-    question: "Autonomiczne samochody będą zasilały bazy o dane (wielokrotny wybór)",
+    question: "Autonomiczne samochody będą zasilały bazy o dane (Wielokrotny wybór)",
     options: [
       "Pochodzące z sensorów i odczytujące sygnały ze świata zewnętrznego",
       "Dotyczące użytkowników w tym ich zainteresowań oraz preferencji konsumenckich",
@@ -1026,7 +1026,7 @@ export const questions: QuizQuestion[] = [
   },
   {
     id: 84,
-    question: "Na jakie trzy grupy można podzielić technologie oferowane przez MarTech?",
+    question: "Na jakie trzy grupy można podzielić technologie oferowane przez MarTech? (Wielokrotny wybór)",
     options: [
       "Stymulacyjne",
       "Obliczeniowe",
