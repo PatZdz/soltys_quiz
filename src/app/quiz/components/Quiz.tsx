@@ -154,10 +154,12 @@ export default function Quiz() {
                 key={index}
                 onClick={() => handleAnswerSelect(option)}
                 className={`w-full text-left flex items-center p-3 sm:p-4 rounded-lg border border-gray-200 
-                  ${currentAnswers.includes(option) ? 'bg-blue-200' : 'bg-blue-50'} 
+                  ${currentAnswers.includes(option) ? 'bg-blue-300' : 'bg-blue-50'} 
                   hover:bg-blue-100 cursor-pointer transition-colors`}
               >
-                <span className="ml-3 text-gray-700">{option}</span>
+                <span className="ml-3 text-gray-700">
+                  {option}
+                </span>
               </button>
             )
           })}
