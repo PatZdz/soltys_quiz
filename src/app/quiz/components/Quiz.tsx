@@ -156,8 +156,7 @@ export default function Quiz() {
                 key={index}
                 onClick={() => handleAnswerSelect(option)}
                 className={`w-full text-left flex items-center p-3 sm:p-4 rounded-lg border 
-                  ${isSelected ? 'bg-blue-300 border-blue-500' : 'bg-blue-50 border-gray-200'} 
-                  hover:bg-blue-100 cursor-pointer transition-colors`}
+                  ${isSelected ? 'bg-blue-300 border-blue-500' : 'bg-blue-50 border-gray-200'}`}
               >
                 <span className="ml-3 text-gray-700">
                   {option}
