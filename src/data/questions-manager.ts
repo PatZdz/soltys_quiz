@@ -1,7 +1,7 @@
 // questions-manager.ts
 
 import { QuizQuestion, questionRanges as questionRanges1, getQuestionsFromRanges as getQuestionsFromRanges1 } from './questions';
-import { questions as questions2, questionRanges as questionRanges2, getQuestionsFromRanges as getQuestionsFromRanges2 } from './questions2';
+import { questionRanges as questionRanges2, getQuestionsFromRanges as getQuestionsFromRanges2 } from './questions2';
 
 export interface QuestionSet {
   id: string;
