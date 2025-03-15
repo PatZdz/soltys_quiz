@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { QuizQuestion, getQuestionsFromRanges } from '@/data/questions';
+import { QuizQuestion } from '@/data/questions-manager';
+import { getQuestionSet } from '@/data/questions-manager';
 
 export default function Quiz() {
   const searchParams = useSearchParams();
@@ -26,6 +27,11 @@ export default function Quiz() {
     const rangesParam = searchParams.get('ranges');
     const countParam = searchParams.get('count');
     const questionsParam = searchParams.get('questions');
+    const setId = searchParams.get('set') || 'digital-transformation';
+    
+    // Get the selected question set
+    const questionSet = getQuestionSet(setId);
+    const getQuestionsFromRanges = questionSet.getQuestions;
     
     if (questionsParam) {
       const questionIds = questionsParam.split(',').map(Number);
@@ -115,6 +121,9 @@ export default function Quiz() {
         if (questionsParam) {
           params.set('questions', questionsParam);
         }
+        
+        const setId = searchParams.get('set') || 'digital-transformation';
+        params.set('set', setId);
     
         window.location.href = `/results?${params.toString()}`;
       }

@@ -2,11 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { questionRanges } from '@/data/questions';
+import { getQuestionSet } from '@/data/questions-manager';
 
 export default function SliderContent() {
   const searchParams = useSearchParams();
   const selectedRangesParam = searchParams.get('ranges');
+  const setId = searchParams.get('set') || 'digital-transformation';
   const [maxQuestions, setMaxQuestions] = useState<number>(0);
   const [selectedQuestions, setSelectedQuestions] = useState<number>(14);
   const router = useRouter();
@@ -14,6 +15,10 @@ export default function SliderContent() {
   useEffect(() => {
     if (selectedRangesParam) {
       const selectedRangeIds = selectedRangesParam.split(',').map(Number);
+      
+      // Get the selected question set
+      const questionSet = getQuestionSet(setId);
+      const questionRanges = questionSet.getRanges();
       
       // Obliczamy dokładną liczbę pytań w wybranych zakresach
       const selectedRanges = questionRanges.filter(range => 
@@ -29,10 +34,10 @@ export default function SliderContent() {
     } else {
       router.push('/range');
     }
-  }, [selectedRangesParam, router, selectedQuestions]);
+  }, [selectedRangesParam, router, selectedQuestions, setId]);
 
   const handleStartQuiz = () => {
-    router.push(`/quiz?count=${selectedQuestions}&ranges=${selectedRangesParam}`);
+    router.push(`/quiz?count=${selectedQuestions}&ranges=${selectedRangesParam}&set=${setId}`);
   };
 
   return (

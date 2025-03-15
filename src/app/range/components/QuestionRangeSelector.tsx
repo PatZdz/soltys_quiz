@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { questionRanges } from '@/data/questions';
+import { useState, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { getQuestionSet } from '@/data/questions-manager';
 
 interface RangeOption {
   id: number;
@@ -11,13 +11,24 @@ interface RangeOption {
 
 export default function QuestionRangeSelector() {
   const [selectedRanges, setSelectedRanges] = useState<number[]>([]);
+  const [rangeOptions, setRangeOptions] = useState<RangeOption[]>([]);
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const setId = searchParams.get('set') || 'digital-transformation';
 
-  // Używamy zakresów pytań bezpośrednio z pliku questions.ts
-  const rangeOptions: RangeOption[] = questionRanges.map(range => ({
-    id: range.id,
-    label: `Pytania ${range.startId} - ${range.endId}`
-  }));
+  useEffect(() => {
+    // Get the selected question set
+    const questionSet = getQuestionSet(setId);
+    const questionRanges = questionSet.getRanges();
+    
+    // Map the ranges to options
+    const options = questionRanges.map(range => ({
+      id: range.id,
+      label: `Pytania ${range.startId} - ${range.endId}`
+    }));
+    
+    setRangeOptions(options);
+  }, [setId]);
 
   const handleRangeSelect = (rangeId: number) => {
     setSelectedRanges(prev =>
@@ -52,7 +63,7 @@ export default function QuestionRangeSelector() {
       </div>
       <div className="mt-8 flex">
         <button
-          onClick={() => router.push(`/slider?ranges=${selectedRanges.join(',')}`)}
+          onClick={() => router.push(`/slider?ranges=${selectedRanges.join(',')}&set=${setId}`)}
           className={`w-full px-4 py-2 text-sm font-medium text-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
             selectedRanges.length > 0
               ? 'bg-blue-600 hover:bg-blue-700'

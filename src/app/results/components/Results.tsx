@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { getQuestionsFromRanges } from '@/data/questions';
+import { getQuestionSet } from '@/data/questions-manager';
 import Image from 'next/image';  // Add this import at the top with other imports
 
 interface AnswerResult {
@@ -44,6 +44,10 @@ export default function Results() {
       }
 
       const ranges = rangesParam ? rangesParam.split(',').map(Number) : [];
+      const setId = searchParams.get('set') || 'digital-transformation';
+      const questionSet = getQuestionSet(setId);
+      const getQuestionsFromRanges = questionSet.getQuestions;
+      
       let correct = 0;
       const answersResults: AnswerResult[] = [];
       const questionIds = Object.keys(userAnswers).map(id => parseInt(id));
@@ -110,7 +114,8 @@ export default function Results() {
       }
 
       const questionIds = Object.keys(userAnswers).map(id => parseInt(id));
-      router.push(`/quiz?questions=${questionIds.join(',')}&ranges=${rangesParam}`);
+      const setId = searchParams.get('set') || 'digital-transformation';
+      router.push(`/quiz?questions=${questionIds.join(',')}&ranges=${rangesParam}&set=${setId}`);
     } catch (error) {
       console.error('Error restarting quiz:', error);
       router.push('/');
@@ -125,12 +130,17 @@ export default function Results() {
       }
 
       const rangesParam = searchParams.get('ranges');
+      const setId = searchParams.get('set') || 'digital-transformation';
+      
       if (!rangesParam) {
         router.push('/');
         return;
       }
 
       const ranges = rangesParam.split(',').map(Number);
+      const questionSet = getQuestionSet(setId);
+      const getQuestionsFromRanges = questionSet.getQuestions;
+      
       const wrongQuestions = results
         .filter(r => !r.isCorrect)
         .map(r => {
@@ -140,7 +150,7 @@ export default function Results() {
         .filter((id): id is number => id !== undefined);
       
       if (wrongQuestions.length > 0) {
-        router.push(`/quiz?questions=${wrongQuestions.join(',')}&ranges=${rangesParam}`);
+        router.push(`/quiz?questions=${wrongQuestions.join(',')}&ranges=${rangesParam}&set=${setId}`);
       } else {
         router.push('/');
       }
