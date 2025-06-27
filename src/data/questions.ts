@@ -1,15 +1,12 @@
 // quiz.ts
-
 ////////////////////////////////////////////////////////////////////////
-// Interfejsy na podstawie przykładu
+// INTERFEJSY
 ////////////////////////////////////////////////////////////////////////
-
 export interface QuizQuestion {
   id: number;
   question: string;
   options: string[];
-  // Jeśli jest jedna poprawna odpowiedź – string,
-  // jeśli więcej niż jedna – tablica stringów.
+  // 1 odpowiedź → string, wiele → string[]
   correctAnswer: string | string[];
 }
 
@@ -21,1938 +18,1156 @@ export interface QuestionRange {
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Pełna lista 161 pytań (1 do 161), w kolejności dokładnie takiej,
-// jak w treści (zachowującej numerację i odpowiedzi).
+// LISTA PYTAŃ 1-80  (pierwotne 1-60 + nowe 61-80)
 ////////////////////////////////////////////////////////////////////////
-
 export const questions: QuizQuestion[] = [
+  // ───────── 1-27 (jak w poprzedniej wersji) ─────────
   {
     id: 1,
-    question: "Marketing 5.0 wg Kotlera (Wielokrotny wybór)",
+    question: "Co to jest metodologia badań?",
     options: [
-      "Polega na wykorzystaniu w działaniach marketingowych możliwości jakie daje technologia tzw. next-tech",
-      "Oparty jest na dwóch filarach – data-driven marketing i agile marketing",
-      "Zakłada, że jedynym sposobem zaspokajania potrzeb współczesnych nabywców jest zastosowanie nowoczesnych technologii na etapie tworzenia produktu",
-      "Jest to model marketingowy odrzucający wszelkie innowacje technologiczne"
+      "Proces reklamowania wyników badań",
+      "Przypadkowe zbieranie opinii",
+      "Systematyczny proces planowania, prowadzenia i analizowania badań",
+      "Lista pytań ankietowych",
+      "Zestaw hipotez",
+      "Podręcznik dla studentów"
     ],
-    correctAnswer: [
-      "Polega na wykorzystaniu w działaniach marketingowych możliwości jakie daje technologia tzw. next-tech",
-      "Oparty jest na dwóch filarach – data-driven marketing i agile marketing",
-      "Zakłada, że jedynym sposobem zaspokajania potrzeb współczesnych nabywców jest zastosowanie nowoczesnych technologii na etapie tworzenia produktu"
-    ]
+    correctAnswer: "Systematyczny proces planowania, prowadzenia i analizowania badań"
   },
   {
     id: 2,
-    question: "Który z elementów kampanii e-mail marketingowej ma największe przełożenie na jej OR?",
+    question: "Czym różnią się metody ilościowe od jakościowych? (wielokrotny wybór)",
     options: [
-      "Treść stopek w e-mailu",
-      "Tytuł",
-      "Waga załączników",
-      "Rozdzielczość obrazków w wiadomości"
+      "Ilościowe badają opinie i emocje",
+      "Ilościowe analizują dane liczbowe",
+      "Jakościowe analizują subiektywne doświadczenia",
+      "Jakościowe wykorzystują statystyki",
+      "Ilościowe zawsze są bardziej precyzyjne",
+      "Jakościowe są losowe"
     ],
-    correctAnswer: "Tytuł"
+    correctAnswer: [
+      "Ilościowe analizują dane liczbowe",
+      "Jakościowe analizują subiektywne doświadczenia"
+    ]
   },
   {
     id: 3,
-    question: "Dynamiczną optymalizację cen umożliwia:",
+    question: "Które pytanie należy do badań ilościowych?",
     options: [
-      "Wyszukiwarka internetowa",
-      "Przeglądarka plików PDF",
-      "Machine Learning",
-      "Edytor tekstu"
+      "Jakie emocje budzi produkt X?",
+      "Ile produktu zużywa przeciętna rodzina?",
+      "Dlaczego ludzie unikają reklamy produktu X?",
+      "Jak konsumenci opisują markę X?",
+      "Co motywuje do korzystania z produktu X?",
+      "Jakie potrzeby zaspokaja produkt X?"
     ],
-    correctAnswer: "Machine Learning"
+    correctAnswer: "Ile produktu zużywa przeciętna rodzina?"
   },
   {
     id: 4,
-    question: "Innowacja, która jest przełomem technologicznym, uznawana jest za radykalną i która często przekształca branże i ma zdolność do tworzenia nowego rynku ma (Wielokrotny wybór)",
+    question: "Po co uczyć się metodologii badań? (wielokrotny wybór)",
     options: [
-      "Duży wpływ na rynek",
-      "Nowość w zakresie wysokich technologii",
-      "Charakter wyłącznie organizacyjny",
-      "Zawsze wykorzystuje tylko tradycyjne sposoby produkcji"
+      "Przydaje się w biznesie i marketingu",
+      "Pozwala podejmować lepsze decyzje",
+      "Pomaga w ocenie wiarygodności reklam",
+      "Zastępuje analizę danych",
+      "Nie jest przydatna na rynku pracy",
+      "Przydaje się tylko w laboratorium"
     ],
     correctAnswer: [
-      "Duży wpływ na rynek",
-      "Nowość w zakresie wysokich technologii"
+      "Przydaje się w biznesie i marketingu",
+      "Pozwala podejmować lepsze decyzje",
+      "Pomaga w ocenie wiarygodności reklam"
     ]
   },
   {
     id: 5,
-    question: "Internet rzeczy umożliwia (Wielokrotny wybór)",
+    question: "Który z poniższych to przykład praktycznego zastosowania analizy danych?",
     options: [
-      "Wzrost produktywności",
-      "Ekspansję na nowe rynki",
-      "Zastąpienie wszystkich interakcji między ludźmi",
-      "Całkowite wyeliminowanie usług w chmurze"
+      "Zmiana logo firmy",
+      "Udostępnianie całego sezonu serialu naraz (Netflix)",
+      "Podniesienie cen bez analizy",
+      "Reklama oparta na intuicji",
+      "Opcja odkupu auta po utracie pracy (Hyundai)",
+      "Zmniejszenie budżetu bez badania rynku"
     ],
     correctAnswer: [
-      "Wzrost produktywności",
-      "Ekspansję na nowe rynki"
+      "Udostępnianie całego sezonu serialu naraz (Netflix)",
+      "Opcja odkupu auta po utracie pracy (Hyundai)"
     ]
   },
   {
     id: 6,
-    question: "Na jakie trzy grupy można podzielić technologie oferowane przez MarTech? (Wielokrotny wybór)",
+    question: "Która odpowiedź najlepiej opisuje proces badawczy?",
     options: [
-      "Technologie stymulacyjne",
-      "Technologie obliczeniowe",
-      "Technologie analityczne",
-      "Technologie socjotechniczne, które wymuszają rezygnację z klasycznego marketingu"
+      "Zebranie opinii znajomych",
+      "Jednorazowe zapytanie w sieci",
+      "Analiza tylko wyników bez planowania",
+      "Sformułowanie problemu, pytania, metoda, badanie, analiza i wnioski",
+      "Pominięcie literatury",
+      "Pomiar bez koncepcji"
     ],
-    correctAnswer: [
-      "Technologie stymulacyjne",
-      "Technologie obliczeniowe",
-      "Technologie analityczne"
-    ]
+    correctAnswer: "Sformułowanie problemu, pytania, metoda, badanie, analiza i wnioski"
   },
   {
     id: 7,
-    question: "Zgodnie z koncepcją New 4c konsument postrzega produkt lub usługę jako instrument marketingu Mix poprzez pryzmat (Wielokrotny wybór)",
+    question: "Skąd można czerpać pomysły na badania? (wielokrotny wybór)",
     options: [
-      "Możliwości współtworzenia",
-      "Wygody zakupu",
-      "Wydatku kosztu",
-      "Wyłączności i braku dostępu dla innych klientów"
+      "Z codziennych obserwacji",
+      "Z literatury naukowej",
+      "Z replikacji istniejących badań",
+      "Z opinii celebrytów",
+      "Z portali plotkarskich",
+      "Z memów w internecie"
     ],
     correctAnswer: [
-      "Możliwości współtworzenia",
-      "Wygody zakupu",
-      "Wydatku kosztu"
+      "Z codziennych obserwacji",
+      "Z literatury naukowej",
+      "Z replikacji istniejących badań"
     ]
   },
   {
     id: 8,
-    question: "Jakie są główne cele regulacji dotyczących ochrony danych takich jak Rodo? (Wielokrotny wybór)",
+    question: "Czym jest luka badawcza?",
     options: [
-      "Wzmocnienie propos praw osób które dane dotyczą",
-      "Zwiększenie przejrzystości w gromadzeniu i wykorzystaniu danych",
-      "Ograniczenia przetwarzania danych",
-      "Wykluczenie możliwości usuwania danych na żądanie"
+      "Brak budżetu na badania",
+      "Przerwa między hipotezą a teorią",
+      "Niezbadany lub słabo zbadany temat",
+      "Moment, w którym dane nie pasują",
+      "Błąd statystyczny",
+      "Luka między metodą a wynikami"
     ],
-    correctAnswer: [
-      "Wzmocnienie propos praw osób które dane dotyczą",
-      "Zwiększenie przejrzystości w gromadzeniu i wykorzystaniu danych",
-      "Ograniczenia przetwarzania danych"
-    ]
+    correctAnswer: "Niezbadany lub słabo zbadany temat"
   },
   {
     id: 9,
-    question: "Klick and collect to:",
+    question: "Co to jest pytanie badawcze?",
     options: [
-      "Technika umożliwiająca przenoszenie spersonalizowanych doświadczeń cyfrowych do świata fizycznego",
-      "Metoda tworzenia stron internetowych w HTML",
-      "Usługa bankowa związana z przelewami zagranicznymi",
-      "Pomysł na marketing sensoryczny w kinach"
+      "Losowo zadane pytanie w ankiecie",
+      "Pytanie do eksperta",
+      "Pytanie zawierające zmienne i sugerujące schemat badawczy",
+      "Pytanie bez znaczenia naukowego",
+      "Pytanie o zgodę na udział w badaniu",
+      "Pytanie używane wyłącznie w psychologii"
     ],
-    correctAnswer: "Technika umożliwiająca przenoszenie spersonalizowanych doświadczeń cyfrowych do świata fizycznego"
+    correctAnswer: "Pytanie zawierające zmienne i sugerujące schemat badawczy"
   },
   {
     id: 10,
-    question: "Do trzech filarów transformacji cyfrowej nie zalicza się:",
+    question: "Które z poniższych to przykłady pytań badawczych? (wielokrotny wybór)",
     options: [
-      "Sztucznej inteligencji",
-      "Zwiększonej przepustowości internetu",
-      "Mocniejszej pamięci operacyjnej",
-      "Usprawnionej analizy Big Data"
+      "Czy A wiąże się z B?",
+      "Czy osoby z cechą A różnią się w B?",
+      "Czy manipulacja A wpływa na B?",
+      "Jak ma się pogoda do humoru badacza?",
+      "Czy liczby są ważne w badaniu?",
+      "Co jadł uczestnik przed badaniem?"
     ],
-    correctAnswer: "Sztucznej inteligencji"
+    correctAnswer: [
+      "Czy A wiąże się z B?",
+      "Czy osoby z cechą A różnią się w B?",
+      "Czy manipulacja A wpływa na B?"
+    ]
   },
   {
     id: 11,
-    question: "Twierdzenie “umożliwia on zwiększenie wydajności marketerów kontaktujących się z klientami poprzez wprowadzenie technologii cyfrowych takich jak czat boty czy wirtualni asystenci” dotyczy:",
+    question: "Czym jest hipoteza badawcza?",
     options: [
-      "Marketingu rozszerzonego",
-      "Marketingu retrakcyjnego",
-      "Marketingu 1.0",
-      "Marketingu bezpośrednio-personalizowanego (ale bez technologii)"
+      "Każde przypuszczenie",
+      "Sugestia bez związku z badaniem",
+      "Zdanie twierdzące będące odpowiedzią na pytanie badawcze",
+      "Tytuł raportu",
+      "Opinie badacza",
+      "Slogan reklamowy"
     ],
-    correctAnswer: "Marketingu rozszerzonego"
+    correctAnswer: "Zdanie twierdzące będące odpowiedzią na pytanie badawcze"
   },
   {
     id: 12,
-    question: "Solucjonizm w charakterze społecznym i politycznym odnosi się do ideologii lub przekonania, że:",
+    question: "Która hipoteza pasuje do eksperymentu?",
     options: [
-      "Wszystkie problemy można rozwiązać przy pomocy rozwiązań technologicznych",
-      "Problemy rozwiązuje jedynie edukacja offline",
-      "Każda inicjatywa technologiczna pogłębia kryzys społeczny",
-      "Instytucje publiczne powinny unikać technologii"
+      "Badani będą zadowoleni z udziału",
+      "Kobiety są bardziej empatyczne",
+      "Osoby poddane treningowi poznawczemu będą bardziej odporne na ryzyko",
+      "Wyniki są losowe",
+      "Większość osób lubi badania",
+      "Uczestnicy będą się nudzić"
     ],
-    correctAnswer: "Wszystkie problemy można rozwiązać przy pomocy rozwiązań technologicznych"
+    correctAnswer: "Osoby poddane treningowi poznawczemu będą bardziej odporne na ryzyko"
   },
   {
     id: 13,
-    question: "Technologie cyfrowe to bardzo wyjątkowy obszar który charakteryzuje się (Wielokrotny wybór)",
+    question: "Co to jest zmienna?",
     options: [
-      "Decentralizacją",
-      "Wzrostem wykładniczym",
-      "Koncentracją",
-      "Całkowitą zależnością od tradycyjnych mediów analogowych"
+      "Stała liczba",
+      "Liczba powtórzeń",
+      "Cecha przyjmująca co najmniej dwie wartości",
+      "Fragment statystyki",
+      "Wynik testu",
+      "Część kwestionariusza"
     ],
-    correctAnswer: [
-      "Decentralizacją",
-      "Wzrostem wykładniczym",
-      "Koncentracją"
-    ]
+    correctAnswer: "Cecha przyjmująca co najmniej dwie wartości"
   },
   {
     id: 14,
-    question: "Jakie znaczenie ma pojęcie dane jako waluta:",
+    question: "Czym różnią się zmienne obserwowalne od nieobserwowalnych? (wielokrotny wybór)",
     options: [
-      "Dane mają narodowość",
-      "Dane są wyłącznie formą płatności w banku centralnym",
-      "Dane nie mają żadnej wartości wymiennej",
-      "Dane to tylko dokumenty papierowe w archiwach"
+      "Obserwowalne można zmierzyć bezpośrednio (np. wzrost)",
+      "Nieobserwowalne to konstrukty jak inteligencja czy stres",
+      "Obserwowalne to teoria, nieobserwowalne to praktyka",
+      "Nieobserwowalne są błędami",
+      "Obserwowalne są subiektywne",
+      "Nieobserwowalne nie mają znaczenia"
     ],
-    correctAnswer: "Dane mają narodowość"
+    correctAnswer: [
+      "Obserwowalne można zmierzyć bezpośrednio (np. wzrost)",
+      "Nieobserwowalne to konstrukty jak inteligencja czy stres"
+    ]
   },
   {
     id: 15,
-    question: "Które z poniższych firm opierają swój model biznesowy na zasadach peer to peer (Wielokrotny wybór)",
+    question: "Co to jest operacjonalizacja?",
     options: [
-      "AirBnb",
-      "Uber",
-      "eBay",
-      "Amazon Web Services"
+      "Tłumaczenie badań na angielski",
+      "Przypadkowe nadanie wartości",
+      "Przekładanie konstruktu teoretycznego na coś, co da się zmierzyć",
+      "Opisywanie zmiennych ogólnie",
+      "Rezygnacja z pomiaru",
+      "Wybór uczestników badania"
     ],
-    correctAnswer: [
-      "AirBnb",
-      "Uber",
-      "eBay"
-    ]
+    correctAnswer: "Przekładanie konstruktu teoretycznego na coś, co da się zmierzyć"
   },
   {
     id: 16,
-    question: "Co oznacza termin “software is eating the world”:",
+    question: "Która skala ma absolutne zero i pozwala powiedzieć, że coś jest dwa razy większe?",
     options: [
-      "Większość tradycyjnych branży jest transformowane przez oprogramowanie",
-      "Oprogramowanie przestaje mieć znaczenie w branżach usługowych",
-      "Oprogramowanie musi być zastępowane innowacjami hardware",
-      "Oprogramowanie dotyczy jedynie sektora gier komputerowych"
+      "Nominalna",
+      "Porządkowa",
+      "Przedziałowa",
+      "Stosunkowa",
+      "Interaktywna",
+      "Segmentowa"
     ],
-    correctAnswer: "Większość tradycyjnych branży jest transformowane przez oprogramowanie"
+    correctAnswer: "Stosunkowa"
   },
   {
     id: 17,
-    question: "Który przykład nie zalicza się do modelu biznesowego:",
+    question: "Jakie są rodzaje skal pomiarowych? (wielokrotny wybór)",
     options: [
-      "Churn",
-      "Freemium",
-      "Subskrypcja",
-      "Marketplace"
-    ],
-    correctAnswer: "Churn"
-  },
-  {
-    id: 18,
-    question: "Konwersja wszelkich informacji do formatu cyfrowego to:",
-    options: [
-      "Cyfryzacja",
-      "Outsourcing",
-      "Uruchomienie technologii AR",
-      "Proces podpisywania dokumentów kwalifikowanym podpisem"
-    ],
-    correctAnswer: "Cyfryzacja"
-  },
-  {
-    id: 19,
-    question: "Prawo do bycia pozostawionym w spokoju jest:",
-    options: [
-      "Jedną z pierwszych i bardzo wpływowych definicji prywatności",
-      "Koncepcją prawną dotyczącą wyłącznie sfery publicznej",
-      "Przepisem nakazującym firmom telekom zrywanie połączeń głosowych",
-      "Zasadą marketingu dozwolonego jedynie w e-commerce"
-    ],
-    correctAnswer: "Jedną z pierwszych i bardzo wpływowych definicji prywatności"
-  },
-  {
-    id: 20,
-    question: "Filarami cyfrowej transformacji są (Wielokrotny wybór):",
-    options: [
-      "Pamięć masowa",
-      "Szerokość pasma komunikacyjnego",
-      "Wykluczenie mobilnych rozwiązań w przedsiębiorstwach",
-      "Całkowita rezygnacja z baz danych offline"
+      "Nominalna – kategorie bez porządku (np. płeć)",
+      "Porządkowa – kolejność (np. wykształcenie)",
+      "Przedziałowa – równe odstępy, brak zera absolutnego (np. IQ)",
+      "Stosunkowa – z absolutnym zerem (np. wiek, dochód)",
+      "Dynamiczna",
+      "Reaktywna"
     ],
     correctAnswer: [
-      "Pamięć masowa",
-      "Szerokość pasma komunikacyjnego"
+      "Nominalna – kategorie bez porządku (np. płeć)",
+      "Porządkowa – kolejność (np. wykształcenie)",
+      "Przedziałowa – równe odstępy, brak zera absolutnego (np. IQ)",
+      "Stosunkowa – z absolutnym zerem (np. wiek, dochód)"
     ]
   },
   {
-    id: 21,
-    question: "Pomyśl o tym, że firmy z branży e-commerce przeniosą swój punkt ciężkości z komputerów stacjonarnych na urządzenia mobilne i że większa część ich przychodów będzie generowana przez platformę mobilną. Jest to przykład:",
+    id: 18,
+    question: "Które z poniższych to metody ilościowe? (wielokrotny wybór)",
     options: [
-      "Cyfryzacji",
-      "Archiwizacji",
-      "Procesu DevOps",
-      "Globalnego spowolnienia technologicznego"
+      "Sondaż",
+      "Korelacja",
+      "Eksperyment",
+      "Quasi-eksperyment",
+      "FGI",
+      "IDI"
     ],
-    correctAnswer: "Cyfryzacji"
+    correctAnswer: [
+      "Sondaż",
+      "Korelacja",
+      "Eksperyment",
+      "Quasi-eksperyment"
+    ]
+  },
+  {
+    id: 19,
+    question: "Czym jest korelacja?",
+    options: [
+      "Zależność przyczynowo-skutkowa",
+      "Statystyczny związek między zmiennymi",
+      "Zbieżność losowa",
+      "Opinia badacza",
+      "Technika jakościowa",
+      "Błąd w próbie"
+    ],
+    correctAnswer: "Statystyczny związek między zmiennymi"
+  },
+  {
+    id: 20,
+    question: "Czym jest korelacja pozorna?",
+    options: [
+      "Fałszywe dane",
+      "Związek wynikający z trzeciej zmiennej",
+      "Korelacja bardzo słaba",
+      "Związek negatywny",
+      "Korelacja w małej grupie",
+      "Brak zmiennych"
+    ],
+    correctAnswer: "Związek wynikający z trzeciej zmiennej"
+  },
+  {
+    id: 21,
+    question: "Czym jest eksperyment?",
+    options: [
+      "Obserwacja uczestników",
+      "Manipulacja zmienną i losowy przydział do grup",
+      "Opis grupy respondentów",
+      "Badanie opinii",
+      "Testowanie bez hipotezy",
+      "Zbieranie danych przez telefon"
+    ],
+    correctAnswer: "Manipulacja zmienną i losowy przydział do grup"
   },
   {
     id: 22,
-    question: "Urządzenie oferuje śledzenie floty GPS w czasie rzeczywistym, jednocześnie monitorując stan pojazdów i wydajność kierowców. To przykład:",
+    question: "Czym różni się quasi-eksperyment od eksperymentu?",
     options: [
-      "Inteligentnego urządzenia (Smart device)",
-      "Sprzętu analogowego",
-      "Trywialnego nośnika danych",
-      "Sieci korporacyjnej zamkniętego typu"
+      "Jest bardziej naukowy",
+      "Zawiera więcej statystyk",
+      "Nie ma losowego przydziału do grup",
+      "Wykorzystuje tylko dzieci",
+      "Trwa krócej",
+      "Jest zawsze lepszy"
     ],
-    correctAnswer: "Inteligentnego urządzenia (Smart device)"
+    correctAnswer: "Nie ma losowego przydziału do grup"
   },
   {
     id: 23,
-    question: "Co tworzy model 5A przedstawiony przez Philipa Kotlera?",
+    question: "Które techniki to techniki zbierania danych ilościowych? (wielokrotny wybór)",
     options: [
-      "Proces pozyskiwania klienta przez marki",
-      "Zaawansowane systemy uczenia maszynowego",
-      "Budowanie kultury organizacyjnej w duchu lean management",
-      "Proces rekrutacji cyfrowych talentów"
+      "CAWI – ankiety internetowe",
+      "CATI – ankiety telefoniczne",
+      "CAPI – z pomocą ankietera",
+      "PAPI – wersja papierowa",
+      "Obserwacja uczestnicząca",
+      "Wywiad narracyjny"
     ],
-    correctAnswer: "Proces pozyskiwania klienta przez marki"
+    correctAnswer: [
+      "CAWI – ankiety internetowe",
+      "CATI – ankiety telefoniczne",
+      "CAPI – z pomocą ankietera",
+      "PAPI – wersja papierowa"
+    ]
   },
   {
     id: 24,
-    question: "Agile marketing:",
+    question: "Czym różnią się pytania otwarte od zamkniętych?",
     options: [
-      "Polega na wykorzystaniu zdecentralizowanych, wielofunkcyjnych zespołów do konceptualizacji, projektowania, rozwoju i walidacji produktów oraz kampanii marketingowych w szybkim czasie",
-      "Zastępuje wszystkie tradycyjne formy marketingu w sklepach offline",
-      "Koncentruje się wyłącznie na marketingu mobilnym",
-      "Jest to metoda tworzenia animacji 3D na potrzeby reklamy"
+      "Otwarte są krótsze",
+      "Otwarte – respondent sam formułuje odpowiedź, zamknięte – wybiera z listy",
+      "Zamknięte są tylko w badaniach jakościowych",
+      "Otwarte nie są analizowane",
+      "Zamknięte są nieczytelne",
+      "Otwarte są zawsze lepsze"
     ],
-    correctAnswer: "Polega na wykorzystaniu zdecentralizowanych, wielofunkcyjnych zespołów do konceptualizacji, projektowania, rozwoju i walidacji produktów oraz kampanii marketingowych w szybkim czasie"
+    correctAnswer: "Otwarte – respondent sam formułuje odpowiedź, zamknięte – wybiera z listy"
   },
   {
     id: 25,
-    question: "Prosumer to:",
+    question: "Czego unikać w pytaniach ankietowych? (wielokrotny wybór)",
     options: [
-      "Konsument 4.0",
-      "Konsument, który nigdy nie korzysta z internetu",
-      "Klient, który rezygnuje z jakichkolwiek form cyfrowej wymiany",
-      "Pracownik marketingu w agencjach B2B"
+      "Dwuznaczności",
+      "Podwójnych przeczeń",
+      "Sformułowań sugerujących odpowiedź",
+      "Pytań o uczucia",
+      "Krótkich pytań",
+      "Pytań o fakty"
     ],
-    correctAnswer: "Konsument 4.0"
+    correctAnswer: [
+      "Dwuznaczności",
+      "Podwójnych przeczeń",
+      "Sformułowań sugerujących odpowiedź"
+    ]
   },
   {
     id: 26,
-    question: "Zasadę 4V wykorzystuje się do (Wielokrotny wybór):",
+    question: "Które z poniższych to zasady etyczne w badaniach? (wielokrotny wybór)",
     options: [
-      "Określania dużej ilości danych",
-      "Określania dużej zmienności danych",
-      "Określania dużej różnorodności danych",
-      "Określania roli billboardów w kampaniach outdoor"
+      "Świadoma zgoda",
+      "Anonimowość i poufność",
+      "Niekrzywdzenie uczestników",
+      "Debriefing po badaniu",
+      "Ukrywanie celu badania",
+      "Zbieranie danych bez pytania"
     ],
     correctAnswer: [
-      "Określania dużej ilości danych",
-      "Określania dużej zmienności danych",
-      "Określania dużej różnorodności danych"
+      "Świadoma zgoda",
+      "Anonimowość i poufność",
+      "Niekrzywdzenie uczestników",
+      "Debriefing po badaniu"
     ]
   },
   {
     id: 27,
-    question: "Technologie tzw. next-tech to:",
+    question: "Co powinien zawierać formularz zgody? (wielokrotny wybór)",
     options: [
-      "Grupa technologii, których celem jest odtworzenie możliwości ludzkich materiałów",
-      "Metody czysto analogowe do zarządzania sieciami telekomunikacyjnymi",
-      "Zwykłe tablety i smartfony sprzed kilkunastu lat",
-      "Zbiór narzędzi do analizy ryzyka w inwestycjach giełdowych"
+      "Informację o celu i przebiegu badania",
+      "Dobrowolność udziału",
+      "Prawo do rezygnacji w każdej chwili",
+      "Informację o ryzykach i korzyściach",
+      "Dane kontaktowe do badacza",
+      "Obowiązek zakończenia badania"
     ],
-    correctAnswer: "Grupa technologii, których celem jest odtworzenie możliwości ludzkich materiałów"
+    correctAnswer: [
+      "Informację o celu i przebiegu badania",
+      "Dobrowolność udziału",
+      "Prawo do rezygnacji w każdej chwili",
+      "Informację o ryzykach i korzyściach",
+      "Dane kontaktowe do badacza"
+    ]
   },
+
+  // ───────── 28-60 (dodane poprzednio) ─────────
   {
     id: 28,
-    question: "Efekt sieciowy występujący przy platformizacji oznacza:",
+    question: "Czym są dane pierwotne (primary data)?",
     options: [
-      "Pętlę sprężenia zwrotnego, czyli większą wartość platformy, która tworzy rosnącą liczbę użytkowników",
-      "Spadek liczby użytkowników wraz z rozwojem platformy",
-      "Wyłącznie ograniczoną skalowalność",
-      "Zawsze konieczność ograniczania dostępu do platformy"
+      "Dane, które nie zostały zebrane pod kątem problemu badawczego",
+      "Dane wywołane przez badacza na potrzeby konkretnego problemu",
+      "Archiwalne dane sprzed lat",
+      "Losowe wpisy z forów internetowych",
+      "Zagregowane statystyki publiczne",
+      "Wyniki metaanalizy"
     ],
-    correctAnswer: "Pętlę sprężenia zwrotnego, czyli większą wartość platformy, która tworzy rosnącą liczbę użytkowników"
+    correctAnswer: "Dane wywołane przez badacza na potrzeby konkretnego problemu"
   },
   {
     id: 29,
-    question: "Według raportu Deloitte Digital Transformation Executive Survey 2018 najbardziej dojrzałą cyfrowo branżą jest branża:",
+    question: "Czym są dane wtórne (secondary data) / dane zastane?",
     options: [
-      "Technologia, media i komunikacja",
-      "Rolnictwo i leśnictwo",
-      "Usługi fryzjerskie",
-      "Rybołówstwo i przetwórstwo mięsa"
+      "Dane zebrane w laboratorium na potrzeby eksperymentu",
+      "Dane, które już istnieją i nie były gromadzone do naszego badania",
+      "Wyniki ankiety prowadzonej wśród pracowników badacza",
+      "Tylko pliki multimedialne (audio/wideo)",
+      "Dane zawsze jakościowe, nigdy ilościowe",
+      "Zawsze są darmowe i publicznie dostępne"
     ],
-    correctAnswer: "Technologia, media i komunikacja"
+    correctAnswer: "Dane, które już istnieją i nie były gromadzone do naszego badania"
   },
   {
     id: 30,
-    question: "Dojrzałość cyfrowa (Wielokrotny wybór):",
+    question: "Badania niereaktywne charakteryzuje to, że…",
     options: [
-      "Określa stan i dynamikę transformacji cyfrowej w organizacji",
-      "Odzwierciedla zwinność i umiejętność organizacji do wykorzystywania na swoją korzyść rozwoju technologicznego",
-      "Jest mierzalna",
-      "Polega na rezygnacji z cyfrowych rozwiązań w marketingu"
+      "Respondenci wypełniają ankietę internetową w czasie rzeczywistym",
+      "Badany nie wie, że jest obiektem badania, a dane pochodzą z istniejących źródeł",
+      "Badacze prowokują określone zachowania w laboratorium",
+      "Używa się wyłącznie eksperymentów polowych",
+      "Wymagają obowiązkowej randomizacji próby",
+      "Zawsze analizują dane biometryczne"
     ],
-    correctAnswer: [
-      "Określa stan i dynamikę transformacji cyfrowej w organizacji",
-      "Odzwierciedla zwinność i umiejętność organizacji do wykorzystywania na swoją korzyść rozwoju technologicznego",
-      "Jest mierzalna"
-    ]
+    correctAnswer: "Badany nie wie, że jest obiektem badania, a dane pochodzą z istniejących źródeł"
   },
   {
     id: 31,
-    question: "Jedną z najbardziej znanych postaci w publicznej debacie o prywatności, osobą która ujawniła wysoce tajne informacje z Agencji Bezpieczeństwa Narodowego w 2013r. i rozpoczęła dyskusję o skali inwigilacji jest:",
+    question: "Które z poniższych to zalety dzielenia się danymi i pracy na danych zastanych? (wielokrotny wybór)",
     options: [
-      "Edward Snowden",
-      "Mark Zuckerberg",
-      "Tim Berners-Lee",
-      "Elon Musk"
-    ],
-    correctAnswer: "Edward Snowden"
-  },
-  {
-    id: 32,
-    question: "Udoskonalane wciąż smartfony i inne branże bazujące na rozwoju technologii mobilnej oraz wciąż rozwijanych części do telefonów to przykład:",
-    options: [
-      "Innowacji zrównoważonej",
-      "Innowacji radykalnej",
-      "Całkowitego odejścia od smartfonów",
-      "Tzw. retromarketingu"
-    ],
-    correctAnswer: "Innowacji zrównoważonej"
-  },
-  {
-    id: 33,
-    question: "Aplikacja wprowadzona przez NIKE, która pomaga wybrać najlepszy rodzaj buta na podstawie skanu nogi to przykład:",
-    options: [
-      "Cyfryzacji",
-      "Marketingu offline",
-      "Tworzenia pism urzędowych w formie cyfrowej",
-      "Zwykłej usługi przymierzania obuwia stacjonarnie"
-    ],
-    correctAnswer: "Cyfryzacji"
-  },
-  {
-    id: 34,
-    question: "Skanowanie papierowego dokumentu i zapisanie go na dysku twardym komputera w formacie PDF to idealny przykład:",
-    options: [
-      "Digitalizacji",
-      "Zawodnego backupu w chmurze",
-      "Marketingu kontekstowego",
-      "Archiwizacji taśm w formacie magnetycznym"
-    ],
-    correctAnswer: "Digitalizacji"
-  },
-  {
-    id: 35,
-    question: "Cyfryzacja nie dokonała by się gdyby nie rozwój w obszarach (Wielokrotny wybór):",
-    options: [
-      "Oprogramowania i systemów informatycznych",
-      "Mocy obliczeniowej",
-      "Łączności internetowej",
-      "Wyłącznie usług pocztowych analogowych"
+      "Transparentność badań",
+      "Szybkość i niski koszt pozyskania danych",
+      "Łatwa powtarzalność badań",
+      "Zawsze idealna kompletność danych",
+      "Brak konieczności analizy statystycznej",
+      "Pełna reprezentatywność bez dodatkowych czynności"
     ],
     correctAnswer: [
-      "Oprogramowania i systemów informatycznych",
-      "Mocy obliczeniowej",
-      "Łączności internetowej"
+      "Transparentność badań",
+      "Szybkość i niski koszt pozyskania danych",
+      "Łatwa powtarzalność badań"
     ]
   },
   {
-    id: 36,
-    question: "Wgranie dokumentu PDF z dysku twardego komputera do chmury i udostępnienie go wielu osobom w celu analizy danych, to przykład:",
+    id: 32,
+    question: "Które stwierdzenia opisują wady pracy na danych zastanych? (wielokrotny wybór)",
     options: [
-      "Cyfryzacji",
-      "Wirtualnej rzeczywistości",
-      "Utraty kontroli nad plikami",
-      "Technologii blockchain"
+      "Niekompletność lub brak niektórych zmiennych",
+      "Nieznane okoliczności powstania danych",
+      "Niereprezentatywność materiału",
+      "Pełna kontrola nad wszystkimi zmiennymi",
+      "Zawsze wysoka trafność pomiarowa",
+      "Dane są celowo zbierane pod nasze hipotezy"
     ],
-    correctAnswer: "Cyfryzacji"
+    correctAnswer: [
+      "Niekompletność lub brak niektórych zmiennych",
+      "Nieznane okoliczności powstania danych",
+      "Niereprezentatywność materiału"
+    ]
+  },
+  {
+    id: 33,
+    question: "Desk Research polega głównie na…",
+    options: [
+      "Analizowaniu istniejących źródeł wewnętrznych i zewnętrznych w celu opisu rynku",
+      "Prowadzeniu eksperymentów z udziałem konsumentów",
+      "Testowaniu hipotez w laboratorium psychologicznym",
+      "Generowaniu Big Data w czasie rzeczywistym",
+      "Korzystaniu wyłącznie z danych jakościowych w terenie",
+      "Anonimowym obserwowaniu użytkowników aplikacji"
+    ],
+    correctAnswer: "Analizowaniu istniejących źródeł wewnętrznych i zewnętrznych w celu opisu rynku"
+  },
+  {
+    id: 34,
+    question: "Thick Data cechuje się tym, że…",
+    options: [
+      "Oparte jest na uczeniu się maszyn i milionach rekordów",
+      "Koncentruje się na pytaniu „dlaczego?” i ma charakter antropologiczny",
+      "Zawsze wynika z analizy logów serwerowych",
+      "Nie pozwala zrozumieć motywacji konsumentów",
+      "Służy wyłącznie do predykcyjnych algorytmów marketingowych",
+      "Nie wymaga żadnych rozmów z ludźmi"
+    ],
+    correctAnswer: "Koncentruje się na pytaniu „dlaczego?” i ma charakter antropologiczny"
+  },
+  {
+    id: 35,
+    question: "Który etap NIE należy do pięciu kroków przeglądu literatury?",
+    options: [
+      "Zidentyfikuj kluczowe terminy",
+      "Zbieraj dane pierwotne na dużej próbie",
+      "Krytycznie oceń znalezione publikacje",
+      "Zorganizuj literaturę w menedżerze cytowań",
+      "Napisz uporządkowany przegląd",
+      "Szukaj źródeł w różnych bazach"
+    ],
+    correctAnswer: "Zbieraj dane pierwotne na dużej próbie"
+  },
+  {
+    id: 36,
+    question: "Głównym celem przeglądu literatury jest…",
+    options: [
+      "Wskazanie luki badawczej i uzasadnienie potrzeby nowego badania",
+      "Zwiększenie liczby cytowań autora",
+      "Publikacja artykułu bez recenzji",
+      "Zastąpienie całego procesu badawczego",
+      "Ominięcie etapu operacjonalizacji",
+      "Wyłącznie nauka stylu APA"
+    ],
+    correctAnswer: "Wskazanie luki badawczej i uzasadnienie potrzeby nowego badania"
   },
   {
     id: 37,
-    question: "Eliminowanie z łańcucha wartości zbędnych elementów, czego przykładem może być redukcja roli pośredników w wyniku postępującej cyfryzacji, to działanie innowacji:",
+    question: "Przegląd literatury prowadzony według ściśle określonego protokołu i kryteriów włączenia to…",
     options: [
-      "Zakłócającej",
-      "Przyrostowej",
-      "Zrównoważonej",
-      "Polegającej wyłącznie na zwiększeniu zasięgu offline"
+      "Przegląd narracyjny",
+      "Przegląd systematyczny",
+      "Desk Research",
+      "Bibliografia adnotowana",
+      "Scoping review bez analizy krytycznej",
+      "Case study"
     ],
-    correctAnswer: "Zakłócającej"
+    correctAnswer: "Przegląd systematyczny"
   },
   {
     id: 38,
-    question: "Które czynniki przyczyniły się do rozwoju robotyki:",
+    question: "W badaniach ilościowych narzędzia pomiarowe są zazwyczaj…",
     options: [
-      "Smartfony i druk 3D, ponieważ ich rozwój sprawia, że komponenty są tańsze",
-      "Bardzo wysoka cena podzespołów i materiałów",
-      "Zupełny brak zapotrzebowania na automatyzację",
-      "Wyłącznie rozwój branży spożywczej"
+      "Standaryzowane, jak kwestionariusz lub ankieta",
+      "Tworzone spontanicznie w trakcie badania",
+      "Ukryte przed respondentem",
+      "Zawsze wizualne (mapy myśli)",
+      "Jednorazowe i niepowtarzalne",
+      "Niepodlegające walidacji"
     ],
-    correctAnswer: "Smartfony i druk 3D, ponieważ ich rozwój sprawia, że komponenty są tańsze"
+    correctAnswer: "Standaryzowane, jak kwestionariusz lub ankieta"
   },
   {
     id: 39,
-    question: "Kontrola dostępu do wybranych obszarów ja to pojęcie prywatności wywodzące się z:",
+    question: "Typowa wielkość próby w badaniach jakościowych to…",
     options: [
-      "Psychologii",
-      "Prawa farmaceutycznego",
-      "Regulacji dot. reklamy TV",
-      "Sportu wyczynowego"
+      "20-50 badanych",
+      "200-1000 badanych",
+      "Ponad 10 000 badanych",
+      "Jedna osoba zawsze wystarczy",
+      "Minimum 500 dla statystycznej mocy",
+      "Zawsze taka sama jak w ilościowych"
     ],
-    correctAnswer: "Psychologii"
+    correctAnswer: "20-50 badanych"
   },
   {
     id: 40,
-    question: "WINTEL to skrót opisujący współpracę pomiędzy Windows i Intel. Opiera się ona na triadzie, która obejmuje (Wielokrotny wybór):",
+    question: "Które efekty grupowe są pożądane podczas FGI? (wielokrotny wybór)",
     options: [
-      "Wszechmocną siłę obliczeniową – bardziej wymagające",
-      "Algorytmy – większa ilość danych do przetworzenia",
-      "Rezygnację z wszelkich platform mobilnych",
-      "Obowiązek tworzenia wyłącznie oprogramowania open source"
+      "Synergia",
+      "Stymulacja",
+      "Śnieżna kula",
+      "Totalna dominacja jednego uczestnika",
+      "Ciche milczenie wszystkich",
+      "Stały off-topic"
     ],
     correctAnswer: [
-      "Wszechmocną siłę obliczeniową – bardziej wymagające",
-      "Algorytmy – większa ilość danych do przetworzenia"
+      "Synergia",
+      "Stymulacja",
+      "Śnieżna kula"
     ]
   },
   {
     id: 41,
-    question: "Konwergencja świata fizycznego, cyfrowego i biologicznego to kluczowy aspekt:",
+    question: "Technika projekcyjna, w której marki nadaje się cechy ludzkie, to…",
     options: [
-      "Czwartej rewolucji przemysłowej",
-      "Drukowania dokumentów urzędowych",
-      "Zastosowania telegrafu w nowoczesnych systemach",
-      "Wyłącznie gamingu w chmurze"
+      "Personifikacja",
+      "Animizacja (marka jako zwierzę)",
+      "Test niedokończonych zdań",
+      "Kolaż",
+      "Drzewo emocji",
+      "Mapa ciepła"
     ],
-    correctAnswer: "Czwartej rewolucji przemysłowej"
+    correctAnswer: "Personifikacja"
   },
   {
     id: 42,
-    question: "Internet, który był głównie siecią tylko do odczytu to Web…?",
+    question: "Moderator w grupie fokusowej powinien… (wielokrotny wybór)",
     options: [
-      "Web 1.0",
-      "Web 2.0",
-      "Web 3.0",
-      "Web 6.0"
-    ],
-    correctAnswer: "Web 1.0"
-  },
-  {
-    id: 43,
-    question: "Co opisuje model 5A przedstawiony przez Phillipa Koltera (Wielokrotny wybór):",
-    options: [
-      "Proces jaki przechodzą klienci szukający konkretnych marek",
-      "Proces pozyskiwania klientów przez marki",
-      "Analizę big data w branży rolniczej",
-      "Tylko elementy brandingu offline"
+      "Parafrazować odpowiedzi",
+      "Dopytywać i klaryfikować",
+      "Aktywnie słuchać",
+      "Oceniać i krytykować uczestników",
+      "Ignorować komunikację niewerbalną",
+      "Czytać pytania z kartki bez reakcji"
     ],
     correctAnswer: [
-      "Proces jaki przechodzą klienci szukający konkretnych marek",
-      "Proces pozyskiwania klientów przez marki"
+      "Parafrazować odpowiedzi",
+      "Dopytywać i klaryfikować",
+      "Aktywnie słuchać"
     ]
   },
   {
-    id: 44,
-    question: "Cel komparatywny modelu dojrzałości cyfrowej służy:",
+    id: 43,
+    question: "Gęsty opis w etnografii oznacza…",
     options: [
-      "Ocenie aktualnego stanu danej organizacji lub procesu, gdzie aktualny potencjał analizowanego podmiotu oceniany jest względem określonych kryteriów",
-      "Wyłącznie porównywaniu cen w sklepie",
-      "Opisowi struktury kapitałowej firmy",
-      "Zdefiniowaniu stylu komunikacji w mediach tradycyjnych"
+      "Szczegółowe odzwierciedlenie działań, intencji i kontekstu kulturowego",
+      "Minimalistyczne streszczenie obserwacji",
+      "Opis statystyczny bez cytatów",
+      "Wyłączne stosowanie tabel przestawnych",
+      "Zastąpienie wszystkich notatek nagraniem wideo",
+      "Raport napisany w formie punktów"
     ],
-    correctAnswer: "Ocenie aktualnego stanu danej organizacji lub procesu, gdzie aktualny potencjał analizowanego podmiotu oceniany jest względem określonych kryteriów"
+    correctAnswer: "Szczegółowe odzwierciedlenie działań, intencji i kontekstu kulturowego"
+  },
+  {
+    id: 44,
+    question: "Badacz, który w netnografii otwarcie mówi o swojej obecności i aktywnie uczestniczy w dyskusji, to wariant…",
+    options: [
+      "Uczestnik",
+      "Przezroczysty obserwator",
+      "Troll",
+      "Noob",
+      "Shadow",
+      "Moderator techniczny"
+    ],
+    correctAnswer: "Uczestnik"
   },
   {
     id: 45,
-    question: "Organizacja dojrzała cyfrowo to taka, w której (Wielokrotny wybór):",
+    question: "Zgodnie z kryteriami Roberta Yina decyzja o zastosowaniu studium przypadku jest właściwa, gdy… (wielokrotny wybór)",
     options: [
-      "Pracownicy mają wysokie kompetencje cyfrowe",
-      "Automatyzacja procesów jest stosowana wszędzie tam, gdzie jest to możliwe",
-      "Wszelkie działania wykluczają automatyzację",
-      "Całkowicie rezygnuje się z analityki danych"
+      "Celem jest odpowiedź na pytanie „Jak?” lub „Dlaczego?”",
+      "Nie można manipulować zachowaniem badanych",
+      "Kontekst jest kluczowy dla interpretacji",
+      "Granice między przypadkiem a kontekstem są wyraźne i jednoznaczne",
+      "Interesuje nas tylko liczebność zjawiska",
+      "Potrzebna jest reprezentatywna próba losowa"
     ],
     correctAnswer: [
-      "Pracownicy mają wysokie kompetencje cyfrowe",
-      "Automatyzacja procesów jest stosowana wszędzie tam, gdzie jest to możliwe"
+      "Celem jest odpowiedź na pytanie „Jak?” lub „Dlaczego?”",
+      "Nie można manipulować zachowaniem badanych",
+      "Kontekst jest kluczowy dla interpretacji"
     ]
   },
   {
     id: 46,
-    question: "Podejście do budowania relacji z klientem, które jest właściwe dla cyfrowej transformacji marketingu to:",
+    question: "Dopasowanie wzorców w analizie studium przypadku polega na…",
     options: [
-      "Nastawienie na 3P (people, product, promotion)",
-      "Wykorzystanie 3R (retention, resell, report)",
-      "Koncentracja tylko na masowym spamie",
-      "Uniwersalizacja działań offline"
+      "Porównywaniu wzorców empirycznych z przewidywaniami teoretycznymi",
+      "Losowym łączeniu zmiennych w model regresji",
+      "Testowaniu hipotez w dużej próbie ankietowej",
+      "Zakodowaniu wywiadów w programie CAQDAS",
+      "Łączeniu kilku przypadków w syntezę przekrojową",
+      "Generowaniu infografik na końcu raportu"
     ],
-    correctAnswer: "Nastawienie na 3P (people, product, promotion)"
+    correctAnswer: "Porównywaniu wzorców empirycznych z przewidywaniami teoretycznymi"
   },
   {
     id: 47,
-    question: "Cyfrową transformacją określamy:",
+    question: "Obserwacja standaryzowana wymaga…",
     options: [
-      "Sposób w jaki organizacja przyjmuje i dostosowuje pojawiające się lub znaczące technologie do tworzenia nowych modeli biznesowych, przekształcania starszych systemów, kultury, struktur i ostatecznie zapewniania bogatszych doświadczeń klientów",
-      "Tylko proces przenoszenia danych do Excela",
-      "Zawsze automatyczne przejście z marketingu na offline",
-      "Projekt tymczasowy prowadzony przez dział HR"
+      "Scheduły (karty) obserwacyjnej z precyzyjnymi kategoriami",
+      "Całkowitej improwizacji obserwatora",
+      "Braku jakichkolwiek wytycznych",
+      "Zawsze ukrytej kamery",
+      "Udziału co najmniej 10 obserwatorów jednocześnie",
+      "Testu projektowego przed obserwacją"
     ],
-    correctAnswer: "Sposób w jaki organizacja przyjmuje i dostosowuje pojawiające się lub znaczące technologie do tworzenia nowych modeli biznesowych, przekształcania starszych systemów, kultury, struktur i ostatecznie zapewniania bogatszych doświadczeń klientów"
+    correctAnswer: "Scheduły (karty) obserwacyjnej z precyzyjnymi kategoriami"
   },
   {
     id: 48,
-    question: "Najważniejszy (służący) punkt wyjścia w marketingu 5.0 jest:",
+    question: "Efekt Hawthorne opisuje…",
     options: [
-      "Data-driven marketing",
-      "Eliminacja analityki danych",
-      "Zakaz stosowania chatbotów",
-      "Drukowane materiały offline"
+      "Zmianę zachowania ludzi z powodu świadomości bycia obserwowanym",
+      "Losowy błąd pomiaru w ankietach internetowych",
+      "Metodę triangulacji danych",
+      "Zjawisko frustracji moderatora fokusów",
+      "Technikę analizy Big Data",
+      "Problem autoselekcji próby"
     ],
-    correctAnswer: "Data-driven marketing"
+    correctAnswer: "Zmianę zachowania ludzi z powodu świadomości bycia obserwowanym"
   },
   {
     id: 49,
-    question: "Jakie są zalety sieci 5G dla społeczeństwa i biznesu? (Wielokrotny wybór)",
+    question: "Shadowing w badaniach jakościowych to…",
     options: [
-      "Ma większą przepustowość, dzięki czemu może obsługiwać wiele wymagających aplikacji i urządzeń jednocześnie",
-      "Jest ultra stabilna",
-      "Zwiększa awaryjność sieci mobilnych",
-      "Ogranicza transfer danych do 1 MB/s"
+      "Długotrwała obserwacja jednostki w jej naturalnym środowisku",
+      "Anonimowa ankieta online",
+      "Zaawansowana metoda regresji",
+      "Wyłącznie nagrywanie rozmów telefonicznych",
+      "Projektowanie eksperymentu laboratoryjnego",
+      "Technika wizualizacji danych"
     ],
-    correctAnswer: [
-      "Ma większą przepustowość, dzięki czemu może obsługiwać wiele wymagających aplikacji i urządzeń jednocześnie",
-      "Jest ultra stabilna"
-    ]
+    correctAnswer: "Długotrwała obserwacja jednostki w jej naturalnym środowisku"
   },
   {
     id: 50,
-    question: "Jakim mianem określamy połączenie produktu, aplikacji, analityki i internetu/sieci?",
+    question: "W wywiadach pogłębionych „punkt nasycenia” oznacza, że…",
     options: [
-      "Interconnected",
-      "Immersive",
-      "Minimalistic",
-      "Blockchain-based"
+      "Kolejne wywiady nie wnoszą nowych informacji",
+      "Wywiad trwa już ponad 4 godziny",
+      "Respondent nie chce odpowiadać",
+      "Budżet badania się wyczerpał",
+      "Wszystkie transkrypcje są już zakodowane",
+      "Uzyskano 100 % odpowiedzi na ankietę"
     ],
-    correctAnswer: "Interconnected"
+    correctAnswer: "Kolejne wywiady nie wnoszą nowych informacji"
   },
   {
     id: 51,
-    question: "Wzrost popularności wykorzystywania interfejsu głosowego i intuicyjnej formy wyszukiwania informacji (Amazon Echo, Siri, Google Home) oraz możliwość sieciowej kooperacji (tzw. współpraca na żądanie) pojawiły się razem z rozwojem:",
+    question: "Triangulacja metod (wg Denzina) polega na… (wielokrotny wybór)",
     options: [
-      "Web 3.0",
-      "Web 1.0",
-      "Web 4.0",
-      "Telewizji cyfrowej"
+      "Łączeniu danych z różnych metod (np. ankieta i wywiad)",
+      "Korzystaniu z różnych badaczy analizujących te same dane",
+      "Porównywaniu interpretacji z różnych teorii",
+      "Analizie wyłącznie jednego źródła danych",
+      "Zastąpieniu obserwacji eksperymentem",
+      "Wykluczeniu błędów systematycznych"
     ],
-    correctAnswer: "Web 3.0"
+    correctAnswer: [
+      "Łączeniu danych z różnych metod (np. ankieta i wywiad)",
+      "Korzystaniu z różnych badaczy analizujących te same dane",
+      "Porównywaniu interpretacji z różnych teorii"
+    ]
   },
   {
     id: 52,
-    question: "Czy celem implementacji technologii, takich jak AI i loT w przedsiębiorstwach jest całkowite zastąpienie pracy ludzkiej?",
+    question: "Paradygmat pozytywistyczny zakłada, że…",
     options: [
-      "Nie, technologie mają pomagać pracownikom",
-      "Tak, ich celem jest wyeliminowanie czynnika ludzkiego",
-      "Tylko w branży medycznej",
-      "Tak, ale dotyczy to wyłącznie działów HR"
+      "Rzeczywistość jest obiektywna i podlega odkrywaniu poprzez zmysły",
+      "Wiedza jest konstruowana subiektywnie przez uczestników",
+      "Metody jakościowe są jedynym sposobem badania świata",
+      "Nie istnieją uniwersalne prawa społeczne",
+      "Badacz i badani tworzą znaczenia wspólnie",
+      "Wyniki badań zawsze mają charakter idiograficzny"
     ],
-    correctAnswer: "Nie, technologie mają pomagać pracownikom"
+    correctAnswer: "Rzeczywistość jest obiektywna i podlega odkrywaniu poprzez zmysły"
   },
   {
     id: 53,
-    question: "Transformacja cyfrowa to:",
+    question: "Dobór próby metodą „kuli śnieżnej” polega na…",
     options: [
-      "Proces, w ramach którego organizacje przechodzą w kierunku nowych sposobów myślenia i działania, dzięki wykorzystaniu potencjału mediów społecznościowych, technologii mobilnej i innych innowacyjnych rozwiązań cyfrowych",
-      "Zastępowanie drukowanych ulotek wersją online w 10% przypadków",
-      "Wyłącznie zmiana nazwy działu IT",
-      "Ograniczanie dostępu do narzędzi cyfrowych"
+      "Polecaniu kolejnych uczestników przez już przebadane osoby",
+      "Losowaniu numerów PESEL z bazy GUS",
+      "Rekrutowaniu wyłącznie ochotników z forów internetowych",
+      "Randomizacji blokowej badanych",
+      "Ustalaniu kwot demograficznych z góry",
+      "Zawsze wymaga udziału panelu online"
     ],
-    correctAnswer: "Proces, w ramach którego organizacje przechodzą w kierunku nowych sposobów myślenia i działania, dzięki wykorzystaniu potencjału mediów społecznościowych, technologii mobilnej i innych innowacyjnych rozwiązań cyfrowych"
+    correctAnswer: "Polecaniu kolejnych uczestników przez już przebadane osoby"
   },
   {
     id: 54,
-    question: "Jakość danych ma kluczowe znaczenie dla ich wartości, brudne dane mogą mieć bardzo małą wartość, a jest ona kluczowa dla oceny gospodarczej pozycji regionów/ krajów czy branży. To definicja danych jako:",
+    question: "Który rodzaj badań online jest synchroniczny?",
     options: [
-      "Złota",
-      "Ropy naftowej",
-      "Nieważnej waluty",
-      "Tylko papierowych archiwaliów"
+      "Wywiad przez Zoom na żywo",
+      "Ankieta e-mailowa wypełniana w dowolnym czasie",
+      "Analiza logów serwera (niereaktywna)",
+      "Desk Research statystyk GUS",
+      "Niereaktywny scraping mediów społecznościowych",
+      "Przegląd literatury w bazach online"
     ],
-    correctAnswer: "Złota"
+    correctAnswer: "Wywiad przez Zoom na żywo"
   },
   {
     id: 55,
-    question: "Blockchain to:",
+    question: "Do mocnych stron badań online zaliczamy… (wielokrotny wybór)",
     options: [
-      "Baza danych, która ma zdecentralizowany i rozproszony charakter",
-      "Zwykła baza SQL z jedną tabelą",
-      "Sposób przesyłania sygnału analogowego",
-      "Procedura legalizacyjna dokumentów"
+      "Łatwy dostęp do rozproszonych respondentów",
+      "Szybkość zbierania danych",
+      "Możliwość badania w przyjaznym środowisku respondenta",
+      "Całkowity brak problemów technicznych",
+      "Pełną kontrolę nad warunkami zewnętrznymi",
+      "Zawsze reprezentatywną próbę bez dodatkowych zabiegów"
     ],
-    correctAnswer: "Baza danych, która ma zdecentralizowany i rozproszony charakter"
+    correctAnswer: [
+      "Łatwy dostęp do rozproszonych respondentów",
+      "Szybkość zbierania danych",
+      "Możliwość badania w przyjaznym środowisku respondenta"
+    ]
   },
   {
     id: 56,
-    question: "Czy sztuczną inteligencję można wykorzystać do tworzenia treści (opisy na stronach internetowych, logo, posty itd.)?",
+    question: "Badania idiograficzne dążą do…",
     options: [
-      "Tak",
-      "Nie, jest to prawnie zakazane",
-      "Tylko w marketingu szeptanym",
-      "Tylko w branży transportowej"
+      "Dogłębnego zrozumienia konkretnego przypadku w jego kontekście",
+      "Formułowania uniwersalnych praw dla całej populacji",
+      "Użycia wyłącznie statystyki inferencyjnej",
+      "Generalizacji wyników na kraje ościenne",
+      "Zbadania minimum 1000 osób",
+      "Zrezygnowania z opisu kontekstu"
     ],
-    correctAnswer: "Tak"
+    correctAnswer: "Dogłębnego zrozumienia konkretnego przypadku w jego kontekście"
   },
   {
     id: 57,
-    question: "Marketing 5.0 jest najbardziej skoncentrowany na:",
+    question: "„Branie w nawias” w etnografii oznacza…",
     options: [
-      "Zastosowaniu nowych technologii",
-      "Wykluczeniu jakichkolwiek rozwiązań cyfrowych w marketingu",
-      "Zastąpieniu wszystkich kampanii mobilnych plakatami",
-      "Tradycyjnych metodach merchandisingu"
+      "Świadome zawieszenie własnych założeń i interpretacji",
+      "Wprowadzenie cytatów do raportu",
+      "Wykreślenie danych odstających",
+      "Kodowanie materiału w NVivo",
+      "Zastosowanie regresji liniowej",
+      "Pominięcie notatek terenowych"
     ],
-    correctAnswer: "Zastosowaniu nowych technologii"
+    correctAnswer: "Świadome zawieszenie własnych założeń i interpretacji"
   },
   {
     id: 58,
-    question: "Do celów cyfryzacji NIE należy: (Wielokrotny wybór)",
+    question: "Które z poniższych jest źródłem WEWNĘTRZNYM w Desk Research?",
     options: [
-      "Rozbudowa wewnętrznego działu IT",
-      "Konwersja wszelkich informacji do formatu cyfrowego",
-      "Skrócenie czasu obsługi klienta",
-      "Zwiększenie przejrzystości procesu biznesowego"
+      "Raport finansowy własnej firmy",
+      "Encyklopedia Britannica",
+      "Baza Eurostat",
+      "Wikipedia",
+      "Artykuł w prasie branżowej",
+      "Dane GUS"
     ],
-    correctAnswer: [
-      "Rozbudowa wewnętrznego działu IT",
-      "Konwersja wszelkich informacji do formatu cyfrowego"
-    ]
+    correctAnswer: "Raport finansowy własnej firmy"
   },
   {
     id: 59,
-    question: "Cyfrowa transformacja nie dokonała by się, gdyby nie rozwój w obszarze (Wielokrotny wybór):",
+    question: "Które podejście badawcze łączy opis ZJAWISKA z próbą jego zmiany?",
     options: [
-      "Gromadzenia i przechowywania danych",
-      "Zwiększenia ilości przeprowadzanych procesów, dokonywanych dzięki wzrostowi mocy obliczeniowej",
-      "Szybkości i przepustowości łączy internetowych",
-      "Druku offsetowego"
+      "Action Research",
+      "Case Study",
+      "Desk Research",
+      "Metaanaliza",
+      "Triangulacja",
+      "Badanie niereaktywne"
     ],
-    correctAnswer: [
-      "Gromadzenia i przechowywania danych",
-      "Zwiększenia ilości przeprowadzanych procesów, dokonywanych dzięki wzrostowi mocy obliczeniowej",
-      "Szybkości i przepustowości łączy internetowych"
-    ]
+    correctAnswer: "Action Research"
   },
   {
     id: 60,
-    question: "Cyfrowy bliźniak (Digital Twin) to: (Wielokrotny wybór)",
+    question: "Big Data w porównaniu z Thick Data charakteryzuje się…",
     options: [
-      "Wirtualne odwzorowanie świata fizycznego w czasie rzeczywistym",
-      "Wirtualna kopia obiektów wraz z możliwością symulacji procesów",
-      "Wyłącznie zapis plików w formacie .jpg",
-      "Robot humanoidalny"
+      "Samouczeniem maszyn i analizą ogromnych wolumenów danych",
+      "Małym zbiorem informacji koncentrującym się na motywach",
+      "Wyłącznie pytaniem „dlaczego?”",
+      "Brakiem matematycznych algorytmów",
+      "Obowiązkową obserwacją uczestniczącą",
+      "Tylko jakościowym charakterem danych"
     ],
-    correctAnswer: [
-      "Wirtualne odwzorowanie świata fizycznego w czasie rzeczywistym",
-      "Wirtualna kopia obiektów wraz z możliwością symulacji procesów"
-    ]
+    correctAnswer: "Samouczeniem maszyn i analizą ogromnych wolumenów danych"
   },
+
+  // ───────── 61-80 (NOWE) ─────────
   {
     id: 61,
-    question: "Marketing 5.0 wg Kotlera:",
+    question: "Konceptualizacja w procesie badawczym to…",
     options: [
-      "Skoncentrowany jest w głównej mierze na rozwoju technologicznym",
-      "Oparty na porzuceniu nowoczesnych technologii",
-      "Obejmuje tylko telemarketing",
-      "Skupia się na ograniczeniu analizy danych"
+      "Tworzenie konkretnych procedur pomiaru zmiennych",
+      "Określanie znaczenia używanych pojęć i zmiennych",
+      "Losowe przypisywanie badanych do grup",
+      "Zapisywanie wyników w bazie danych",
+      "Analiza statystyczna wyników",
+      "Publikacja artykułu"
     ],
-    correctAnswer: "Skoncentrowany jest w głównej mierze na rozwoju technologicznym"
+    correctAnswer: "Określanie znaczenia używanych pojęć i zmiennych"
   },
   {
     id: 62,
-    question: "Zasady projektowania przemysłu 4.0 to:",
+    question: "Metody ilościowe mają zazwyczaj charakter…",
     options: [
-      "Interoperacyjność, wirtualizacja, decentralizacja, praca w czasie rzeczywistym, orientacja na usługi, modularność rozwiązań",
-      "Wyłącznie maksymalizacja zatrudnienia manualnego",
-      "Nieustanny outsourcing bez automatyzacji",
-      "Zakaz łączenia systemów IT"
+      "Eksploracyjny i subiektywny",
+      "Rozstrzygający i dążą do uogólniania wyników na populację",
+      "Narracyjny i biograficzny",
+      "Fenomenologiczny",
+      "Wyłącznie opisowy bez statystyki",
+      "Spontaniczny i niestrukturalny"
     ],
-    correctAnswer: "Interoperacyjność, wirtualizacja, decentralizacja, praca w czasie rzeczywistym, orientacja na usługi, modularność rozwiązań"
+    correctAnswer: "Rozstrzygający i dążą do uogólniania wyników na populację"
   },
   {
     id: 63,
-    question: "Oferta firmy obejmuje streaming filmów online. Firma rozpoczyna zbieranie danych od klientów w celu ich analizy, przygotowania indywidualnych rekomendacji, ofert, reklam. Jest to przykład:",
+    question: "Dobór próby w badaniach jakościowych jest zwykle…",
     options: [
-      "Cyfrowej transformacji",
-      "Druku 3D",
-      "Technologii VR",
-      "Zwykłego mailingu"
+      "Losowy i reprezentatywny",
+      "Nielosowy i celowy",
+      "Warstwowy losowy",
+      "Systematyczny co 10-tą osobę",
+      "Prosty losowy z notabli",
+      "Zawsze kwotowy"
     ],
-    correctAnswer: "Cyfrowej transformacji"
+    correctAnswer: "Nielosowy i celowy"
   },
   {
     id: 64,
-    question: "Digital natives nazywamy:",
+    question: "Efekt oczekiwań społecznych polega na…",
     options: [
-      "Osoby urodzone w czasie powszechnego stosowania w życiu codziennym i zawodowym Internetu, komputerów i innych urządzeń, których działanie oparte jest na nowoczesne technologie",
-      "Osoby, które żyją w erze analogowej",
-      "Klientów, którzy nie używają w ogóle internetu",
-      "Tylko dzieci mające dostęp do telewizora"
+      "Tendencji respondentów do udzielania odpowiedzi zgodnych z normami społecznymi",
+      "Losowym zaznaczaniu odpowiedzi",
+      "Całkowitym braku motywacji do udziału w badaniu",
+      "Zwiększonej szczerości odpowiedzi w anonimowych ankietach",
+      "Błędem losowym przy kodowaniu danych",
+      "Automatycznym wypełnianiu ankiet przez boty"
     ],
-    correctAnswer: "Osoby urodzone w czasie powszechnego stosowania w życiu codziennym i zawodowym Internetu, komputerów i innych urządzeń, których działanie oparte jest na nowoczesne technologie"
+    correctAnswer: "Tendencji respondentów do udzielania odpowiedzi zgodnych z normami społecznymi"
   },
   {
     id: 65,
-    question: "Przemysł 4.0 to (Wielokrotny wybór)",
+    question: "Paradygmat konstruktywistyczny zakłada, że…",
     options: [
-      "Zmiana paradygmatu produkcji z produkcji masowej na produkcję kastomizowaną",
-      "Koncepcja zmian organizacyjnych i technologicznych wraz z integracją łańcuchów wartości i rozwojem nowych modeli biznesowych",
-      "Dogłębna organizacja łańcucha wartości, produktów i modelu biznesowego",
-      "Wyłącznie powrót do rzemiosła bez automatyzacji"
+      "Rzeczywistość jest tworzona subiektywnie przez ludzi i ich interakcje",
+      "Istnieje jedna obiektywna rzeczywistość odkrywana zmysłami",
+      "Badania muszą zawsze używać metod ilościowych",
+      "Hipotezy są zbędne w nauce",
+      "Obserwacja jest niemożliwa",
+      "Wszystkie dane muszą być liczbowe"
     ],
-    correctAnswer: [
-      "Zmiana paradygmatu produkcji z produkcji masowej na produkcję kastomizowaną",
-      "Koncepcja zmian organizacyjnych i technologicznych wraz z integracją łańcuchów wartości i rozwojem nowych modeli biznesowych",
-      "Dogłębna organizacja łańcucha wartości, produktów i modelu biznesowego"
-    ]
+    correctAnswer: "Rzeczywistość jest tworzona subiektywnie przez ludzi i ich interakcje"
   },
   {
     id: 66,
-    question: "Do technologicznych fundamentów cyfrowej transformacji można zaliczyć (Wielokrotny wybór):",
+    question: "Triangulacja badaczy oznacza…",
     options: [
-      "Wykładniczy wzrost mocy obliczeniowej",
-      "Coraz szybsze połączenia internetowe",
-      "Zastępowanie łączy internetowych sygnałem radiowym AM",
-      "Rezygnację z cyfrowych systemów obliczeniowych"
+      "Analizę tych samych danych przez różnych badaczy",
+      "Użycie wielu źródeł danych",
+      "Łączenie metod jakościowych i ilościowych",
+      "Porównywanie różnych teorii",
+      "Powtórzenie badania po roku",
+      "Randomizację grup badanych"
     ],
-    correctAnswer: [
-      "Wykładniczy wzrost mocy obliczeniowej",
-      "Coraz szybsze połączenia internetowe"
-    ]
+    correctAnswer: "Analizę tych samych danych przez różnych badaczy"
   },
   {
     id: 67,
-    question: "Kluczowe technologie napędzające rozwój Przemysłu 4.0 to (Wielokrotny wybór)",
+    question: "Wyjaśnienie nomotetyczne dąży do…",
     options: [
-      "Internet rzeczy, druk 3D, AR, VR, mobile, chmura obliczeniowa",
-      "Technologie wspierające procesy cyfrowej transformacji",
-      "Roboty kolaborujące, rozwiązania do wirtualnej symulacji procesów, w tym cyfrowy bliźniak",
-      "Obsługa faksów i telegrafu"
+      "Formułowania uniwersalnych praw dla całej populacji",
+      "Dogłębnego zrozumienia pojedynczego przypadku",
+      "Opisania narracji życiowej jednostki",
+      "Zmiany sytuacji w społeczności lokalnej",
+      "Wyłącznie analizy treści mediów",
+      "Zastąpienia teorii opisem statystycznym"
     ],
-    correctAnswer: [
-      "Internet rzeczy, druk 3D, AR, VR, mobile, chmura obliczeniowa",
-      "Technologie wspierające procesy cyfrowej transformacji",
-      "Roboty kolaborujące, rozwiązania do wirtualnej symulacji procesów, w tym cyfrowy bliźniak"
-    ]
+    correctAnswer: "Formułowania uniwersalnych praw dla całej populacji"
   },
   {
     id: 68,
-    question: "Jednym z najpopularniejszych rozwiązań w produkcji wykorzystujących sztuczną inteligencję do określenia stanu pracy sprzętu w celu oszacowania, kiedy należy dokonać naprawy lub przewidzenia awarii, jest tzw.:",
+    question: "Analizy Big Data zwykle wymagają…",
     options: [
-      "Predykcyjne utrzymanie ruchu (Predictive maintenance)",
-      "Tradycyjna konserwacja maszyn offline",
-      "Eliminacja wszelkich czujników w zakładzie",
-      "Technika marketingu szeptanego"
+      "Specjalistycznego oprogramowania i umiejętności analitycznych",
+      "Wyłącznie kartki i długopisu",
+      "Małej liczby obserwacji",
+      "Braku wiedzy matematycznej",
+      "Tylko jakościowych opisów zjawisk",
+      "Całkowitego pominięcia etapów czyszczenia danych"
     ],
-    correctAnswer: "Predykcyjne utrzymanie ruchu (Predictive maintenance)"
+    correctAnswer: "Specjalistycznego oprogramowania i umiejętności analitycznych"
   },
   {
     id: 69,
-    question: "Efektywny insight konsumencki (Wielokrotny wybór)",
+    question: "Technika komiksowych dymków w FGI to przykład…",
     options: [
-      "To charakterystyka m.in. oczekiwań i poglądów danego segmentu klientów, które odgrywają istotną rolę w procesie zakupu",
-      "Charakteryzuje zasada 4R",
-      "Jest całkowicie nieistotny dla marketerów",
-      "Dotyczy tylko analizy kosztów surowców"
+      "Techniki projekcyjnej",
+      "Metody losowego doboru próby",
+      "Analizy ilościowej",
+      "Modelu logicznego",
+      "Syntezy przekrojowej",
+      "Scheduły obserwacyjnej"
     ],
-    correctAnswer: [
-      "To charakterystyka m.in. oczekiwań i poglądów danego segmentu klientów, które odgrywają istotną rolę w procesie zakupu",
-      "Charakteryzuje zasada 4R"
-    ]
+    correctAnswer: "Techniki projekcyjnej"
   },
   {
     id: 70,
-    question: "Pogląd na sztuczną inteligencję jako technologię produkcyjną usprawniającą nową klasę zadań związanych z danymi wywodzi się z idei:",
+    question: "W etnografii „wiedza milcząca” odnosi się do…",
     options: [
-      "Dane jako siła robocza",
-      "Zawsze offline",
-      "Wykluczenia wolnego rynku",
-      "Paper-driven marketing"
+      "Trudnej do werbalizacji wiedzy utrwalonej w praktykach",
+      "Głośnych deklaracji publicznych",
+      "Oficjalnych dokumentów organizacji",
+      "Danych liczbowych z ankiet",
+      "Raportów finansowych",
+      "Wyników testów psychologicznych"
     ],
-    correctAnswer: "Dane jako siła robocza"
+    correctAnswer: "Trudnej do werbalizacji wiedzy utrwalonej w praktykach"
   },
   {
     id: 71,
-    question: "Pomiar dojrzałości cyfrowej organizacji służy:",
+    question: "W netnografii rola „trolla” polega na…",
     options: [
-      "Wskazaniu stanu zaawansowania cyfrowej transformacji w organizacji",
-      "Wyłącznie do oceny jakości wydruku ulotek",
-      "Analizie łańcucha dostaw offline",
-      "Rezygnacji z analiz wyników"
+      "Prowokowaniu grupy negatywnymi emocjami w celu uzyskania głębszych odpowiedzi",
+      "Byciu niewidocznym obserwatorem",
+      "Angażowaniu się jawnie i konstruktywnie",
+      "Zadawaniu wielu podstawowych pytań jak nowicjusz",
+      "Moderowaniu dyskusji tematycznych bez udziału badacza",
+      "Analizie statystyk odwiedzin strony"
     ],
-    correctAnswer: "Wskazaniu stanu zaawansowania cyfrowej transformacji w organizacji"
+    correctAnswer: "Prowokowaniu grupy negatywnymi emocjami w celu uzyskania głębszych odpowiedzi"
   },
   {
     id: 72,
-    question: "Ciągłe zwiększanie konkurencyjności istniejących produktów lub usług poprzez koncentrację na obniżaniu kosztów oraz ulepszaniu lub dodawaniu funkcji to:",
+    question: "Analiza szeregów czasowych w studium przypadku służy do…",
     options: [
-      "Innowacja przyrostowa",
-      "Innowacja zakłócająca",
-      "Cofanie produktu do wersji analogowej",
-      "Wyłącznie stagnacja technologiczna"
+      "Śledzenia zmian w czasie i porównywania trendów empirycznych z teoretycznymi",
+      "Randomizacji grup eksperymentalnych",
+      "Losowego doboru respondentów do ankiety",
+      "Budowania modeli regresji liniowej",
+      "Kodowania treści wywiadów narracyjnych",
+      "Walidacji kwestionariusza"
     ],
-    correctAnswer: "Innowacja przyrostowa"
+    correctAnswer: "Śledzenia zmian w czasie i porównywania trendów empirycznych z teoretycznymi"
   },
   {
     id: 73,
-    question: "Autonomiczne samochody będą zasilały bazy o dane (Wielokrotny wybór)",
+    question: "Jedną z wad obserwacji uczestniczącej jest…",
     options: [
-      "Pochodzące z sensorów i odczytujące sygnały ze świata zewnętrznego",
-      "Dotyczące użytkowników w tym ich zainteresowań oraz preferencji konsumenckich",
-      "Etyczne wspierające tworzenie nowych bardziej precyzyjnych regulacji",
-      "Tylko dane w formie papierowej"
+      "Zaangażowanie emocjonalne badacza mogące wpłynąć na obiektywność",
+      "Brak możliwości notowania na bieżąco w obserwacji nieuczestniczącej",
+      "Pełna kontrola nad sytuacją badawczą",
+      "Natychmiastowa standaryzacja danych",
+      "Zawsze krótki czas trwania badania",
+      "Brak problemów etycznych"
     ],
-    correctAnswer: [
-      "Pochodzące z sensorów i odczytujące sygnały ze świata zewnętrznego",
-      "Dotyczące użytkowników w tym ich zainteresowań oraz preferencji konsumenckich",
-      "Etyczne wspierające tworzenie nowych bardziej precyzyjnych regulacji"
-    ]
+    correctAnswer: "Zaangażowanie emocjonalne badacza mogące wpłynąć na obiektywność"
   },
   {
     id: 74,
-    question: "Która z innowacji spośród prezentowanych na innovation matrix określa wysoki wpływ na rynek i niską nowość technologiczną?",
+    question: "Plan eksperymentalny z powtarzanym pomiarem (within-subject) oznacza, że…",
     options: [
-      "Innowacja zakłócająca",
-      "Innowacja radykalna",
-      "Innowacja zrównoważona",
-      "Innowacja przyrostowa"
+      "Ci sami uczestnicy są mierzeni wielokrotnie w różnych warunkach",
+      "Grupy są losowane raz i mierzona tylko jedna zmienna",
+      "Każdy uczestnik trafia do innej grupy badawczej",
+      "Zmienna zależna nie jest mierzona",
+      "Eksperyment trwa zawsze mniej niż 5 minut",
+      "Badanie jest zawsze niereaktywne"
     ],
-    correctAnswer: "Innowacja zakłócająca"
+    correctAnswer: "Ci sami uczestnicy są mierzeni wielokrotnie w różnych warunkach"
   },
   {
     id: 75,
-    question: "Marketing rozszerzony umożliwia:",
+    question: "Scenariusz wywiadu indywidualnego (IDI) powinien mieć strukturę…",
     options: [
-      "Zwiększenie wydajności marketerów dzięki technologiom (chatboty, wirtualni asystenci)",
-      "Eliminację wszelkich narzędzi cyfrowych w marketingu",
-      "Zawężenie rynku docelowego do jednej osoby offline",
-      "Automatyczne zastąpienie działu marketingu w całości"
+      "Lejka – od pytań ogólnych do szczegółowych",
+      "Piramidy – od szczegółowych do ogólnych",
+      "Losową bez kolejności",
+      "Wyłącznie zamkniętą listę pytań",
+      "Formę skali Likerta",
+      "Zawierać tylko jedno pytanie"
     ],
-    correctAnswer: "Zwiększenie wydajności marketerów dzięki technologiom (chatboty, wirtualni asystenci)"
+    correctAnswer: "Lejka – od pytań ogólnych do szczegółowych"
   },
   {
     id: 76,
-    question: "Marketing kontekstowy polega na:",
+    question: "Dobór teoretyczny próby polega na…",
     options: [
-      "Spersonalizowaniu doświadczeń w świecie fizycznym, one-to-one w czasie rzeczywistym",
-      "Stosowaniu masowego spamu mailowego",
-      "Promocji w gazetach codziennych",
-      "Wyłącznie banerach internetowych na stronach statycznych"
+      "Włączaniu przypadków wskazanych przez teorię dla pełniejszego wyjaśnienia zjawiska",
+      "Losowym wybieraniu co dziesiątej osoby na liście",
+      "Ustalaniu kwot demograficznych z góry",
+      "Selekcji według kolejności zgłoszeń",
+      "Rekrutacji wyłącznie przez ogłoszenia w social media",
+      "Pomiarze na reprezentatywnej próbie ogólnopolskiej"
     ],
-    correctAnswer: "Spersonalizowaniu doświadczeń w świecie fizycznym, one-to-one w czasie rzeczywistym"
+    correctAnswer: "Włączaniu przypadków wskazanych przez teorię dla pełniejszego wyjaśnienia zjawiska"
   },
   {
     id: 77,
-    question: "Marketing predykcyjny wykorzystuje narzędzia analityczne do:",
+    question: "Replikacja wcześniejszych badań służy głównie…",
     options: [
-      "Przewidywania skutków działań marketingowych",
-      "Zaprzeczenia jakichkolwiek prognoz",
-      "Wyłącznie przechowywania danych na dyskach twardych",
-      "Eliminacji segmentacji klientów"
+      "Weryfikacji i potwierdzeniu (lub obaleniu) wcześniejszych wyników",
+      "Generowaniu losowych hipotez",
+      "Zmniejszeniu liczby publikacji naukowych",
+      "Zastąpieniu badania pilotażowego",
+      "Wyłącznie prezentacji wyników w mediach",
+      "Ominięciu procesu recenzji"
     ],
-    correctAnswer: "Przewidywania skutków działań marketingowych"
+    correctAnswer: "Weryfikacji i potwierdzeniu (lub obaleniu) wcześniejszych wyników"
   },
   {
     id: 78,
-    question: "Co to jest Customer 6.0?",
+    question: "Rzetelność pomiaru oznacza, że…",
     options: [
-      "W pełni zintegrowany z zaawansowanymi technologiami (AI, VR/AR, blockchain), dla spersonalizowanych doświadczeń",
-      "Konsument, który nie korzysta z sieci",
-      "Użytkownik starego telefonu klawiszowego",
-      "Grupa docelowa nieskorzystająca z technologii AR"
+      "Powtórzone pomiary w tych samych warunkach dają te same wyniki",
+      "Pomiar dotyczy dokładnie tego, co miał mierzyć",
+      "Badanie jest zawsze anonimowe",
+      "Użyto metody triangulacji",
+      "Kwestionariusz składa się z pytań otwartych",
+      "Próba jest losowa"
     ],
-    correctAnswer: "W pełni zintegrowany z zaawansowanymi technologiami (AI, VR/AR, blockchain), dla spersonalizowanych doświadczeń"
+    correctAnswer: "Powtórzone pomiary w tych samych warunkach dają te same wyniki"
   },
   {
     id: 79,
-    question: "Co to jest Customer 5.0?",
+    question: "Trafność pomiaru odnosi się do…",
     options: [
-      "Cyfrowy klient, korzysta ze smartfona i szybko zmienia decyzje",
-      "Klient, który nigdy nie miał dostępu do komputera",
-      "Segment klientów offline w wieku 80+",
-      "Osoba, która korzysta tylko z telewizora"
+      "Tego, czy pomiar rzeczywiście mierzył zamierzoną zmienną",
+      "Powtarzalności wyników",
+      "Losowego doboru próby",
+      "Szybkości wypełniania ankiety",
+      "Anonimowości respondentów",
+      "Liczby pytań w ankiecie"
     ],
-    correctAnswer: "Cyfrowy klient, korzysta ze smartfona i szybko zmienia decyzje"
+    correctAnswer: "Tego, czy pomiar rzeczywiście mierzył zamierzoną zmienną"
   },
   {
     id: 80,
-    question: "Co to jest marketing omnichannel?",
-    options: [
-      "Spójne doświadczenie i przekaz w każdym kanale (sklep, e-commerce, social media, aplikacja)",
-      "Rozproszone kampanie bez koordynacji",
-      "Unikanie social mediów",
-      "Jednokanałowa reklama TV"
-    ],
-    correctAnswer: "Spójne doświadczenie i przekaz w każdym kanale (sklep, e-commerce, social media, aplikacja)"
-  },
-  {
-    id: 81,
-    question: "Co to jest marketing multikanałowy?",
-    options: [
-      "Komunikaty w wielu kanałach (online/offline), ale niespójny przekaz marki",
-      "Zawsze spójny i zintegrowany przekaz",
-      "Wyłącznie marketing szeptany w social media",
-      "Marketing wielopoziomowy"
-    ],
-    correctAnswer: "Komunikaty w wielu kanałach (online/offline), ale niespójny przekaz marki"
-  },
-  {
-    id: 82,
-    question: "Jakie są Zasady projektowania przemysłu 4.0?",
-    options: [
-      "Interoperacyjność, wirtualizacja, decentralizacja, praca w czasie rzeczywistym, usługi, modularność",
-      "Maksymalizacja pracy manualnej i odrzucenie sieci",
-      "Tylko jednowątkowa produkcja offline",
-      "Brak technologii cyfrowych w fabryce"
-    ],
-    correctAnswer: "Interoperacyjność, wirtualizacja, decentralizacja, praca w czasie rzeczywistym, usługi, modularność"
-  },
-  {
-    id: 83,
-    question: "Co to jest Web 3.0?",
-    options: [
-      "Wzrost znaczenia interfejsów głosowych, sieciowej kooperacji i współpracy na żądanie",
-      "Pierwsza generacja internetu",
-      "Rezygnacja z jakichkolwiek narzędzi AI",
-      "Chmura obliczeniowa powiązana z telepatią"
-    ],
-    correctAnswer: "Wzrost znaczenia interfejsów głosowych, sieciowej kooperacji i współpracy na żądanie"
-  },
-  {
-    id: 84,
-    question: "Na jakie trzy grupy można podzielić technologie oferowane przez MarTech? (Wielokrotny wybór)",
-    options: [
-      "Stymulacyjne",
-      "Obliczeniowe",
-      "Analityczne",
-      "Usługi wysyłkowe offline"
-    ],
-    correctAnswer: [
-      "Stymulacyjne",
-      "Obliczeniowe",
-      "Analityczne"
-    ]
-  },
-  {
-    id: 85,
-    question: "Co to jest Klick and collect?",
-    options: [
-      "Technika umożliwiająca przenoszenie spersonalizowanych doświadczeń cyfrowych do świata fizycznego",
-      "Stara nazwa usługi wykonywania ksero",
-      "Metoda płatności w bankomatach",
-      "Papierowy kupon zniżkowy"
-    ],
-    correctAnswer: "Technika umożliwiająca przenoszenie spersonalizowanych doświadczeń cyfrowych do świata fizycznego"
-  },
-  {
-    id: 86,
-    question: "Do trzech filarów transformacji cyfrowej nie zalicza się:",
-    options: [
-      "Sztucznej inteligencji",
-      "Wydajnych sieci",
-      "Rozwoju pamięci masowej",
-      "Zwiększonej mocy obliczeniowej"
-    ],
-    correctAnswer: "Sztucznej inteligencji"
-  },
-  {
-    id: 87,
-    question: "Co to jest interconnected?",
-    options: [
-      "Połączenie produktu, aplikacji, analityki i sieci",
-      "Wyciek danych z bazy",
-      "Zamknięty system offline",
-      "Brak analityki"
-    ],
-    correctAnswer: "Połączenie produktu, aplikacji, analityki i sieci"
-  },
-  {
-    id: 88,
-    question: "Co tworzy model 5A przedstawiony przez Philipa Kotlera?",
-    options: [
-      "Proces pozyskiwania klienta przez marki",
-      "Zasady budowy hal produkcyjnych",
-      "Sposób rekrutacji programistów",
-      "Metodę testów offline"
-    ],
-    correctAnswer: "Proces pozyskiwania klienta przez marki"
-  },
-  {
-    id: 89,
-    question: "Co oznacza termin \"software is eating the world\"?",
-    options: [
-      "Oprogramowanie przekształca tradycyjne branże",
-      "Zanik roli oprogramowania w sektorze rolniczym",
-      "Tylko branża gamingowa się rozwija",
-      "Hasło kampanii charytatywnej"
-    ],
-    correctAnswer: "Oprogramowanie przekształca tradycyjne branże"
-  },
-  {
-    id: 90,
-    question: "Co to jest Inteligentne urządzenie (Smart device)?",
-    options: [
-      "Urządzenie śledzące flotę GPS, monitorujące stan pojazdu i kierowców",
-      "Zwykły kalkulator kieszonkowy z 1980 r.",
-      "Urządzenie elektroniczne bez połączenia z siecią",
-      "Narzędzie używane tylko w laboratoriach chemicznych"
-    ],
-    correctAnswer: "Urządzenie śledzące flotę GPS, monitorujące stan pojazdu i kierowców"
-  },
-  {
-    id: 91,
-    question: "Co opisuje model 5A przedstawiony przez Phillipa Kotlera?",
-    options: [
-      "Proces pozyskiwania klienta przez marki",
-      "Monitorowanie baz danych klientów offline",
-      "Wyłącznie model przyciągania inwestorów",
-      "Tylko sposób budowy relacji B2B w rolnictwie"
-    ],
-    correctAnswer: "Proces pozyskiwania klienta przez marki"
-  },
-  {
-    id: 92,
-    question: "Co to jest Agile marketing?",
-    options: [
-      "Szybkie tworzenie i testowanie kampanii w autonomicznych zespołach",
-      "Zastąpienie wszystkich działań marketingowych przez outsourcing",
-      "Skrócenie projektów marketingowych do 3 godzin",
-      "Stosowanie marketingu wyłącznie w telewizji"
-    ],
-    correctAnswer: "Szybkie tworzenie i testowanie kampanii w autonomicznych zespołach"
-  },
-  {
-    id: 93,
-    question: "Co to jest data-driven marketing?",
-    options: [
-      "Analiza dużych ilości danych do optymalizacji decyzji marketingowych",
-      "Marketing oparty na ulotkach papierowych",
-      "Wyłącznie marketing pocztowy",
-      "Nielegalna forma przetwarzania danych"
-    ],
-    correctAnswer: "Analiza dużych ilości danych do optymalizacji decyzji marketingowych"
-  },
-  {
-    id: 94,
-    question: "Co to jest interconnected?",
-    options: [
-      "Połączenie produktu, aplikacji, analityki i sieci",
-      "System segregacji dokumentów papierowych",
-      "Metoda szyfrowania offline",
-      "Nic nie znaczący skrót IT"
-    ],
-    correctAnswer: "Połączenie produktu, aplikacji, analityki i sieci"
-  },
-  {
-    id: 95,
-    question: "Co to jest Blockchain?",
-    options: [
-      "Zdecentralizowana, rozproszona baza danych",
-      "Baza SQL w jednym serwerze",
-      "Zbiór notatek papierowych",
-      "Sposób szyfrowania e-maili"
-    ],
-    correctAnswer: "Zdecentralizowana, rozproszona baza danych"
-  },
-  {
-    id: 96,
-    question: "Co to jest Cyfrowy bliźniak (Digital Twin)?",
-    options: [
-      "Wirtualna kopia obiektów fizycznych z symulacją w czasie rzeczywistym",
-      "Przeglądarka do e-booków",
-      "Odtwarzanie kaset VHS",
-      "System masowej wysyłki mailingów"
-    ],
-    correctAnswer: "Wirtualna kopia obiektów fizycznych z symulacją w czasie rzeczywistym"
-  },
-  {
-    id: 97,
-    question: "Co nazywamy Digital natives?",
-    options: [
-      "Osoby urodzone w erze powszechnego użycia Internetu i technologii",
-      "Osoby używające tylko telefonów stacjonarnych",
-      "Emigrantów nieposługujących się internetem",
-      "Wszelkich użytkowników komputerów powyżej 60 r.ż."
-    ],
-    correctAnswer: "Osoby urodzone w erze powszechnego użycia Internetu i technologii"
-  },
-  {
-    id: 98,
-    question: "Co to jest predykcyjne utrzymanie ruchu (Predictive maintenance)?",
-    options: [
-      "System AI przewidujący awarie, by zapobiec uszkodzeniom sprzętu",
-      "Konserwacja maszyn raz na dekadę bez czujników",
-      "Zwykłe sprzątanie hal produkcyjnych",
-      "Przegląd dokumentacji RODO"
-    ],
-    correctAnswer: "System AI przewidujący awarie, by zapobiec uszkodzeniom sprzętu"
-  },
-  {
-    id: 99,
-    question: "Jakie dane będą zasilały bazy danych autonomicznych samochodów?",
-    options: [
-      "Z sensorów (świat zewnętrzny) oraz dane o preferencjach użytkowników",
-      "Tylko dokumenty papierowe z urzędów",
-      "Wycinki prasowe offline",
-      "Nie ma żadnych baz danych dla aut autonomicznych"
-    ],
-    correctAnswer: "Z sensorów (świat zewnętrzny) oraz dane o preferencjach użytkowników"
-  },
-  {
-    id: 100,
-    question: "Która z innowacji spośród prezentowanych na innovation matrix określa wysoki wpływ na rynek i niską nowość technologiczną?",
-    options: [
-      "Innowacja zakłócająca",
-      "Innowacja radykalna",
-      "Innowacja zrównoważona",
-      "Innowacja przyrostowa"
-    ],
-    correctAnswer: "Innowacja zakłócająca"
-  },
-  {
-    id: 101,
-    question: "Jakie są przykłady modeli biznesowych typowych dla cyfrowej transformacji?",
-    options: [
-      "On demand",
-      "Subskrypcyjny",
-      "Marketplace",
-      "Sprzedaż wyłącznie offline z rezygnacją z modelu e-commerce"
-    ],
-    correctAnswer: [
-      "On demand",
-      "Subskrypcyjny",
-      "Marketplace"
-    ]
-  },
-  {
-    id: 102,
-    question: "Co to jest Marketing technologiczny (MARTECH)?",
-    options: [
-      "Zestaw narzędzi technologicznych wspierających marketing",
-      "Metoda zamykania danych w segregatorach analogowych",
-      "Technika publikacji offline",
-      "Obsługa billboardów przy drogach"
-    ],
-    correctAnswer: "Zestaw narzędzi technologicznych wspierających marketing"
-  },
-  {
-    id: 103,
-    question: "Co to jest insight konsumencki?",
-    options: [
-      "Zrozumienie postaw i wartości decydujących o wyborach konsumenta",
-      "Zbiór przepisów kulinarnych",
-      "Znajomość wyłącznie danych demograficznych",
-      "Analiza stacjonarnego ruchu pieszych"
-    ],
-    correctAnswer: "Zrozumienie postaw i wartości decydujących o wyborach konsumenta"
-  },
-  {
-    id: 104,
-    question: "Co to jest Marketing 6.0 (Metamarketing)?",
-    options: [
-      "Łączy świat fizyczny i cyfrowy",
-      "Odrzuca wszelkie technologie VR",
-      "Promuje tylko narzędzia offline",
-      "Model rezygnacji z big data"
-    ],
-    correctAnswer: "Łączy świat fizyczny i cyfrowy"
-  },
-  {
-    id: 105,
-    question: "Co to jest Marketing 5.0?",
-    options: [
-      "Technologie symulujące możliwości ludzkich marketerów",
-      "Wprowadzenie zakazu analizy danych",
-      "Brak udziału sztucznej inteligencji",
-      "Tylko mailing papierowy"
-    ],
-    correctAnswer: "Technologie symulujące możliwości ludzkich marketerów"
-  },
-  {
-    id: 106,
-    question: "Co to jest Marketing 4.0?",
-    options: [
-      "Współtworzenie wartości marki przez klientów (opinie, rekomendacje)",
-      "Wyłącznie marketing w postaci banerów ulicznych",
-      "Zasada braku interakcji z użytkownikiem",
-      "Tylko kampanie w radiu"
-    ],
-    correctAnswer: "Współtworzenie wartości marki przez klientów (opinie, rekomendacje)"
-  },
-  {
-    id: 107,
-    question: "Co oznacza efekt tłustego kota w kontekście transformacji cyfrowej?",
-    options: [
-      "Firma po transformacji uznaje, że nie musi dalej się rozwijać",
-      "Strategia intensyfikacji R&D",
-      "Wyłącznie model rozliczeń w bankowości",
-      "Metoda rekrutacji menedżerów"
-    ],
-    correctAnswer: "Firma po transformacji uznaje, że nie musi dalej się rozwijać"
-  },
-  {
-    id: 108,
-    question: "Jaki procent fejkowego kontentu jest skierowany na kobiety?",
-    options: [
-      "96%",
-      "10%",
-      "50%",
-      "100%"
-    ],
-    correctAnswer: "96%"
-  },
-  {
-    id: 109,
-    question: "Czym jest deep fake i do czego może być wykorzystywany?",
-    options: [
-      "Manipulowanie wizerunkiem osób publicznych, wpływ na giełdę i zachęcanie do inwestycji",
-      "Tworzenie oryginalnych materiałów wideo bez żadnych zmian",
-      "Tylko konwersja tekstu na mowę",
-      "Wyłącznie retusz zdjęć w Photoshopie"
-    ],
-    correctAnswer: "Manipulowanie wizerunkiem osób publicznych, wpływ na giełdę i zachęcanie do inwestycji"
-  },
-  {
-    id: 110,
-    question: "Jakie są najczęstsze formy cyberprzestępczości?",
-    options: [
-      "Oszustwa SMS-owe i telefoniczne",
-      "Tylko masowe ataki botnetu na serwery",
-      "Wyłącznie phishing mailowy",
-      "Kradzież kabli miedzianych"
-    ],
-    correctAnswer: "Oszustwa SMS-owe i telefoniczne"
-  },
-  {
-    id: 111,
-    question: "Jak źle działają aplikacje mobilne?",
-    options: [
-      "Po instalacji trojan przejmuje uprawnienia i może wymuszać subskrypcje premium",
-      "Zwykle ułatwiają bezpieczeństwo danych",
-      "Zapobiegają atakom wirusów",
-      "Nigdy nie pobierają żadnych wrażliwych danych"
-    ],
-    correctAnswer: "Po instalacji trojan przejmuje uprawnienia i może wymuszać subskrypcje premium"
-  },
-  {
-    id: 112,
-    question: "Jaki procent ataków na Androida stanowią złośliwe aplikacje?",
-    options: [
-      "98%",
-      "2%",
-      "50%",
-      "0%"
-    ],
-    correctAnswer: "98%"
-  },
-  {
-    id: 113,
-    question: "Jak działają oszustwa internetowe typu \"świniobicie\"?",
-    options: [
-      "Fałszywa tożsamość zwodzi ofiarę atrakcyjnymi ofertami, by ostatecznie ją okraść",
-      "Akcja marketingowa promująca wyłącznie mięso",
-      "Zalecenia dietetyczne online",
-      "Wyłącznie phishing przez SMS"
-    ],
-    correctAnswer: "Fałszywa tożsamość zwodzi ofiarę atrakcyjnymi ofertami, by ostatecznie ją okraść"
-  },
-  {
-    id: 114,
-    question: "Co zrobić, jeśli padniesz ofiarą oszustwa?",
-    options: [
-      "Zgłosić do organów ścigania i poinformować banki oraz firmy obsługujące płatności",
-      "Przestać korzystać z telefonu na stałe",
-      "Opublikować post o tym w social media bez dalszych działań",
-      "Nic nie robić, bo to nieważne"
-    ],
-    correctAnswer: "Zgłosić do organów ścigania i poinformować banki oraz firmy obsługujące płatności"
-  },
-  {
-    id: 115,
-    question: "Jak działają oszustwa internetowe?",
-    options: [
-      "Wykorzystują inżynierię społeczną i wywołują irracjonalne zachowania ofiar",
-      "Zawsze przebiegają tylko przez kontakt osobisty",
-      "Dotyczą wyłącznie haseł do Wi-Fi",
-      "To legalna forma reklamy"
-    ],
-    correctAnswer: "Wykorzystują inżynierię społeczną i wywołują irracjonalne zachowania ofiar"
-  },
-  {
-    id: 116,
-    question: "Co zrobić, jeśli zostaniesz zaatakowany przez spamerów?",
-    options: [
-      "Wstrzymać transakcje, skontaktować się z usługodawcą, używać ochrony przeglądania",
-      "Podawać im więcej danych",
-      "Zainstalować trojana w komputerze celowo",
-      "Nie reagować, licząc że spam zniknie"
-    ],
-    correctAnswer: "Wstrzymać transakcje, skontaktować się z usługodawcą, używać ochrony przeglądania"
-  },
-  {
-    id: 117,
-    question: "Co to jest spam?",
-    options: [
-      "Niechciana, masowa komunikacja cyfrowa",
-      "Wsparcie marketingowe oparte na RODO",
-      "Wyłącznie wiadomości listowne",
-      "Metoda szyfrowania plików"
-    ],
-    correctAnswer: "Niechciana, masowa komunikacja cyfrowa"
-  },
-  {
-    id: 118,
-    question: "Jak działa oszustwo typu spam?",
-    options: [
-      "Kusi super ofertą, prowadzi do fałszywej strony, używa fałszywych danych wysyłki i form płatności",
-      "Jest zawsze łatwe do rozpoznania, bo przychodzi z rządowej domeny",
-      "Zawsze dotyczy nieruchomości",
-      "Zgodnie z RODO, wszelkie spamowanie jest legalne"
-    ],
-    correctAnswer: "Kusi super ofertą, prowadzi do fałszywej strony, używa fałszywych danych wysyłki i form płatności"
-  },
-  {
-    id: 119,
-    question: "Co robić w przypadku ataku phishingowego?",
-    options: [
-      "Zmienić hasła, zablokować karty, skorzystać z usług monitorowania tożsamości",
-      "Nic nie robić",
-      "Przekazać więcej danych oszustowi",
-      "Zadzwonić do działu HR"
-    ],
-    correctAnswer: "Zmienić hasła, zablokować karty, skorzystać z usług monitorowania tożsamości"
-  },
-  {
-    id: 120,
-    question: "Co to jest phishing?",
-    options: [
-      "Wyłudzanie danych lub kliknięć prowadzących do złośliwego oprogramowania",
-      "Legalne mailingi do subskrybentów",
-      "Zbiór przepisów BHP",
-      "Metoda szyfrowania dysków"
-    ],
-    correctAnswer: "Wyłudzanie danych lub kliknięć prowadzących do złośliwego oprogramowania"
-  },
-  {
-    id: 121,
-    question: "Jak działa phishing?",
-    options: [
-      "Tworzy realistyczne strony i stosuje socjotechnikę, zwykle kontaktując się przez e-mail lub SMS",
-      "Odbywa się wyłącznie na spotkaniach offline",
-      "Wymaga fizycznego dostarczenia pendrive",
-      "Jest metodą bezpiecznego logowania"
-    ],
-    correctAnswer: "Tworzy realistyczne strony i stosuje socjotechnikę, zwykle kontaktując się przez e-mail lub SMS"
-  },
-  {
-    id: 122,
-    question: "Jakie są najczęściej atakowane platformy społecznościowe pod kątem phishingu w 2023 roku?",
-    options: [
-      "Facebook",
-      "GoldenLine",
-      "Nasza Klasa",
-      "Myspace"
-    ],
-    correctAnswer: "Facebook"
-  },
-  {
-    id: 123,
-    question: "Jak uniknąć złodziei informacji?",
-    options: [
-      "Korzystać z antywirusa, zmieniać hasła, monitorować tożsamość online",
-      "Podawać login i hasło wszędzie, gdzie poproszą",
-      "Ignorować alerty bezpieczeństwa",
-      "Zawsze zapisywać hasła w notatniku papierowym i publikować je"
-    ],
-    correctAnswer: "Korzystać z antywirusa, zmieniać hasła, monitorować tożsamość online"
-  },
-  {
-    id: 124,
-    question: "Jak działają złodzieje informacji?",
-    options: [
-      "Zwabiają ofiary do pobrania, zbierają dane i sprzedają je w darknecie",
-      "Legalnie chronią hasła w chmurze",
-      "Zawsze żądają rozmowy telefonicznej",
-      "Zapewniają darmowe ubezpieczenie"
-    ],
-    correctAnswer: "Zwabiają ofiary do pobrania, zbierają dane i sprzedają je w darknecie"
-  },
-  {
-    id: 125,
-    question: "Co to są Infostealery?",
-    options: [
-      "Złośliwe programy udające legalne, by cicho kraść dane użytkowników",
-      "Aplikacje do legalnego backupu",
-      "Gry komputerowe offline",
-      "Dokumentacja RODO"
-    ],
-    correctAnswer: "Złośliwe programy udające legalne, by cicho kraść dane użytkowników"
-  },
-  {
-    id: 126,
-    question: "Jakie są największe zagrożenia dla konsumentów w zakresie złośliwego oprogramowania?",
-    options: [
-      "Infostealery",
-      "Zawsze oryginalne aplikacje z Google Play",
-      "Nieszkodliwe wirusy testowe",
-      "Programy antywirusowe"
-    ],
-    correctAnswer: "Infostealery"
-  },
-  {
-    id: 127,
-    question: "Jakie są obawy o prywatność w XXI wieku?",
-    options: [
-      "Jednostka kontra algorytmy",
-      "Tylko spór o przepisy prawa budowlanego",
-      "Brak jakiejkolwiek inwigilacji",
-      "Wyłącznie prywatność offline"
-    ],
-    correctAnswer: "Jednostka kontra algorytmy"
-  },
-  {
-    id: 128,
-    question: "Co oznacza \"The right to be left alone\"?",
-    options: [
-      "Prawo do pozostawienia w spokoju",
-      "Nakaz włączania reklam kontekstowych",
-      "Rozporządzenie UE o marketingu mobilnym",
-      "Tylko zasada w social media"
-    ],
-    correctAnswer: "Prawo do pozostawienia w spokoju"
-  },
-  {
-    id: 129,
-    question: "Jakie środki bezpieczeństwa należy wdrożyć zgodnie z art. 32 RODO?",
-    options: [
-      "Szyfrowanie danych",
-      "Ciągła poufność i integralność",
-      "Szybkie przywracanie dostępu w razie incydentu",
-      "Udostępnianie wszystkich danych publicznie"
-    ],
-    correctAnswer: [
-      "Szyfrowanie danych",
-      "Ciągła poufność i integralność",
-      "Szybkie przywracanie dostępu w razie incydentu"
-    ]
-  },
-  {
-    id: 130,
-    question: "Jaki jest cel RODO?",
-    options: [
-      "Ochrona danych i przeciwdziałanie dominacji technologicznej Chin i USA",
-      "Promowanie spamu w internecie",
-      "Zakaz przechowywania haseł przez firmy",
-      "Obowiązek publikacji danych w sieci"
-    ],
-    correctAnswer: "Ochrona danych i przeciwdziałanie dominacji technologicznej Chin i USA"
-  },
-  {
-    id: 131,
-    question: "Jaki procent światowej populacji będzie objęty przepisami dotyczącymi prywatności podobnymi do RODO do 2025 roku?",
-    options: [
-      "Prawie 65%",
-      "5%",
-      "10%",
-      "100%"
-    ],
-    correctAnswer: "Prawie 65%"
-  },
-  {
-    id: 132,
-    question: "Co trzeci Polak obawia się czego?",
-    options: [
-      "Wycieku danych",
-      "Zniesienia cła",
-      "Zwiększenia liczby komputerów stacjonarnych",
-      "Każdej formy marketingu"
-    ],
-    correctAnswer: "Wycieku danych"
-  },
-  {
-    id: 133,
-    question: "Jakie jest najczęstsze źródło informacji o zagrożeniach online?",
-    options: [
-      "Internet, prasa, TV lub radio (47%)",
-      "Plotki na ulicy",
-      "Tylko materiały rządowe w urzędach",
-      "Żadne z powyższych"
-    ],
-    correctAnswer: "Internet, prasa, TV lub radio (47%)"
-  },
-  {
-    id: 134,
-    question: "Ile procent ofiar oszustw nie jest uwzględnianych w oficjalnych statystykach?",
-    options: [
-      "63%",
-      "0%",
-      "10%",
-      "100%"
-    ],
-    correctAnswer: "63%"
-  },
-  {
-    id: 135,
-    question: "Dlaczego ludzie tracą pieniądze lub dane osobowe w wyniku oszustwa?",
-    options: [
-      "45% nie umiało rozpoznać oszustwa",
-      "Zawsze udostępniali hasła celowo",
-      "Tylko z powodu wirusa w komputerze",
-      "Nikt nigdy nie traci pieniędzy w wyniku oszustwa"
-    ],
-    correctAnswer: "45% nie umiało rozpoznać oszustwa"
-  },
-  {
-    id: 136,
-    question: "Jaki procent prób wyłudzeń jest obecnie podejmowanych częściej niż w ubiegłym roku?",
-    options: [
-      "36%",
-      "1%",
-      "90%",
-      "0%"
-    ],
-    correctAnswer: "36%"
-  },
-  {
-    id: 137,
-    question: "Jak często ludzie otrzymują próby wyłudzenia danych?",
-    options: [
-      "61% - co najmniej raz w miesiącu",
-      "Nigdy",
-      "Raz do roku",
-      "Wyłącznie w weekendy"
-    ],
-    correctAnswer: "61% - co najmniej raz w miesiącu"
-  },
-  {
-    id: 138,
-    question: "Jaki procent respondentów doświadczyło jakiejś formy oszustwa w ciągu ostatniego roku (Raport Global Anti-Scam Alliance 2023)?",
-    options: [
-      "78%",
-      "2%",
-      "10%",
-      "95%"
-    ],
-    correctAnswer: "78%"
-  },
-  {
-    id: 139,
-    question: "Co to jest Spam?",
-    options: [
-      "Niechciane masowe wiadomości wysyłane elektronicznie (np. e-maile)",
-      "Wsparcie marketingowe zgodne z RODO",
-      "Tylko krótkie SMS-y",
-      "Usługa bankowa"
-    ],
-    correctAnswer: "Niechciane masowe wiadomości wysyłane elektronicznie (np. e-maile)"
-  },
-  {
-    id: 140,
-    question: "Co to jest Scam?",
-    options: [
-      "Wyłudzenie pieniędzy, danych lub innych wartości przez wprowadzenie w błąd",
-      "Legalne wsparcie kampanii non profit",
-      "Zabezpieczenie antywirusowe",
-      "Specjalny protokół w sieci LAN"
-    ],
-    correctAnswer: "Wyłudzenie pieniędzy, danych lub innych wartości przez wprowadzenie w błąd"
-  },
-  {
-    id: 141,
-    question: "Jakie są odczuwane konsekwencje cyberzagrożeń?",
-    options: [
-      "66% ofiar odczuwa stres, a 22% traci pieniądze",
-      "0% traci pieniądze",
-      "Tylko stres bez utraty pieniędzy",
-      "Zawsze wywołuje korzyść dla ofiary"
-    ],
-    correctAnswer: "66% ofiar odczuwa stres, a 22% traci pieniądze"
-  },
-  {
-    id: 142,
-    question: "Jak zmienił się odsetek osób doświadczających cyberzagrożeń w Polsce w latach 2020-2022?",
-    options: [
-      "2020 - 29%, 2021 - 34%, 2022 - 41%",
-      "Zmalał do 0% w 2022",
-      "Był zawsze powyżej 90%",
-      "Dane niedostępne"
-    ],
-    correctAnswer: "2020 - 29%, 2021 - 34%, 2022 - 41%"
-  },
-  {
-    id: 143,
-    question: "Jaki procent Polaków doświadczył jakiejś formy cyber zagrożenia w ciągu ostatnich 12 miesięcy (Consumer Market Research 2023)?",
-    options: [
-      "46%",
-      "5%",
-      "90%",
-      "0%"
-    ],
-    correctAnswer: "46%"
-  },
-  {
-    id: 144,
-    question: "Jakie było jedno z pięciu największych zagrożeń w latach 2021-2024?",
-    options: [
-      "Cyberataki",
-      "Brak internetu mobilnego",
-      "Zamknięcie sklepów stacjonarnych",
-      "Całkowita deregulacja RODO"
-    ],
-    correctAnswer: "Cyberataki"
-  },
-  {
-    id: 145,
-    question: "Jakie jest odniesienie do danych jako waluty?",
-    options: [
-      "Dane mają wartość i można je wymieniać, podobnie jak tradycyjną walutę",
-      "Dane nie mają żadnej wartości",
-      "Służą tylko do wypełniania rubryk w Excelu",
-      "Są bezużyteczne w gospodarce"
-    ],
-    correctAnswer: "Dane mają wartość i można je wymieniać, podobnie jak tradycyjną walutę"
-  },
-  {
-    id: 146,
-    question: "Jakie jest odniesienie do danych jako pracy?",
-    options: [
-      "Ludzie generują je przez aktywność online, co można traktować jako cyfrową formę pracy",
-      "Dane powstają wyłącznie w laboratoriach",
-      "Nie można w ogóle nazwać tego pracą",
-      "Dotyczy tylko robotników w fabrykach"
-    ],
-    correctAnswer: "Ludzie generują je przez aktywność online, co można traktować jako cyfrową formę pracy"
-  },
-  {
-    id: 147,
-    question: "Jakie jest odniesienie do danych jako nowej ropy naftowej?",
-    options: [
-      "Dane stały się cennym i strategicznie ważnym zasobem w gospodarce cyfrowej",
-      "Nie mają żadnego znaczenia",
-      "Dostępne są tylko w branży papierowej",
-      "Dotyczy wyłącznie produkcji przemysłu ciężkiego"
-    ],
-    correctAnswer: "Dane stały się cennym i strategicznie ważnym zasobem w gospodarce cyfrowej"
-  },
-  {
-    id: 148,
-    question: "Jak Chiny klasyfikują dane od 2020 roku?",
-    options: [
-      "Jako piąty czynnik produkcji, obok pracy, ziemi, kapitału i technologii",
-      "Jako nieistotny dodatek",
-      "Jako zasób pozbawiony wartości",
-      "Jako produkt wyłącznie rolniczy"
-    ],
-    correctAnswer: "Jako piąty czynnik produkcji, obok pracy, ziemi, kapitału i technologii"
-  },
-  {
-    id: 149,
-    question: "Jakie są 4 fale AI?",
-    options: [
-      "Internet AI, Business AI, Perception AI, Autonomous AI",
-      "Sieci analogowe, VR AI, HTML AI, Cloud AI",
-      "Tylko VR, AR, XR, MR",
-      "Brak wyróżnionych fal"
-    ],
-    correctAnswer: "Internet AI, Business AI, Perception AI, Autonomous AI"
-  },
-  {
-    id: 150,
-    question: "Jakie korzyści oferuje sieć 5G?",
-    options: [
-      "Większa przepustowość, stabilność, pobieranie filmu Full HD w <10 sek., hiperconnectivity",
-      "Znacznie wolniejsze łącze",
-      "Brak obsługi IoT",
-      "Tylko sygnał radiowy AM"
-    ],
-    correctAnswer: "Większa przepustowość, stabilność, pobieranie filmu Full HD w <10 sek., hiperconnectivity"
-  },
-  {
-    id: 151,
-    question: "Jak szybka jest sieć 5G w porównaniu do 4G?",
-    options: [
-      "Nawet 100 razy szybsza niż 4G",
-      "Tyle samo",
-      "10 razy wolniejsza",
-      "5G nie istnieje"
-    ],
-    correctAnswer: "Nawet 100 razy szybsza niż 4G"
-  },
-  {
-    id: 152,
-    question: "Jakie są trzy filary technologiczne cyfrowej transformacji?",
-    options: [
-      "Moc obliczeniowa, internet, gromadzenie danych",
-      "Tylko marketing szeptany, spedycja i transport",
-      "Komputery 8-bitowe",
-      "Zasoby w postaci dyskietek"
-    ],
-    correctAnswer: "Moc obliczeniowa, internet, gromadzenie danych"
-  },
-  {
-    id: 153,
-    question: "Jakie są charakterystyki transformacji cyfrowej?",
-    options: [
-      "Określenie kierunku transformacji, nowa wartość dla klientów, nowy mindset liderów",
-      "Całkowity brak celu",
-      "Eliminacja innowacji",
-      "Zawsze powrót do rozwiązań offline"
-    ],
-    correctAnswer: "Określenie kierunku transformacji, nowa wartość dla klientów, nowy mindset liderów"
-  },
-  {
-    id: 154,
-    question: "Co to jest Cyfrowa Transformacja?",
-    options: [
-      "Przystosowanie się organizacji do nowych technologii w celu zmiany modeli biznesowych, systemów, kultury i struktur dla lepszych doświadczeń klientów",
-      "Zamknięcie firmy na czas nieokreślony",
-      "Wprowadzenie marketingu door-to-door",
-      "Rezygnacja z analizy danych"
-    ],
-    correctAnswer: "Przystosowanie się organizacji do nowych technologii w celu zmiany modeli biznesowych, systemów, kultury i struktur dla lepszych doświadczeń klientów"
-  },
-  {
-    id: 155,
-    question: "Jakie jest uzasadnienie cyfryzacji?",
-    options: [
-      "Lepsza obsługa klientów, usprawnienie procesów firmowych i redefinicja modelu biznesowego",
-      "Rezygnacja z wszelkiej automatyzacji",
-      "Zwiększenie liczby papierowych dokumentów",
-      "Ignorowanie potrzeb klientów"
-    ],
-    correctAnswer: "Lepsza obsługa klientów, usprawnienie procesów firmowych i redefinicja modelu biznesowego"
-  },
-  {
-    id: 156,
-    question: "Co to jest Cyfryzacja?",
-    options: [
-      "Zwiększone wykorzystanie technologii cyfrowej w organizacjach i społeczeństwie, gdzie rozwiązania cyfrowe stają się infrastrukturą",
-      "Proces tworzenia kopii papierowych",
-      "Wyłącznie migracja do maszyn do pisania",
-      "Zamykanie dostępu do internetu"
-    ],
-    correctAnswer: "Zwiększone wykorzystanie technologii cyfrowej w organizacjach i społeczeństwie, gdzie rozwiązania cyfrowe stają się infrastrukturą"
-  },
-  {
-    id: 157,
-    question: "Jakie jest uzasadnienie digitalizacji?",
-    options: [
-      "Niższe koszty, szybsze działanie, przejrzystość i efektywność",
-      "Zawsze wyższe koszty i wydłużenie procesów",
-      "Brak jakiejkolwiek transparentności",
-      "Spowolnienie usług"
-    ],
-    correctAnswer: "Niższe koszty, szybsze działanie, przejrzystość i efektywność"
-  },
-  {
-    id: 158,
-    question: "Co to jest Digitalizacja?",
-    options: [
-      "Proces konwersji danych analogowych na cyfrowe bity (1 i 0)",
-      "Zamiana plików PDF na druk wielkoformatowy",
-      "Pomijanie archiwizacji elektronicznej",
-      "Tworzenie ręcznych notatek w segregatorach"
-    ],
-    correctAnswer: "Proces konwersji danych analogowych na cyfrowe bity (1 i 0)"
-  },
-  {
-    id: 159,
-    question: "Jaki wzrost skali manipulacji rozprzestrzenianych w internecie za pośrednictwem sztucznej inteligencji przewiduje się w ciągu kolejnych 10 lat?",
-    options: [
-      "77%",
-      "5%",
-      "0%",
-      "200%"
-    ],
-    correctAnswer: "77%"
-  },
-  {
-    id: 160,
-    question: "Ile procent Polaków zetknęło się z fake newsem?",
-    options: [
-      "84%",
-      "1%",
-      "50%",
-      "0%"
-    ],
-    correctAnswer: "84%"
-  },
-  {
-    id: 161,
-    question: "Technologia Deepfake jest wykorzystywana przeciwko komu?",
-    options: [
-      "Kobietom",
-      "Wyłącznie firmom IT",
-      "Nikt nie stosuje deepfake",
-      "Osobom posiadającym wyłącznie telewizor analogowy"
-    ],
-    correctAnswer: "Kobietom"
+    question: "Dyskusja wyników w raporcie badawczym polega na…",
+    options: [
+      "Interpretacji rezultatów w kontekście literatury i celu badania",
+      "Prezentacji surowych danych bez komentarza",
+      "Wyłącznie przedstawieniu tabel statystycznych",
+      "Wprowadzeniu nowych, nieprzebadanych hipotez",
+      "Usunięciu wszystkich odniesień do teorii",
+      "Randomizacji kolejności rozdziałów"
+    ],
+    correctAnswer: "Interpretacji rezultatów w kontekście literatury i celu badania"
   }
 ];
 
 ////////////////////////////////////////////////////////////////////////
-// Tworzymy 16 "paczek" z pytaniami: po 10 w każdej, a ostatnia ma 11.
-// W sumie 161 pytań:
-//
-//  1..10   => id:1
-//  11..20  => id:2
-//  21..30  => id:3
-//  31..40  => id:4
-//  41..50  => id:5
-//  51..60  => id:6
-//  61..70  => id:7
-//  71..80  => id:8
-//  81..90  => id:9
-//  91..100 => id:10
-//  101..110=> id:11
-//  111..120=> id:12
-//  121..130=> id:13
-//  131..140=> id:14
-//  141..150=> id:15
-//  151..161=> id:16 (11 pytań)
+// "PACZKI" PYTAŃ  – 8 zakresów po 10 pytań
 ////////////////////////////////////////////////////////////////////////
-
 export const questionRanges: QuestionRange[] = [
-  { id: 1, label: "Questions 1 - 10",   startId: 1,   endId: 10   },
-  { id: 2, label: "Questions 11 - 20",  startId: 11,  endId: 20  },
-  { id: 3, label: "Questions 21 - 30",  startId: 21,  endId: 30  },
-  { id: 4, label: "Questions 31 - 40",  startId: 31,  endId: 40  },
-  { id: 5, label: "Questions 41 - 50",  startId: 41,  endId: 50  },
-  { id: 6, label: "Questions 51 - 60",  startId: 51,  endId: 60  },
-  { id: 7, label: "Questions 61 - 70",  startId: 61,  endId: 70  },
-  { id: 8, label: "Questions 71 - 80",  startId: 71,  endId: 80  },
-  { id: 9, label: "Questions 81 - 90",  startId: 81,  endId: 90  },
-  { id: 10, label: "Questions 91 - 100", startId: 91,  endId: 100 },
-  { id: 11, label: "Questions 101 - 110", startId: 101, endId: 110 },
-  { id: 12, label: "Questions 111 - 120", startId: 111, endId: 120 },
-  { id: 13, label: "Questions 121 - 130", startId: 121, endId: 130 },
-  { id: 14, label: "Questions 131 - 140", startId: 131, endId: 140 },
-  { id: 15, label: "Questions 141 - 150", startId: 141, endId: 150 },
-  { id: 16, label: "Questions 151 - 161", startId: 151, endId: 161 },
+  { id: 1, label: "Questions 1 – 10", startId: 1, endId: 10 },
+  { id: 2, label: "Questions 11 – 20", startId: 11, endId: 20 },
+  { id: 3, label: "Questions 21 – 30", startId: 21, endId: 30 },
+  { id: 4, label: "Questions 31 – 40", startId: 31, endId: 40 },
+  { id: 5, label: "Questions 41 – 50", startId: 41, endId: 50 },
+  { id: 6, label: "Questions 51 – 60", startId: 51, endId: 60 },
+  { id: 7, label: "Questions 61 – 70", startId: 61, endId: 70 },
+  { id: 8, label: "Questions 71 – 80", startId: 71, endId: 80 }
 ];
 
 ////////////////////////////////////////////////////////////////////////
-// Funkcja pobierająca pytania z wybranych zakresów
+// FUNKCJA FILTRUJĄCA
 ////////////////////////////////////////////////////////////////////////
 export const getQuestionsFromRanges = (selectedRangeIds: number[]): QuizQuestion[] => {
-  // Jeśli nie wybrano żadnych zakresów, zwracamy wszystkie pytania
-  if (selectedRangeIds.length === 0) return questions;
-
-  // Wybieramy zdefiniowane range według id
-  const selectedRanges = questionRanges.filter((range) =>
-    selectedRangeIds.includes(range.id)
-  );
-
-  // Filtrowanie pytań, które należą do któregoś z wybranych zakresów
-  return questions.filter((question) =>
-    selectedRanges.some(
-      (range) => question.id >= range.startId && question.id <= range.endId
-    )
+  if (selectedRangeIds.length === 0) return questions; // brak filtrów → zwróć wszystko
+  const selectedRanges = questionRanges.filter(r => selectedRangeIds.includes(r.id));
+  return questions.filter(q =>
+    selectedRanges.some(r => q.id >= r.startId && q.id <= r.endId)
   );
 };
