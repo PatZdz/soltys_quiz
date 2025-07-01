@@ -18,8 +18,8 @@ export const questionSets: QuestionSet[] = [
     getRanges: () => questionRanges1
   },
   {
-    id: 'managerial-economics',
-    name: 'Ekonomia Managerska',
+    id: 'prawo-ulicy',
+    name: 'Prawo',
     getQuestions: getQuestionsFromRanges2,
     getRanges: () => questionRanges2
   }
