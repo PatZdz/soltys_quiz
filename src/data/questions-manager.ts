@@ -12,8 +12,8 @@ export interface QuestionSet {
 
 export const questionSets: QuestionSet[] = [
   {
-    id: 'metody-badan',
-    name: 'Metody badań ilościowych i jakościowych',
+    id: 'CSR',
+    name: 'CSR',
     getQuestions: getQuestionsFromRanges1,
     getRanges: () => questionRanges1
   },

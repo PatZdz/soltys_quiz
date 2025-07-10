@@ -1,7 +1,3 @@
-// quiz.ts
-////////////////////////////////////////////////////////////////////////
-// INTERFEJSY
-////////////////////////////////////////////////////////////////////////
 export interface QuizQuestion {
   id: number;
   question: string;
@@ -18,1156 +14,1186 @@ export interface QuestionRange {
 }
 
 ////////////////////////////////////////////////////////////////////////
-// LISTA PYTAŃ 1-80  (pierwotne 1-60 + nowe 61-80)
+// LISTA PYTAŃ 1-104
 ////////////////////////////////////////////////////////////////////////
 export const questions: QuizQuestion[] = [
-  // ───────── 1-27 (jak w poprzedniej wersji) ─────────
   {
     id: 1,
-    question: "Co to jest metodologia badań?",
+    question: "Która koncepcja CSR zakłada cztery poziomy odpowiedzialności, włączając w to poziom filantropijny?",
     options: [
-      "Proces reklamowania wyników badań",
-      "Przypadkowe zbieranie opinii",
-      "Systematyczny proces planowania, prowadzenia i analizowania badań",
-      "Lista pytań ankietowych",
-      "Zestaw hipotez",
-      "Podręcznik dla studentów"
+      "Koncepcja 3BL",
+      "Teoria interesariuszy Freemana",
+      "Piramida społecznej odpowiedzialności Carroll'a",
+      "Alternatywna piramida CSR"
     ],
-    correctAnswer: "Systematyczny proces planowania, prowadzenia i analizowania badań"
+    correctAnswer: "Piramida społecznej odpowiedzialności Carroll'a"
   },
   {
     id: 2,
-    question: "Czym różnią się metody ilościowe od jakościowych? (wielokrotny wybór)",
+    question: "Która teoria zakłada, że cele ekonomiczne i społeczne uzupełniają się wzajemnie?",
     options: [
-      "Ilościowe badają opinie i emocje",
-      "Ilościowe analizują dane liczbowe",
-      "Jakościowe analizują subiektywne doświadczenia",
-      "Jakościowe wykorzystują statystyki",
-      "Ilościowe zawsze są bardziej precyzyjne",
-      "Jakościowe są losowe"
+      "Koncepcja wartości wspólnej M. Portera",
+      "Teoria interesariuszy Freemana",
+      "Koncepcja 3BL",
+      "Piramida społecznej odpowiedzialności Carroll'a"
     ],
-    correctAnswer: [
-      "Ilościowe analizują dane liczbowe",
-      "Jakościowe analizują subiektywne doświadczenia"
-    ]
+    correctAnswer: "Teoria interesariuszy Freemana"
   },
   {
     id: 3,
-    question: "Które pytanie należy do badań ilościowych?",
+    question: "Która koncepcja CSR skupia się na trzech aspektach: ludzi, planety i zysku?",
     options: [
-      "Jakie emocje budzi produkt X?",
-      "Ile produktu zużywa przeciętna rodzina?",
-      "Dlaczego ludzie unikają reklamy produktu X?",
-      "Jak konsumenci opisują markę X?",
-      "Co motywuje do korzystania z produktu X?",
-      "Jakie potrzeby zaspokaja produkt X?"
+      "Koncepcja 3BL",
+      "Koncepcja wartości wspólnej M. Portera",
+      "Teoria interesariuszy Freemana",
+      "Alternatywna piramida CSR"
     ],
-    correctAnswer: "Ile produktu zużywa przeciętna rodzina?"
+    correctAnswer: "Koncepcja 3BL"
   },
   {
     id: 4,
-    question: "Po co uczyć się metodologii badań? (wielokrotny wybór)",
+    question: "Jakie są trzy wymiary budowania wartości społecznej według piramidy społecznej odpowiedzialności Carroll'a?",
     options: [
-      "Przydaje się w biznesie i marketingu",
-      "Pozwala podejmować lepsze decyzje",
-      "Pomaga w ocenie wiarygodności reklam",
-      "Zastępuje analizę danych",
-      "Nie jest przydatna na rynku pracy",
-      "Przydaje się tylko w laboratorium"
+      "Zasady, procesy, system zarządzania",
+      "Środowiskowy, przekonaniowy, wartości i założeniowy",
+      "Etyka, ekologia, ekonomia",
+      "Cele ekonomiczne, cele społeczne, cele środowiskowe"
     ],
-    correctAnswer: [
-      "Przydaje się w biznesie i marketingu",
-      "Pozwala podejmować lepsze decyzje",
-      "Pomaga w ocenie wiarygodności reklam"
-    ]
+    correctAnswer: "Zasady, procesy, system zarządzania"
   },
   {
     id: 5,
-    question: "Który z poniższych to przykład praktycznego zastosowania analizy danych?",
+    question: "Które z poniższych poziomów zostały dodane na początku alternatywnej piramidy CSR Carroll'a?",
     options: [
-      "Zmiana logo firmy",
-      "Udostępnianie całego sezonu serialu naraz (Netflix)",
-      "Podniesienie cen bez analizy",
-      "Reklama oparta na intuicji",
-      "Opcja odkupu auta po utracie pracy (Hyundai)",
-      "Zmniejszenie budżetu bez badania rynku"
+      "Prawny, ekonomiczny, etyczny, filantropijny",
+      "Środowiskowy, przekonaniowy, wartości i założeniowy",
+      "Środowiskowy, przekonaniowy, filantropijny",
+      "Etyczny, filantropijny, przekonaniowy, wartości i założeniowy"
     ],
-    correctAnswer: [
-      "Udostępnianie całego sezonu serialu naraz (Netflix)",
-      "Opcja odkupu auta po utracie pracy (Hyundai)"
-    ]
+    correctAnswer: "Środowiskowy, przekonaniowy, wartości i założeniowy"
   },
   {
     id: 6,
-    question: "Która odpowiedź najlepiej opisuje proces badawczy?",
+    question: "Jakie są główne interesy uwzględniane w teorii interesariuszy Freemana?",
     options: [
-      "Zebranie opinii znajomych",
-      "Jednorazowe zapytanie w sieci",
-      "Analiza tylko wyników bez planowania",
-      "Sformułowanie problemu, pytania, metoda, badanie, analiza i wnioski",
-      "Pominięcie literatury",
-      "Pomiar bez koncepcji"
+      "Inwestorzy, pracownicy, partnerzy biznesowi, społeczeństwo, klienci",
+      "Pracownicy, partnerzy biznesowi, społeczeństwo, inwestorzy, dostawcy",
+      "Klienci, dostawcy, inwestorzy, społeczeństwo, pracownicy"
     ],
-    correctAnswer: "Sformułowanie problemu, pytania, metoda, badanie, analiza i wnioski"
+    correctAnswer: "Inwestorzy, pracownicy, partnerzy biznesowi, społeczeństwo, klienci"
   },
   {
     id: 7,
-    question: "Skąd można czerpać pomysły na badania? (wielokrotny wybór)",
+    question: "Która koncepcja CSR skupia się na tworzeniu wartości zarówno dla przedsiębiorstwa, jak i dla społeczności?",
     options: [
-      "Z codziennych obserwacji",
-      "Z literatury naukowej",
-      "Z replikacji istniejących badań",
-      "Z opinii celebrytów",
-      "Z portali plotkarskich",
-      "Z memów w internecie"
+      "Koncepcja wartości wspólnej M. Portera",
+      "Teoria interesariuszy Freemana",
+      "Koncepcja 3BL",
+      "Piramida społecznej odpowiedzialności Carroll'a"
     ],
-    correctAnswer: [
-      "Z codziennych obserwacji",
-      "Z literatury naukowej",
-      "Z replikacji istniejących badań"
-    ]
+    correctAnswer: "Koncepcja wartości wspólnej M. Portera"
   },
   {
     id: 8,
-    question: "Czym jest luka badawcza?",
+    question: "Co oznacza skrót ESG w kontekście odpowiedzialności społecznej i biznesu?",
     options: [
-      "Brak budżetu na badania",
-      "Przerwa między hipotezą a teorią",
-      "Niezbadany lub słabo zbadany temat",
-      "Moment, w którym dane nie pasują",
-      "Błąd statystyczny",
-      "Luka między metodą a wynikami"
+      "European Sustainability Governance",
+      "Environmental Sustainability Guidelines",
+      "Environment Social Governance",
+      "Ethical Social Guidelines"
     ],
-    correctAnswer: "Niezbadany lub słabo zbadany temat"
+    correctAnswer: "Environment Social Governance"
   },
   {
     id: 9,
-    question: "Co to jest pytanie badawcze?",
+    question: "Jakie inicjatywy i standardy są związane z trendem ESG?",
     options: [
-      "Losowo zadane pytanie w ankiecie",
-      "Pytanie do eksperta",
-      "Pytanie zawierające zmienne i sugerujące schemat badawczy",
-      "Pytanie bez znaczenia naukowego",
-      "Pytanie o zgodę na udział w badaniu",
-      "Pytanie używane wyłącznie w psychologii"
+      "SFDR, TR, TCFC",
+      "NFRD, CSRD, TNFD",
+      "CSDDD, ESRS, ESG",
+      "CSR, CSRD, TCFC"
     ],
-    correctAnswer: "Pytanie zawierające zmienne i sugerujące schemat badawczy"
+    correctAnswer: "NFRD, CSRD, TNFD"
   },
   {
     id: 10,
-    question: "Które z poniższych to przykłady pytań badawczych? (wielokrotny wybór)",
+    question: "Które modele CSR skupiają się na wartościach ekonomicznych?",
     options: [
-      "Czy A wiąże się z B?",
-      "Czy osoby z cechą A różnią się w B?",
-      "Czy manipulacja A wpływa na B?",
-      "Jak ma się pogoda do humoru badacza?",
-      "Czy liczby są ważne w badaniu?",
-      "Co jadł uczestnik przed badaniem?"
+      "Modele ukierunkowane na wartości moralne",
+      "Modele ukierunkowane na wartości ekonomiczne",
+      "Zarówno modele ukierunkowane na wartości moralne, jak i ekonomiczne",
+      "Żaden z powyższych"
     ],
-    correctAnswer: [
-      "Czy A wiąże się z B?",
-      "Czy osoby z cechą A różnią się w B?",
-      "Czy manipulacja A wpływa na B?"
-    ]
+    correctAnswer: "Modele ukierunkowane na wartości ekonomiczne"
   },
   {
     id: 11,
-    question: "Czym jest hipoteza badawcza?",
+    question: "Co to jest startup pozytywnego wpływu (SPW)?",
     options: [
-      "Każde przypuszczenie",
-      "Sugestia bez związku z badaniem",
-      "Zdanie twierdzące będące odpowiedzią na pytanie badawcze",
-      "Tytuł raportu",
-      "Opinie badacza",
-      "Slogan reklamowy"
+      "Startup skupiający się na zrównoważonym rozwoju",
+      "Startup działający w sektorze społecznym",
+      "Startup wykorzystujący innowacje technologiczne",
+      "Wszystkie powyższe odpowiedzi"
     ],
-    correctAnswer: "Zdanie twierdzące będące odpowiedzią na pytanie badawcze"
+    correctAnswer: "Wszystkie powyższe odpowiedzi"
   },
   {
     id: 12,
-    question: "Która hipoteza pasuje do eksperymentu?",
+    question: "Co jest istotną cechą przedsiębiorczości pozytywnego wpływu?",
     options: [
-      "Badani będą zadowoleni z udziału",
-      "Kobiety są bardziej empatyczne",
-      "Osoby poddane treningowi poznawczemu będą bardziej odporne na ryzyko",
-      "Wyniki są losowe",
-      "Większość osób lubi badania",
-      "Uczestnicy będą się nudzić"
+      "Pasja i wzrost wartości organizacji",
+      "Skupienie na innowacjach technologicznych",
+      "Rzetelność organizacyjna i efektywność",
+      "Wszystkie powyższe odpowiedzi"
     ],
-    correctAnswer: "Osoby poddane treningowi poznawczemu będą bardziej odporne na ryzyko"
+    correctAnswer: "Wszystkie powyższe odpowiedzi"
   },
   {
     id: 13,
-    question: "Co to jest zmienna?",
+    question: "Co składa się na model przedsiębiorczości pozytywnego wpływu?",
     options: [
-      "Stała liczba",
-      "Liczba powtórzeń",
-      "Cecha przyjmująca co najmniej dwie wartości",
-      "Fragment statystyki",
-      "Wynik testu",
-      "Część kwestionariusza"
+      "Purpose + Scale",
+      "Entrepreneurship + Technology + Sustainability + Innovation",
+      "Tech4Susty",
+      "Wszystkie powyższe odpowiedzi"
     ],
-    correctAnswer: "Cecha przyjmująca co najmniej dwie wartości"
+    correctAnswer: "Wszystkie powyższe odpowiedzi"
   },
   {
     id: 14,
-    question: "Czym różnią się zmienne obserwowalne od nieobserwowalnych? (wielokrotny wybór)",
+    question: "Jakie są typy odpowiedzialnych innowacji?",
     options: [
-      "Obserwowalne można zmierzyć bezpośrednio (np. wzrost)",
-      "Nieobserwowalne to konstrukty jak inteligencja czy stres",
-      "Obserwowalne to teoria, nieobserwowalne to praktyka",
-      "Nieobserwowalne są błędami",
-      "Obserwowalne są subiektywne",
-      "Nieobserwowalne nie mają znaczenia"
+      "Typ 1: Inaczej",
+      "Typ 2: Coś innego",
+      "Oba typy",
+      "Żaden z powyższych"
     ],
-    correctAnswer: [
-      "Obserwowalne można zmierzyć bezpośrednio (np. wzrost)",
-      "Nieobserwowalne to konstrukty jak inteligencja czy stres"
-    ]
+    correctAnswer: "Oba typy"
   },
   {
     id: 15,
-    question: "Co to jest operacjonalizacja?",
+    question: "Co to jest przedsiębiorstwo społeczne?",
     options: [
-      "Tłumaczenie badań na angielski",
-      "Przypadkowe nadanie wartości",
-      "Przekładanie konstruktu teoretycznego na coś, co da się zmierzyć",
-      "Opisywanie zmiennych ogólnie",
-      "Rezygnacja z pomiaru",
-      "Wybór uczestników badania"
+      "Podmiot ekonomii społecznej skupiający się na zrównoważonych praktykach gospodarczych",
+      "Organizacja pozarządowa działająca na rzecz dobra publicznego",
+      "Spółdzielnia socjalna zatrudniająca osoby zagrożone marginalizacją społeczną",
+      "Wszystkie powyższe odpowiedzi"
     ],
-    correctAnswer: "Przekładanie konstruktu teoretycznego na coś, co da się zmierzyć"
+    correctAnswer: "Wszystkie powyższe odpowiedzi"
   },
   {
     id: 16,
-    question: "Która skala ma absolutne zero i pozwala powiedzieć, że coś jest dwa razy większe?",
+    question: "Które z podmiotów należą do ekonomii społecznej?",
     options: [
-      "Nominalna",
-      "Porządkowa",
-      "Przedziałowa",
-      "Stosunkowa",
-      "Interaktywna",
-      "Segmentowa"
+      "Spółdzielnia socjalna",
+      "Warsztat terapii zajęciowej",
+      "Organizacja pozarządowa",
+      "Wszystkie powyższe odpowiedzi"
     ],
-    correctAnswer: "Stosunkowa"
+    correctAnswer: "Wszystkie powyższe odpowiedzi"
   },
   {
     id: 17,
-    question: "Jakie są rodzaje skal pomiarowych? (wielokrotny wybór)",
+    question: "Jakie są akty prawne dla przedsiębiorstw społecznych?",
     options: [
-      "Nominalna – kategorie bez porządku (np. płeć)",
-      "Porządkowa – kolejność (np. wykształcenie)",
-      "Przedziałowa – równe odstępy, brak zera absolutnego (np. IQ)",
-      "Stosunkowa – z absolutnym zerem (np. wiek, dochód)",
-      "Dynamiczna",
-      "Reaktywna"
+      "Stowarzyszenie",
+      "Fundacja",
+      "Spółdzielnia socjalna",
+      "Wszystkie powyższe odpowiedzi"
     ],
-    correctAnswer: [
-      "Nominalna – kategorie bez porządku (np. płeć)",
-      "Porządkowa – kolejność (np. wykształcenie)",
-      "Przedziałowa – równe odstępy, brak zera absolutnego (np. IQ)",
-      "Stosunkowa – z absolutnym zerem (np. wiek, dochód)"
-    ]
+    correctAnswer: "Wszystkie powyższe odpowiedzi"
   },
   {
     id: 18,
-    question: "Które z poniższych to metody ilościowe? (wielokrotny wybór)",
+    question: "Ile osób minimalnie musi tworzyć spółdzielnię socjalną?",
     options: [
-      "Sondaż",
-      "Korelacja",
-      "Eksperyment",
-      "Quasi-eksperyment",
-      "FGI",
-      "IDI"
+      "3 osoby fizyczne lub 2 osoby prawne",
+      "7 osób fizycznych",
+      "10 osób fizycznych",
+      "Dowolna liczba osób"
     ],
-    correctAnswer: [
-      "Sondaż",
-      "Korelacja",
-      "Eksperyment",
-      "Quasi-eksperyment"
-    ]
+    correctAnswer: "3 osoby fizyczne lub 2 osoby prawne"
   },
   {
     id: 19,
-    question: "Czym jest korelacja?",
+    question: "Jakie są główne cele przedsiębiorstw społecznych?",
     options: [
-      "Zależność przyczynowo-skutkowa",
-      "Statystyczny związek między zmiennymi",
-      "Zbieżność losowa",
-      "Opinia badacza",
-      "Technika jakościowa",
-      "Błąd w próbie"
+      "Integracja zawodowa i społeczna osób zagrożonych marginalizacją społeczną",
+      "Generowanie zysków dla właścicieli",
+      "Wzrost wartości rynkowej organizacji",
+      "Konkurowanie z innymi przedsiębiorstwami"
     ],
-    correctAnswer: "Statystyczny związek między zmiennymi"
+    correctAnswer: "Integracja zawodowa i społeczna osób zagrożonych marginalizacją społeczną"
   },
   {
     id: 20,
-    question: "Czym jest korelacja pozorna?",
+    question: "Które z podmiotów ekonomii społecznej opierają się na demokratycznym zarządzaniu?",
     options: [
-      "Fałszywe dane",
-      "Związek wynikający z trzeciej zmiennej",
-      "Korelacja bardzo słaba",
-      "Związek negatywny",
-      "Korelacja w małej grupie",
-      "Brak zmiennych"
+      "Spółdzielnia pracy",
+      "Centrum/klub integracji społecznej",
+      "Organizacja pozarządowa",
+      "Wszystkie powyższe odpowiedzi"
     ],
-    correctAnswer: "Związek wynikający z trzeciej zmiennej"
+    correctAnswer: "Wszystkie powyższe odpowiedzi"
   },
   {
     id: 21,
-    question: "Czym jest eksperyment?",
+    question: "Które z poniższych elementów nie należy do odpowiedzialności firm wobec konsumentów?",
     options: [
-      "Obserwacja uczestników",
-      "Manipulacja zmienną i losowy przydział do grup",
-      "Opis grupy respondentów",
-      "Badanie opinii",
-      "Testowanie bez hipotezy",
-      "Zbieranie danych przez telefon"
+      "Komunikacja",
+      "Marketing",
+      "Sprzedaż",
+      "Badania i rozwój"
     ],
-    correctAnswer: "Manipulacja zmienną i losowy przydział do grup"
+    correctAnswer: "Badania i rozwój"
   },
   {
     id: 22,
-    question: "Czym różni się quasi-eksperyment od eksperymentu?",
+    question: "Co oznacza pojęcie \"dark patterns\" w kontekście odpowiedzialności firm wobec konsumentów?",
     options: [
-      "Jest bardziej naukowy",
-      "Zawiera więcej statystyk",
-      "Nie ma losowego przydziału do grup",
-      "Wykorzystuje tylko dzieci",
-      "Trwa krócej",
-      "Jest zawsze lepszy"
+      "Strategie marketingowe oparte na badaniach psychologicznych",
+      "Sposoby manipulacji konsumentami poprzez wykorzystanie strachu i ograniczonej dostępności produktów/usług",
+      "Praktyki związane z bezpieczeństwem danych osobowych",
+      "Techniki sprzedażowe oparte na uczciwości i przejrzystości"
     ],
-    correctAnswer: "Nie ma losowego przydziału do grup"
+    correctAnswer: "Sposoby manipulacji konsumentami poprzez wykorzystanie strachu i ograniczonej dostępności produktów/usług"
   },
   {
     id: 23,
-    question: "Które techniki to techniki zbierania danych ilościowych? (wielokrotny wybór)",
+    question: "Jakie są odpowiedzialności firm za przekaz reklamowy?",
     options: [
-      "CAWI – ankiety internetowe",
-      "CATI – ankiety telefoniczne",
-      "CAPI – z pomocą ankietera",
-      "PAPI – wersja papierowa",
-      "Obserwacja uczestnicząca",
-      "Wywiad narracyjny"
+      "Zakaz odnoszenia się do suplementów leczniczych w sposób sugerujący ich właściwości lecznicze",
+      "Zapobieganie i monitoring stosowania misselingu",
+      "Uproszczenie języka bankowego",
+      "Wszystkie powyższe odpowiedzi"
     ],
-    correctAnswer: [
-      "CAWI – ankiety internetowe",
-      "CATI – ankiety telefoniczne",
-      "CAPI – z pomocą ankietera",
-      "PAPI – wersja papierowa"
-    ]
+    correctAnswer: "Wszystkie powyższe odpowiedzi"
   },
   {
     id: 24,
-    question: "Czym różnią się pytania otwarte od zamkniętych?",
+    question: "Co to są innowacje STI?",
     options: [
-      "Otwarte są krótsze",
-      "Otwarte – respondent sam formułuje odpowiedź, zamknięte – wybiera z listy",
-      "Zamknięte są tylko w badaniach jakościowych",
-      "Otwarte nie są analizowane",
-      "Zamknięte są nieczytelne",
-      "Otwarte są zawsze lepsze"
+      "Innowacje technologiczne",
+      "Innowacje organizacyjne",
+      "Innowacje społeczne",
+      "Innowacje w komunikacji marketingowej"
     ],
-    correctAnswer: "Otwarte – respondent sam formułuje odpowiedź, zamknięte – wybiera z listy"
+    correctAnswer: "Innowacje technologiczne"
   },
   {
     id: 25,
-    question: "Czego unikać w pytaniach ankietowych? (wielokrotny wybór)",
+    question: "Jakie znaczenie mają innowacje społeczne w miejscu pracy?",
     options: [
-      "Dwuznaczności",
-      "Podwójnych przeczeń",
-      "Sformułowań sugerujących odpowiedź",
-      "Pytań o uczucia",
-      "Krótkich pytań",
-      "Pytań o fakty"
+      "Wzrost produktywności i wyników finansowych firm",
+      "Poprawa relacji między pracownikami",
+      "Zwiększenie konkurencyjności na rynku",
+      "Wszystkie powyższe odpowiedzi"
     ],
-    correctAnswer: [
-      "Dwuznaczności",
-      "Podwójnych przeczeń",
-      "Sformułowań sugerujących odpowiedź"
-    ]
+    correctAnswer: "Wszystkie powyższe odpowiedzi"
   },
   {
     id: 26,
-    question: "Które z poniższych to zasady etyczne w badaniach? (wielokrotny wybór)",
+    question: "Jakie są typy innowacji według badań w krajach skandynawskich?",
     options: [
-      "Świadoma zgoda",
-      "Anonimowość i poufność",
-      "Niekrzywdzenie uczestników",
-      "Debriefing po badaniu",
-      "Ukrywanie celu badania",
-      "Zbieranie danych bez pytania"
+      "Innowacje technologiczne, innowacje społeczne, innowacje produktowe",
+      "Innowacje technologiczne, innowacje organizacyjne, innowacje marketingowe",
+      "Innowacje społeczne, innowacje infrastrukturalne, innowacje usługowe",
+      "Innowacje technologiczne, innowacje społeczne, innowacje usługowe"
     ],
-    correctAnswer: [
-      "Świadoma zgoda",
-      "Anonimowość i poufność",
-      "Niekrzywdzenie uczestników",
-      "Debriefing po badaniu"
-    ]
+    correctAnswer: "Innowacje technologiczne, innowacje organizacyjne, innowacje marketingowe"
   },
   {
     id: 27,
-    question: "Co powinien zawierać formularz zgody? (wielokrotny wybór)",
+    question: "Kto zazwyczaj inicjuje innowacje w miejscu pracy?",
     options: [
-      "Informację o celu i przebiegu badania",
-      "Dobrowolność udziału",
-      "Prawo do rezygnacji w każdej chwili",
-      "Informację o ryzykach i korzyściach",
-      "Dane kontaktowe do badacza",
-      "Obowiązek zakończenia badania"
+      "Pracownicy",
+      "Zarząd/dyrektor",
+      "Badacze i naukowcy",
+      "Klienci i konsumenci"
     ],
-    correctAnswer: [
-      "Informację o celu i przebiegu badania",
-      "Dobrowolność udziału",
-      "Prawo do rezygnacji w każdej chwili",
-      "Informację o ryzykach i korzyściach",
-      "Dane kontaktowe do badacza"
-    ]
+    correctAnswer: "Zarząd/dyrektor"
   },
-
-  // ───────── 28-60 (dodane poprzednio) ─────────
   {
     id: 28,
-    question: "Czym są dane pierwotne (primary data)?",
+    question: "Jakie czynniki mogą wspierać innowacje w miejscu pracy?",
     options: [
-      "Dane, które nie zostały zebrane pod kątem problemu badawczego",
-      "Dane wywołane przez badacza na potrzeby konkretnego problemu",
-      "Archiwalne dane sprzed lat",
-      "Losowe wpisy z forów internetowych",
-      "Zagregowane statystyki publiczne",
-      "Wyniki metaanalizy"
+      "Kompetencje decyzyjne rozproszone w organizacji",
+      "Struktura organizacyjna",
+      "Relacje między pracownikami",
+      "Wszystkie powyższe odpowiedzi"
     ],
-    correctAnswer: "Dane wywołane przez badacza na potrzeby konkretnego problemu"
+    correctAnswer: "Wszystkie powyższe odpowiedzi"
   },
   {
     id: 29,
-    question: "Czym są dane wtórne (secondary data) / dane zastane?",
+    question: "Jaką rolę odgrywają menadżerowie w procesie innowacji?",
     options: [
-      "Dane zebrane w laboratorium na potrzeby eksperymentu",
-      "Dane, które już istnieją i nie były gromadzone do naszego badania",
-      "Wyniki ankiety prowadzonej wśród pracowników badacza",
-      "Tylko pliki multimedialne (audio/wideo)",
-      "Dane zawsze jakościowe, nigdy ilościowe",
-      "Zawsze są darmowe i publicznie dostępne"
+      "Wspierają wdrażanie innowacji",
+      "Rozumieją nieprzewidywalność i ryzyko",
+      "Akceptują konieczność uczenia się",
+      "Wszystkie powyższe odpowiedzi"
     ],
-    correctAnswer: "Dane, które już istnieją i nie były gromadzone do naszego badania"
+    correctAnswer: "Wszystkie powyższe odpowiedzi"
   },
   {
     id: 30,
-    question: "Badania niereaktywne charakteryzuje to, że…",
+    question: "Jakie są bariery w dzieleniu się wiedzą i pomysłami w kontekście innowacji w miejscu pracy?",
     options: [
-      "Respondenci wypełniają ankietę internetową w czasie rzeczywistym",
-      "Badany nie wie, że jest obiektem badania, a dane pochodzą z istniejących źródeł",
-      "Badacze prowokują określone zachowania w laboratorium",
-      "Używa się wyłącznie eksperymentów polowych",
-      "Wymagają obowiązkowej randomizacji próby",
-      "Zawsze analizują dane biometryczne"
+      "Niechęć do dzielenia się wiedzą",
+      "Obawa o kradzież pomysłu",
+      "Przewaga kontroli",
+      "Wszystkie powyższe odpowiedzi"
     ],
-    correctAnswer: "Badany nie wie, że jest obiektem badania, a dane pochodzą z istniejących źródeł"
+    correctAnswer: "Wszystkie powyższe odpowiedzi"
   },
   {
     id: 31,
-    question: "Które z poniższych to zalety dzielenia się danymi i pracy na danych zastanych? (wielokrotny wybór)",
+    question: "Który model przywództwa opiera się na zasadzie \"coś za coś\" i wykorzystuje zewnętrzne motywatory?",
     options: [
-      "Transparentność badań",
-      "Szybkość i niski koszt pozyskania danych",
-      "Łatwa powtarzalność badań",
-      "Zawsze idealna kompletność danych",
-      "Brak konieczności analizy statystycznej",
-      "Pełna reprezentatywność bez dodatkowych czynności"
+      "Transakcyjne",
+      "Transformacyjne",
+      "Adaptacyjne",
+      "Organiczne"
     ],
-    correctAnswer: [
-      "Transparentność badań",
-      "Szybkość i niski koszt pozyskania danych",
-      "Łatwa powtarzalność badań"
-    ]
+    correctAnswer: "Transakcyjne"
   },
   {
     id: 32,
-    question: "Które stwierdzenia opisują wady pracy na danych zastanych? (wielokrotny wybór)",
+    question: "Jakie są style przywództwa w Polsce, według notatek?",
     options: [
-      "Niekompletność lub brak niektórych zmiennych",
-      "Nieznane okoliczności powstania danych",
-      "Niereprezentatywność materiału",
-      "Pełna kontrola nad wszystkimi zmiennymi",
-      "Zawsze wysoka trafność pomiarowa",
-      "Dane są celowo zbierane pod nasze hipotezy"
+      "Strukturyzujący, autokratyczny, partycypacyjny, makiaweliczny, nagradzający, zdystansowanie",
+      "Autorytarny, demokratyczny, laissez-faire",
+      "Transakcyjny, transformacyjny, autentyczny",
+      "Przywództwo służebne, przywództwo autorytarne, przywództwo demokratyczne"
     ],
-    correctAnswer: [
-      "Niekompletność lub brak niektórych zmiennych",
-      "Nieznane okoliczności powstania danych",
-      "Niereprezentatywność materiału"
-    ]
+    correctAnswer: "Strukturyzujący, autokratyczny, partycypacyjny, makiaweliczny, nagradzający, zdystansowanie"
   },
   {
     id: 33,
-    question: "Desk Research polega głównie na…",
+    question: "Który model biznesowy w duchu zrównoważonego rozwoju polega na maksymalizowaniu efektywności materiałowej i energetycznej?",
     options: [
-      "Analizowaniu istniejących źródeł wewnętrznych i zewnętrznych w celu opisu rynku",
-      "Prowadzeniu eksperymentów z udziałem konsumentów",
-      "Testowaniu hipotez w laboratorium psychologicznym",
-      "Generowaniu Big Data w czasie rzeczywistym",
-      "Korzystaniu wyłącznie z danych jakościowych w terenie",
-      "Anonimowym obserwowaniu użytkowników aplikacji"
+      "Technological",
+      "Social",
+      "Organizational",
+      "Circular economy"
     ],
-    correctAnswer: "Analizowaniu istniejących źródeł wewnętrznych i zewnętrznych w celu opisu rynku"
+    correctAnswer: "Technological"
   },
   {
     id: 34,
-    question: "Thick Data cechuje się tym, że…",
+    question: "Co oznacza pojęcie \"greenwashing\" w kontekście działań firm związanych z zrównoważonym rozwojem?",
     options: [
-      "Oparte jest na uczeniu się maszyn i milionach rekordów",
-      "Koncentruje się na pytaniu „dlaczego?” i ma charakter antropologiczny",
-      "Zawsze wynika z analizy logów serwerowych",
-      "Nie pozwala zrozumieć motywacji konsumentów",
-      "Służy wyłącznie do predykcyjnych algorytmów marketingowych",
-      "Nie wymaga żadnych rozmów z ludźmi"
+      "Stosowanie szczególnego nazewnictwa w przekazach reklamowych, które sugeruje przyjazność środowiskową",
+      "Niedoinformowanie klientów na temat rzeczywistych działań firm związanych z zrównoważonym rozwojem",
+      "Monitorowanie działań firm przez instytucje odpowiedzialne za zrównoważony rozwój",
+      "Podejmowanie działań proekologicznych przez firmy"
     ],
-    correctAnswer: "Koncentruje się na pytaniu „dlaczego?” i ma charakter antropologiczny"
+    correctAnswer: "Stosowanie szczególnego nazewnictwa w przekazach reklamowych, które sugeruje przyjazność środowiskową"
   },
   {
     id: 35,
-    question: "Który etap NIE należy do pięciu kroków przeglądu literatury?",
+    question: "Jakie branże są bardziej monitorowane przez instytucje związane z zrównoważonym rozwojem?",
     options: [
-      "Zidentyfikuj kluczowe terminy",
-      "Zbieraj dane pierwotne na dużej próbie",
-      "Krytycznie oceń znalezione publikacje",
-      "Zorganizuj literaturę w menedżerze cytowań",
-      "Napisz uporządkowany przegląd",
-      "Szukaj źródeł w różnych bazach"
+      "Rolniczo-spożywcza, finansowa, energetyczna, e-commerce",
+      "Farmaceutyczna, medyczna, technologiczna, transportowa",
+      "Budowlana, turystyczna, handlowa, gastronomiczna",
+      "Spożywcza, modowa, filmowa, artystyczna"
     ],
-    correctAnswer: "Zbieraj dane pierwotne na dużej próbie"
+    correctAnswer: "Rolniczo-spożywcza, finansowa, energetyczna, e-commerce"
   },
   {
     id: 36,
-    question: "Głównym celem przeglądu literatury jest…",
+    question: "Jakie znaczenie ma przywództwo służebne?",
     options: [
-      "Wskazanie luki badawczej i uzasadnienie potrzeby nowego badania",
-      "Zwiększenie liczby cytowań autora",
-      "Publikacja artykułu bez recenzji",
-      "Zastąpienie całego procesu badawczego",
-      "Ominięcie etapu operacjonalizacji",
-      "Wyłącznie nauka stylu APA"
+      "Słuchanie pracowników i podejmowanie z nimi decyzji",
+      "Budowanie pełnego zaangażowania wszystkich uczestników",
+      "Przywódca pokazuje kierunki i daje wzorce",
+      "Wszystkie powyższe odpowiedzi"
     ],
-    correctAnswer: "Wskazanie luki badawczej i uzasadnienie potrzeby nowego badania"
+    correctAnswer: "Wszystkie powyższe odpowiedzi"
   },
   {
     id: 37,
-    question: "Przegląd literatury prowadzony według ściśle określonego protokołu i kryteriów włączenia to…",
+    question: "Jakie są przykłady nowych modeli biznesowych w duchu zrównoważonego rozwoju, na czym mogą bazować?",
     options: [
-      "Przegląd narracyjny",
-      "Przegląd systematyczny",
-      "Desk Research",
-      "Bibliografia adnotowana",
-      "Scoping review bez analizy krytycznej",
-      "Case study"
+      "Technological, social, organizational",
+      "Circular economy, sharing economy, social entrepreneurship",
+      "Renewable energy, sustainable supply chain, BCorp",
+      "Recycling, upcycling, positive impact startups"
     ],
-    correctAnswer: "Przegląd systematyczny"
+    correctAnswer: "Technological, social, organizational"
   },
   {
     id: 38,
-    question: "W badaniach ilościowych narzędzia pomiarowe są zazwyczaj…",
+    question: "Która branża jest często kojarzona z działaniami nieodpowiedzialnymi społecznie, takimi jak reklamy swoich produktów?",
     options: [
-      "Standaryzowane, jak kwestionariusz lub ankieta",
-      "Tworzone spontanicznie w trakcie badania",
-      "Ukryte przed respondentem",
-      "Zawsze wizualne (mapy myśli)",
-      "Jednorazowe i niepowtarzalne",
-      "Niepodlegające walidacji"
+      "Farmaceutyczna",
+      "Spożywcza",
+      "Finansowa",
+      "Energetyczna"
     ],
-    correctAnswer: "Standaryzowane, jak kwestionariusz lub ankieta"
+    correctAnswer: "Farmaceutyczna"
   },
   {
     id: 39,
-    question: "Typowa wielkość próby w badaniach jakościowych to…",
+    question: "Jakie są przykłady działań firm w duchu zrównoważonego rozwoju, które są monitorowane przez instytucje?",
     options: [
-      "20-50 badanych",
-      "200-1000 badanych",
-      "Ponad 10 000 badanych",
-      "Jedna osoba zawsze wystarczy",
-      "Minimum 500 dla statystycznej mocy",
-      "Zawsze taka sama jak w ilościowych"
+      "Promowanie złych wzorców zachowania",
+      "Zachowania nieodpowiedzialne społecznie",
+      "Aspekt ekologiczny danej usługi",
+      "Wszystkie powyższe odpowiedzi"
     ],
-    correctAnswer: "20-50 badanych"
+    correctAnswer: "Wszystkie powyższe odpowiedzi"
   },
   {
     id: 40,
-    question: "Które efekty grupowe są pożądane podczas FGI? (wielokrotny wybór)",
+    question: "Które elementy zamieniły kolejność w alternatywnej piramidzie CSR Carroll'a?",
     options: [
-      "Synergia",
-      "Stymulacja",
-      "Śnieżna kula",
-      "Totalna dominacja jednego uczestnika",
-      "Ciche milczenie wszystkich",
-      "Stały off-topic"
+      "Prawny z Filantropijnym",
+      "Prawny z Ekonomicznym",
+      "Etyczny z Ekonomicznym",
+      "Filantropijny z Etycznym"
     ],
-    correctAnswer: [
-      "Synergia",
-      "Stymulacja",
-      "Śnieżna kula"
-    ]
+    correctAnswer: "Prawny z Ekonomicznym"
   },
   {
     id: 41,
-    question: "Technika projekcyjna, w której marki nadaje się cechy ludzkie, to…",
+    question: "Które z poniższych ryzyk jest uwzględniane w kryteriach niefinansowych ESG?",
     options: [
-      "Personifikacja",
-      "Animizacja (marka jako zwierzę)",
-      "Test niedokończonych zdań",
-      "Kolaż",
-      "Drzewo emocji",
-      "Mapa ciepła"
+      "Ryzyka klimatyczne",
+      "Ryzyka finansowe",
+      "Ryzyka technologiczne",
+      "Ryzyka marketingowe"
     ],
-    correctAnswer: "Personifikacja"
+    correctAnswer: "Ryzyka klimatyczne"
   },
   {
     id: 42,
-    question: "Moderator w grupie fokusowej powinien… (wielokrotny wybór)",
+    question: "Jakie podejście do raportowania jest związane z ESG?",
     options: [
-      "Parafrazować odpowiedzi",
-      "Dopytywać i klaryfikować",
-      "Aktywnie słuchać",
-      "Oceniać i krytykować uczestników",
-      "Ignorować komunikację niewerbalną",
-      "Czytać pytania z kartki bez reakcji"
+      "Standardy międzynarodowe",
+      "Regulacje prawne",
+      "Praktyka rynkowa",
+      "Wszystkie powyższe"
     ],
-    correctAnswer: [
-      "Parafrazować odpowiedzi",
-      "Dopytywać i klaryfikować",
-      "Aktywnie słuchać"
-    ]
+    correctAnswer: "Wszystkie powyższe"
   },
   {
     id: 43,
-    question: "Gęsty opis w etnografii oznacza…",
+    question: "Jakie są trendy wśród inwestorów związane z ESG?",
     options: [
-      "Szczegółowe odzwierciedlenie działań, intencji i kontekstu kulturowego",
-      "Minimalistyczne streszczenie obserwacji",
-      "Opis statystyczny bez cytatów",
-      "Wyłączne stosowanie tabel przestawnych",
-      "Zastąpienie wszystkich notatek nagraniem wideo",
-      "Raport napisany w formie punktów"
+      "Włączanie kryteriów finansowych w działalność spółek",
+      "Ignorowanie aspektów środowiskowych i społecznych",
+      "Zwiększanie ryzyka inwestycji",
+      "Włączanie kryteriów niefinansowych w działalność spółek"
     ],
-    correctAnswer: "Szczegółowe odzwierciedlenie działań, intencji i kontekstu kulturowego"
+    correctAnswer: "Włączanie kryteriów niefinansowych w działalność spółek"
   },
   {
     id: 44,
-    question: "Badacz, który w netnografii otwarcie mówi o swojej obecności i aktywnie uczestniczy w dyskusji, to wariant…",
+    question: "Które z poniższych modeli gospodarki jest związane z ESG?",
     options: [
-      "Uczestnik",
-      "Przezroczysty obserwator",
-      "Troll",
-      "Noob",
-      "Shadow",
-      "Moderator techniczny"
+      "Model kapitalistyczny",
+      "Model socjalistyczny",
+      "Model gospodarki obiegu zamkniętego, naturalnego klimatycznie",
+      "Model autorytarny"
     ],
-    correctAnswer: "Uczestnik"
+    correctAnswer: "Model gospodarki obiegu zamkniętego, naturalnego klimatycznie"
   },
   {
     id: 45,
-    question: "Zgodnie z kryteriami Roberta Yina decyzja o zastosowaniu studium przypadku jest właściwa, gdy… (wielokrotny wybór)",
+    question: "Jakie są cechy modelu przywództwa transakcyjnego?",
     options: [
-      "Celem jest odpowiedź na pytanie „Jak?” lub „Dlaczego?”",
-      "Nie można manipulować zachowaniem badanych",
-      "Kontekst jest kluczowy dla interpretacji",
-      "Granice między przypadkiem a kontekstem są wyraźne i jednoznaczne",
-      "Interesuje nas tylko liczebność zjawiska",
-      "Potrzebna jest reprezentatywna próba losowa"
+      "Wykorzystywanie zewnętrznych motywatorów",
+      "Transformowanie podwładnych",
+      "Budowanie pełnego zaangażowania uczestników",
+      "Pozostawienie decyzji na poziomie indywidualnym"
     ],
-    correctAnswer: [
-      "Celem jest odpowiedź na pytanie „Jak?” lub „Dlaczego?”",
-      "Nie można manipulować zachowaniem badanych",
-      "Kontekst jest kluczowy dla interpretacji"
-    ]
+    correctAnswer: "Wykorzystywanie zewnętrznych motywatorów"
   },
   {
     id: 46,
-    question: "Dopasowanie wzorców w analizie studium przypadku polega na…",
+    question: "Który z wymienionych liderów wzbudza fascynację swoją odwagą i wszechmocnością?",
     options: [
-      "Porównywaniu wzorców empirycznych z przewidywaniami teoretycznymi",
-      "Losowym łączeniu zmiennych w model regresji",
-      "Testowaniu hipotez w dużej próbie ankietowej",
-      "Zakodowaniu wywiadów w programie CAQDAS",
-      "Łączeniu kilku przypadków w syntezę przekrojową",
-      "Generowaniu infografik na końcu raportu"
+      "Transformacyjny lider narcystyczny",
+      "Transakcyjny lider adaptacyjny",
+      "Transformacyjny lider uwodzicielski",
+      "Organiczny lider"
     ],
-    correctAnswer: "Porównywaniu wzorców empirycznych z przewidywaniami teoretycznymi"
+    correctAnswer: "Transformacyjny lider narcystyczny"
   },
   {
     id: 47,
-    question: "Obserwacja standaryzowana wymaga…",
+    question: "Który model przywództwa wspiera ludzi w wypracowaniu rozwiązań samodzielnie?",
     options: [
-      "Scheduły (karty) obserwacyjnej z precyzyjnymi kategoriami",
-      "Całkowitej improwizacji obserwatora",
-      "Braku jakichkolwiek wytycznych",
-      "Zawsze ukrytej kamery",
-      "Udziału co najmniej 10 obserwatorów jednocześnie",
-      "Testu projektowego przed obserwacją"
+      "Transakcyjne przywództwo",
+      "Transformacyjne przywództwo",
+      "Adaptacyjne przywództwo",
+      "Organiczne przywództwo"
     ],
-    correctAnswer: "Scheduły (karty) obserwacyjnej z precyzyjnymi kategoriami"
+    correctAnswer: "Adaptacyjne przywództwo"
   },
   {
     id: 48,
-    question: "Efekt Hawthorne opisuje…",
+    question: "Jaki styl przywództwa charakteryzuje się klarownym zadawaniem zadań, analizą i monitorowaniem postępów?",
     options: [
-      "Zmianę zachowania ludzi z powodu świadomości bycia obserwowanym",
-      "Losowy błąd pomiaru w ankietach internetowych",
-      "Metodę triangulacji danych",
-      "Zjawisko frustracji moderatora fokusów",
-      "Technikę analizy Big Data",
-      "Problem autoselekcji próby"
+      "Strukturyzujący",
+      "Autokratyczny",
+      "Partycypacyjny",
+      "Makiaweliczny"
     ],
-    correctAnswer: "Zmianę zachowania ludzi z powodu świadomości bycia obserwowanym"
+    correctAnswer: "Strukturyzujący"
   },
   {
     id: 49,
-    question: "Shadowing w badaniach jakościowych to…",
+    question: "Który styl przywództwa eksponuje władzę i stawia wysokie standardy, karząc za niepożądane zachowania?",
     options: [
-      "Długotrwała obserwacja jednostki w jej naturalnym środowisku",
-      "Anonimowa ankieta online",
-      "Zaawansowana metoda regresji",
-      "Wyłącznie nagrywanie rozmów telefonicznych",
-      "Projektowanie eksperymentu laboratoryjnego",
-      "Technika wizualizacji danych"
+      "Strukturyzujący",
+      "Autokratyczny",
+      "Partycypacyjny",
+      "Makiaweliczny"
     ],
-    correctAnswer: "Długotrwała obserwacja jednostki w jej naturalnym środowisku"
+    correctAnswer: "Autokratyczny"
   },
   {
     id: 50,
-    question: "W wywiadach pogłębionych „punkt nasycenia” oznacza, że…",
+    question: "Który styl przywództwa charakteryzuje się wsparciem dla pracowników w podejmowaniu decyzji i inicjatyw?",
     options: [
-      "Kolejne wywiady nie wnoszą nowych informacji",
-      "Wywiad trwa już ponad 4 godziny",
-      "Respondent nie chce odpowiadać",
-      "Budżet badania się wyczerpał",
-      "Wszystkie transkrypcje są już zakodowane",
-      "Uzyskano 100 % odpowiedzi na ankietę"
+      "Strukturyzujący",
+      "Autokratyczny",
+      "Partycypacyjny",
+      "Makiaweliczny"
     ],
-    correctAnswer: "Kolejne wywiady nie wnoszą nowych informacji"
+    correctAnswer: "Partycypacyjny"
   },
   {
     id: 51,
-    question: "Triangulacja metod (wg Denzina) polega na… (wielokrotny wybór)",
+    question: "Jaki styl przywództwa charakteryzuje się manipulacją informacjami i tolerancją wobec niskich standardów etycznych i moralnych?",
     options: [
-      "Łączeniu danych z różnych metod (np. ankieta i wywiad)",
-      "Korzystaniu z różnych badaczy analizujących te same dane",
-      "Porównywaniu interpretacji z różnych teorii",
-      "Analizie wyłącznie jednego źródła danych",
-      "Zastąpieniu obserwacji eksperymentem",
-      "Wykluczeniu błędów systematycznych"
+      "Nagradzający",
+      "Zdystansowanie",
+      "Makiaweliczny",
+      "Autokratyczny"
     ],
-    correctAnswer: [
-      "Łączeniu danych z różnych metod (np. ankieta i wywiad)",
-      "Korzystaniu z różnych badaczy analizujących te same dane",
-      "Porównywaniu interpretacji z różnych teorii"
-    ]
+    correctAnswer: "Makiaweliczny"
   },
   {
     id: 52,
-    question: "Paradygmat pozytywistyczny zakłada, że…",
+    question: "Który model zrównoważonego rozwoju opiera się na generowaniu większej ilości pieniędzy z tych samych produktów i wykorzystywaniu materiałów z recyklingu?",
     options: [
-      "Rzeczywistość jest obiektywna i podlega odkrywaniu poprzez zmysły",
-      "Wiedza jest konstruowana subiektywnie przez uczestników",
-      "Metody jakościowe są jedynym sposobem badania świata",
-      "Nie istnieją uniwersalne prawa społeczne",
-      "Badacz i badani tworzą znaczenia wspólnie",
-      "Wyniki badań zawsze mają charakter idiograficzny"
+      "Gospodarka cyrkularna",
+      "Ekonomia współdzielenia",
+      "Przedsiębiorczość społeczna",
+      "Energia odnawialna"
     ],
-    correctAnswer: "Rzeczywistość jest obiektywna i podlega odkrywaniu poprzez zmysły"
+    correctAnswer: "Gospodarka cyrkularna"
   },
   {
     id: 53,
-    question: "Dobór próby metodą „kuli śnieżnej” polega na…",
+    question: "Który model zrównoważonego rozwoju opiera się na współdzieleniu zasobów, na przykład poprzez usługi car-sharingowe?",
     options: [
-      "Polecaniu kolejnych uczestników przez już przebadane osoby",
-      "Losowaniu numerów PESEL z bazy GUS",
-      "Rekrutowaniu wyłącznie ochotników z forów internetowych",
-      "Randomizacji blokowej badanych",
-      "Ustalaniu kwot demograficznych z góry",
-      "Zawsze wymaga udziału panelu online"
+      "Gospodarka cyrkularna",
+      "Ekonomia współdzielenia",
+      "Przedsiębiorczość społeczna",
+      "Energia odnawialna"
     ],
-    correctAnswer: "Polecaniu kolejnych uczestników przez już przebadane osoby"
+    correctAnswer: "Ekonomia współdzielenia"
   },
   {
     id: 54,
-    question: "Który rodzaj badań online jest synchroniczny?",
+    question: "Który model zrównoważonego rozwoju koncentruje się na tworzeniu przedsiębiorstw, których działalność ma pozytywny wpływ społeczny, na przykład poprzez model \"kup jeden, podaruj jeden\" (buy one give one)?",
     options: [
-      "Wywiad przez Zoom na żywo",
-      "Ankieta e-mailowa wypełniana w dowolnym czasie",
-      "Analiza logów serwera (niereaktywna)",
-      "Desk Research statystyk GUS",
-      "Niereaktywny scraping mediów społecznościowych",
-      "Przegląd literatury w bazach online"
+      "Gospodarka cyrkularna",
+      "Ekonomia współdzielenia",
+      "Przedsiębiorczość społeczna",
+      "Energia odnawialna"
     ],
-    correctAnswer: "Wywiad przez Zoom na żywo"
+    correctAnswer: "Przedsiębiorczość społeczna"
   },
   {
     id: 55,
-    question: "Do mocnych stron badań online zaliczamy… (wielokrotny wybór)",
+    question: "Która instytucja zajmuje się ochroną klientów i konsumentów oraz rozwiązywaniem sytuacji problematycznych dla interesariuszy?",
     options: [
-      "Łatwy dostęp do rozproszonych respondentów",
-      "Szybkość zbierania danych",
-      "Możliwość badania w przyjaznym środowisku respondenta",
-      "Całkowity brak problemów technicznych",
-      "Pełną kontrolę nad warunkami zewnętrznymi",
-      "Zawsze reprezentatywną próbę bez dodatkowych zabiegów"
+      "EASA – European advertising Alliance",
+      "KER - Komisja Etyki Reklamy",
+      "UOKiK – urząd ochrony klientów i konsumentów"
     ],
-    correctAnswer: [
-      "Łatwy dostęp do rozproszonych respondentów",
-      "Szybkość zbierania danych",
-      "Możliwość badania w przyjaznym środowisku respondenta"
-    ]
+    correctAnswer: "UOKiK – urząd ochrony klientów i konsumentów"
   },
   {
     id: 56,
-    question: "Badania idiograficzne dążą do…",
+    question: "Jakie są dwa główne tryby innowacji zdefiniowane w notatkach?",
     options: [
-      "Dogłębnego zrozumienia konkretnego przypadku w jego kontekście",
-      "Formułowania uniwersalnych praw dla całej populacji",
-      "Użycia wyłącznie statystyki inferencyjnej",
-      "Generalizacji wyników na kraje ościenne",
-      "Zbadania minimum 1000 osób",
-      "Zrezygnowania z opisu kontekstu"
+      "Innowacje STI i innowacje DUI",
+      "Innowacje technologiczne i innowacje społeczne",
+      "Innowacje organizacyjne i innowacje ekonomiczne"
     ],
-    correctAnswer: "Dogłębnego zrozumienia konkretnego przypadku w jego kontekście"
+    correctAnswer: "Innowacje STI i innowacje DUI"
   },
   {
     id: 57,
-    question: "„Branie w nawias” w etnografii oznacza…",
+    question: "W jakim kontekście polityka gospodarcza traktuje innowacje jako czynnik wzrostu produktywności?",
     options: [
-      "Świadome zawieszenie własnych założeń i interpretacji",
-      "Wprowadzenie cytatów do raportu",
-      "Wykreślenie danych odstających",
-      "Kodowanie materiału w NVivo",
-      "Zastosowanie regresji liniowej",
-      "Pominięcie notatek terenowych"
+      "W kontekście programów unijnych",
+      "W kontekście badań nad innowacjami typu DUI w ramach UE",
+      "W kontekście zwiększania jakościowych miejsc pracy"
     ],
-    correctAnswer: "Świadome zawieszenie własnych założeń i interpretacji"
+    correctAnswer: "W kontekście programów unijnych"
   },
   {
     id: 58,
-    question: "Które z poniższych jest źródłem WEWNĘTRZNYM w Desk Research?",
+    question: "Jakie czynniki są wskazane jako decydujące o funkcjonowaniu jednostek w społeczeństwie w kontekście działań społecznych związanych z innowacjami w miejscu pracy?",
     options: [
-      "Raport finansowy własnej firmy",
-      "Encyklopedia Britannica",
-      "Baza Eurostat",
-      "Wikipedia",
-      "Artykuł w prasie branżowej",
-      "Dane GUS"
+      "Dobrostan i satysfakcja z miejsca pracy",
+      "Efektywność produkcyjna i zysk",
+      "Wykorzystanie nowych technologii i systemów informatycznych"
     ],
-    correctAnswer: "Raport finansowy własnej firmy"
+    correctAnswer: "Dobrostan i satysfakcja z miejsca pracy"
   },
   {
     id: 59,
-    question: "Które podejście badawcze łączy opis ZJAWISKA z próbą jego zmiany?",
+    question: "Według notatek, co jest źródłem problemu w nurcie rozumienia \"społeczne\" w innowacjach?",
     options: [
-      "Action Research",
-      "Case Study",
-      "Desk Research",
-      "Metaanaliza",
-      "Triangulacja",
-      "Badanie niereaktywne"
+      "Niezaspokojone potrzeby społeczne",
+      "Brak wystarczających środków finansowych",
+      "Brak odpowiedniej infrastruktury technologicznej"
     ],
-    correctAnswer: "Action Research"
+    correctAnswer: "Niezaspokojone potrzeby społeczne"
   },
   {
     id: 60,
-    question: "Big Data w porównaniu z Thick Data charakteryzuje się…",
+    question: "Jakie obszary są objęte innowacjami społecznymi zgodnie z notatkami?",
     options: [
-      "Samouczeniem maszyn i analizą ogromnych wolumenów danych",
-      "Małym zbiorem informacji koncentrującym się na motywach",
-      "Wyłącznie pytaniem „dlaczego?”",
-      "Brakiem matematycznych algorytmów",
-      "Obowiązkową obserwacją uczestniczącą",
-      "Tylko jakościowym charakterem danych"
+      "Organizacja pracy i systemy zarządzania",
+      "Technologie informatyczne i komunikacyjne",
+      "Produkty i usługi technologiczne"
     ],
-    correctAnswer: "Samouczeniem maszyn i analizą ogromnych wolumenów danych"
+    correctAnswer: "Organizacja pracy i systemy zarządzania"
   },
-
-  // ───────── 61-80 (NOWE) ─────────
   {
     id: 61,
-    question: "Konceptualizacja w procesie badawczym to…",
+    question: "Zgodnie z badaniami nad innowacjami w miejscu pracy w krajach skandynawskich, jaką część sukcesu innowacji przypisuje się innowacjom technologicznym?",
     options: [
-      "Tworzenie konkretnych procedur pomiaru zmiennych",
-      "Określanie znaczenia używanych pojęć i zmiennych",
-      "Losowe przypisywanie badanych do grup",
-      "Zapisywanie wyników w bazie danych",
-      "Analiza statystyczna wyników",
-      "Publikacja artykułu"
+      "25%",
+      "50%",
+      "75%"
     ],
-    correctAnswer: "Określanie znaczenia używanych pojęć i zmiennych"
+    correctAnswer: "25%"
   },
   {
     id: 62,
-    question: "Metody ilościowe mają zazwyczaj charakter…",
+    question: "Jakie procesy biznesowe głównie koncentrują się badania nad innowacjami w miejscu pracy w Polsce?",
     options: [
-      "Eksploracyjny i subiektywny",
-      "Rozstrzygający i dążą do uogólniania wyników na populację",
-      "Narracyjny i biograficzny",
-      "Fenomenologiczny",
-      "Wyłącznie opisowy bez statystyki",
-      "Spontaniczny i niestrukturalny"
+      "Procesy związane z produkcją i logistyką",
+      "Procesy związane z marketingiem i sprzedażą",
+      "Procesy związane z zasobami ludzkimi i zarządzaniem"
     ],
-    correctAnswer: "Rozstrzygający i dążą do uogólniania wyników na populację"
+    correctAnswer: "Procesy związane z produkcją i logistyką"
   },
   {
     id: 63,
-    question: "Dobór próby w badaniach jakościowych jest zwykle…",
+    question: "Jakie działania wspierają innowacyjność w polskich firmach według przeprowadzonych badań?",
     options: [
-      "Losowy i reprezentatywny",
-      "Nielosowy i celowy",
-      "Warstwowy losowy",
-      "Systematyczny co 10-tą osobę",
-      "Prosty losowy z notabli",
-      "Zawsze kwotowy"
+      "Tworzenie elastycznych grafików pracy",
+      "Organizowanie integracyjnych wyjazdów dla pracowników",
+      "Wdrażanie innowacyjnych rozwiązań"
     ],
-    correctAnswer: "Nielosowy i celowy"
+    correctAnswer: "Wdrażanie innowacyjnych rozwiązań"
   },
   {
     id: 64,
-    question: "Efekt oczekiwań społecznych polega na…",
+    question: "Jakie czynniki przyczyniają się do wyższej produktywności i wyników finansowych firm, które przykładają wagę do rozwoju miejsca pracy?",
     options: [
-      "Tendencji respondentów do udzielania odpowiedzi zgodnych z normami społecznymi",
-      "Losowym zaznaczaniu odpowiedzi",
-      "Całkowitym braku motywacji do udziału w badaniu",
-      "Zwiększonej szczerości odpowiedzi w anonimowych ankietach",
-      "Błędem losowym przy kodowaniu danych",
-      "Automatycznym wypełnianiu ankiet przez boty"
+      "Zatrudnianie pracowników o wysokim doświadczeniu zawodowym",
+      "Koncentracja na efektywności procesów produkcyjnych",
+      "Rozwój i dbałość o dobrostan pracowników"
     ],
-    correctAnswer: "Tendencji respondentów do udzielania odpowiedzi zgodnych z normami społecznymi"
+    correctAnswer: "Rozwój i dbałość o dobrostan pracowników"
   },
   {
     id: 65,
-    question: "Paradygmat konstruktywistyczny zakłada, że…",
+    question: "Dlaczego ludzie wymyślili honor?",
     options: [
-      "Rzeczywistość jest tworzona subiektywnie przez ludzi i ich interakcje",
-      "Istnieje jedna obiektywna rzeczywistość odkrywana zmysłami",
-      "Badania muszą zawsze używać metod ilościowych",
-      "Hipotezy są zbędne w nauce",
-      "Obserwacja jest niemożliwa",
-      "Wszystkie dane muszą być liczbowe"
+      "Aby chronić swoje mienie",
+      "Aby zwiększyć swoją reputację i zaufanie w społeczeństwie",
+      "Aby zyskać władzę nad innymi",
+      "Aby unikać konfliktów z prawem"
     ],
-    correctAnswer: "Rzeczywistość jest tworzona subiektywnie przez ludzi i ich interakcje"
+    correctAnswer: "Aby zwiększyć swoją reputację i zaufanie w społeczeństwie"
   },
   {
     id: 66,
-    question: "Triangulacja badaczy oznacza…",
+    question: "Po co ludziom prawo?",
     options: [
-      "Analizę tych samych danych przez różnych badaczy",
-      "Użycie wielu źródeł danych",
-      "Łączenie metod jakościowych i ilościowych",
-      "Porównywanie różnych teorii",
-      "Powtórzenie badania po roku",
-      "Randomizację grup badanych"
+      "Aby ograniczyć wolność jednostek",
+      "Aby zapewnić stabilność społeczną i sprawiedliwość",
+      "Aby zmniejszyć liczebność populacji",
+      "Aby zwiększyć dochody państwa"
     ],
-    correctAnswer: "Analizę tych samych danych przez różnych badaczy"
+    correctAnswer: "Aby zapewnić stabilność społeczną i sprawiedliwość"
   },
   {
     id: 67,
-    question: "Wyjaśnienie nomotetyczne dąży do…",
+    question: "Dlaczego ludzie ustanawiają własne zasady?",
     options: [
-      "Formułowania uniwersalnych praw dla całej populacji",
-      "Dogłębnego zrozumienia pojedynczego przypadku",
-      "Opisania narracji życiowej jednostki",
-      "Zmiany sytuacji w społeczności lokalnej",
-      "Wyłącznie analizy treści mediów",
-      "Zastąpienia teorii opisem statystycznym"
+      "Aby lepiej kontrolować innych",
+      "Aby zaspokoić swoje potrzeby moralne i utrzymać wewnętrzny porządek",
+      "Aby unikać odpowiedzialności",
+      "Aby zyskać przewagę konkurencyjną"
     ],
-    correctAnswer: "Formułowania uniwersalnych praw dla całej populacji"
+    correctAnswer: "Aby zaspokoić swoje potrzeby moralne i utrzymać wewnętrzny porządek"
   },
   {
     id: 68,
-    question: "Analizy Big Data zwykle wymagają…",
+    question: "Czy zwierzęta mają poczucie niesprawiedliwości?",
     options: [
-      "Specjalistycznego oprogramowania i umiejętności analitycznych",
-      "Wyłącznie kartki i długopisu",
-      "Małej liczby obserwacji",
-      "Braku wiedzy matematycznej",
-      "Tylko jakościowych opisów zjawisk",
-      "Całkowitego pominięcia etapów czyszczenia danych"
+      "Nie, zwierzęta nie mają zdolności do odczuwania niesprawiedliwości",
+      "Tak, niektóre zwierzęta wykazują zachowania sugerujące poczucie niesprawiedliwości",
+      "Tylko ssaki mają poczucie niesprawiedliwości",
+      "Tylko zwierzęta żyjące w grupach społecznych odczuwają niesprawiedliwość"
     ],
-    correctAnswer: "Specjalistycznego oprogramowania i umiejętności analitycznych"
+    correctAnswer: "Tak, niektóre zwierzęta wykazują zachowania sugerujące poczucie niesprawiedliwości"
   },
   {
     id: 69,
-    question: "Technika komiksowych dymków w FGI to przykład…",
+    question: "Jak rozwój gospodarki wpływa na etyczne zachowania społeczeństw?",
     options: [
-      "Techniki projekcyjnej",
-      "Metody losowego doboru próby",
-      "Analizy ilościowej",
-      "Modelu logicznego",
-      "Syntezy przekrojowej",
-      "Scheduły obserwacyjnej"
+      "Społeczeństwa stają się mniej etyczne, ponieważ rośnie materializm",
+      "Społeczeństwa stają się bardziej etyczne, ponieważ rośnie świadomość społeczna",
+      "Rozwój gospodarki nie ma wpływu na etyczne zachowania społeczeństw",
+      "Społeczeństwa stają się bardziej etyczne tylko w krajach rozwiniętych"
     ],
-    correctAnswer: "Techniki projekcyjnej"
+    correctAnswer: "Społeczeństwa stają się bardziej etyczne, ponieważ rośnie świadomość społeczna"
   },
   {
     id: 70,
-    question: "W etnografii „wiedza milcząca” odnosi się do…",
+    question: "Piramida Maslowa a moralność: jak zaspokajanie podstawowych potrzeb wpływa na etykę?",
     options: [
-      "Trudnej do werbalizacji wiedzy utrwalonej w praktykach",
-      "Głośnych deklaracji publicznych",
-      "Oficjalnych dokumentów organizacji",
-      "Danych liczbowych z ankiet",
-      "Raportów finansowych",
-      "Wyników testów psychologicznych"
+      "Zaspokojanie podstawowych potrzeb nie wpływa na etykę",
+      "Ludzie stają się mniej etyczni w miarę zaspokajania podstawowych potrzeb",
+      "Ludzie stają się bardziej zaangażowani w działania etyczne w miarę zaspokajania podstawowych potrzeb",
+      "Piramida Maslowa nie ma związku z moralnością"
     ],
-    correctAnswer: "Trudnej do werbalizacji wiedzy utrwalonej w praktykach"
+    correctAnswer: "Ludzie stają się bardziej zaangażowani w działania etyczne w miarę zaspokajania podstawowych potrzeb"
   },
   {
     id: 71,
-    question: "W netnografii rola „trolla” polega na…",
+    question: "Jak reputacja wpływa na zdolności działania jednostki?",
     options: [
-      "Prowokowaniu grupy negatywnymi emocjami w celu uzyskania głębszych odpowiedzi",
-      "Byciu niewidocznym obserwatorem",
-      "Angażowaniu się jawnie i konstruktywnie",
-      "Zadawaniu wielu podstawowych pytań jak nowicjusz",
-      "Moderowaniu dyskusji tematycznych bez udziału badacza",
-      "Analizie statystyk odwiedzin strony"
+      "Dobra reputacja zmniejsza zdolności działania",
+      "Dobra reputacja zwiększa zaufanie i możliwości współpracy",
+      "Reputacja nie ma wpływu na zdolności działania jednostki",
+      "Dobra reputacja zwiększa tylko zdolności finansowe jednostki"
     ],
-    correctAnswer: "Prowokowaniu grupy negatywnymi emocjami w celu uzyskania głębszych odpowiedzi"
+    correctAnswer: "Dobra reputacja zwiększa zaufanie i możliwości współpracy"
   },
   {
     id: 72,
-    question: "Analiza szeregów czasowych w studium przypadku służy do…",
+    question: "Czy oszuści kiedyś znikną ze społeczeństwa?",
     options: [
-      "Śledzenia zmian w czasie i porównywania trendów empirycznych z teoretycznymi",
-      "Randomizacji grup eksperymentalnych",
-      "Losowego doboru respondentów do ankiety",
-      "Budowania modeli regresji liniowej",
-      "Kodowania treści wywiadów narracyjnych",
-      "Walidacji kwestionariusza"
+      "Tak, ponieważ społeczeństwo stanie się całkowicie etyczne",
+      "Nie, oszuści zawsze będą częścią społeczeństwa zgodnie z teorią gier",
+      "Tak, ponieważ oszukiwanie stanie się nieopłacalne",
+      "Nie, ponieważ społeczeństwo nie potrafi ich wykryć"
     ],
-    correctAnswer: "Śledzenia zmian w czasie i porównywania trendów empirycznych z teoretycznymi"
+    correctAnswer: "Nie, oszuści zawsze będą częścią społeczeństwa zgodnie z teorią gier"
   },
   {
     id: 73,
-    question: "Jedną z wad obserwacji uczestniczącej jest…",
+    question: "Jak perspektywa długoterminowych kontaktów wpływa na zachowanie jednostek?",
     options: [
-      "Zaangażowanie emocjonalne badacza mogące wpłynąć na obiektywność",
-      "Brak możliwości notowania na bieżąco w obserwacji nieuczestniczącej",
-      "Pełna kontrola nad sytuacją badawczą",
-      "Natychmiastowa standaryzacja danych",
-      "Zawsze krótki czas trwania badania",
-      "Brak problemów etycznych"
+      "Sprzyja krótkoterminowemu zyskowi",
+      "Sprzyja współpracy i budowaniu zaufania",
+      "Zniechęca do współpracy",
+      "Nie ma wpływu na zachowanie jednostek"
     ],
-    correctAnswer: "Zaangażowanie emocjonalne badacza mogące wpłynąć na obiektywność"
+    correctAnswer: "Sprzyja współpracy i budowaniu zaufania"
   },
   {
     id: 74,
-    question: "Plan eksperymentalny z powtarzanym pomiarem (within-subject) oznacza, że…",
+    question: "Jakie są zasady moralnego przywództwa według S. Robinsona?",
     options: [
-      "Ci sami uczestnicy są mierzeni wielokrotnie w różnych warunkach",
-      "Grupy są losowane raz i mierzona tylko jedna zmienna",
-      "Każdy uczestnik trafia do innej grupy badawczej",
-      "Zmienna zależna nie jest mierzona",
-      "Eksperyment trwa zawsze mniej niż 5 minut",
-      "Badanie jest zawsze niereaktywne"
+      "Uczciwość, sprawiedliwość, manipulowanie informacją",
+      "Uczciwość, prawdomówność, sprawiedliwość, promowanie wartości etycznych",
+      "Prawdomówność, manipulowanie informacją, sprawiedliwość",
+      "Uczciwość, prawdomówność, brak sprawiedliwości"
     ],
-    correctAnswer: "Ci sami uczestnicy są mierzeni wielokrotnie w różnych warunkach"
+    correctAnswer: "Uczciwość, prawdomówność, sprawiedliwość, promowanie wartości etycznych"
   },
   {
     id: 75,
-    question: "Scenariusz wywiadu indywidualnego (IDI) powinien mieć strukturę…",
+    question: "Czym jest kapitał społeczny?",
     options: [
-      "Lejka – od pytań ogólnych do szczegółowych",
-      "Piramidy – od szczegółowych do ogólnych",
-      "Losową bez kolejności",
-      "Wyłącznie zamkniętą listę pytań",
-      "Formę skali Likerta",
-      "Zawierać tylko jedno pytanie"
+      "Siecią relacji i zaufania, która obniża koszty operacyjne firmy",
+      "Środkiem do zwiększenia zysków finansowych",
+      "Systemem kontroli nad pracownikami",
+      "Zasobem materialnym firmy"
     ],
-    correctAnswer: "Lejka – od pytań ogólnych do szczegółowych"
+    correctAnswer: "Środkiem do zwiększenia zysków finansowych"
   },
   {
     id: 76,
-    question: "Dobór teoretyczny próby polega na…",
+    question: "Jaka jest różnica między filantropią a CSR?",
     options: [
-      "Włączaniu przypadków wskazanych przez teorię dla pełniejszego wyjaśnienia zjawiska",
-      "Losowym wybieraniu co dziesiątej osoby na liście",
-      "Ustalaniu kwot demograficznych z góry",
-      "Selekcji według kolejności zgłoszeń",
-      "Rekrutacji wyłącznie przez ogłoszenia w social media",
-      "Pomiarze na reprezentatywnej próbie ogólnopolskiej"
+      "Filantropia to systematyczne działania, CSR to jednorazowe działania charytatywne",
+      "Filantropia to dobrowolne działania charytatywne, CSR to systematyczne działania wbudowane w strategię firmy",
+      "Filantropia i CSR to to samo",
+      "CSR to dobrowolne działania charytatywne, filantropia to systematyczne działania"
     ],
-    correctAnswer: "Włączaniu przypadków wskazanych przez teorię dla pełniejszego wyjaśnienia zjawiska"
+    correctAnswer: "Filantropia to dobrowolne działania charytatywne, CSR to systematyczne działania wbudowane w strategię firmy"
   },
   {
     id: 77,
-    question: "Replikacja wcześniejszych badań służy głównie…",
+    question: "Jakie są korzyści z wdrażania CSR w firmie?",
     options: [
-      "Weryfikacji i potwierdzeniu (lub obaleniu) wcześniejszych wyników",
-      "Generowaniu losowych hipotez",
-      "Zmniejszeniu liczby publikacji naukowych",
-      "Zastąpieniu badania pilotażowego",
-      "Wyłącznie prezentacji wyników w mediach",
-      "Ominięciu procesu recenzji"
+      "Zwiększenie kosztów operacyjnych",
+      "Poprawa wizerunku firmy, wzrost zaufania interesariuszy, zwiększenie lojalności klientów",
+      "Zmniejszenie lojalności klientów",
+      "Zwiększenie konfliktów z interesariuszami"
     ],
-    correctAnswer: "Weryfikacji i potwierdzeniu (lub obaleniu) wcześniejszych wyników"
+    correctAnswer: "Poprawa wizerunku firmy, wzrost zaufania interesariuszy, zwiększenie lojalności klientów"
   },
   {
     id: 78,
-    question: "Rzetelność pomiaru oznacza, że…",
+    question: "Jakie są elementy programów etycznych w firmach?",
     options: [
-      "Powtórzone pomiary w tych samych warunkach dają te same wyniki",
-      "Pomiar dotyczy dokładnie tego, co miał mierzyć",
-      "Badanie jest zawsze anonimowe",
-      "Użyto metody triangulacji",
-      "Kwestionariusz składa się z pytań otwartych",
-      "Próba jest losowa"
+      "Brak systemu nagród i sankcji",
+      "Identyfikacja wartości, misja firmy, kodeks etyczny, programy kształcenia etycznego, audyty etyczne",
+      "Tylko kodeks etyczny",
+      "Wyłącznie audyty etyczne"
     ],
-    correctAnswer: "Powtórzone pomiary w tych samych warunkach dają te same wyniki"
+    correctAnswer: "Identyfikacja wartości, misja firmy, kodeks etyczny, programy kształcenia etycznego, audyty etyczne"
   },
   {
     id: 79,
-    question: "Trafność pomiaru odnosi się do…",
+    question: "Jak reputacja wpływa na wyniki firmy?",
     options: [
-      "Tego, czy pomiar rzeczywiście mierzył zamierzoną zmienną",
-      "Powtarzalności wyników",
-      "Losowego doboru próby",
-      "Szybkości wypełniania ankiety",
-      "Anonimowości respondentów",
-      "Liczby pytań w ankiecie"
+      "Nie ma wpływu na wyniki firmy",
+      "Poprawia wyniki finansowe poprzez zwiększenie zaufania i lojalności klientów",
+      "Zmniejsza wyniki finansowe",
+      "Zwiększa koszty operacyjne"
     ],
-    correctAnswer: "Tego, czy pomiar rzeczywiście mierzył zamierzoną zmienną"
+    correctAnswer: "Poprawia wyniki finansowe poprzez zwiększenie zaufania i lojalności klientów"
   },
   {
     id: 80,
-    question: "Dyskusja wyników w raporcie badawczym polega na…",
+    question: "Jakie są kluczowe aspekty zrównoważonego rozwoju?",
     options: [
-      "Interpretacji rezultatów w kontekście literatury i celu badania",
-      "Prezentacji surowych danych bez komentarza",
-      "Wyłącznie przedstawieniu tabel statystycznych",
-      "Wprowadzeniu nowych, nieprzebadanych hipotez",
-      "Usunięciu wszystkich odniesień do teorii",
-      "Randomizacji kolejności rozdziałów"
+      "Tylko ekonomiczne aspekty",
+      "Ekonomiczne, społeczne i środowiskowe aspekty",
+      "Tylko społeczne aspekty",
+      "Tylko środowiskowe aspekty"
     ],
-    correctAnswer: "Interpretacji rezultatów w kontekście literatury i celu badania"
+    correctAnswer: "Ekonomiczne, społeczne i środowiskowe aspekty"
+  },
+  {
+    id: 81,
+    question: "Co to jest \"mięsień moralny\"?",
+    options: [
+      "Zdolność do fizycznej pracy",
+      "Zdolność do podejmowania etycznych decyzji, którą można rozwijać poprzez codzienne działania",
+      "Zdolność do zarządzania finansami",
+      "Zdolność do manipulowania informacją"
+    ],
+    correctAnswer: "Zdolność do podejmowania etycznych decyzji, którą można rozwijać poprzez codzienne działania"
+  },
+  {
+    id: 82,
+    question: "Jakie są zasady etycznego przywództwa według S. Robinsona?",
+    options: [
+      "Uczciwość, prawdomówność, sprawiedliwość, promowanie wartości etycznych",
+      "Manipulowanie informacją, uczciwość, brak sprawiedliwości",
+      "Sprawiedliwość, prawdomówność, manipulowanie informacją",
+      "Uczciwość, brak prawdomówności, promowanie wartości etycznych"
+    ],
+    correctAnswer: "Manipulowanie informacją, uczciwość, brak sprawiedliwości"
+  },
+  {
+    id: 83,
+    question: "Czym jest kapitał relacyjny?",
+    options: [
+      "Środkiem finansowym firmy",
+      "Elementem kapitału strukturalnego obejmującym relacje przedsiębiorstwa z innymi podmiotami, wyrażone miarami satysfakcji, trwałością kontaktów i wsparciem finansowym",
+      "Systemem kontroli nad pracownikami",
+      "Zasobem materialnym firmy"
+    ],
+    correctAnswer: "Elementem kapitału strukturalnego obejmującym relacje przedsiębiorstwa z innymi podmiotami, wyrażone miarami satysfakcji, trwałością kontaktów i wsparciem finansowym"
+  },
+  {
+    id: 84,
+    question: "Jakie są korzyści z dobrego raportowania CSR?",
+    options: [
+      "Zwiększenie kosztów operacyjnych",
+      "Przejrzystość i zaufanie interesariuszy",
+      "Zmniejszenie przejrzystości",
+      "Brak korzyści"
+    ],
+    correctAnswer: "Przejrzystość i zaufanie interesariuszy"
+  },
+  {
+    id: 85,
+    question: "Jakie są korzyści z wdrażania CSR w strategii firmy?",
+    options: [
+      "Zwiększenie zysków krótkoterminowych",
+      "Poprawa wizerunku, zwiększenie lojalności klientów, lepsze zarządzanie ryzykiem",
+      "Zmniejszenie kosztów operacyjnych w krótkim okresie",
+      "Brak korzyści długoterminowych"
+    ],
+    correctAnswer: "Poprawa wizerunku, zwiększenie lojalności klientów, lepsze zarządzanie ryzykiem"
+  },
+  {
+    id: 86,
+    question: "Co oznacza \"niewidzialna ręka rynku\"?",
+    options: [
+      "System regulacji rządowych",
+      "Mechanizm rynkowy, w którym jednostki działając we własnym interesie przyczyniają się do dobra społecznego",
+      "Rola przedsiębiorstw w regulowaniu rynku",
+      "Wpływ korporacji na gospodarkę światową"
+    ],
+    correctAnswer: "Mechanizm rynkowy, w którym jednostki działając we własnym interesie przyczyniają się do dobra społecznego"
+  },
+  {
+    id: 87,
+    question: "Jakie są typowe działania w ramach programów etycznych?",
+    options: [
+      "Brak działań edukacyjnych",
+      "Identyfikacja wartości, ustalenie misji firmy, opracowanie kodeksu etycznego, programy kształcenia, audyty etyczne",
+      "Tylko organizacja wydarzeń promocyjnych",
+      "Ograniczenie działań do zarządzania ryzykiem"
+    ],
+    correctAnswer: "Identyfikacja wartości, ustalenie misji firmy, opracowanie kodeksu etycznego, programy kształcenia, audyty etyczne"
+  },
+  {
+    id: 88,
+    question: "Czym charakteryzuje się klasyczne podejście do odpowiedzialności przedsiębiorcy?",
+    options: [
+      "Dbanie o maksymalizację zysków krótkoterminowych",
+      "Wiara, że przedsiębiorcy powinni dbać o to, aby ich towary i usługi były jak tańsze, bez dodatkowych obowiązków społecznych",
+      "Skupienie się na zrównoważonym rozwoju",
+      "Angażowanie się w działania filantropijne"
+    ],
+    correctAnswer: "Wiara, że przedsiębiorcy powinni dbać o to, aby ich towary i usługi były jak tańsze, bez dodatkowych obowiązków społecznych"
+  },
+  {
+    id: 89,
+    question: "Co to jest kapitał ludzki w modelu Skandii?",
+    options: [
+      "Aktywa rzeczowe firmy",
+      "Zdolność pracowników do wykonywania powierzonych im zadań, kultura organizacyjna, wartości i filozofia firmy",
+      "Zasoby finansowe firmy",
+      "System kontroli nad pracownikami"
+    ],
+    correctAnswer: "Zdolność pracowników do wykonywania powierzonych im zadań, kultura organizacyjna, wartości i filozofia firmy"
+  },
+  {
+    id: 90,
+    question: "Jakie są zasady moralnego przywództwa?",
+    options: [
+      "Manipulowanie informacją i ukrywanie błędów",
+      "Prawdomówność, uczciwość, wyrozumiałość, sprawiedliwość, promowanie wartości etycznych",
+      "Ignorowanie etycznych standardów",
+      "Skupienie się wyłącznie na zyskach firmy"
+    ],
+    correctAnswer: "Prawdomówność, uczciwość, wyrozumiałość, sprawiedliwość, promowanie wartości etycznych"
+  },
+  {
+    id: 91,
+    question: "Czym jest CSR (Corporate Social Responsibility)?",
+    options: [
+      "Działalnością charytatywną firm",
+      "Odpowiedzialnością przedsiębiorstw za wpływ ich działalności na społeczeństwo i środowisko",
+      "Strategią marketingową",
+      "Przepisem prawnym narzuconym firmom"
+    ],
+    correctAnswer: "Odpowiedzialnością przedsiębiorstw za wpływ ich działalności na społeczeństwo i środowisko"
+  },
+  {
+    id: 92,
+    question: "Jakie są korzyści z posiadania dobrego kodeksu etycznego?",
+    options: [
+      "Zwiększenie przypadków łapownictwa",
+      "Zmniejszenie konfliktów interesów, zwiększenie zaufania klientów, poprawa reputacji firmy",
+      "Ograniczenie komunikacji wewnętrznej",
+      "Brak znaczących korzyści"
+    ],
+    correctAnswer: "Zmniejszenie konfliktów interesów, zwiększenie zaufania klientów, poprawa reputacji firmy"
+  },
+  {
+    id: 93,
+    question: "Jakie są standardy raportowania CSR?",
+    options: [
+      "Brak standardów raportowania",
+      "GRI (Global Reporting Initiative), Integrated Reporting (IR)",
+      "Tylko lokalne standardy",
+      "Standardy opracowane wyłącznie przez firmy"
+    ],
+    correctAnswer: "GRI (Global Reporting Initiative), Integrated Reporting (IR)"
+  },
+  {
+    id: 94,
+    question: "Jakie są korzyści z wdrażania programów etycznych?",
+    options: [
+      "Zwiększenie kosztów operacyjnych",
+      "Poprawa kultury organizacyjnej, zwiększenie zaangażowania pracowników, budowanie zaufania",
+      "Ograniczenie innowacyjności",
+      "Zmniejszenie lojalności pracowników"
+    ],
+    correctAnswer: "Poprawa kultury organizacyjnej, zwiększenie zaangażowania pracowników, budowanie zaufania"
+  },
+  {
+    id: 95,
+    question: "Jakie są konsekwencje złamania obietnic przez firmę?",
+    options: [
+      "Zwiększenie zaufania pracowników",
+      "Spadek zaufania i lojalności pracowników, negatywny wpływ na zaangażowanie",
+      "Poprawa wizerunku firmy",
+      "Zwiększenie lojalności klientów"
+    ],
+    correctAnswer: "Spadek zaufania i lojalności pracowników, negatywny wpływ na zaangażowanie"
+  },
+  {
+    id: 96,
+    question: "Jakie są zasady etycznego przywództwa?",
+    options: [
+      "Uczciwość, prawdomówność, sprawiedliwość, promowanie wartości etycznych",
+      "Manipulowanie informacją, ukrywanie błędów",
+      "Ignorowanie potrzeb pracowników",
+      "Skupienie się wyłącznie na wynikach finansowych"
+    ],
+    correctAnswer: "Ignorowanie potrzeb pracowników"
+  },
+  {
+    id: 97,
+    question: "Jak kapitał społeczny wpływa na działalność firm?",
+    options: [
+      "Zwiększa koszty operacyjne",
+      "Obniża koszty operacyjne, zwiększa efektywność współpracy, buduje zaufanie",
+      "Nie ma wpływu na działalność firm",
+      "Ogranicza innowacyjność"
+    ],
+    correctAnswer: "Obniża koszty operacyjne, zwiększa efektywność współpracy, buduje zaufanie"
+  },
+  {
+    id: 98,
+    question: "Jakie są cele odpowiedzialnego biznesu?",
+    options: [
+      "Maksymalizacja krótkoterminowych zysków",
+      "Powiększanie wartości firmy, dbałość o relacje z interesariuszami, działanie zgodne z prawem i normami etycznymi",
+      "Skupienie się wyłącznie na marketingu",
+      "Ignorowanie wpływu na społeczeństwo i środowisko"
+    ],
+    correctAnswer: "Powiększanie wartości firmy, dbałość o relacje z interesariuszami, działanie zgodne z prawem i normami etycznymi"
+  },
+  {
+    id: 99,
+    question: "Jakie są zasady raportowania CSR?",
+    options: [
+      "Raportowanie wyłącznie działań finansowych",
+      "Transparentność, uwzględnienie działań społecznych i środowiskowych, standardy takie jak GRI",
+      "Brak konieczności raportowania",
+      "Raportowanie tylko działań marketingowych"
+    ],
+    correctAnswer: "Transparentność, uwzględnienie działań społecznych i środowiskowych, standardy takie jak GRI"
+  },
+  {
+    id: 100,
+    question: "Jakie są korzyści z budowania zaufania w firmie?",
+    options: [
+      "Zwiększenie konfliktów wewnętrznych",
+      "Zwiększenie efektywności współpracy, lojalności pracowników, pozytywny wizerunek",
+      "Zmniejszenie lojalności klientów",
+      "Brak korzyści"
+    ],
+    correctAnswer: "Zwiększenie efektywności współpracy, lojalności pracowników, pozytywny wizerunek"
+  },
+  {
+    id: 101,
+    question: "Czym jest zrównoważony rozwój?",
+    options: [
+      "Koncentracją wyłącznie na aspektach ekonomicznych",
+      "Balansowaniem potrzeb ekonomicznych, społecznych i środowiskowych w celu zapewnienia trwałego rozwoju",
+      "Ograniczeniem działań społecznych",
+      "Skupieniem się wyłącznie na ochronie środowiska"
+    ],
+    correctAnswer: "Balansowaniem potrzeb ekonomicznych, społecznych i środowiskowych w celu zapewnienia trwałego rozwoju"
+  },
+  {
+    id: 102,
+    question: "Jakie są role interesariuszy w firmie?",
+    options: [
+      "Wewnętrzni interesariusze to klienci i dostawcy",
+      "Wewnętrzni interesariusze to menedżerowie i pracownicy, a zewnętrzni to właściciele, klienci, dostawcy, społeczność lokalna, rządy i organizacje pozarządowe",
+      "Interesariusze nie mają wpływu na działalność firmy",
+      "Wszyscy interesariusze są równie ważni"
+    ],
+    correctAnswer: "Wewnętrzni interesariusze to menedżerowie i pracownicy, a zewnętrzni to właściciele, klienci, dostawcy, społeczność lokalna, rządy i organizacje pozarządowe"
+  },
+  {
+    id: 103,
+    question: "Jakie są kluczowe komponenty zrównoważonego rozwoju?",
+    options: [
+      "Tylko aspekty ekonomiczne",
+      "Ekonomiczne, społeczne i środowiskowe aspekty (triple bottom line)",
+      "Tylko aspekty społeczne",
+      "Tylko aspekty środowiskowe"
+    ],
+    correctAnswer: "Ekonomiczne, społeczne i środowiskowe aspekty (triple bottom line)"
+  },
+  {
+    id: 104,
+    question: "Jakie są korzyści z posiadania dobrego kodeksu etycznego w firmie?",
+    options: [
+      "Zwiększenie przypadków łapownictwa",
+      "Zmniejszenie konfliktów interesów, zwiększenie zaufania klientów, poprawa reputacji firmy",
+      "Ograniczenie komunikacji wewnętrznej",
+      "Brak znaczących korzyści"
+    ],
+    correctAnswer: "Zmniejszenie konfliktów interesów, zwiększenie zaufania klientów, poprawa reputacji firmy"
   }
 ];
 
 ////////////////////////////////////////////////////////////////////////
-// "PACZKI" PYTAŃ  – 8 zakresów po 10 pytań
+// ZAKRESY PYTAŃ (11 zakresów: 10 x po 10 pytań + 1 x 14 pytań)
 ////////////////////////////////////////////////////////////////////////
 export const questionRanges: QuestionRange[] = [
-  { id: 1, label: "Questions 1 – 10", startId: 1, endId: 10 },
-  { id: 2, label: "Questions 11 – 20", startId: 11, endId: 20 },
-  { id: 3, label: "Questions 21 – 30", startId: 21, endId: 30 },
-  { id: 4, label: "Questions 31 – 40", startId: 31, endId: 40 },
-  { id: 5, label: "Questions 41 – 50", startId: 41, endId: 50 },
-  { id: 6, label: "Questions 51 – 60", startId: 51, endId: 60 },
-  { id: 7, label: "Questions 61 – 70", startId: 61, endId: 70 },
-  { id: 8, label: "Questions 71 – 80", startId: 71, endId: 80 }
+  { id: 1, label: "Pytania 1-10", startId: 1, endId: 10 },
+  { id: 2, label: "Pytania 11-20", startId: 11, endId: 20 },
+  { id: 3, label: "Pytania 21-30", startId: 21, endId: 30 },
+  { id: 4, label: "Pytania 31-40", startId: 31, endId: 40 },
+  { id: 5, label: "Pytania 41-50", startId: 41, endId: 50 },
+  { id: 6, label: "Pytania 51-60", startId: 51, endId: 60 },
+  { id: 7, label: "Pytania 61-70", startId: 61, endId: 70 },
+  { id: 8, label: "Pytania 71-80", startId: 71, endId: 80 },
+  { id: 9, label: "Pytania 81-90", startId: 81, endId: 90 },
+  { id: 10, label: "Pytania 91-104", startId: 91, endId: 104 }
 ];
 
 ////////////////////////////////////////////////////////////////////////
-// FUNKCJA FILTRUJĄCA
+// FUNKCJE POMOCNICZE
 ////////////////////////////////////////////////////////////////////////
+export function getQuestionsByRange(rangeId: number): QuizQuestion[] {
+  const range = questionRanges.find(r => r.id === rangeId);
+  if (!range) return [];
+
+  return questions.filter(q => q.id >= range.startId && q.id <= range.endId);
+}
+
+export function getRandomQuestions(count: number): QuizQuestion[] {
+  const shuffled = [...questions].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+}
+
+export function getQuestionById(id: number): QuizQuestion | undefined {
+  return questions.find(q => q.id === id);
+}
+
 export const getQuestionsFromRanges = (selectedRangeIds: number[]): QuizQuestion[] => {
-  if (selectedRangeIds.length === 0) return questions; // brak filtrów → zwróć wszystko
-  const selectedRanges = questionRanges.filter(r => selectedRangeIds.includes(r.id));
-  return questions.filter(q =>
-    selectedRanges.some(r => q.id >= r.startId && q.id <= r.endId)
-  );
+  const selectedQuestions: QuizQuestion[] = [];
+  
+  selectedRangeIds.forEach(rangeId => {
+    const questionsFromRange = getQuestionsByRange(rangeId);
+    selectedQuestions.push(...questionsFromRange);
+  });
+  
+  return selectedQuestions;
 };
