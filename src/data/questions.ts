@@ -2,20 +2,11 @@ export interface QuizQuestion {
   id: number;
   question: string;
   options: string[];
-  // 1 odpowiedź → string, wiele → string[]
+  // Jeśli jest jedna poprawna odpowiedź – string,
+  // jeśli więcej – tablica stringów.
   correctAnswer: string | string[];
 }
 
-export interface QuestionRange {
-  id: number;
-  label: string;
-  startId: number;
-  endId: number;
-}
-
-////////////////////////////////////////////////////////////////////////
-// LISTA PYTAŃ 1-104
-////////////////////////////////////////////////////////////////////////
 export const questions: QuizQuestion[] = [
   {
     id: 1,
@@ -1152,48 +1143,38 @@ export const questions: QuizQuestion[] = [
   }
 ];
 
-////////////////////////////////////////////////////////////////////////
-// ZAKRESY PYTAŃ (11 zakresów: 10 x po 10 pytań + 1 x 14 pytań)
-////////////////////////////////////////////////////////////////////////
+export interface QuestionRange {
+  id: number;
+  label: string;
+  startId: number;
+  endId: number;
+}
+
 export const questionRanges: QuestionRange[] = [
-  { id: 1, label: "Pytania 1-10", startId: 1, endId: 10 },
-  { id: 2, label: "Pytania 11-20", startId: 11, endId: 20 },
-  { id: 3, label: "Pytania 21-30", startId: 21, endId: 30 },
-  { id: 4, label: "Pytania 31-40", startId: 31, endId: 40 },
-  { id: 5, label: "Pytania 41-50", startId: 41, endId: 50 },
-  { id: 6, label: "Pytania 51-60", startId: 51, endId: 60 },
-  { id: 7, label: "Pytania 61-70", startId: 61, endId: 70 },
-  { id: 8, label: "Pytania 71-80", startId: 71, endId: 80 },
-  { id: 9, label: "Pytania 81-90", startId: 81, endId: 90 },
-  { id: 10, label: "Pytania 91-104", startId: 91, endId: 104 }
+  { id: 1, label: "Pytania 1 - 10", startId: 1, endId: 10 },
+  { id: 2, label: "Pytania 11 - 20", startId: 11, endId: 20 },
+  { id: 3, label: "Pytania 21 - 30", startId: 21, endId: 30 },
+  { id: 4, label: "Pytania 31 - 40", startId: 31, endId: 40 },
+  { id: 5, label: "Pytania 41 - 50", startId: 41, endId: 50 },
+  { id: 6, label: "Pytania 51 - 60", startId: 51, endId: 60 },
+  { id: 7, label: "Pytania 61 - 70", startId: 61, endId: 70 },
+  { id: 8, label: "Pytania 71 - 80", startId: 71, endId: 80 },
+  { id: 9, label: "Pytania 81 - 90", startId: 81, endId: 90 },
+  { id: 10, label: "Pytania 91 - 104", startId: 91, endId: 104 }
 ];
 
-////////////////////////////////////////////////////////////////////////
-// FUNKCJE POMOCNICZE
-////////////////////////////////////////////////////////////////////////
-export function getQuestionsByRange(rangeId: number): QuizQuestion[] {
-  const range = questionRanges.find(r => r.id === rangeId);
-  if (!range) return [];
-
-  return questions.filter(q => q.id >= range.startId && q.id <= range.endId);
-}
-
-export function getRandomQuestions(count: number): QuizQuestion[] {
-  const shuffled = [...questions].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, count);
-}
-
-export function getQuestionById(id: number): QuizQuestion | undefined {
-  return questions.find(q => q.id === id);
-}
-
 export const getQuestionsFromRanges = (selectedRangeIds: number[]): QuizQuestion[] => {
-  const selectedQuestions: QuizQuestion[] = [];
-  
-  selectedRangeIds.forEach(rangeId => {
-    const questionsFromRange = getQuestionsByRange(rangeId);
-    selectedQuestions.push(...questionsFromRange);
-  });
-  
-  return selectedQuestions;
+  // Jeśli nie ma wybranych zakresów, zwróć wszystkie pytania
+  if (selectedRangeIds.length === 0) return questions;
+
+  const selectedRanges = questionRanges.filter(range =>
+    selectedRangeIds.includes(range.id)
+  );
+
+  return questions.filter(question =>
+    selectedRanges.some(range =>
+      question.id >= range.startId && question.id <= range.endId
+    )
+  );
 };
+

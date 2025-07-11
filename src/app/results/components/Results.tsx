@@ -25,7 +25,7 @@ export default function Results() {
     try {
       const answersParam = searchParams.get('answers');
       const rangesParam = searchParams.get('ranges');
-      
+
       if (!answersParam) {
         console.error('No answers parameter provided');
         router.push('/');
@@ -47,12 +47,12 @@ export default function Results() {
       const setId = searchParams.get('set') || 'digital-transformation';
       const questionSet = getQuestionSet(setId);
       const getQuestionsFromRanges = questionSet.getQuestions;
-      
+
       let correct = 0;
       const answersResults: AnswerResult[] = [];
       const questionIds = Object.keys(userAnswers).map(id => parseInt(id));
       const quizQuestions = getQuestionsFromRanges(ranges).filter(q => questionIds.includes(q.id));
-      
+
       if (quizQuestions.length === 0) {
         console.error('No questions found');
         router.push('/');
@@ -61,20 +61,20 @@ export default function Results() {
 
       quizQuestions.forEach(question => {
         if (!question) return;
-        
+
         const userAnswer = userAnswers[question.id];
         const isCorrect = Array.isArray(question.correctAnswer)
-          ? Array.isArray(userAnswer) && 
-            userAnswer.length === question.correctAnswer.length && 
-            userAnswer.sort().join(',') === question.correctAnswer.sort().join(',')
+          ? Array.isArray(userAnswer) &&
+          userAnswer.length === question.correctAnswer.length &&
+          userAnswer.sort().join(',') === question.correctAnswer.sort().join(',')
           : userAnswer[0] === question.correctAnswer;
-      
+
         if (isCorrect) correct++;
-      
+
         answersResults.push({
           question: question.question,
           userAnswer: Array.isArray(userAnswer) ? userAnswer.join(', ') : userAnswer[0] || 'No answer provided',
-          correctAnswer: Array.isArray(question.correctAnswer) 
+          correctAnswer: Array.isArray(question.correctAnswer)
             ? question.correctAnswer.join(', ')
             : question.correctAnswer,
           isCorrect
@@ -96,7 +96,7 @@ export default function Results() {
       setIsLoading(true);
       const answersParam = searchParams.get('answers');
       const rangesParam = searchParams.get('ranges');
-      
+
       if (!answersParam || !rangesParam) {
         router.push('/');
         return;
@@ -131,7 +131,7 @@ export default function Results() {
 
       const rangesParam = searchParams.get('ranges');
       const setId = searchParams.get('set') || 'digital-transformation';
-      
+
       if (!rangesParam) {
         router.push('/');
         return;
@@ -140,7 +140,7 @@ export default function Results() {
       const ranges = rangesParam.split(',').map(Number);
       const questionSet = getQuestionSet(setId);
       const getQuestionsFromRanges = questionSet.getQuestions;
-      
+
       const wrongQuestions = results
         .filter(r => !r.isCorrect)
         .map(r => {
@@ -148,7 +148,7 @@ export default function Results() {
           return question?.id;
         })
         .filter((id): id is number => id !== undefined);
-      
+
       if (wrongQuestions.length > 0) {
         router.push(`/quiz?questions=${wrongQuestions.join(',')}&ranges=${rangesParam}&set=${setId}`);
       } else {
@@ -180,9 +180,9 @@ export default function Results() {
                   Wynik: {score} z {totalQuestions} ({Math.round((score / totalQuestions) * 100)}%)
                 </p>
                 {score === 83 && totalQuestions === 83 && (
-                  <Image 
-                    src="/easter.jpg" 
-                    alt="" 
+                  <Image
+                    src="/easter.jpg"
+                    alt=""
                     width={80}
                     height={80}
                     className="object-contain"
@@ -190,14 +190,13 @@ export default function Results() {
                 )}
               </div>
             </div>
-            
+
             <div className="space-y-4 mb-48 sm:mb-0">
               {results.map((result, index) => (
-                <div 
-                  key={index} 
-                  className={`p-4 rounded-lg ${
-                    result.isCorrect ? 'bg-green-50' : 'bg-red-50'
-                  }`}
+                <div
+                  key={index}
+                  className={`p-4 rounded-lg ${result.isCorrect ? 'bg-green-50' : 'bg-red-50'
+                    }`}
                 >
                   <div className="flex justify-between items-start">
                     <div className="flex-grow">
@@ -211,9 +210,8 @@ export default function Results() {
                         </p>
                       )}
                     </div>
-                    <div className={`ml-4 ${
-                      result.isCorrect ? 'text-green-600' : 'text-red-600'
-                    }`}>
+                    <div className={`ml-4 ${result.isCorrect ? 'text-green-600' : 'text-red-600'
+                      }`}>
                       {result.isCorrect ? '✓' : '✗'}
                     </div>
                   </div>

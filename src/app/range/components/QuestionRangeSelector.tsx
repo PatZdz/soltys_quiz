@@ -20,13 +20,13 @@ export default function QuestionRangeSelector() {
     // Get the selected question set
     const questionSet = getQuestionSet(setId);
     const questionRanges = questionSet.getRanges();
-    
+
     // Map the ranges to options
     const options = questionRanges.map(range => ({
       id: range.id,
       label: `Pytania ${range.startId} - ${range.endId}`
     }));
-    
+
     setRangeOptions(options);
   }, [setId]);
 
@@ -45,11 +45,10 @@ export default function QuestionRangeSelector() {
         {rangeOptions.map((range) => (
           <label
             key={range.id}
-            className={`flex items-center p-2 sm:p-3 rounded-lg border ${
-              selectedRanges.includes(range.id)
+            className={`flex items-center p-2 sm:p-3 rounded-lg border ${selectedRanges.includes(range.id)
                 ? 'border-blue-500 bg-blue-50'
                 : 'border-gray-200 hover:bg-gray-50'
-            } cursor-pointer transition-colors`}
+              } cursor-pointer transition-colors`}
           >
             <input
               type="checkbox"
@@ -64,11 +63,10 @@ export default function QuestionRangeSelector() {
       <div className="mt-8 flex">
         <button
           onClick={() => router.push(`/slider?ranges=${selectedRanges.join(',')}&set=${setId}`)}
-          className={`w-full px-4 py-2 text-sm font-medium text-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
-            selectedRanges.length > 0
+          className={`w-full px-4 py-2 text-sm font-medium text-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${selectedRanges.length > 0
               ? 'bg-blue-600 hover:bg-blue-700'
               : 'bg-gray-300 cursor-not-allowed'
-          }`}
+            }`}
           disabled={selectedRanges.length === 0}
         >
           Dalej

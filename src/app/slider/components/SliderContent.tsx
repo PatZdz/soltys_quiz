@@ -15,20 +15,20 @@ export default function SliderContent() {
   useEffect(() => {
     if (selectedRangesParam) {
       const selectedRangeIds = selectedRangesParam.split(',').map(Number);
-      
+
       // Get the selected question set
       const questionSet = getQuestionSet(setId);
       const questionRanges = questionSet.getRanges();
-      
+
       // Obliczamy dokładną liczbę pytań w wybranych zakresach
-      const selectedRanges = questionRanges.filter(range => 
+      const selectedRanges = questionRanges.filter(range =>
         selectedRangeIds.includes(range.id)
       );
-      
-      const totalQuestions = selectedRanges.reduce((sum, range) => 
+
+      const totalQuestions = selectedRanges.reduce((sum, range) =>
         sum + (range.endId - range.startId + 1), 0
       );
-      
+
       setMaxQuestions(totalQuestions);
       setSelectedQuestions(Math.min(selectedQuestions, totalQuestions));
     } else {
@@ -48,7 +48,7 @@ export default function SliderContent() {
             <p className="text-center text-lg text-gray-700 mb-8">
               Wybrana liczba pytań: {selectedQuestions}
             </p>
-            
+
             <input
               type="range"
               min="1"

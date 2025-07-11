@@ -28,18 +28,18 @@ export default function Quiz() {
     const countParam = searchParams.get('count');
     const questionsParam = searchParams.get('questions');
     const setId = searchParams.get('set') || 'digital-transformation';
-    
+
     // Get the selected question set
     const questionSet = getQuestionSet(setId);
     const getQuestionsFromRanges = questionSet.getQuestions;
-    
+
     if (questionsParam) {
       const questionIds = questionsParam.split(',').map(Number);
       const allQuestions = getQuestionsFromRanges([]);
       const filteredQuestions = questionIds
         .map(id => allQuestions.find(q => q.id === id))
         .filter((q): q is QuizQuestion => q !== undefined);
-      
+
       if (filteredQuestions.length > 0) {
         setQuestions(filteredQuestions);
         // Shuffle options for all questions
@@ -55,13 +55,13 @@ export default function Quiz() {
     else if (rangesParam) {
       const selectedRanges = rangesParam.split(',').map(Number);
       const count = countParam ? parseInt(countParam, 10) : undefined;
-      
+
       let filteredQuestions = getQuestionsFromRanges(selectedRanges);
-      
+
       if (count && count < filteredQuestions.length) {
         filteredQuestions = shuffleArray(filteredQuestions).slice(0, count);
       }
-      
+
       setQuestions(filteredQuestions);
       // Shuffle options for all questions
       const shuffled = filteredQuestions.reduce((acc, question) => {
@@ -85,7 +85,7 @@ export default function Quiz() {
     const currentQuestion = questions[currentQuestionIndex];
     const isMultipleChoice = Array.isArray(currentQuestion.correctAnswer);
     const currentAnswers = userAnswers[currentQuestion.id] || [];
-    
+
     let newAnswers: string[];
     if (isMultipleChoice) {
       if (currentAnswers.includes(answer)) {
@@ -111,20 +111,20 @@ export default function Quiz() {
         const params = new URLSearchParams();
         const encodedAnswers = encodeURIComponent(encodeURIComponent(JSON.stringify(updatedAnswers)));
         params.set('answers', encodedAnswers);
-        
+
         const rangesParam = searchParams.get('ranges');
         if (rangesParam) {
           params.set('ranges', rangesParam);
         }
-        
+
         const questionsParam = searchParams.get('questions');
         if (questionsParam) {
           params.set('questions', questionsParam);
         }
-        
+
         const setId = searchParams.get('set') || 'digital-transformation';
         params.set('set', setId);
-    
+
         window.location.href = `/results?${params.toString()}`;
       }
     }
@@ -159,7 +159,7 @@ export default function Quiz() {
           {shuffledOptions[currentQuestion.id]?.map((option, index) => {
             const currentAnswers = userAnswers[currentQuestion.id] || [];
             const isSelected = currentAnswers.some(answer => answer === option);
-            
+
             return (
               <button
                 key={index}
