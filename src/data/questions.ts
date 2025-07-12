@@ -1140,7 +1140,293 @@ export const questions: QuizQuestion[] = [
       "Brak znaczących korzyści"
     ],
     correctAnswer: "Zmniejszenie konfliktów interesów, zwiększenie zaufania klientów, poprawa reputacji firmy"
-  }
+  },
+  {
+    id: 105,
+    question: "Która z poniższych definicji najlepiej opisuje Społeczną Odpowiedzialność Biznesu (CSR)?",
+    options: [
+      "Strategia polegająca wyłącznie na maksymalizacji zysków akcjonariuszy",
+      "Odpowiedzialność organizacji za wpływ jej decyzji i działań na społeczeństwo i środowisko, realizowana przez przejrzyste i etyczne postępowanie",
+      "Kampania reklamowa mająca poprawić wizerunek marki",
+      "Działania filantropijne prowadzone jednorazowo w okresie świątecznym"
+    ],
+    correctAnswer: "Odpowiedzialność organizacji za wpływ jej decyzji i działań na społeczeństwo i środowisko, realizowana przez przejrzyste i etyczne postępowanie"
+  },
+  {
+    id: 106,
+    question: "Filantropia w klasycznym ujęciu oznacza:",
+    options: [
+      "Obowiązkowy podatek charytatywny",
+      "Bezosobową automatyczną wpłatę na cele społeczne",
+      "Bezinteresowną pomoc finansową lub materialną udzielaną potrzebującym",
+      "System raportowania niefinansowego"
+    ],
+    correctAnswer: "Bezinteresowną pomoc finansową lub materialną udzielaną potrzebującym"
+  },
+  {
+    id: 107,
+    question: "Która z poniższych grup jest kluczowym interesariuszem przedsiębiorstwa?",
+    options: [
+      "Właściciele i inwestorzy",
+      "Kolor ścian w biurze",
+      "Modele samochodów pracowników",
+      "Wystrój recepcji"
+    ],
+    correctAnswer: "Właściciele i inwestorzy"
+  },
+  {
+    id: 108,
+    question: "Program „Sociology Department” Henry’ego Forda był przykładem:",
+    options: [
+      "Dobrowolnej opieki socjalnej bez ingerencji w życie prywatne pracowników",
+      "Intensywnej ingerencji w życie prywatne pracowników pod pozorem troski o dobrostan",
+      "Programu mentoringowego dla kadry kierowniczej",
+      "Projektu wolontariatu pracowniczego w społeczności lokalnej"
+    ],
+    correctAnswer: "Intensywnej ingerencji w życie prywatne pracowników pod pozorem troski o dobrostan"
+  },
+  {
+    id: 109,
+    question: "Główny cel filozofii Kyosei promowanej przez Caux Round Table to:",
+    options: [
+      "Maksymalizacja krótkoterminowego zysku kosztem interesariuszy",
+      "Wspólne dobro realizowane poprzez współpracę i odpowiedzialność biznesu",
+      "Eliminacja konkurencji na rynku",
+      "Zastąpienie wszystkich regulacji rynkowych jednym globalnym kodeksem"
+    ],
+    correctAnswer: "Wspólne dobro realizowane poprzez współpracę i odpowiedzialność biznesu"
+  },
+  {
+    id: 110,
+    question: "Caux Round Table została założona w roku:",
+    options: [
+      "1975",
+      "1986",
+      "1999",
+      "2005"
+    ],
+    correctAnswer: "1986"
+  },
+  {
+    id: 111,
+    question: "Ile podstawowych zasad obejmuje UN Global Compact?",
+    options: [
+      "4",
+      "10",
+      "17",
+      "26"
+    ],
+    correctAnswer: "10"
+  },
+  {
+    id: 112,
+    question: "Norma PN-ISO 26000 dotyczy:",
+    options: [
+      "Systemów zarządzania bezpieczeństwem informacji",
+      "Społecznej odpowiedzialności organizacji",
+      "Kontroli jakości w produkcji spożywczej",
+      "Zarządzania energią w budynkach"
+    ],
+    correctAnswer: "Społecznej odpowiedzialności organizacji"
+  },
+  {
+    id: 113,
+    question: "Agenda 2030 ONZ obejmuje:",
+    options: [
+      "5 Zasad Zrównoważonego Rozwoju",
+      "17 Celów Zrównoważonego Rozwoju (SDGs)",
+      "12 Filtrów Inwestycyjnych",
+      "1 Globalny Indeks Dobrobytu"
+    ],
+    correctAnswer: "17 Celów Zrównoważonego Rozwoju (SDGs)"
+  },
+  {
+    id: 114,
+    question: "Pojęcie „społeczeństwa ryzyka” oznacza, że:",
+    options: [
+      "Jednostkowe racjonalne działania mogą prowadzić do zbiorowych konsekwencji destabilizujących system",
+      "Indywidualne decyzje biznesowe zawsze minimalizują ryzyka społeczne",
+      "Firmy ponoszą odpowiedzialność wyłącznie za własne zyski",
+      "Ryzyko społeczne dotyczy tylko sektora finansowego"
+    ],
+    correctAnswer: "Jednostkowe racjonalne działania mogą prowadzić do zbiorowych konsekwencji destabilizujących system"
+  },
+  {
+    id: 115,
+    question: "Który z poniższych elementów NIE należy do zestawu ESG?",
+    options: [
+      "Environmental",
+      "Social",
+      "Governance",
+      "Fiscal"
+    ],
+    correctAnswer: "Fiscal"
+  },
+  {
+    id: 116,
+    question: "Raportowanie niefinansowe obejmuje przede wszystkim:",
+    options: [
+      "Wyłącznie informacje o przychodach i kosztach",
+      "Dane środowiskowe, społeczne i dotyczące ładu korporacyjnego",
+      "Aktualny kurs akcji spółki",
+      "Listę wszystkich kontrahentów"
+    ],
+    correctAnswer: "Dane środowiskowe, społeczne i dotyczące ładu korporacyjnego"
+  },
+  {
+    id: 117,
+    question: "Aby działalność gospodarcza mogła zostać uznana za zrównoważoną według Taksonomii UE, musi:",
+    options: [
+      "Przynosić największy przychód w sektorze",
+      "Wnieść istotny wkład w co najmniej jeden z sześciu celów środowiskowych oraz nie wyrządzać poważnych szkód pozostałym",
+      "Uzyskać zgodę co najmniej dwóch państw członkowskich",
+      "Być zwolniona z podatku dochodowego"
+    ],
+    correctAnswer: "Wnieść istotny wkład w co najmniej jeden z sześciu celów środowiskowych oraz nie wyrządzać poważnych szkód pozostałym"
+  },
+  {
+    id: 118,
+    question: "Dyrektywa CSRD wprowadza przede wszystkim:",
+    options: [
+      "Obowiązek publikacji kwartalnych wyników finansowych w euro",
+      "Rozszerzone i ujednolicone raportowanie informacji o zrównoważonym rozwoju",
+      "Zakaz reklamy produktów wysokoemisyjnych",
+      "Zwolnienie mikroprzedsiębiorstw z podatku VAT"
+    ],
+    correctAnswer: "Rozszerzone i ujednolicone raportowanie informacji o zrównoważonym rozwoju"
+  },
+  {
+    id: 119,
+    question: "Pakiet Omnibus (2025) ma na celu przede wszystkim:",
+    options: [
+      "Zaostrzenie wymogów raportowania ESG",
+      "Zmniejszenie biurokracji i odroczenie części obowiązków raportowych",
+      "Wprowadzenie globalnego podatku węglowego",
+      "Likwidację standardów ESRS"
+    ],
+    correctAnswer: "Zmniejszenie biurokracji i odroczenie części obowiązków raportowych"
+  },
+  {
+    id: 120,
+    question: "Greenwashing to praktyka polegająca na:",
+    options: [
+      "Dokładnym audycie środowiskowym przedsiębiorstwa",
+      "Nieuzasadnionym używaniu twierdzeń o przyjazności środowisku w komunikacji marketingowej",
+      "Budowie instalacji do recyklingu",
+      "Uzyskaniu certyfikatu ISO 14001"
+    ],
+    correctAnswer: "Nieuzasadnionym używaniu twierdzeń o przyjazności środowisku w komunikacji marketingowej"
+  },
+  {
+    id: 121,
+    question: "Który z poniższych czynników NAJMNIEJ wpływa na postępowanie etyczne pracowników?",
+    options: [
+      "Cele organizacji",
+      "Reputacja firmy",
+      "Obowiązujące prawo",
+      "Kolor firmowego logo"
+    ],
+    correctAnswer: "Kolor firmowego logo"
+  },
+  {
+    id: 122,
+    question: "Warunkiem skuteczności programu etycznego jest:",
+    options: [
+      "Zgodność deklaracji z praktyką organizacji",
+      "Brak struktury i spontaniczne działania",
+      "Całkowite pomijanie procesu doboru kadr",
+      "Unikanie komunikacji wewnętrznej"
+    ],
+    correctAnswer: "Zgodność deklaracji z praktyką organizacji"
+  },
+  {
+    id: 123,
+    question: "Wzorcowy program etyczny według Kapteina powinien charakteryzować się m.in.:",
+    options: [
+      "Jasnością, wsparciem i możliwością sankcjonowania naruszeń",
+      "Minimalnym poziomem komunikacji",
+      "Brakiem przejrzystości, by chronić dane",
+      "Koncentracją wyłącznie na wynikach finansowych"
+    ],
+    correctAnswer: "Jasnością, wsparciem i możliwością sankcjonowania naruszeń"
+  },
+  {
+    id: 124,
+    question: "Etyka obowiązku w organizacji kładzie nacisk głównie na:",
+    options: [
+      "Inspirację wartościami i przywództwo etyczne",
+      "Unikanie problemów poprzez stosowanie norm, kodeksów i procedur",
+      "Innowacyjne projekty społeczne",
+      "Budowanie zaangażowania interesariuszy w decyzje strategiczne"
+    ],
+    correctAnswer: "Unikanie problemów poprzez stosowanie norm, kodeksów i procedur"
+  },
+  {
+    id: 125,
+    question: "Etyka aspiracji w organizacji skupia się przede wszystkim na:",
+    options: [
+      "Wdrożeniu jak największej liczby procedur",
+      "Rozwoju wartości, szkoleń etycznych i przywództwa opartego na wartościach",
+      "Braku formalnych kodeksów etycznych",
+      "Minimalizowaniu komunikacji wewnętrznej"
+    ],
+    correctAnswer: "Rozwoju wartości, szkoleń etycznych i przywództwa opartego na wartościach"
+  },
+  {
+    id: 126,
+    question: "W kontekście infrastruktury etycznej sankcje za naruszenia kodeksu etycznego powinny być:",
+    options: [
+      "Rozmyte i uznaniowe",
+      "Wyłącznie symboliczne",
+      "Jasno określone i proporcjonalne do naruszeń",
+      "Zarezerwowane tylko dla kadry najwyższego szczebla"
+    ],
+    correctAnswer: "Jasno określone i proporcjonalne do naruszeń"
+  },
+  {
+    id: 127,
+    question: "Model Kohlberga opisuje:",
+    options: [
+      "Stadia rozwoju moralnego jednostki",
+      "Fazy cyklu życia produktu",
+      "Etapy wdrożenia systemu jakości",
+      "Poziomy zarządzania kryzysowego"
+    ],
+    correctAnswer: "Stadia rozwoju moralnego jednostki"
+  },
+  {
+    id: 128,
+    question: "Który z poniższych przykładów najlepiej ilustruje dylemat etyczny w biznesie?",
+    options: [
+      "Rozliczenie faktury zgodnie z terminem",
+      "Konflikt lojalności wobec pracodawcy z obowiązkiem ujawnienia nieprawidłowości",
+      "Przestrzeganie przepisów BHP",
+      "Uzyskanie nowego certyfikatu jakości"
+    ],
+    correctAnswer: "Konflikt lojalności wobec pracodawcy z obowiązkiem ujawnienia nieprawidłowości"
+  },
+  {
+    id: 129,
+    question: "Przedsiębiorczość społeczna różni się od tradycyjnej tym, że:",
+    options: [
+      "Koncentruje się na tworzeniu wartości społecznej, a nie wyłącznie finansowej",
+      "Nie może generować zysku",
+      "Ogranicza się do działalności charytatywnej",
+      "Nie wymaga innowacyjności"
+    ],
+    correctAnswer: "Koncentruje się na tworzeniu wartości społecznej, a nie wyłącznie finansowej"
+  },
+  {
+    id: 130,
+    question: "Przykład Enronu w kontekście wartości korporacyjnych pokazuje przede wszystkim:",
+    options: [
+      "Wzorcowe wdrożenie kodeksu etycznego",
+      "Rozbieżność między deklarowanymi wartościami a faktycznymi działaniami zarządu",
+      "Skuteczność programu przeciwdziałania korupcji",
+      "Transparentność raportowania ESG"
+    ],
+    correctAnswer: "Rozbieżność między deklarowanymi wartościami a faktycznymi działaniami zarządu"
+  },
 ];
 
 export interface QuestionRange {
@@ -1160,7 +1446,10 @@ export const questionRanges: QuestionRange[] = [
   { id: 7, label: "Pytania 61 - 70", startId: 61, endId: 70 },
   { id: 8, label: "Pytania 71 - 80", startId: 71, endId: 80 },
   { id: 9, label: "Pytania 81 - 90", startId: 81, endId: 90 },
-  { id: 10, label: "Pytania 91 - 104", startId: 91, endId: 104 }
+  { id: 10, label: "Pytania 91 - 100", startId: 91, endId: 100 },
+  { id: 11, label: "Pytania 101 - 110", startId: 101, endId: 110 },
+  { id: 12, label: "Pytania 111 - 120", startId: 111, endId: 120 },
+  { id: 13, label: "Pytania 121 - 130", startId: 121, endId: 130 },
 ];
 
 export const getQuestionsFromRanges = (selectedRangeIds: number[]): QuizQuestion[] => {
