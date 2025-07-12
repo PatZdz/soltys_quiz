@@ -897,7 +897,7 @@ export const questions: QuizQuestion[] = [
       "Sprawiedliwość, prawdomówność, manipulowanie informacją",
       "Uczciwość, brak prawdomówności, promowanie wartości etycznych"
     ],
-    correctAnswer: "Manipulowanie informacją, uczciwość, brak sprawiedliwości"
+    correctAnswer: "Uczciwość, prawdomówność, sprawiedliwość, promowanie wartości etycznych"
   },
   {
     id: 83,
@@ -1145,10 +1145,10 @@ export const questions: QuizQuestion[] = [
     id: 105,
     question: "Która z poniższych definicji najlepiej opisuje Społeczną Odpowiedzialność Biznesu (CSR)?",
     options: [
-      "Strategia polegająca wyłącznie na maksymalizacji zysków akcjonariuszy",
+      "Strategia ograniczająca się do spełnienia minimalnych wymogów prawnych i raportowania finansowego",
       "Odpowiedzialność organizacji za wpływ jej decyzji i działań na społeczeństwo i środowisko, realizowana przez przejrzyste i etyczne postępowanie",
-      "Kampania reklamowa mająca poprawić wizerunek marki",
-      "Działania filantropijne prowadzone jednorazowo w okresie świątecznym"
+      "Koncepcja polegająca wyłącznie na przekazywaniu części zysku na cele charytatywne w celu poprawy wizerunku",
+      "Zestaw krótkoterminowych kampanii PR skoncentrowanych na ochronie środowiska"
     ],
     correctAnswer: "Odpowiedzialność organizacji za wpływ jej decyzji i działań na społeczeństwo i środowisko, realizowana przez przejrzyste i etyczne postępowanie"
   },
@@ -1156,10 +1156,10 @@ export const questions: QuizQuestion[] = [
     id: 106,
     question: "Filantropia w klasycznym ujęciu oznacza:",
     options: [
-      "Obowiązkowy podatek charytatywny",
-      "Bezosobową automatyczną wpłatę na cele społeczne",
+      "Obowiązkowy mechanizm podatkowy wymuszający redystrybucję zysków spółki",
       "Bezinteresowną pomoc finansową lub materialną udzielaną potrzebującym",
-      "System raportowania niefinansowego"
+      "Model społeczny polegający na wymianie barterowej z organizacjami non-profit",
+      "Inwestycję kapitałową w start-up ekologiczny realizowaną wyłącznie dla zwrotu finansowego"
     ],
     correctAnswer: "Bezinteresowną pomoc finansową lub materialną udzielaną potrzebującym"
   },
@@ -1168,9 +1168,9 @@ export const questions: QuizQuestion[] = [
     question: "Która z poniższych grup jest kluczowym interesariuszem przedsiębiorstwa?",
     options: [
       "Właściciele i inwestorzy",
-      "Kolor ścian w biurze",
-      "Modele samochodów pracowników",
-      "Wystrój recepcji"
+      "Anonimowi obserwatorzy trendów rynkowych, którzy nie wchodzą w interakcje z firmą",
+      "Międzynarodowe organizacje normalizacyjne publikujące standardy branżowe bez bezpośrednich relacji z przedsiębiorstwem",
+      "Firmy consultingowe sporządzające ogólne raporty analityczne, gdy nie są zatrudnione przez spółkę"
     ],
     correctAnswer: "Właściciele i inwestorzy"
   },
@@ -1178,10 +1178,10 @@ export const questions: QuizQuestion[] = [
     id: 108,
     question: "Program „Sociology Department” Henry’ego Forda był przykładem:",
     options: [
-      "Dobrowolnej opieki socjalnej bez ingerencji w życie prywatne pracowników",
+      "Dobrowolnego programu benefitów zdrowotnych nieingerującego w prywatność pracowników",
       "Intensywnej ingerencji w życie prywatne pracowników pod pozorem troski o dobrostan",
-      "Programu mentoringowego dla kadry kierowniczej",
-      "Projektu wolontariatu pracowniczego w społeczności lokalnej"
+      "Programu wczesnych emerytur finansowanych przez firmę",
+      "Pilotażu pracy zdalnej zwiększającego elastyczność zatrudnienia"
     ],
     correctAnswer: "Intensywnej ingerencji w życie prywatne pracowników pod pozorem troski o dobrostan"
   },
@@ -1189,10 +1189,10 @@ export const questions: QuizQuestion[] = [
     id: 109,
     question: "Główny cel filozofii Kyosei promowanej przez Caux Round Table to:",
     options: [
-      "Maksymalizacja krótkoterminowego zysku kosztem interesariuszy",
+      "Optymalizacja struktur podatkowych w celu maksymalizacji wartości dla akcjonariuszy",
       "Wspólne dobro realizowane poprzez współpracę i odpowiedzialność biznesu",
-      "Eliminacja konkurencji na rynku",
-      "Zastąpienie wszystkich regulacji rynkowych jednym globalnym kodeksem"
+      "Model lean management ukierunkowany na redukcję marnotrawstwa procesowego",
+      "Polityka monopolizacyjna mająca ograniczyć liczbę konkurentów"
     ],
     correctAnswer: "Wspólne dobro realizowane poprzez współpracę i odpowiedzialność biznesu"
   },
@@ -1200,10 +1200,10 @@ export const questions: QuizQuestion[] = [
     id: 110,
     question: "Caux Round Table została założona w roku:",
     options: [
-      "1975",
+      "1984",
       "1986",
-      "1999",
-      "2005"
+      "1989",
+      "1991"
     ],
     correctAnswer: "1986"
   },
@@ -1211,10 +1211,10 @@ export const questions: QuizQuestion[] = [
     id: 111,
     question: "Ile podstawowych zasad obejmuje UN Global Compact?",
     options: [
-      "4",
+      "8",
       "10",
-      "17",
-      "26"
+      "12",
+      "17"
     ],
     correctAnswer: "10"
   },
@@ -1224,8 +1224,8 @@ export const questions: QuizQuestion[] = [
     options: [
       "Systemów zarządzania bezpieczeństwem informacji",
       "Społecznej odpowiedzialności organizacji",
-      "Kontroli jakości w produkcji spożywczej",
-      "Zarządzania energią w budynkach"
+      "Systemów zarządzania środowiskowego ISO 14001",
+      "Zarządzania ciągłością działania ISO 22301"
     ],
     correctAnswer: "Społecznej odpowiedzialności organizacji"
   },
@@ -1233,10 +1233,10 @@ export const questions: QuizQuestion[] = [
     id: 113,
     question: "Agenda 2030 ONZ obejmuje:",
     options: [
-      "5 Zasad Zrównoważonego Rozwoju",
+      "8 Milenijnych Celów Rozwoju",
       "17 Celów Zrównoważonego Rozwoju (SDGs)",
-      "12 Filtrów Inwestycyjnych",
-      "1 Globalny Indeks Dobrobytu"
+      "12 Zasad Odpowiedzialnej Konsumpcji",
+      "20 Wskaźników Zrównoważonego Rozwoju"
     ],
     correctAnswer: "17 Celów Zrównoważonego Rozwoju (SDGs)"
   },
@@ -1245,9 +1245,9 @@ export const questions: QuizQuestion[] = [
     question: "Pojęcie „społeczeństwa ryzyka” oznacza, że:",
     options: [
       "Jednostkowe racjonalne działania mogą prowadzić do zbiorowych konsekwencji destabilizujących system",
-      "Indywidualne decyzje biznesowe zawsze minimalizują ryzyka społeczne",
-      "Firmy ponoszą odpowiedzialność wyłącznie za własne zyski",
-      "Ryzyko społeczne dotyczy tylko sektora finansowego"
+      "Wszystkie ryzyka biznesowe są w pełni kontrolowalne przy użyciu zaawansowanych narzędzi analitycznych",
+      "Ryzyko społeczne ogranicza się wyłącznie do szkód środowiskowych w sektorze górniczym",
+      "Ryzyko jest wyłącznie kwestią ubezpieczeniową i finansową"
     ],
     correctAnswer: "Jednostkowe racjonalne działania mogą prowadzić do zbiorowych konsekwencji destabilizujących system"
   },
@@ -1258,18 +1258,18 @@ export const questions: QuizQuestion[] = [
       "Environmental",
       "Social",
       "Governance",
-      "Fiscal"
+      "Economic"
     ],
-    correctAnswer: "Fiscal"
+    correctAnswer: "Economic"
   },
   {
     id: 116,
     question: "Raportowanie niefinansowe obejmuje przede wszystkim:",
     options: [
-      "Wyłącznie informacje o przychodach i kosztach",
+      "Wyłącznie dane o rentowności na akcję",
       "Dane środowiskowe, społeczne i dotyczące ładu korporacyjnego",
-      "Aktualny kurs akcji spółki",
-      "Listę wszystkich kontrahentów"
+      "Głównie informacje o strukturze kapitałowej i podatkowej spółki",
+      "Wyłącznie dane operacyjne dotyczące wydajności produkcji"
     ],
     correctAnswer: "Dane środowiskowe, społeczne i dotyczące ładu korporacyjnego"
   },
@@ -1277,10 +1277,10 @@ export const questions: QuizQuestion[] = [
     id: 117,
     question: "Aby działalność gospodarcza mogła zostać uznana za zrównoważoną według Taksonomii UE, musi:",
     options: [
-      "Przynosić największy przychód w sektorze",
+      "Osiągać stopę zwrotu powyżej średniej dla sektora zrównoważonego",
       "Wnieść istotny wkład w co najmniej jeden z sześciu celów środowiskowych oraz nie wyrządzać poważnych szkód pozostałym",
-      "Uzyskać zgodę co najmniej dwóch państw członkowskich",
-      "Być zwolniona z podatku dochodowego"
+      "Uzyskać certyfikat zgodności od trzech niezależnych instytucji finansowych",
+      "Dotyczyć wyłącznie produkcji energii odnawialnej"
     ],
     correctAnswer: "Wnieść istotny wkład w co najmniej jeden z sześciu celów środowiskowych oraz nie wyrządzać poważnych szkód pozostałym"
   },
@@ -1288,10 +1288,10 @@ export const questions: QuizQuestion[] = [
     id: 118,
     question: "Dyrektywa CSRD wprowadza przede wszystkim:",
     options: [
-      "Obowiązek publikacji kwartalnych wyników finansowych w euro",
+      "Obowiązek publikacji kwartalnych sprawozdań z emisji CO₂ w czasie rzeczywistym",
       "Rozszerzone i ujednolicone raportowanie informacji o zrównoważonym rozwoju",
-      "Zakaz reklamy produktów wysokoemisyjnych",
-      "Zwolnienie mikroprzedsiębiorstw z podatku VAT"
+      "Nakaz publikacji wszystkich kontraktów handlowych w rejestrze publicznym",
+      "Obniżenie standardów raportowania ESG dla MŚP"
     ],
     correctAnswer: "Rozszerzone i ujednolicone raportowanie informacji o zrównoważonym rozwoju"
   },
@@ -1299,10 +1299,10 @@ export const questions: QuizQuestion[] = [
     id: 119,
     question: "Pakiet Omnibus (2025) ma na celu przede wszystkim:",
     options: [
-      "Zaostrzenie wymogów raportowania ESG",
+      "Zaostrzenie sankcji finansowych za nieprawidłowe raportowanie ESG",
       "Zmniejszenie biurokracji i odroczenie części obowiązków raportowych",
-      "Wprowadzenie globalnego podatku węglowego",
-      "Likwidację standardów ESRS"
+      "Wprowadzenie wiążącego celu neutralności klimatycznej do 2030 r.",
+      "Utworzenie centralnego rejestru zielonych inwestycji kontrolowanego przez EBC"
     ],
     correctAnswer: "Zmniejszenie biurokracji i odroczenie części obowiązków raportowych"
   },
@@ -1310,10 +1310,10 @@ export const questions: QuizQuestion[] = [
     id: 120,
     question: "Greenwashing to praktyka polegająca na:",
     options: [
-      "Dokładnym audycie środowiskowym przedsiębiorstwa",
       "Nieuzasadnionym używaniu twierdzeń o przyjazności środowisku w komunikacji marketingowej",
-      "Budowie instalacji do recyklingu",
-      "Uzyskaniu certyfikatu ISO 14001"
+      "Strategii neutralności klimatycznej zgodnej z ISO 50001",
+      "Kompleksowej ocenie cyklu życia produktu (LCA)",
+      "Uzyskaniu ogólnofirmowej certyfikacji środowiskowej zatwierdzonej przez organ publiczny"
     ],
     correctAnswer: "Nieuzasadnionym używaniu twierdzeń o przyjazności środowisku w komunikacji marketingowej"
   },
@@ -1321,32 +1321,32 @@ export const questions: QuizQuestion[] = [
     id: 121,
     question: "Który z poniższych czynników NAJMNIEJ wpływa na postępowanie etyczne pracowników?",
     options: [
-      "Cele organizacji",
-      "Reputacja firmy",
-      "Obowiązujące prawo",
-      "Kolor firmowego logo"
+      "Cele strategiczne przedsiębiorstwa",
+      "Obowiązujące przepisy prawa",
+      "Opinie liderów branżowych",
+      "Wzór tapety w biurze"
     ],
-    correctAnswer: "Kolor firmowego logo"
+    correctAnswer: "Wzór tapety w biurze"
   },
   {
     id: 122,
     question: "Warunkiem skuteczności programu etycznego jest:",
     options: [
-      "Zgodność deklaracji z praktyką organizacji",
-      "Brak struktury i spontaniczne działania",
-      "Całkowite pomijanie procesu doboru kadr",
-      "Unikanie komunikacji wewnętrznej"
+      "Zgodność deklaracji z praktyką działalności organizacji",
+      "Obniżenie kosztów administracyjnych poprzez redukcję raportowania",
+      "Fokus na zewnętrznych akcjach wizerunkowych zamiast procedur wewnętrznych",
+      "Stosowanie wyłącznie jednorazowych akcji filantropijnych bez wsparcia systemowego"
     ],
-    correctAnswer: "Zgodność deklaracji z praktyką organizacji"
+    correctAnswer: "Zgodność deklaracji z praktyką działalności organizacji"
   },
   {
     id: 123,
     question: "Wzorcowy program etyczny według Kapteina powinien charakteryzować się m.in.:",
     options: [
       "Jasnością, wsparciem i możliwością sankcjonowania naruszeń",
-      "Minimalnym poziomem komunikacji",
-      "Brakiem przejrzystości, by chronić dane",
-      "Koncentracją wyłącznie na wynikach finansowych"
+      "Opcjonalnością stosowania kodeksu etyki w zależności od działu",
+      "Ścisłą tajnością procedur – brak jawności",
+      "Brakiem konsekwencji za naruszenia przy jednoczesnym promowaniu innowacji"
     ],
     correctAnswer: "Jasnością, wsparciem i możliwością sankcjonowania naruszeń"
   },
@@ -1356,8 +1356,8 @@ export const questions: QuizQuestion[] = [
     options: [
       "Inspirację wartościami i przywództwo etyczne",
       "Unikanie problemów poprzez stosowanie norm, kodeksów i procedur",
-      "Innowacyjne projekty społeczne",
-      "Budowanie zaangażowania interesariuszy w decyzje strategiczne"
+      "Tworzenie platformy współdzielenia wartości w łańcuchu dostaw",
+      "Integrację kryteriów ESG z systemem premiowym"
     ],
     correctAnswer: "Unikanie problemów poprzez stosowanie norm, kodeksów i procedur"
   },
@@ -1365,10 +1365,10 @@ export const questions: QuizQuestion[] = [
     id: 125,
     question: "Etyka aspiracji w organizacji skupia się przede wszystkim na:",
     options: [
-      "Wdrożeniu jak największej liczby procedur",
       "Rozwoju wartości, szkoleń etycznych i przywództwa opartego na wartościach",
-      "Braku formalnych kodeksów etycznych",
-      "Minimalizowaniu komunikacji wewnętrznej"
+      "Implementacji detalicznych procedur kontrolno-sankcyjnych",
+      "Minimalizacji komunikacji o wartościach z obawy przed ryzykiem reputacyjnym",
+      "Wdrażaniu wyłącznie wymaganych przepisów bez dodatkowych szkoleń"
     ],
     correctAnswer: "Rozwoju wartości, szkoleń etycznych i przywództwa opartego na wartościach"
   },
@@ -1379,7 +1379,7 @@ export const questions: QuizQuestion[] = [
       "Rozmyte i uznaniowe",
       "Wyłącznie symboliczne",
       "Jasno określone i proporcjonalne do naruszeń",
-      "Zarezerwowane tylko dla kadry najwyższego szczebla"
+      "Nakładane wyłącznie na podmioty zewnętrzne"
     ],
     correctAnswer: "Jasno określone i proporcjonalne do naruszeń"
   },
@@ -1389,8 +1389,8 @@ export const questions: QuizQuestion[] = [
     options: [
       "Stadia rozwoju moralnego jednostki",
       "Fazy cyklu życia produktu",
-      "Etapy wdrożenia systemu jakości",
-      "Poziomy zarządzania kryzysowego"
+      "Modele adaptacyjne zmian strategicznych",
+      "Poziomy delegowania odpowiedzialności"
     ],
     correctAnswer: "Stadia rozwoju moralnego jednostki"
   },
@@ -1398,10 +1398,10 @@ export const questions: QuizQuestion[] = [
     id: 128,
     question: "Który z poniższych przykładów najlepiej ilustruje dylemat etyczny w biznesie?",
     options: [
-      "Rozliczenie faktury zgodnie z terminem",
       "Konflikt lojalności wobec pracodawcy z obowiązkiem ujawnienia nieprawidłowości",
-      "Przestrzeganie przepisów BHP",
-      "Uzyskanie nowego certyfikatu jakości"
+      "Zawarcie umowy zgodnie z lokalnymi przepisami podatkowymi",
+      "Przeprowadzenie audytu zewnętrznego na wniosek zarządu",
+      "Wdrożenie programu mentoringowego dla nowych pracowników"
     ],
     correctAnswer: "Konflikt lojalności wobec pracodawcy z obowiązkiem ujawnienia nieprawidłowości"
   },
@@ -1410,9 +1410,9 @@ export const questions: QuizQuestion[] = [
     question: "Przedsiębiorczość społeczna różni się od tradycyjnej tym, że:",
     options: [
       "Koncentruje się na tworzeniu wartości społecznej, a nie wyłącznie finansowej",
-      "Nie może generować zysku",
-      "Ogranicza się do działalności charytatywnej",
-      "Nie wymaga innowacyjności"
+      "Nie generuje przychodów i opiera się wyłącznie na dotacjach publicznych",
+      "Realizuje wyłącznie cele filantropijne bez modelu biznesowego",
+      "Koncentruje się na maksymalizacji udziału w rynku bez względu na wpływ społeczny"
     ],
     correctAnswer: "Koncentruje się na tworzeniu wartości społecznej, a nie wyłącznie finansowej"
   },
@@ -1422,8 +1422,8 @@ export const questions: QuizQuestion[] = [
     options: [
       "Wzorcowe wdrożenie kodeksu etycznego",
       "Rozbieżność między deklarowanymi wartościami a faktycznymi działaniami zarządu",
-      "Skuteczność programu przeciwdziałania korupcji",
-      "Transparentność raportowania ESG"
+      "Case study udanej transformacji ESG",
+      "Model referencyjny w zakresie zarządzania innowacjami"
     ],
     correctAnswer: "Rozbieżność między deklarowanymi wartościami a faktycznymi działaniami zarządu"
   },
