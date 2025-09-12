@@ -10,806 +10,797 @@ export interface QuizQuestion {
 export const questions: QuizQuestion[] = [
   {
     id: 1,
-    question: "Kadencja członka zarządu spółki akcyjnej nie może być dłuższa niż:",
-    options: [
-      "6 lat",
-      "4 lata",
-      "5 lat",
-      "3 lata"
-    ],
-    correctAnswer: "5 lat"
+    question: "Umowa spółki ABC z o.o. została zawarta w dniu 2 kwietnia 2009 roku. Wspólnicy zastanawiają się, czy w roku 2020 mogą zmienić jej postanowienia i wprowadzić do umowy spółki postanowienia, zgodnie z którymi zarząd powinien uzyskać zgodę rady nadzorczej na zaciąganie zobowiązań, których wysokość przekracza 100 000 zł. W tej sytuacji sąd rejestrowy musi zarejestrować nasze zdanie, a zmiana musi zostać wprowadzona do rejestru.",
+    options: ["prawda", "fałsz"],
+    correctAnswer: "prawda"
   },
   {
     id: 2,
-    question: "Za zobowiązania spółki partnerskiej powstałe w związku z wykonywaniem przez pozostałych partnerów wolnego zawodu w spółce, o ile umowa spółki nie stanowi inaczej, partner:",
+    question: "Jakie czynności prawne mogą nie być zawierane przez pełnomocnika?",
     options: [
-      "ponosi odpowiedzialność do wysokości wniesionego wkładu",
-      "ponosi odpowiedzialność solidarnie z partnerem, z winy którego powstało zobowiązanie",
-      "nie ponosi odpowiedzialności",
-      "ponosi odpowiedzialność całym swoim majątkiem osobistym"
+      "uznanie dziecka, zawarcie małżeństwa i każde inne umowy",
+      "testament",
+      "podjęcie decyzji prawnych w sądzie",
+      "zawarcie umowy"
     ],
-    correctAnswer: "nie ponosi odpowiedzialności"
+    correctAnswer: [
+      "uznanie dziecka, zawarcie małżeństwa i każde inne umowy",
+      "testament",
+      "podjęcie decyzji prawnych w sądzie"
+    ]
   },
   {
     id: 3,
-    question: "Prokurenta spółki może odwołać:",
-    options: [
-      "każdy członek rady nadzorczej lub walnego zgromadzenia spółki",
-      "każdy członek walnego zgromadzenia spółki",
-      "każdy członek zarządu spółki",
-      "każdy członek rady nadzorczej spółki"
-    ],
-    correctAnswer: "każdy członek zarządu spółki"
+    question: "Zamierzam razem z innymi 3 osobami rozpocząć działalność gospodarczą w zakresie produkcji odzieży. Do prowadzenia tej działalności możemy utworzyć:",
+    options: ["spółkę komandytową", "spółkę akcyjną", "spółkę partnerską", "spółkę jawną"],
+    correctAnswer: ["spółkę komandytową", "spółkę akcyjną", "spółkę jawną"]
   },
   {
     id: 4,
-    question: "Wkłady do prostej spółki akcyjnej powinny być wniesione w całości:",
+    question: "Spółka z o.o. zamierza udzielić Janowi Kowalskiemu pełnomocnictwa do zawierania w imieniu spółki umów sprzedaży towarów handlowych. Udzielone pełnomocnictwo będzie:",
     options: [
-      "w ciągu 3 lat od wpisania spółki do KRS-u",
-      "w ciągu 2 lat od wpisania spółki do KRS-u",
-      "w ciągu 6 miesięcy od wpisania spółki do KRS-u",
-      "przed wpisaniem spółki do KRS-u"
+      "pełnomocnictwem rodzajowym",
+      "pełnomocnictwem domniemanym",
+      "pełnomocnictwem do poszczególnej czynności prawnej",
+      "pełnomocnictwem ogólnym"
     ],
-    correctAnswer: "w ciągu 3 lat od wpisania spółki do KRS-u"
+    correctAnswer: "pełnomocnictwem rodzajowym"
   },
   {
     id: 5,
-    question: "Cechą spółki kapitałowej jest:",
+    question: "Zobowiązanie w rozumieniu kodeksu cywilnego powstaje w wyniku:",
     options: [
-      "wkładami wspólników może być praca i usługi świadczone na rzecz spółki",
-      "brak osobistej odpowiedzialności wspólnika za zobowiązania spółki",
-      "stały i niezmienny skład wspólników",
-      "prowadzenie spraw spółki należy do kompetencji jej wspólników"
+      "wyrządzenia szkody czynem niedozwolonym",
+      "wyłącznie w wyniku opóźnienia zapłaty podatku dochodowego od osób fizycznych",
+      "zawarcia umowy zlecenia"
     ],
-    correctAnswer: "brak osobistej odpowiedzialności wspólnika za zobowiązania spółki"
+    correctAnswer: ["wyrządzenia szkody czynem niedozwolonym", "zawarcia umowy zlecenia"]
   },
   {
     id: 6,
-    question: "Akcje prostej spółki akcyjnej mogą być:",
+    question: "Do kompetencji zarządu spółki z o.o. zaliczamy:",
     options: [
-      "korporacyjne",
-      "beznominałowe",
-      "walutowe",
-      "obligacyjne"
+      "zwoływanie zgromadzeń wspólników",
+      "kontrolę działalności rady nadzorczej",
+      "prowadzenie spraw spółki",
+      "zawieranie umów w imieniu spółki"
     ],
-    correctAnswer: "beznominałowe"
+    correctAnswer: ["zwoływanie zgromadzeń wspólników", "prowadzenie spraw spółki", "zawieranie umów w imieniu spółki"]
   },
   {
     id: 7,
-    question: "Organami w spółce komandytowo-akcyjnej są:",
+    question: "Do powstania spółki z o.o. wymagane jest:",
     options: [
-      "Rada Nadzorcza, Zarząd i Walne Zgromadzenie",
-      "Rada Nadzorcza i Walne Zgromadzenie",
-      "Rada Nadzorcza",
-      "Zarząd i Walne Zgromadzenie"
+      "wpis do Krajowego Rejestru Sądowego",
+      "uzyskanie zgody ministra gospodarki na utworzenie spółki",
+      "powołanie zarządu spółki",
+      "zawarcie umowy spółki"
     ],
-    correctAnswer: "Rada Nadzorcza i Walne Zgromadzenie"
+    correctAnswer: ["wpis do Krajowego Rejestru Sądowego", "powołanie zarządu spółki", "zawarcie umowy spółki"]
   },
   {
     id: 8,
-    question: "Czy zgoda na przetwarzanie danych może być wycofana w każdym momencie?",
+    question: "Odpowiedzialność solidarna trzech dłużników oznacza, że:",
     options: [
-      "tak",
-      "administrator sam określa, czy klient może wycofać taką zgodę",
-      "organ nadzoru określa, czy klient danego przedsiębiorcy może wycofać zgodę",
-      "nie"
+      "każdy z dłużników odpowiada w całości długu, a wierzyciel może według swojego wyboru dochodzić roszczenia o całość długu od dowolnego dłużnika solidarnego",
+      "każdy z nich odpowiada tylko za 1/3 długu",
+      "za dług odpowiada tylko ten dłużnik, który ma największy majątek"
     ],
-    correctAnswer: "tak"
+    correctAnswer: "każdy z dłużników odpowiada w całości długu, a wierzyciel może według swojego wyboru dochodzić roszczenia o całość długu od dowolnego dłużnika solidarnego"
   },
   {
     id: 9,
-    question: "Czy Rejestr Czynności Przetwarzania powinien prowadzić każdy administrator danych?",
+    question: "Aport to:",
     options: [
-      "nie",
-      "decyduje o tym organ nadzoru",
-      "tak",
-      "zależy, jakie dane przetwarza administrator i ilu zatrudnia pracowników"
+      "wyłącznie nieruchomość nabyta przez spółkę",
+      "wkład niepieniężny wniesiony do spółki przez wspólnika spółki z o.o.",
+      "wkład pieniężny wniesiony do spółki przez wspólnika spółki z o.o.",
+      "środek trwały nabyty przez spółkę z o.o. w trakcie prowadzenia działalności spółki"
     ],
-    correctAnswer: "zależy, jakie dane przetwarza administrator i ilu zatrudnia pracowników"
+    correctAnswer: "wkład niepieniężny wniesiony do spółki przez wspólnika spółki z o.o."
   },
   {
     id: 10,
-    question: "Wkładem do spółki kapitałowej nie może być:",
-    options: [
-      "świadczenie usług",
-      "prawo własności nieruchomości",
-      "udziały lub akcje w innej spółce",
-      "przedsiębiorstwo w znaczeniu przedmiotowym"
-    ],
-    correctAnswer: "świadczenie usług"
+    question: "Prawo składania oświadczeń woli w imieniu osoby prawnej przysługuje właściwemu organowi wskazanemu w ustawie lub statucie danej osoby prawnej.",
+    options: ["prawda", "fałsz"],
+    correctAnswer: "prawda"
   },
   {
     id: 11,
-    question: "Prosta spółka akcyjna nie może być założona przez:",
-    options: [
-      "spółkę akcyjną publiczną",
-      "spółkę akcyjną niepubliczną",
-      "osoby fizyczne",
-      "jednoosobową spółkę z o.o."
-    ],
-    correctAnswer: "jednoosobową spółkę z o.o."
+    question: "Spółka cywilna podlega rejestracji.",
+    options: ["prawda", "fałsz"],
+    correctAnswer: "fałsz"
   },
   {
     id: 12,
-    question: "Wspólnik pasywny w spółce komandytowo-akcyjnej to:",
+    question: "Prokura uprawnia do:",
     options: [
-      "mandatariusz",
-      "akcjonariusz",
-      "komplementariusz",
-      "komandytariusz"
+      "zarządzania spółką kapitałową",
+      "kontroli podmiotów prowadzących działalność gospodarczą",
+      "zawierania umów w imieniu przedsiębiorstw"
     ],
-    correctAnswer: "akcjonariusz"
+    correctAnswer: "zawierania umów w imieniu przedsiębiorstw"
   },
   {
     id: 13,
-    question: "Spółkę komandytową reprezentują:",
+    question: "Zasada swobody umów oznacza:",
     options: [
-      "wybrani przez komandytariuszy komplementariusze spółki",
-      "komandytariusze spółki, którzy wnieśli wkłady przekraczające ponad 25 % udziałów w spółce",
-      "komplementariusze, których z mocy umowy spółki albo prawomocnego orzeczenia sądu nie pozbawiono prawa reprezentowania spółki",
-      "komandytariusze wraz z komplementariuszami"
+      "swobodę ukształtowania treści umowy, pod warunkiem, że będzie ona zgodna z obowiązującymi przepisami",
+      "swobodę wyboru partnera, z którym zawieramy umowę",
+      "obie odpowiedzi są poprawne"
     ],
-    correctAnswer: "komplementariusze, których z mocy umowy spółki albo prawomocnego orzeczenia sądu nie pozbawiono prawa reprezentowania spółki"
+    correctAnswer: [
+      "swobodę ukształtowania treści umowy, pod warunkiem, że będzie ona zgodna z obowiązującymi przepisami",
+      "swobodę wyboru partnera, z którym zawieramy umowę"
+    ]
   },
   {
     id: 14,
-    question: "Rejestracji spółki kapitałowej w Krajowym Rejestrze Sądowym dokonuje:",
+    question: "Czy członek wieloosobowego zarządu spółki kapitałowej może samodzielnie podpisać w imieniu spółki umowę?",
     options: [
-      "Rada Nadzorcza",
-      "Zarząd spółki",
-      "Zgromadzenie wspólników lub akcjonariuszy",
-      "Prokurent wraz z członkiem zarządu"
+      "nie, ponieważ każda umowa w spółce kapitałowej powinna być podpisana przez więcej niż połowę składu zarządu",
+      "tak, ale tylko wtedy, gdy taka możliwość wynika z umowy lub statutu spółki kapitałowej"
     ],
-    correctAnswer: "Zarząd spółki"
+    correctAnswer: "tak, ale tylko wtedy, gdy taka możliwość wynika z umowy lub statutu spółki kapitałowej"
   },
   {
     id: 15,
-    question: "W spółce z ograniczoną odpowiedzialnością uchwała wspólników dotycząca wyrażenia zgody na sprzedaż przedsiębiorstwa lub jego zorganizowanej części zapada:",
+    question: "W spółce akcyjnej uchwały walnego zgromadzenia wspólników wymaga:",
     options: [
-      "większością 2/3 głosów",
-      "jednomyślnie",
-      "bezwzględną większością głosów",
-      "zwykłą większością głosów"
+      "uchwała w sprawie powołania członków zarządu spółki",
+      "zmiana umowy spółki",
+      "zawieszenie z ważnych powodów w czynnościach poszczególnych lub wszystkich członków zarządu",
+      "ocena wniosku zarządu dotycząca podziału zysku i pokrycia strat"
     ],
-    correctAnswer: "większością 2/3 głosów"
+    correctAnswer: "zmiana umowy spółki"
   },
   {
     id: 16,
-    question: "Jeżeli komplementariuszem w spółce komandytowej jest spółka z o.o., zaś komandytariuszem jest wspólnik tej spółki:",
+    question: "Wspólnik spółki z o.o. może:",
     options: [
-      "wkład komandytariusza mogą stanowić jego udziały w tej spółce z o.o.",
-      "wkład komandytariusza mogą stanowić jego udziały w tej spółce z o.o., jeżeli zgodę na taki wkład wyrażą pozostali komandytariusze spółki",
-      "wkład komandytariusza muszą stanowić jego udziały w tej spółce z o.o.",
-      "wkładu komandytariusza nie mogą stanowić jego udziały w tej spółce z o.o."
+      "żądać od zarządu spółki okazania dokumentów finansowych tej spółki",
+      "zawierać umowy w imieniu spółki",
+      "zaskarżyć uchwałę zgromadzenia wspólników, jeżeli narusza ona jego uprawnienia",
+      "darować swoje udziały w spółce dowolnej osobie fizycznej lub prawnej"
     ],
-    correctAnswer: "wkładu komandytariusza nie mogą stanowić jego udziały w tej spółce z o.o."
+    correctAnswer: [
+      "żądać od zarządu spółki okazania dokumentów finansowych tej spółki",
+      "zaskarżyć uchwałę zgromadzenia wspólników, jeżeli narusza ona jego uprawnienia"
+    ]
   },
   {
     id: 17,
-    question: "Uprzywilejowanie udziałów w spółce handlowej:",
+    question: "Kapitał zakładowy spółki z ograniczoną odpowiedzialnością to:",
     options: [
-      "dotyczy prawa do reprezentacji spółki",
-      "zawsze dotyczy dywidendy",
-      "może dotyczyć prawa głosu lub dywidendy",
-      "zawsze dotyczy prawa głosu"
+      "kwota gwarantująca wypłacalność spółki zgromadzona na rachunku bankowym tej spółki",
+      "środki finansowe zgromadzone przez spółkę w trakcie działalności gospodarczej",
+      "suma środków wniesionych przez wspólników tej spółki na pokrycie udziałów, które objęli"
     ],
-    correctAnswer: "może dotyczyć prawa głosu lub dywidendy"
+    correctAnswer: "suma środków wniesionych przez wspólników tej spółki na pokrycie udziałów, które objęli"
   },
   {
     id: 18,
-    question: "Uchwały rady nadzorczej spółki akcyjnej zapadają:",
+    question: "Zobowiązanie w rozumieniu kodeksu cywilnego powstaje w wyniku:",
     options: [
-      "jednomyślnie",
-      "względną większością głosów",
-      "bezwzględną większością głosów, chyba że statut spółki stanowi inaczej",
-      "zawsze większością 2/3 głosów"
+      "wydania pozwolenia na budowę domu jednorodzinnego",
+      "przedawnienia roszczenia",
+      "zawarcia umowy o wykonanie usługi",
+      "bezpodstawnego wzbogacenia",
+      "upływu terminu do zapłaty podatku dochodowego od osób fizycznych"
     ],
-    correctAnswer: "bezwzględną większością głosów, chyba że statut spółki stanowi inaczej"
+    correctAnswer: ["zawarcia umowy o wykonanie usługi", "bezpodstawnego wzbogacenia"]
   },
   {
     id: 19,
-    question: "W okresie likwidacji spółki prokura:",
+    question: "Zobowiązanie w rozumieniu kodeksu cywilnego powstaje w wyniku:",
     options: [
-      "może być ustanowiona z wyłączeniem możliwości sprzedaży firmy",
-      "nie może być ustanowiona",
-      "może być ustanowiona za zgodą sądu rejestrowego",
-      "może być ustanawiana bez ograniczeń"
+      "zawarcia umowy o dzieło",
+      "wyrządzenia szkody czynem niedozwolonym",
+      "bezpodstawnego wzbogacenia"
     ],
-    correctAnswer: "nie może być ustanowiona"
+    correctAnswer: ["zawarcia umowy o dzieło", "wyrządzenia szkody czynem niedozwolonym", "bezpodstawnego wzbogacenia"]
   },
   {
     id: 20,
-    question: "Zakaz zajmowania się interesami konkurencyjnymi:",
+    question: "Prokura upoważnia do:",
     options: [
-      "obejmuje udział w konkurencyjnej spółce kapitałowej, w przypadku posiadania w niej przez członka zarządu co najmniej 10 % udziałów albo akcji",
-      "obejmuje udział w konkurencyjnej spółce kapitałowej, w przypadku posiadania w niej przez członka zarządu mniej niż 10 % udziałów albo akcji",
-      "obejmuje udział w konkurencyjnej spółce kapitałowej, w przypadku posiadania w niej przez członka zarządu co najmniej 5 % udziałów albo akcji",
-      "obejmuje udział w konkurencyjnej spółce kapitałowej, w przypadku posiadania w niej przez członka zarządu powyżej 5 % udziałów albo akcji"
+      "wykonywania czynności członka zarządu spółki z o.o.",
+      "kontroli podmiotów prowadzących działalność gospodarczą",
+      "sprzedaży nieruchomości",
+      "zawierania umów sprzedaży produktów wytwarzanych przez spółki prawa handlowego"
     ],
-    correctAnswer: "obejmuje udział w konkurencyjnej spółce kapitałowej, w przypadku posiadania w niej przez członka zarządu co najmniej 10 % udziałów albo akcji"
+    correctAnswer: "zawierania umów sprzedaży produktów wytwarzanych przez spółki prawa handlowego"
   },
   {
     id: 21,
-    question: "Wartość nominalna udziału w spółce z o.o. nie może być niższa niż:",
+    question: "Wymagalność świadczenia w przypadku umowy forfaitingu wynosi:",
     options: [
-      "0,01 zł",
-      "50 zł",
-      "100 zł",
-      "5 zł"
+      "od roku do 10 lat",
+      "od 6 miesięcy do 5 lat",
+      "od 6 miesięcy do 10 lat",
+      "od roku do 5 lat"
     ],
-    correctAnswer: "50 zł"
+    correctAnswer: "od 6 miesięcy do 5 lat"
   },
   {
     id: 22,
-    question: "W spółce komandytowo-akcyjnej, w której liczba akcjonariuszy wynosi 30 osób, ustanowienie rady nadzorczej jest:",
+    question: "Wspólnik spółki z ograniczoną odpowiedzialnością:",
     options: [
-      "fakultatywne, jeżeli akcjonariusze wyrażą na to zgodę",
-      "obligatoryjne tylko wtedy, gdy tak przewiduje statut spółki",
-      "obligatoryjne",
-      "fakultatywne"
+      "nie odpowiada za zobowiązania spółki",
+      "odpowiada za wszystkie zobowiązania majątkowe spółki",
+      "odpowiada za zobowiązania spółki tylko wtedy, gdy majątek spółki nie wystarcza na pokrycie jej zobowiązań względem wierzycieli"
     ],
-    correctAnswer: "obligatoryjne"
+    correctAnswer: "nie odpowiada za zobowiązania spółki"
   },
   {
     id: 23,
-    question: "Członek zarządu, prokurent, likwidator, kierownik oddziału lub zakładu oraz zatrudniony w spółce akcyjnej główny księgowy, radca prawny lub adwokat:",
-    options: [
-      "nie może być jednocześnie członkiem rady nadzorczej",
-      "może być jednocześnie członkiem rady nadzorczej",
-      "nie może być jednocześnie członkiem rady nadzorczej, chyba że akcjonariusze wyrażą na to zgodę",
-      "nie może być jednocześnie członkiem rady nadzorczej, chyba że zarząd spółki wyrazi na to zgodę"
-    ],
-    correctAnswer: "nie może być jednocześnie członkiem rady nadzorczej"
+    question: "Zamierzam razem z innymi 4 osobami rozpocząć działalność w zakresie produkcji zabawek. Do prowadzenia tej działalności możemy utworzyć:",
+    options: ["spółkę partnerską", "spółkę z o.o.", "spółkę jawną", "spółkę akcyjną"],
+    correctAnswer: ["spółkę z o.o.", "spółkę jawną", "spółkę akcyjną"]
   },
   {
     id: 24,
-    question: "Członek zarządu spółki z o.o. może być odwołany:",
+    question: "Czy członkowie zarządu spółki z o.o. odpowiadają całym swym majątkiem za zobowiązania spółki?",
     options: [
-      "w każdym czasie",
-      "tylko jeśli wyrazi na to zgodę",
-      "tylko po wygaśnięciu mandatu",
-      "tylko po upływie kadencji, na jaką został wybrany"
+      "ponoszą odpowiedzialność, jeżeli egzekucja z majątku okaże się bezskuteczna",
+      "ponoszą odpowiedzialność tylko do kwoty 1/2 części kapitału zakładowego",
+      "nie ponoszą odpowiedzialności"
     ],
-    correctAnswer: "w każdym czasie"
+    correctAnswer: "ponoszą odpowiedzialność, jeżeli egzekucja z majątku okaże się bezskuteczna"
   },
   {
     id: 25,
-    question: "Zarząd może być powołany w spółce:",
+    question: "Do kompetencji zarządu spółki z o.o. zaliczamy:",
     options: [
-      "partnerskiej",
-      "komandytowo-akcyjnej",
-      "komandytowej",
-      "jawnej"
+      "podejmowanie decyzji o zmianie siedziby spółki",
+      "zawieranie umów w imieniu spółki",
+      "zaskarżanie uchwał zgromadzenia wspólników",
+      "opiniowanie działalności rady nadzorczej spółki i przedstawienie opinii na zgromadzeniu wspólników",
+      "zwoływanie zgromadzeń wspólników"
     ],
-    correctAnswer: "partnerskiej"
+    correctAnswer: ["zawieranie umów w imieniu spółki", "zwoływanie zgromadzeń wspólników"]
   },
   {
     id: 26,
-    question: "Członków zarządu spółki z o.o. wybiera:",
-    options: [
-      "Walne zgromadzenie akcjonariuszy",
-      "Zgromadzenie wspólników w porozumieniu z radą nadzorczą",
-      "Zgromadzenie wspólników",
-      "Rada Nadzorcza"
-    ],
-    correctAnswer: "Zgromadzenie wspólników"
+    question: "Obowiązkowe organy władzy w każdej spółce z o.o. to:",
+    options: ["zarząd", "dyrektor naczelny", "komisja rewizyjna", "rada powiernicza"],
+    correctAnswer: "zarząd"
   },
   {
     id: 27,
-    question: "Prawo i obowiązek prowadzenia spraw spółki komandytowo-akcyjnej ma:",
+    question: "Do kompetencji zarządu spółki z o.o. zaliczamy:",
     options: [
-      "każdy akcjonariusz",
-      "każdy upoważniony komplementariusz",
-      "każdy komplementariusz",
-      "każdy komplementariusz i akcjonariusz"
+      "zmianę umowy spółki",
+      "zawieranie umów w imieniu spółki",
+      "zatwierdzanie sprawozdań spółki",
+      "prowadzenie spraw spółki"
     ],
-    correctAnswer: "każdy komplementariusz"
+    correctAnswer: ["zawieranie umów w imieniu spółki", "prowadzenie spraw spółki"]
   },
   {
     id: 28,
-    question: "Cechą spółki handlowej osobowej jest:",
+    question: "Prokura upoważnia do:",
     options: [
-      "istnienie określonego kapitału zakładowego",
-      "możliwość założenia spółki jednoosobowej",
-      "osobista odpowiedzialność wspólnika za zobowiązania spółki",
-      "osobowość prawna"
+      "zarządzania spółką",
+      "umowy o wykonanie usługi o wartości przekraczającej 100 000 zł",
+      "ustanowienia hipoteki na nieruchomości spółki",
+      "zawarcia umowy najmu lokalu użytkowego dla spółki z o.o.",
+      "kontroli spółki"
     ],
-    correctAnswer: "osobista odpowiedzialność wspólnika za zobowiązania spółki"
+    correctAnswer: "zawarcia umowy najmu lokalu użytkowego dla spółki z o.o."
   },
   {
     id: 29,
-    question: "Zawiadomienie o zgromadzeniu wspólników spółki z o.o.:",
-    options: [
-      "może być wysłane listem zwykłym",
-      "powinno być przekazane w sposób zwyczajowo przyjęty w spółce",
-      "powinno być wysłane listem poleconym lub przesyłką kurierską",
-      "może być przekazane w dowolnej formie, np. telefonicznie lub mailowo"
-    ],
-    correctAnswer: "powinno być wysłane listem poleconym lub przesyłką kurierską"
+    question: "Akcjonariusz w spółce komandytowo-akcyjnej nie odpowiada za zobowiązania spółki.",
+    options: ["prawda", "fałsz"],
+    correctAnswer: "prawda"
   },
   {
     id: 30,
-    question: "Akcjonariusz spółki komandytowo-akcyjnej (S.K.A.):",
-    options: [
-      "może reprezentować spółkę jedynie jako pełnomocnik",
-      "zawsze może reprezentować spółkę",
-      "reprezentuje spółkę, jeżeli posiada ponad 25 % akcji",
-      "nie może reprezentować spółki"
-    ],
-    correctAnswer: "może reprezentować spółkę jedynie jako pełnomocnik"
+    question: "Kapitał zakładowy spółki akcyjnej wynosi co najmniej:",
+    options: ["5 000", "10 000", "100 000", "150 000"],
+    correctAnswer: "150 000"
   },
   {
     id: 31,
-    question: "Komandytariusz w spółce komandytowej:",
+    question: "Zgodnie z przepisami prawa polskiego, na terytorium Polski mogą być utworzone spółki:",
     options: [
-      "odpowiada za zobowiązania spółki, jeżeli egzekucja z majątku komplementariusza okaże się bezskuteczna",
-      "odpowiada za zobowiązania spółki całym swoim majątkiem osobistym",
-      "odpowiada za zobowiązania spółki na takich samych zasadach co komplementariusz",
-      "odpowiada za zobowiązania spółki tylko do wysokości tzw. sumy komandytowej"
+      "spółki partnersko-komandytowa",
+      "spółka mieszana jawno-cywilna",
+      "spółka jawna",
+      "spółka partnerska",
+      "spółka z ograniczoną odpowiedzialnością"
     ],
-    correctAnswer: "odpowiada za zobowiązania spółki tylko do wysokości tzw. sumy komandytowej"
+    correctAnswer: ["spółka jawna", "spółka partnerska", "spółka z ograniczoną odpowiedzialnością"]
   },
   {
     id: 32,
-    question: "Podejmowanie uchwał przez zarząd spółki akcyjnej wymaga dodatkowo dla jej ważności:",
-    options: [
-      "monitorowania przez członka Rady Nadzorczej",
-      "nagrywania",
-      "rejestrowania audiowizualnego",
-      "protokołowania"
-    ],
-    correctAnswer: "protokołowania"
+    question: "Wkładem komandytariusza do spółki może być:",
+    options: ["gotówka", "świadczona na rzecz spółki praca i usługi", "żadna odpowiedź nie jest poprawna"],
+    correctAnswer: "gotówka"
   },
   {
     id: 33,
-    question: "W spółce komandytowej w sprawach przekraczających zakres zwykłych czynności wymagana jest zgoda:",
-    options: [
-      "wszystkich komplementariuszy i wszystkich komandytariuszy, chyba że umowa spółki stanowi inaczej",
-      "sądu rejestrowego",
-      "tylko komplementariuszy, którzy mają prawo do prowadzenia spraw spółki",
-      "samych komandytariuszy spółki"
-    ],
-    correctAnswer: "wszystkich komplementariuszy i wszystkich komandytariuszy, chyba że umowa spółki stanowi inaczej"
+    question: "Komplementariusz w spółce komandytowej nie ma prawa do równego udziału w zyskach i stratach.",
+    options: ["prawda", "fałsz"],
+    correctAnswer: "fałsz"
   },
   {
     id: 34,
-    question: "Spółka akcyjna w organizacji staje się spółką akcyjną w chwili:",
+    question: "Do kompetencji rady nadzorczej spółki z o.o. należy:",
     options: [
-      "objęcia wszystkich akcji",
-      "zawarcia umowy spółki",
-      "ustanowienia zarządu spółki",
-      "wpisania spółki do KRS-u"
+      "wydawanie poleceń członkom zarządu w zakresie prowadzenia spraw spółki",
+      "sprzedaż nieruchomości spółki",
+      "stały nadzór nad działalnością spółki",
+      "zawieranie umów w imieniu spółki"
     ],
-    correctAnswer: "wpisania spółki do KRS-u"
+    correctAnswer: "stały nadzór nad działalnością spółki"
   },
   {
     id: 35,
-    question: "Minimalny kapitał zakładowy wymagany do założenia spółki akcyjnej to:",
+    question: "Wierzycielem w rozumieniu kodeksu cywilnego jest:",
     options: [
-      "500 000 zł",
-      "10 000 zł",
-      "100 000 zł",
-      "1 zł"
+      "poszkodowany, który domaga się od sprawcy szkody odszkodowania",
+      "sprzedawca w umowie sprzedaży",
+      "wyłącznie osoba, która żąda zapłaty określonej sumy pieniężnej"
     ],
-    correctAnswer: "100 000 zł"
+    correctAnswer: ["poszkodowany, który domaga się od sprawcy szkody odszkodowania", "sprzedawca w umowie sprzedaży"]
   },
   {
     id: 36,
-    question: "Przedsiębiorstwo działające w formie spółki handlowej, zanim rozpocznie działalność, musi zarejestrować się w:",
+    question: "Zasada swobody umów oznacza:",
     options: [
-      "Rejestrze Gospodarczym",
-      "Krajowym Rejestrze Sądowym",
-      "Krajowym Rejestrze Gospodarczym",
-      "Rejestrze Handlowym"
+      "swobodę wypowiedzenia zawartej umowy",
+      "swobodę ukształtowania treści umowy, jeśli jest ona zgodna z ustawą i zasadami współżycia społecznego"
     ],
-    correctAnswer: "Krajowym Rejestrze Sądowym"
+    correctAnswer: "swobodę ukształtowania treści umowy, jeśli jest ona zgodna z ustawą i zasadami współżycia społecznego"
   },
   {
     id: 37,
-    question: "Uchwały Walnego Zgromadzenia Akcjonariuszy spółki akcyjnej mogą być podjęte, pomimo braku formalnego zwołania walnego zgromadzenia, jeżeli:",
+    question: "Wkładem niepieniężnym do spółki kapitałowej nie może być:",
     options: [
-      "jeśli co najmniej ¾ kapitału zakładowego jest reprezentowane",
-      "jeśli co najmniej ⅔ kapitału zakładowego jest reprezentowane",
-      "jeśli cały kapitał zakładowy jest reprezentowany",
-      "jeśli bezwzględna większość kapitału zakładowego jest reprezentowana"
+      "prawo własności nieruchomości",
+      "prawo własności rzeczy ruchomej",
+      "prawo użytkowania wieczystego",
+      "zobowiązanie do wykonywania czynności członka zarządu tej spółki",
+      "know-how"
     ],
-    correctAnswer: "jeśli cały kapitał zakładowy jest reprezentowany"
+    correctAnswer: "zobowiązanie do wykonywania czynności członka zarządu tej spółki"
   },
   {
     id: 38,
-    question: "Minimalna wysokość kapitału zakładowego spółki komandytowo-akcyjnej wynosi:",
-    options: [
-      "500 000 zł",
-      "25 000 zł",
-      "5 000 zł",
-      "50 000 zł"
-    ],
-    correctAnswer: "50 000 zł"
+    question: "Zobowiązanie w rozumieniu kodeksu cywilnego powstaje w wyniku:",
+    options: ["zawarcia umowy sprzedaży", "bezpodstawnego wzbogacenia", "wydania decyzji administracyjnej"],
+    correctAnswer: ["zawarcia umowy sprzedaży", "bezpodstawnego wzbogacenia"]
   },
   {
     id: 39,
-    question: "Minimalna liczba wspólników w spółce jawnej to:",
-    options: [
-      "4 wspólników",
-      "3 wspólników",
-      "1 wspólnik",
-      "2 wspólników"
-    ],
-    correctAnswer: "2 wspólników"
+    question: "Członków zarządu spółki akcyjnej powołuje:",
+    options: ["Rada Nadzorcza", "zarząd", "dyrektor naczelny", "rada powiernicza"],
+    correctAnswer: "Rada Nadzorcza"
   },
   {
     id: 40,
-    question: "Członków zarządu spółki akcyjnej powołuje i odwołuje:",
+    question: "Który z poniżej wskazanych jest osobą prawną:",
     options: [
-      "Zgromadzenie Wspólników",
-      "Walne Zgromadzenie Akcjonariuszy",
-      "Walne Zgromadzenie Akcjonariuszy w porozumieniu z Radą Nadzorczą",
-      "Rada Nadzorcza, chyba że statut spółki stanowi inaczej"
+      "spółka z ograniczoną odpowiedzialnością",
+      "fundacja",
+      "Skarb Państwa",
+      "każdy przedsiębiorca",
+      "Jan Kowalski posiadający pełną zdolność do czynności prawnych"
     ],
-    correctAnswer: "Rada Nadzorcza, chyba że statut spółki stanowi inaczej"
+    correctAnswer: ["spółka z ograniczoną odpowiedzialnością", "fundacja", "Skarb Państwa"]
   },
   {
     id: 41,
-    question: "Zgromadzenie wspólników spółki z o.o. zwołuje się za pomocą listów poleconych lub przesyłek nadanych pocztą kurierską, wysłanych na co najmniej:",
-    options: [
-      "7 dni przed terminem zgromadzenia wspólników",
-      "26 dni przed terminem zgromadzenia wspólników",
-      "21 dni przed terminem zgromadzenia wspólników",
-      "14 dni przed terminem zgromadzenia wspólników"
-    ],
-    correctAnswer: "14 dni przed terminem zgromadzenia wspólników"
+    question: "Źródłem solidarności dłużników może być:",
+    options: ["ustawa", "nakaz", "umowa", "rozporządzenie"],
+    correctAnswer: ["ustawa", "umowa"]
   },
   {
     id: 42,
-    question: "Pierwsze organy spółki kapitałowej muszą być powołane:",
+    question: "Zobowiązanie w rozumieniu kodeksu cywilnego to:",
     options: [
-      "niezwłocznie po zarejestrowaniu spółki w KRSie",
-      "najpóźniej przed zgłoszeniem spółki do rejestru",
-      "już w umowie lub statucie spółki",
-      "w ciągu 2 lat od wpisania spółki do KRS-U"
+      "rodzaj stosunku cywilnoprawnego powstającego np. w wyniku zawarcia umowy sprzedaży",
+      "wyłącznie obowiązek zapłaty określonej sumy pieniężnej",
+      "obowiązek zapłaty podatku od nieruchomości"
     ],
-    correctAnswer: "najpóźniej przed zgłoszeniem spółki do rejestru"
+    correctAnswer: "rodzaj stosunku cywilnoprawnego powstającego np. w wyniku zawarcia umowy sprzedaży"
   },
   {
     id: 43,
-    question: "Uchwały rady nadzorczej spółki akcyjnej zapadają:",
+    question: "Odpowiedzialność całym swym majątkiem za zobowiązania spółki ponoszą:",
     options: [
-      "jednomyślnie, chyba że regulamin rady nadzorczej stanowi inaczej",
-      "względną większością głosów, którą określa statut spółki",
-      "bezwzględną większością głosów, chyba że statut spółki stanowi inaczej",
-      "większością 2/3 głosów przy obecności połowy składu rady"
+      "wspólnicy spółki jawnej, o ile egzekucja z majątku spółki okaże się bezskuteczna",
+      "komplementariusze",
+      "wspólnicy spółki z o.o."
     ],
-    correctAnswer: "bezwzględną większością głosów, chyba że statut spółki stanowi inaczej"
+    correctAnswer: ["wspólnicy spółki jawnej, o ile egzekucja z majątku spółki okaże się bezskuteczna", "komplementariusze"]
   },
   {
     id: 44,
-    question: "Ogół praw i obowiązków wspólnika spółki handlowej osobowej:",
-    options: [
-      "może być przeniesiony jeżeli sąd rejestrowy, w którym zarejestrowana jest spółka, wyrazi na to zgodę",
-      "może być przeniesiony na inną osobę tylko wówczas, gdy umowa spółki tak stanowi",
-      "może być przeniesiony na inną osobę, nawet gdy umowa tego zabrania",
-      "może być przeniesiony na inną osobę, nawet gdy umowa o tym nie stanowi"
-    ],
-    correctAnswer: "może być przeniesiony na inną osobę tylko wówczas, gdy umowa spółki tak stanowi"
+    question: "Strony umowy sprzedaży ustaliły treść łączącej ich umowy w drodze korespondencji mailowej, co oznacza, że umowa ta została zawarta w formie:",
+    options: ["ustnej", "pisemnej", "dokumentowej", "pisemnej z poświadczeniem podpisu"],
+    correctAnswer: "dokumentowej"
   },
   {
     id: 45,
-    question: "Członkiem rady nadzorczej lub komisji rewizyjnej spółki kapitałowej nie może być w szczególności:",
-    options: [
-      "członek zarządu, wspólnik, prokurent, likwidator, kierownik oddziału lub zakładu oraz zatrudniony w spółce główny księgowy, radca prawny lub adwokat",
-      "członek zarządu, wspólnik, prokurent, likwidator, kierownik oddziału lub zakładu oraz zatrudniony w spółce główny księgowy",
-      "członek zarządu, prokurent, likwidator, kierownik oddziału lub zakładu oraz zatrudniony w spółce główny księgowy, radca prawny lub adwokat",
-      "wspólnik, prokurent, likwidator, kierownik oddziału lub zakładu oraz zatrudniony w spółce główny księgowy, radca prawny"
-    ],
-    correctAnswer: "członek zarządu, prokurent, likwidator, kierownik oddziału lub zakładu oraz zatrudniony w spółce główny księgowy, radca prawny lub adwokat"
+    question: "Osobowość prawną posiada:",
+    options: ["spółka z o.o.", "Skarb Państwa", "osoba fizyczna", "każda spółka prawa handlowego"],
+    correctAnswer: ["spółka z o.o.", "Skarb Państwa"]
   },
   {
     id: 46,
-    question: "Komandytariusz uczestniczy w zyskach spółki:",
+    question: "Do kompetencji rady nadzorczej spółki z o.o. należy:",
     options: [
-      "zgodnie z regulacjami kodeksu spółek handlowych, które określają wysokość udziału komandytariusza w zysku spółki",
-      "proporcjonalnie co do rzeczywiście wniesionego do spółki wkładu",
-      "na równi z pozostałymi komandytariuszami spółki",
-      "na równi z pozostałymi wspólnikami bez względu na wysokość wniesionego wkładu"
+      "zawieranie umów w imieniu spółki",
+      "podział zysków wynikających z rocznego bilansu spółki",
+      "zaskarżenie uchwał Zgromadzenia Wspólników",
+      "podejmowanie decyzji o zmianie siedziby spółki",
+      "zwoływanie Zgromadzeń Wspólników"
     ],
-    correctAnswer: "proporcjonalnie co do rzeczywiście wniesionego do spółki wkładu"
+    correctAnswer: ["zaskarżenie uchwał Zgromadzenia Wspólników", "zwoływanie Zgromadzeń Wspólników"]
   },
   {
     id: 47,
-    question: "Jeżeli umowa spółki z o.o. nie zawiera innych postanowień w tym przedmiocie, członek zarządu może być w każdym czasie odwołany:",
-    options: [
-      "decyzją sądu rejestrowego, w który zarejestrowana jest spółka",
-      "uchwałą wspólników",
-      "uchwałą zarządu",
-      "decyzją rady nadzorczej"
-    ],
-    correctAnswer: "uchwałą wspólników"
+    question: "Szkoda majątkowa w rozumieniu kodeksu cywilnego obejmuje:",
+    options: ["zadośćuczynienie za doznaną krzywdę", "rzeczywistą stratę i utracone korzyści", "wyłącznie rzeczywistą stratę"],
+    correctAnswer: "rzeczywista stratę i utracone korzyści".replace("rzeczywista", "rzeczywistą")
   },
   {
     id: 48,
-    question: "Zawiadomienie o zgromadzeniu wspólników spółki z o.o.:",
+    question: "Dłużnikiem w rozumieniu kodeksu cywilnego jest:",
     options: [
-      "może być wysłane listem zwykłym lub poleconym",
-      "powinno być wysłane listem poleconym lub przesyłką kurierską",
-      "może być przekazane w dowolnej formie np. telefonicznie lub mailowo",
-      "powinno być przekazane w sposób zwyczajowo przyjęty w spółce"
+      "kupujący w umowie sprzedaży",
+      "jedynie osoba zobowiązana do zapłaty określonej kwoty pieniężnej",
+      "tylko ten podmiot, który nie zapłacił w terminie świadczenia pieniężnego"
     ],
-    correctAnswer: "powinno być wysłane listem poleconym lub przesyłką kurierską"
+    correctAnswer: "kupujący w umowie sprzedaży"
   },
   {
     id: 49,
-    question: "Administrator powinien zgłosić do organu nadzorczego przypadek istotnego naruszenia ochrony danych osobowych w organizacji w ciągu:",
-    options: [
-      "24 godzin",
-      "48 godzin",
-      "72 godzin",
-      "nie zgłasza w ogóle, to organ nadzorczy się z nim kontaktuje"
-    ],
-    correctAnswer: "72 godzin"
+    question: "Za zobowiązania osób prawnych ponosi odpowiedzialność osoba prawna swoim majątkiem.",
+    options: ["prawda", "fałsz"],
+    correctAnswer: "prawda"
   },
   {
     id: 50,
-    question: "Co do zasady członków zarządów P.S.A. powołują i odwołują oraz zawieszają w czynnościach, z ważnych powodów:",
-    options: [
-      "komitet wykonawczy spółki",
-      "członkowie rady nadzorczej",
-      "członkowie rady dyrektorów",
-      "akcjonariusze spółki"
-    ],
-    correctAnswer: "akcjonariusze spółki"
+    question: "Prawo zawierania umów w imieniu osób prawnych przysługuje:",
+    options: ["Skarbowi Państwa", "właściwemu organowi osoby prawnej", "dowolnemu menedżerowi zatrudnionemu w tym podmiocie"],
+    correctAnswer: "właściwemu organowi osoby prawnej"
   },
   {
     id: 51,
-    question: "Rada nadzorcza podejmuje uchwały, jeżeli na posiedzeniu jest obecna co najmniej połowa jej członków, a wszyscy jej członkowie zostali zaproszeni na posiedzenie. Statut spółki akcyjnej:",
+    question: "Wskaż wierzyciela i dłużnika w umowie najmu i umowie sprzedaży:",
     options: [
-      "może przewidywać surowsze wymagania dotyczące kworum rady nadzorczej",
-      "nie może przewidywać surowszych wymagań dotyczących kworum rady nadzorczej z wyjątkiem sytuacji określonych w ustawie",
-      "może przewidywać bardziej liberalne wymagania dotyczące kworum rady nadzorczej",
-      "nie może przewidywać surowszych wymagań dotyczących kworum rady nadzorczej"
+      "sprzedawca, kupujący, wynajmujący i najemca są jednocześnie dłużnikami i wierzycielami",
+      "sprzedawca i wynajmujący to dłużnicy, najemca i kupujący to wierzyciele",
+      "sprzedawca i wynajmujący to wierzyciele, najemca i kupujący to dłużnicy"
     ],
-    correctAnswer: "może przewidywać surowsze wymagania dotyczące kworum rady nadzorczej"
+    correctAnswer: "sprzedawca, kupujący, wynajmujący i najemca są jednocześnie dłużnikami i wierzycielami"
   },
   {
     id: 52,
-    question: "Rada nadzorcza spółki kapitałowej nie ma prawa:",
-    options: [
-      "wytaczać powództwa o uchylenie uchwały wspólników",
-      "kontrolować wysokości zobowiązań wymagalnych spółki",
-      "dokonywać rewizji stanu majątku spółki",
-      "wydawać zarządowi spółki wiążących poleceń dotyczących prowadzenia spraw spółki"
-    ],
-    correctAnswer: "wydawać zarządowi spółki wiążących poleceń dotyczących prowadzenia spraw spółki"
+    question: "Wkładem niepieniężnym do spółki kapitałowej może być:",
+    options: ["prawo własności nieruchomości", "świadczenie pracy przez wspólnika", "urządzenia produkcyjne", "komputer"],
+    correctAnswer: ["prawo własności nieruchomości", "urządzenia produkcyjne", "komputer"]
   },
   {
     id: 53,
-    question: "Prokura ustanawiana jest w formie:",
-    options: [
-      "dorozumianej",
-      "ustnej",
-      "notarialnej",
-      "pisemnej"
-    ],
-    correctAnswer: "pisemnej"
+    question: "Bezwzględna większość głosów wymagana do podjęcia uchwał przez zgromadzenie wspólników lub walne zgromadzenie oznacza:",
+    options: ["75% głosów oddanych", "co najmniej 50% głosów + 1 głos", "więcej niż połowę głosów oddanych", "2/3 głosów oddanych"],
+    correctAnswer: "więcej niż połowę głosów oddanych"
   },
   {
     id: 54,
-    question: "W spółce akcyjnej uchwały Walnego zgromadzenia akcjonariuszy wymaga:",
-    options: [
-      "podpisanie umowy najmu przez spółkę",
-      "powołanie prokurenta spółki",
-      "sporządzenie sprawozdania bilansowego z działalności spółki za poprzedni rok obrotowy",
-      "sprzedaż lub wydzierżawienie przedsiębiorstwa"
-    ],
-    correctAnswer: "sprzedaż lub wydzierżawienie przedsiębiorstwa"
+    question: "Osoba prawna to:",
+    options: ["spółka z ograniczoną odpowiedzialnością", "spółka jawna", "spółka komandytowa", "spółka komandytowo-akcyjna", "spółka cywilna"],
+    correctAnswer: ["spółka z ograniczoną odpowiedzialnością", "spółka komandytowo-akcyjna"]
   },
   {
     id: 55,
-    question: "Zarząd zgłasza zawiązanie spółki kapitałowej do sądu rejestrowego właściwego ze względu na siedzibę spółki w celu wpisania spółki do rejestru. Wniosek o wpis spółki do KRS-u podpisują:",
+    question: "Wartość nominalna udziału w spółce z o.o.:",
     options: [
-      "wszyscy akcjonariusze, którzy podpisali umowę spółki",
-      "wszyscy członkowie zarządu",
-      "wszyscy założyciele i członkowie zarządu",
-      "wszyscy założyciele"
+      "nie może być niższa niż 100 zł",
+      "nie może być niższa niż 50 zł",
+      "nie może być niższa niż 500 zł",
+      "nie może być niższa niż 150 zł"
     ],
-    correctAnswer: "wszyscy członkowie zarządu"
+    correctAnswer: "nie może być niższa niż 50 zł"
   },
   {
     id: 56,
-    question: "Wspólnik aktywny w spółce komandytowej to:",
-    options: [
-      "komandytariusz",
-      "akcjonariusz",
-      "komplementariusz",
-      "mandantariusz"
-    ],
-    correctAnswer: "komplementariusz"
+    question: "Zasadnicza różnica między koncesją a zezwoleniem polega na tym, że:",
+    options: ["zezwolenie jest decyzją związaną, a koncesja uznaniową", "zezwolenie jest decyzją uznaniową, a koncesja związaną"],
+    correctAnswer: "zezwolenie jest decyzją związaną, a koncesja uznaniową"
   },
   {
     id: 57,
-    question: "W spółce komandytowo-akcyjnej, w której liczba akcjonariuszy wynosi 30 osób, ustanowienie rady nadzorczej jest:",
+    question: "Do powstania spółki akcyjnej wymagane jest:",
     options: [
-      "fakultatywne jeżeli akcjonariusze wyrażą na to zgodę",
-      "obligatoryjne tylko wtedy gdy tak przewiduje statut spółki",
-      "fakultatywne",
-      "obligatoryjne"
+      "ustanowienie zarządu i rady nadzorczej",
+      "zgromadzenie całego kapitału przed rejestracją spółki",
+      "uchwalenie statutu w formie aktu notarialnego",
+      "wpis do rejestru"
     ],
-    correctAnswer: "obligatoryjne"
+    correctAnswer: ["ustanowienie zarządu i rady nadzorczej", "uchwalenie statutu w formie aktu notarialnego", "wpis do rejestru"]
   },
   {
     id: 58,
-    question: "Spółka jednoosobowa to:",
-    options: [
-      "spółka kapitałowa, w której wszystkie udziały lub akcje należą bezpośrednio do jednego wspólnika albo akcjonariusza",
-      "spółka handlowa, w której wszystkie udziały lub akcje należą bezpośrednio do jednego wspólnika albo akcjonariusza",
-      "spółka z o.o., w której wszystkie udziały lub akcje należą bezpośrednio do jednego udziałowca",
-      "spółka komandytowa, w której największy wkładem jest suma komandytowa wniesiona przez komandytariusza"
-    ],
-    correctAnswer: "spółka kapitałowa, w której wszystkie udziały lub akcje należą bezpośrednio do jednego wspólnika albo akcjonariusza"
+    question: "Akcjonariusz w spółce komandytowo-akcyjnej odpowiada za zobowiązania spółki:",
+    options: ["prawda", "fałsz"],
+    correctAnswer: "fałsz"
   },
   {
     id: 59,
-    question: "Zawiadomienie o posiedzeniu zarządu spółki akcyjnej:",
+    question: "Wspólnicy spółki jawnej:",
     options: [
-      "powinno wskazywać przynajmniej datę, godzinę i miejsce posiedzenia",
-      "powinno być doręczone każdemu członkowi osobiście do rąk własnych",
-      "powinno zawierać szczegółowy porządek obrad",
-      "powinno być wysłane listem poleconym albo przesyłką kurierską"
+      "odpowiadają za zobowiązania spółki tylko do wysokości 100 000",
+      "nie ponoszą odpowiedzialności za zobowiązania spółki",
+      "ponoszą odpowiedzialność subsydiarną i solidarną za zobowiązania spółki"
     ],
-    correctAnswer: "powinno zawierać szczegółowy porządek obrad"
+    correctAnswer: "ponoszą odpowiedzialność subsydiarną i solidarną za zobowiązania spółki"
   },
   {
     id: 60,
-    question: "Zakaz konkurencji dla członka zarządu dotyczy udziału w konkurencyjnej spółce kapitałowej, w przypadku posiadania w niej:",
+    question: "Przedawnienie roszczenia oznacza, że:",
     options: [
-      "20% udziałów albo akcji bądź prawa do powołania co najmniej jednego członka zarządu",
-      "10% udziałów albo akcji bądź prawa do powołania co najmniej jednego członka zarządu",
-      "33% udziałów albo akcji bądź prawa do powołania co najmniej jednego członka zarządu",
-      "5% udziałów albo akcji bądź prawa do powołania co najmniej jednego członka zarządu"
+      "roszczenie to wygasa",
+      "sąd oddali złożone w tej sprawie powództwo, o ile pozwany zgłosił zarzut przedawnienia",
+      "dobrowolna zapłata przedawnionego roszczenia powinna być zwrócona podmiotowi, który dokonał zapłaty tego roszczenia"
     ],
-    correctAnswer: "10% udziałów albo akcji bądź prawa do powołania co najmniej jednego członka zarządu"
+    correctAnswer: "sąd oddali złożone w tej sprawie powództwo, o ile pozwany zgłosił zarzut przedawnienia"
   },
   {
     id: 61,
-    question: "Jak długo przedsiębiorca może przechowywać dane osobowe:",
+    question: "Strony umowy spółki z o.o. mogą umówić się, że wkładem niepieniężnym jest:",
     options: [
-      "bez ograniczeń",
-      "nie dłużej niż jest to konieczne",
-      "każdy pracownik może je usunąć kiedy uzna, że nie są mu już potrzebne",
-      "maksymalnie przez 12 miesięcy"
+      "know-how",
+      "nieruchomość",
+      "majątkowe prawa autorskie",
+      "surowce do produkcji",
+      "świadczenie pracy przez wspólników"
     ],
-    correctAnswer: "nie dłużej niż jest to konieczne"
+    correctAnswer: ["know-how", "nieruchomość", "majątkowe prawa autorskie", "surowce do produkcji"]
   },
   {
     id: 62,
-    question: "Umowa spółki jawnej stanowi, że ogół praw i obowiązków może być przeniesiony na inną osobę, natomiast nie zawiera w tej kwestii dalszych postanowień. Ogół praw i obowiązków w tej spółce może być przeniesiony na inną osobę:",
+    question: "Prawo cywilne reguluje:",
     options: [
-      "po uzyskaniu zgody większości wspólników",
-      "bez zgody pozostałych wspólników",
-      "po uzyskaniu pisemnej zgody wszystkich wspólników",
-      "po uzyskaniu zgody sądu rejestrowego, w którym zarejestrowana jest spółka"
+      "obowiązek wykonania należycie umowy faktoringu, która nie jest regulowana odrębnymi przepisami",
+      "prokurę",
+      "odpowiedzialność za zobowiązania Skarbu Państwa",
+      "wydawanie decyzji w sprawie podatku od nieruchomości",
+      "działalność szkół podstawowych"
     ],
-    correctAnswer: "po uzyskaniu pisemnej zgody wszystkich wspólników"
+    correctAnswer: [
+      "obowiązek wykonania należycie umowy faktoringu, która nie jest regulowana odrębnymi przepisami",
+      "prokurę",
+      "odpowiedzialność za zobowiązania Skarbu Państwa"
+    ]
   },
   {
     id: 63,
-    question: "Subsydiarna odpowiedzialność wspólnika spółki jawnej polega na tym, że wierzyciel może prowadzić egzekucję z majątku wspólnika:",
+    question: "Obowiązek zapłaty odsetek od sumy pieniężnej powstaje:",
     options: [
-      "nawet, gdy egzekucja z majątku spółki okaże się skuteczna",
-      "gdy uzna, że przyczyni się to do szybszego zaspokojenia jego roszczeń",
-      "gdy egzekucja z majątku spółki okaże się nieskuteczna",
-      "gdy w skład majątku spółki wchodzą wyłącznie nieruchomości"
+      "tylko wtedy, gdy obowiązek zapłaty odsetek przewiduje zawarta umowa",
+      "zawsze, gdy nastąpiło przekroczenie terminu płatności zobowiązania pieniężnego",
+      "Jeżeli dłużnik opóźnia się ze spełnieniem świadczenia pieniężnego, wierzyciel może żądać odsetek za czas opóźnienia, chociażby nie poniósł żadnej szkody i chociażby opóźnienie było następstwem okoliczności, za które dłużnik nie ponosi odpowiedzialności"
     ],
-    correctAnswer: "gdy egzekucja z majątku spółki okaże się nieskuteczna"
+    correctAnswer: [
+      "zawsze, gdy nastąpiło przekroczenie terminu płatności zobowiązania pieniężnego",
+      "Jeżeli dłużnik opóźnia się ze spełnieniem świadczenia pieniężnego, wierzyciel może żądać odsetek za czas opóźnienia, chociażby nie poniósł żadnej szkody i chociażby opóźnienie było następstwem okoliczności, za które dłużnik nie ponosi odpowiedzialności"
+    ]
   },
   {
     id: 64,
-    question: "Organem nadzorującym ochronę danych osobowych na terenie całego kraju jest:",
-    options: [
-      "Prezes Urzędu Ochrony Danych Osobowych",
-      "Prokurator Generalny",
-      "Minister ds. Cyfryzacji",
-      "Inspektor Ochrony Danych Osobowych"
-    ],
-    correctAnswer: "Prezes Urzędu Ochrony Danych Osobowych"
+    question: "Kodeks spółek handlowych reguluje tworzenie i funkcjonowanie:",
+    options: ["spółki mieszkaniowej", "spółki z o.o.", "spółki mieszanej", "spółki partnerskiej", "spółki komandytowo-akcyjnej"],
+    correctAnswer: ["spółki z o.o.", "spółki partnerskiej", "spółki komandytowo-akcyjnej"]
   },
   {
     id: 65,
-    question: "Organem fakultatywnym w spółce z o.o. jest:",
-    options: [
-      "rada dyrektorów",
-      "zarząd",
-      "komisja rewizyjna",
-      "zgromadzenie wspólników"
-    ],
-    correctAnswer: "komisja rewizyjna"
+    question: "Umowy mogą być zawierane w formie:",
+    options: ["dokumentowej", "pisemnej", "aktu notarialnego"],
+    correctAnswer: ["dokumentowej", "pisemnej", "aktu notarialnego"]
   },
   {
     id: 66,
-    question: "Podczas zgromadzenie wspólników spółki z o.o. uchwały zapadają:",
-    options: [
-      "bezwzględną większością głosów, jeżeli przepisy KSH lub umowa spółki nie stanowią inaczej",
-      "jednomyślnie, jeżeli umowa spółki nie stanowi inaczej",
-      "większością głosów jeżeli przepisy KSH lub umowa spółki nie stanowią inaczej",
-      "zwykłą większością głosów, chyba że umowa spółki stanowi inaczej"
-    ],
-    correctAnswer: "bezwzględną większością głosów, jeżeli przepisy KSH lub umowa spółki nie stanowią inaczej"
+    question: "Do kompetencji zarządu spółki z o.o. zaliczamy:",
+    options: ["prowadzenie spraw spółki", "podział zysków wykazanych w sprawozdaniu finansowym spółki", "zawieranie umów w imieniu spółki", "powoływanie rady nadzorczej spółki"],
+    correctAnswer: ["prowadzenie spraw spółki", "zawieranie umów w imieniu spółki"]
   },
   {
     id: 67,
-    question: "Spółka z o.o. może być utworzona:",
-    options: [
-      "przez co najmniej 6 osób",
-      "tylko przez co najmniej 2 osoby",
-      "przez co najmniej 3 osoby",
-      "przez 1 lub więcej osób"
-    ],
-    correctAnswer: "przez 1 lub więcej osób"
+    question: "Członkiem zarządu w spółce z o.o. nie może być:",
+    options: ["inna spółka z ograniczoną odpowiedzialnością", "osoba karana", "brak prawidłowej odpowiedzi"],
+    correctAnswer: ["inna spółka z ograniczoną odpowiedzialnością", "osoba karana"]
   },
   {
     id: 68,
-    question: "Uchwały zarządu spółki akcyjnej zapadają:",
-    options: [
-      "większością 2/3 głosów przy obecności 3/4 składu zarządu",
-      "bezwzględną większością głosów, chyba że statut stanowi inaczej",
-      "jednomyślnie, chyba że statut spółki stanowi inaczej",
-      "zwykłą większością głosów przy obecności co najmniej połowy składu zarządu"
-    ],
-    correctAnswer: "bezwzględną większością głosów, chyba że statut stanowi inaczej"
+    question: "Wspólnikiem spółki z ograniczoną odpowiedzialnością może być:",
+    options: ["osoba fizyczna", "przedsiębiorstwo państwowe", "spółka akcyjna", "stowarzyszenie", "gmina"],
+    correctAnswer: ["osoba fizyczna", "przedsiębiorstwo państwowe", "spółka akcyjna", "stowarzyszenie", "gmina"]
   },
   {
     id: 69,
-    question: "Spółki osobowe mogą:",
+    question: "Do określonych kodeksem spółek handlowych kompetencji rady nadzorczej spółki z ograniczoną odpowiedzialnością należy:",
     options: [
-      "we własnym imieniu nabywać prawa, z wyłączeniem własności nieruchomości i innych praw rzeczowych, mogą zaciągać zobowiązania, pozywać i być pozywane",
-      "w imieniu wspólników nabywać prawa, z wyłączeniem własności nieruchomości i innych praw rzeczowych, mogą zaciągać zobowiązania, pozywać i być pozywane",
-      "we własnym imieniu nabywać prawa, w tym własność nieruchomości i inne prawa rzeczowe, zaciągać zobowiązania, pozywać i być pozywane",
-      "we własnym imieniu nabywać prawa i własność nieruchomości, które jednak należą do ich wspólników"
+      "powoływanie członków zarządu",
+      "stały nadzór nad działalnością spółki",
+      "wydawanie zarządowi spółki poleceń w zakresie prowadzenia spraw spółki",
+      "zatwierdzanie sprawozdania finansowego spółki"
     ],
-    correctAnswer: "we własnym imieniu nabywać prawa, w tym własność nieruchomości i inne prawa rzeczowe, zaciągać zobowiązania, pozywać i być pozywane"
+    correctAnswer: ["powoływanie członków zarządu", "stały nadzór nad działalnością spółki", "zatwierdzanie sprawozdania finansowego spółki"]
   },
   {
     id: 70,
-    question: "Do podjęcia uchwały na walnym zgromadzeniu akcjonariuszy spółki akcyjnej o obniżeniu kapitału zakładowego spółki potrzebna jest większość:",
+    question: "Kodeks spółek handlowych przyznaje wspólnikom spółki z o.o. następujące uprawnienia:",
     options: [
-      "2/3 głosów",
-      "bezwzględna",
-      "1/2 głosów",
-      "3/4 głosów"
+      "prawo do sprzedaży udziałów, które posiadają w spółce",
+      "prawo do uczestnictwa w zyskach spółki",
+      "prawo do zawierania umów w imieniu spółki",
+      "prawo kontroli spółki (przegląd dokumentów, jeśli nie ma powołanej rady nadzorczej)"
     ],
-    correctAnswer: "3/4 głosów"
+    correctAnswer: ["prawo do sprzedaży udziałów, które posiadają w spółce", "prawo do uczestnictwa w zyskach spółki", "prawo kontroli spółki (przegląd dokumentów, jeśli nie ma powołanej rady nadzorczej)"]
   },
   {
     id: 71,
-    question: "W spółce komandytowej w sprawach przekraczających zakres zwykłych czynności wymaga jest zgoda:",
-    options: [
-      "wszystkich komandytariuszy spółki",
-      "tylko komplementariuszy, którzy mają prawo do prowadzenia spraw spółki",
-      "wszystkich komplementariuszy i wszystkich komandytariuszy, chyba że umowa spółki stanowi inaczej",
-      "wszystkich komplementariuszy i wskazanych przez nich imiennie komandytariuszy, chyba że umowa spółki stanowi inaczej"
-    ],
-    correctAnswer: "wszystkich komplementariuszy i wszystkich komandytariuszy, chyba że umowa spółki stanowi inaczej"
+    question: "Prokura to rodzaj pełnomocnictwa dla osoby fizycznej, które upoważnia do dokonywania czynności (sądowych i pozasądowych) związanych z prowadzeniem przedsiębiorstwa.",
+    options: ["prawda", "fałsz"],
+    correctAnswer: "prawda"
   },
   {
     id: 72,
-    question: "Podział zysków pomiędzy wspólnikami spółki jawnej:",
-    options: [
-      "musi określać umowa spółki jawnej",
-      "reguluje tylko i wyłącznie kodeks handlowy",
-      "jest równy, bez względu na rodzaj i wartość wkładów, chyba że umowa spółki stanowi inaczej",
-      "regulowany jest przez przepisy kodeksu cywilnego"
-    ],
-    correctAnswer: "jest równy, bez względu na rodzaj i wartość wkładów, chyba że umowa spółki stanowi inaczej"
+    question: "Zarząd może zostać powołany w spółce:",
+    options: ["komandytowej", "partnerskiej", "z o.o."],
+    correctAnswer: "z o.o."
   },
   {
     id: 73,
-    question: "W spółkach osobowych zmiana postanowień umowy spółki:",
+    question: "Do obowiązków wspólników w spółce z o.o. należy:",
+    options: ["uczestnictwo", "wniesienie wkładów", "zawieranie umów w imieniu spółki"],
+    correctAnswer: "wniesienie wkładów"
+  },
+  {
+    id: 74,
+    question: "Kadencja zarządu spółki akcyjnej wynosi:",
+    options: ["minimum 5 lat", "nie dłużej niż 5 lat", "nie dłużej niż 3 lata"],
+    correctAnswer: "nie dłużej niż 5 lat"
+  },
+  {
+    id: 75,
+    question: "Uprzywilejowanie udziałów może dotyczyć prawa głosu i prawa do dywidendy.",
+    options: ["prawda", "fałsz"],
+    correctAnswer: "prawda"
+  },
+  {
+    id: 76,
+    question: "Podział zysków w polskiej spółce z o.o. należy do:",
+    options: ["rady nadzorczej", "zarządu", "sądu rejestrowego", "zgromadzenia wspólników"],
+    correctAnswer: "zgromadzenia wspólników"
+  },
+  {
+    id: 77,
+    question: "Umowa spółki jawnej powinna być zawarta:",
+    options: ["ustnie", "na piśmie pod rygorem nieważności", "mailowo/dokumentowo"],
+    correctAnswer: "na piśmie pod rygorem nieważności"
+  },
+  {
+    id: 78,
+    question: "Umowy w imieniu spółki jawnej zawierają:",
+    options: ["zarząd", "wspólnicy", "komandytariusze"],
+    correctAnswer: "wspólnicy"
+  },
+  {
+    id: 79,
+    question: "Dłużnikiem w rozumieniu kodeksu cywilnego jest:",
     options: [
-      "zawsze wymaga zgody wszystkich wspólników",
-      "musi zostać przewidziana umową spółki",
-      "wymaga zgody wszystkich wspólników, chyba że umowa spółki stanowi inaczej",
-      "wymaga zgody zarządu spółki"
+      "jedynie osoba zobowiązana do zapłaty określonej kwoty pieniężnej",
+      "tylko ten podmiot, który nie zapłacił w terminie świadczenia pieniężnego",
+      "jedna ze stron stosunku prawnego nazywanego zobowiązaniem"
     ],
-    correctAnswer: "wymaga zgody wszystkich wspólników, chyba że umowa spółki stanowi inaczej"
+    correctAnswer: "jedna ze stron stosunku prawnego nazywanego zobowiązaniem"
+  },
+  {
+    id: 80,
+    question: "W której dziedzinie wymagane jest uzyskanie koncesji:",
+    options: ["sprzedaż napojów alkoholowych", "działalność kantorowa", "przewóz lotniczy", "brak poprawnej odpowiedzi"],
+    correctAnswer: ["działalność kantorowa", "przewóz lotniczy"]
+  },
+  {
+    id: 81,
+    question: "Obowiązek zapłaty odsetek od sumy pieniężnej powstaje:",
+    options: [
+      "tylko wtedy, gdy obowiązek zapłaty odsetek przewiduje zawarta umowa",
+      "zawsze, gdy nastąpiło przekroczenie terminu płatności zobowiązania pieniężnego",
+      "tylko wtedy, gdy przekroczenie terminu płatności nastąpiło z winy dłużnika"
+    ],
+    correctAnswer: "zawsze, gdy nastąpiło przekroczenie terminu płatności zobowiązania pieniężnego"
+  },
+  {
+    id: 82,
+    question: "Obowiązek zapłaty odsetek od sumy pieniężnej powstaje:",
+    options: [
+      "tylko wtedy, gdy obowiązek zapłaty odsetek przewiduje zawarta umowa",
+      "zawsze, gdy nastąpiło przekroczenie ustalonego terminu płatności zobowiązania pieniężnego",
+      "tylko wtedy, gdy przekroczenie terminu płatności nastąpiło z winy dłużnika"
+    ],
+    correctAnswer: "zawsze, gdy nastąpiło przekroczenie ustalonego terminu płatności zobowiązania pieniężnego"
+  },
+  {
+    id: 83,
+    question: "Spółka z o.o. może być utworzona tylko dla realizacji celu prawnie dopuszczalnego.",
+    options: ["prawda", "fałsz"],
+    correctAnswer: "prawda"
+  },
+  {
+    id: 84,
+    question: "Członków zarządu powołuje:",
+    options: ["rada nadzorcza", "rada powiernicza", "komisja rewizyjna", "dyrektor naczelny"],
+    correctAnswer: "rada nadzorcza"
+  },
+  {
+    id: 85,
+    question: "Do spółek prawa handlowego zaliczamy:",
+    options: ["spółkę z o.o.", "spółkę jawną", "spółkę komandytowo-akcyjną"],
+    correctAnswer: ["spółkę z o.o.", "spółkę jawną", "spółkę komandytowo-akcyjną"]
+  },
+  {
+    id: 86,
+    question: "W umowie ustalono, że należność za wykonaną usługę podmiot X zapłaci Kowalskiemu do dnia 15.07.2020. Kiedy, zgodnie z przepisami kodeksu cywilnego, Kowalski powinien otrzymać należność?",
+    options: [
+      "wystarczy, że w dniu 15.07.2020 X złoży przelew w swoim banku, ponieważ nie odpowiada przed Kowalskim za termin realizacji przelewu przez bank",
+      "najpóźniej w dniu 15.07.2020 umówiona kwota powinna wpłynąć na konto Kowalskiego"
+    ],
+    correctAnswer: "najpóźniej w dniu 15.07.2020 umówiona kwota powinna wpłynąć na konto Kowalskiego"
+  },
+  {
+    id: 87,
+    question: "Brak odpowiedzi na otrzymaną ofertę oznacza, że:",
+    options: [
+      "oznacza zawarcie umowy na warunkach określonych w ofercie",
+      "brak odpowiedzi nie rodzi żadnych skutków prawnych"
+    ],
+    correctAnswer: "brak odpowiedzi nie rodzi żadnych skutków prawnych"
+  },
+  {
+    id: 88,
+    question: "Trzy dni temu została zarejestrowana spółka z o.o. z kapitałem zakładowym 60 000. Spółka nie uzyskała jeszcze żadnych przychodów ze swojej działalności. Zarząd zamierza zakupić dla tej spółki surowiec za kwotę 15 000. Czy na zapłatę ceny może użyć środki pochodzące z wpłat na kapitał zakładowy?",
+    options: ["tak", "nie"],
+    correctAnswer: "nie"
+  },
+  {
+    id: 89,
+    question: "Jan Nowak i Z. Piotrowski są wspólnikami spółki cywilnej. Spółka zakupiła od przedsiębiorcy X towar za cenę 60 000 zł. Cena nie została zapłacona w terminie. Przedsiębiorca X zażądał zapłaty całości od Z. Piotrowskiego. Ten odmówił zapłaty i uzasadnił, że jest zobowiązany do zapłaty wyłącznie 20 000 zł. Oceń zasadność stanowiska Z. Piotrowskiego.",
+    options: [
+      "Zbigniew jest zobowiązany do zapłaty całości i może potem ewentualnie ubiegać się o roszczenia wobec swoich wspólników",
+      "Zbigniew uzasadnił prawidłowo odmowę zapłaty i nie musi płacić całości"
+    ],
+    correctAnswer: "Zbigniew jest zobowiązany do zapłaty całości i może potem ewentualnie ubiegać się o roszczenia wobec swoich wspólników"
+  },
+  {
+    id: 90,
+    question: "Pełnomocnictwo do zawarcia umowy leasingu urządzenia o wartości 160 000 wymaga formy:",
+    options: ["pisemnej pod rygorem nieważności", "ustnej", "pisemnej", "dokumentowej"],
+    correctAnswer: "pisemnej pod rygorem nieważności"
+  },
+  {
+    id: 91,
+    question: "Wkładem niepieniężnym do spółki kapitałowej nie może być:",
+    options: ["know-how", "prawo użytkowania wieczystego", "zobowiązanie do wykonania czynności członka zarządu tej spółki", "prawo własności nieruchomości"],
+    correctAnswer: "zobowiązanie do wykonania czynności członka zarządu tej spółki"
+  },
+  {
+    id: 92,
+    question: "Prawo składania oświadczeń woli w imieniu osoby prawnej przysługuje:",
+    options: [
+      "pracownikowi zatrudnionemu na stanowisku menedżerskim",
+      "Skarbowi Państwa",
+      "właściwemu organowi wskazanemu w ustawie lub statucie danej osoby prawnej",
+      "podmiotowi, który jest założycielem danej osoby prawnej"
+    ],
+    correctAnswer: "właściwemu organowi wskazanemu w ustawie lub statucie danej osoby prawnej"
   }
 ];
 
@@ -827,7 +818,8 @@ export const questionRanges: QuestionRange[] = [
   { id: 4, label: "Pytania 31 - 40", startId: 31, endId: 40 },
   { id: 5, label: "Pytania 41 - 50", startId: 41, endId: 50 },
   { id: 6, label: "Pytania 51 - 60", startId: 51, endId: 60 },
-  { id: 7, label: "Pytania 61 - 73", startId: 61, endId: 73 },
+  { id: 7, label: "Pytania 61 - 73", startId: 61, endId: 80 },
+  { id: 8, label: "Pytania 61 - 73", startId: 81, endId: 92 },
 ];
 
 export const getQuestionsFromRanges = (selectedRangeIds: number[]): QuizQuestion[] => {
@@ -844,3 +836,4 @@ export const getQuestionsFromRanges = (selectedRangeIds: number[]): QuizQuestion
     )
   );
 };
+
