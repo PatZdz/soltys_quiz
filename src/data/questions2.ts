@@ -166,7 +166,6 @@ export const questions: QuizQuestion[] = [
     correctAnswer: [
       "żądać od zarządu spółki okazania dokumentów finansowych tej spółki",
       "zaskarżyć uchwałę zgromadzenia wspólników, jeżeli narusza ona jego uprawnienia",
-      "darować swoje udziały w spółce dowolnej osobie fizycznej lub prawnej"
     ]
   },
   {
