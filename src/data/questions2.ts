@@ -165,7 +165,8 @@ export const questions: QuizQuestion[] = [
     ],
     correctAnswer: [
       "żądać od zarządu spółki okazania dokumentów finansowych tej spółki",
-      "zaskarżyć uchwałę zgromadzenia wspólników, jeżeli narusza ona jego uprawnienia"
+      "zaskarżyć uchwałę zgromadzenia wspólników, jeżeli narusza ona jego uprawnienia",
+      "darować swoje udziały w spółce dowolnej osobie fizycznej lub prawnej"
     ]
   },
   {
@@ -706,7 +707,7 @@ export const questions: QuizQuestion[] = [
     id: 80,
     question: "W której dziedzinie wymagane jest uzyskanie koncesji:",
     options: ["sprzedaż napojów alkoholowych", "działalność kantorowa", "przewóz lotniczy", "brak poprawnej odpowiedzi"],
-    correctAnswer: ["działalność kantorowa", "przewóz lotniczy"]
+    correctAnswer: ["przewóz lotniczy"]
   },
   {
     id: 81,
