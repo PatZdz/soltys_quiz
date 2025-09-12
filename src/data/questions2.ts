@@ -818,8 +818,10 @@ export const questionRanges: QuestionRange[] = [
   { id: 4, label: "Pytania 31 - 40", startId: 31, endId: 40 },
   { id: 5, label: "Pytania 41 - 50", startId: 41, endId: 50 },
   { id: 6, label: "Pytania 51 - 60", startId: 51, endId: 60 },
-  { id: 7, label: "Pytania 61 - 73", startId: 61, endId: 80 },
-  { id: 8, label: "Pytania 61 - 73", startId: 81, endId: 92 },
+  { id: 7, label: "Pytania 61 - 73", startId: 61, endId: 70 },
+  { id: 8, label: "Pytania 61 - 73", startId: 71, endId: 80 },
+  { id: 9, label: "Pytania 61 - 73", startId: 81, endId: 92 },
+
 ];
 
 export const getQuestionsFromRanges = (selectedRangeIds: number[]): QuizQuestion[] => {
