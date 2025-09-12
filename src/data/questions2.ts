@@ -299,7 +299,7 @@ export const questions: QuizQuestion[] = [
     id: 30,
     question: "Kapitał zakładowy spółki akcyjnej wynosi co najmniej:",
     options: ["5 000", "10 000", "100 000", "150 000"],
-    correctAnswer: "150 000"
+    correctAnswer: "100 000"
   },
   {
     id: 31,
