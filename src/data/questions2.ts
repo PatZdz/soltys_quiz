@@ -601,7 +601,7 @@ export const questions: QuizQuestion[] = [
   {
     id: 65,
     question: "Umowy mogą być zawierane w formie:",
-    options: ["dokumentowej", "pisemnej", "aktu notarialnego"],
+    options: ["dokumentowej", "pisemnej", "aktu notarialnego", "aktu handlowego"],
     correctAnswer: ["dokumentowej", "pisemnej", "aktu notarialnego"]
   },
   {
