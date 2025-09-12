@@ -743,7 +743,7 @@ export const questions: QuizQuestion[] = [
   {
     id: 85,
     question: "Do spółek prawa handlowego zaliczamy:",
-    options: ["spółkę z o.o.", "spółkę jawną", "spółkę komandytowo-akcyjną"],
+    options: ["spółkę z o.o.", "spółkę jawną", "spółkę komandytowo-akcyjną", "spółkę handlową"],
     correctAnswer: ["spółkę z o.o.", "spółkę jawną", "spółkę komandytowo-akcyjną"]
   },
   {
