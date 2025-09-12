@@ -768,7 +768,7 @@ export const questions: QuizQuestion[] = [
     id: 88,
     question: "Trzy dni temu została zarejestrowana spółka z o.o. z kapitałem zakładowym 60 000. Spółka nie uzyskała jeszcze żadnych przychodów ze swojej działalności. Zarząd zamierza zakupić dla tej spółki surowiec za kwotę 15 000. Czy na zapłatę ceny może użyć środki pochodzące z wpłat na kapitał zakładowy?",
     options: ["tak", "nie"],
-    correctAnswer: "tak"
+    correctAnswer: "nie"
   },
   {
     id: 89,
