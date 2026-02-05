@@ -12,8 +12,8 @@ export interface QuestionSet {
 
 export const questionSets: QuestionSet[] = [
   {
-    id: 'csr',
-    name: 'csr',
+    id: 'prawo-podatkowe',
+    name: 'Prawo Podatkowe',
     getQuestions: getQuestionsFromRanges1,
     getRanges: () => questionRanges1
   },
