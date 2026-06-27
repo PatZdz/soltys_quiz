@@ -1,43 +1,42 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { getQuestionSet } from '@/data/questions-manager';
 
 export default function SliderContent() {
   const searchParams = useSearchParams();
   const selectedRangesParam = searchParams.get('ranges');
-  const setId = searchParams.get('set') || 'digital-transformation';
-  const [maxQuestions, setMaxQuestions] = useState<number>(0);
+  const setId = searchParams.get('set') || 'azure-fundamentals';
   const [selectedQuestions, setSelectedQuestions] = useState<number>(14);
   const router = useRouter();
 
+  const maxQuestions = useMemo(() => {
+    if (!selectedRangesParam) return 0;
+
+    const selectedRangeIds = selectedRangesParam.split(',').map(Number);
+    const questionSet = getQuestionSet(setId);
+    const questionRanges = questionSet.getRanges();
+
+    const selectedRanges = questionRanges.filter(range =>
+      selectedRangeIds.includes(range.id)
+    );
+
+    return selectedRanges.reduce((sum, range) =>
+      sum + (range.endId - range.startId + 1), 0
+    );
+  }, [selectedRangesParam, setId]);
+
+  const selectedQuestionCount = Math.min(selectedQuestions, maxQuestions || selectedQuestions);
+
   useEffect(() => {
-    if (selectedRangesParam) {
-      const selectedRangeIds = selectedRangesParam.split(',').map(Number);
-
-      // Get the selected question set
-      const questionSet = getQuestionSet(setId);
-      const questionRanges = questionSet.getRanges();
-
-      // Obliczamy dokładną liczbę pytań w wybranych zakresach
-      const selectedRanges = questionRanges.filter(range =>
-        selectedRangeIds.includes(range.id)
-      );
-
-      const totalQuestions = selectedRanges.reduce((sum, range) =>
-        sum + (range.endId - range.startId + 1), 0
-      );
-
-      setMaxQuestions(totalQuestions);
-      setSelectedQuestions(Math.min(selectedQuestions, totalQuestions));
-    } else {
+    if (!selectedRangesParam) {
       router.push('/range');
     }
-  }, [selectedRangesParam, router, selectedQuestions, setId]);
+  }, [selectedRangesParam, router]);
 
   const handleStartQuiz = () => {
-    router.push(`/quiz?count=${selectedQuestions}&ranges=${selectedRangesParam}&set=${setId}`);
+    router.push(`/quiz?count=${selectedQuestionCount}&ranges=${selectedRangesParam}&set=${setId}`);
   };
 
   return (
@@ -46,14 +45,14 @@ export default function SliderContent() {
         <div className="w-full sm:max-w-[672px] min-h-screen sm:min-h-0 bg-white rounded-none sm:rounded-lg shadow-lg p-8 flex flex-col justify-center">
           <div className="mb-4">
             <p className="text-center text-lg text-gray-700 mb-8">
-              Wybrana liczba pytań: {selectedQuestions}
+              Wybrana liczba pytań: {selectedQuestionCount}
             </p>
 
             <input
               type="range"
               min="1"
               max={maxQuestions}
-              value={selectedQuestions}
+              value={selectedQuestionCount}
               onChange={(e) => setSelectedQuestions(Number(e.target.value))}
               className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
             />

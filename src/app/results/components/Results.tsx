@@ -44,7 +44,7 @@ export default function Results() {
       }
 
       const ranges = rangesParam ? rangesParam.split(',').map(Number) : [];
-      const setId = searchParams.get('set') || 'digital-transformation';
+      const setId = searchParams.get('set') || 'azure-fundamentals';
       const questionSet = getQuestionSet(setId);
       const getQuestionsFromRanges = questionSet.getQuestions;
 
@@ -114,7 +114,7 @@ export default function Results() {
       }
 
       const questionIds = Object.keys(userAnswers).map(id => parseInt(id));
-      const setId = searchParams.get('set') || 'digital-transformation';
+      const setId = searchParams.get('set') || 'azure-fundamentals';
       router.push(`/quiz?questions=${questionIds.join(',')}&ranges=${rangesParam}&set=${setId}`);
     } catch (error) {
       console.error('Error restarting quiz:', error);
@@ -130,7 +130,7 @@ export default function Results() {
       }
 
       const rangesParam = searchParams.get('ranges');
-      const setId = searchParams.get('set') || 'digital-transformation';
+      const setId = searchParams.get('set') || 'azure-fundamentals';
 
       if (!rangesParam) {
         router.push('/');

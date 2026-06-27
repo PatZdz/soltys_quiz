@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { getQuestionSet } from '@/data/questions-manager';
 
@@ -11,24 +11,14 @@ interface RangeOption {
 
 export default function QuestionRangeSelector() {
   const [selectedRanges, setSelectedRanges] = useState<number[]>([]);
-  const [rangeOptions, setRangeOptions] = useState<RangeOption[]>([]);
   const router = useRouter();
   const searchParams = useSearchParams();
-  const setId = searchParams.get('set') || 'digital-transformation';
-
-  useEffect(() => {
-    // Get the selected question set
-    const questionSet = getQuestionSet(setId);
-    const questionRanges = questionSet.getRanges();
-
-    // Map the ranges to options
-    const options = questionRanges.map(range => ({
-      id: range.id,
-      label: `Pytania ${range.startId} - ${range.endId}`
-    }));
-
-    setRangeOptions(options);
-  }, [setId]);
+  const setId = searchParams.get('set') || 'azure-fundamentals';
+  const questionSet = getQuestionSet(setId);
+  const rangeOptions: RangeOption[] = questionSet.getRanges().map(range => ({
+    id: range.id,
+    label: `Pytania ${range.startId} - ${range.endId}`
+  }));
 
   const handleRangeSelect = (rangeId: number) => {
     setSelectedRanges(prev =>

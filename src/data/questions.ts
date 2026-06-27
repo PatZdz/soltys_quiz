@@ -1,1458 +1,1182 @@
+export interface QuizOption {
+  text: string;
+  explanation: string;
+}
+
 export interface QuizQuestion {
   id: number;
   question: string;
-  options: string[];
-  // Jeśli jest jedna poprawna odpowiedź – string,
-  // jeśli więcej – tablica stringów.
+  options: QuizOption[];
+  // If there is one correct answer, use a string. If there are multiple, use an array.
   correctAnswer: string | string[];
+  generalExplanation: string;
 }
 
 export const questions: QuizQuestion[] = [
   {
-    id: 1,
-    question: "Zgodnie z Ordynacją podatkową, podatek to świadczenie:",
-    options: [
-      "Dobrowolne i zwrotne",
-      "Odpłatne i przymusowe",
-      "Przymusowe, bezzwrotne, nieodpłatne i publicznoprawne",
-      "Prywatnoprawne i pieniężne"
+    "id": 1,
+    "question": "Which Microsoft tool helps you assess and track your organization's compliance with international standards and government regulations (for example, GDPR or ISO/IEC 27001)?",
+    "options": [
+      {
+        "text": "Purview Compliance Manager",
+        "explanation": "To poprawna odpowiedź. Purview Compliance Manager służy do oceny i śledzenia zgodności organizacji z normami oraz regulacjami, takimi jak GDPR czy ISO/IEC 27001. Pozostałe odpowiedzi opisują usługi albo dokumenty, które nie monitorują zgodności Twojej organizacji w ten sposób."
+      },
+      {
+        "text": "Azure Government Services",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Purview Compliance Manager. Purview Compliance Manager służy do oceny i śledzenia zgodności organizacji z normami oraz regulacjami, takimi jak GDPR czy ISO/IEC 27001. Pozostałe odpowiedzi opisują usługi albo dokumenty, które nie monitorują zgodności Twojej organizacji w ten sposób."
+      },
+      {
+        "text": "Service Trust Portal",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Purview Compliance Manager. Purview Compliance Manager służy do oceny i śledzenia zgodności organizacji z normami oraz regulacjami, takimi jak GDPR czy ISO/IEC 27001. Pozostałe odpowiedzi opisują usługi albo dokumenty, które nie monitorują zgodności Twojej organizacji w ten sposób."
+      },
+      {
+        "text": "Microsoft Privacy Statement",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Purview Compliance Manager. Purview Compliance Manager służy do oceny i śledzenia zgodności organizacji z normami oraz regulacjami, takimi jak GDPR czy ISO/IEC 27001. Pozostałe odpowiedzi opisują usługi albo dokumenty, które nie monitorują zgodności Twojej organizacji w ten sposób."
+      }
     ],
-    correctAnswer: "Przymusowe, bezzwrotne, nieodpłatne i publicznoprawne"
+    "correctAnswer": "Purview Compliance Manager",
+    "generalExplanation": "Purview Compliance Manager służy do oceny i śledzenia zgodności organizacji z normami oraz regulacjami, takimi jak GDPR czy ISO/IEC 27001. Pozostałe odpowiedzi opisują usługi albo dokumenty, które nie monitorują zgodności Twojej organizacji w ten sposób."
   },
   {
-    id: 2,
-    question: "Która z poniższych cech NIE dotyczy podatku według definicji ustawowej?",
-    options: [
-      "Pieniężny charakter",
-      "Ekwiwalentność (odpłatność)",
-      "Przymusowość",
-      "Bezzwrotność"
+    "id": 2,
+    "question": "Which cloud service model best describes Microsoft Outlook as delivered through Microsoft 365 (web and desktop clients)?",
+    "options": [
+      {
+        "text": "Infrastructure as a Service (IaaS)",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Software as a Service (SaaS). Microsoft Outlook w Microsoft 365 jest gotową aplikacją dostarczaną przez internet, więc jest przykładem SaaS. Użytkownik korzysta z usługi, a Microsoft odpowiada za infrastrukturę, platformę, utrzymanie i aktualizacje."
+      },
+      {
+        "text": "Software as a Service (SaaS)",
+        "explanation": "To poprawna odpowiedź. Microsoft Outlook w Microsoft 365 jest gotową aplikacją dostarczaną przez internet, więc jest przykładem SaaS. Użytkownik korzysta z usługi, a Microsoft odpowiada za infrastrukturę, platformę, utrzymanie i aktualizacje."
+      },
+      {
+        "text": "Platform as a Service (PaaS)",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Software as a Service (SaaS). Microsoft Outlook w Microsoft 365 jest gotową aplikacją dostarczaną przez internet, więc jest przykładem SaaS. Użytkownik korzysta z usługi, a Microsoft odpowiada za infrastrukturę, platformę, utrzymanie i aktualizacje."
+      }
     ],
-    correctAnswer: "Ekwiwalentność (odpłatność)"
+    "correctAnswer": "Software as a Service (SaaS)",
+    "generalExplanation": "Microsoft Outlook w Microsoft 365 jest gotową aplikacją dostarczaną przez internet, więc jest przykładem SaaS. Użytkownik korzysta z usługi, a Microsoft odpowiada za infrastrukturę, platformę, utrzymanie i aktualizacje."
   },
   {
-    id: 3,
-    question: "Funkcja redystrybucyjna podatku polega na:",
-    options: [
-      "Dostarczaniu środków do budżetu państwa",
-      "Wywoływaniu korzystnych zjawisk gospodarczych",
-      "Podziale dochodów między grupy społeczne i niwelowaniu różnic majątkowych",
-      "Dostarczaniu informacji o przebiegu procesów gospodarczych"
+    "id": 3,
+    "question": "Which three stages are commonly used in the Azure service lifecycle?",
+    "options": [
+      {
+        "text": "Preview Phase, General Availability Phase, and Unpublished",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Private Preview, Public Preview, and General Availability. Typowy cykl życia usług Azure obejmuje Private Preview, Public Preview i General Availability. Private Preview jest ograniczone, Public Preview pozwala szerszej grupie testować usługę, a General Availability oznacza oficjalną dostępność."
+      },
+      {
+        "text": "Private Preview, Public Preview, and General Availability",
+        "explanation": "To poprawna odpowiedź. Typowy cykl życia usług Azure obejmuje Private Preview, Public Preview i General Availability. Private Preview jest ograniczone, Public Preview pozwala szerszej grupie testować usługę, a General Availability oznacza oficjalną dostępność."
+      },
+      {
+        "text": "Development phase, QA phase, and Live phase",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Private Preview, Public Preview, and General Availability. Typowy cykl życia usług Azure obejmuje Private Preview, Public Preview i General Availability. Private Preview jest ograniczone, Public Preview pozwala szerszej grupie testować usługę, a General Availability oznacza oficjalną dostępność."
+      },
+      {
+        "text": "Announced, Coming Soon, and Live",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Private Preview, Public Preview, and General Availability. Typowy cykl życia usług Azure obejmuje Private Preview, Public Preview i General Availability. Private Preview jest ograniczone, Public Preview pozwala szerszej grupie testować usługę, a General Availability oznacza oficjalną dostępność."
+      }
     ],
-    correctAnswer: "Podziale dochodów między grupy społeczne i niwelowaniu różnic majątkowych"
+    "correctAnswer": "Private Preview, Public Preview, and General Availability",
+    "generalExplanation": "Typowy cykl życia usług Azure obejmuje Private Preview, Public Preview i General Availability. Private Preview jest ograniczone, Public Preview pozwala szerszej grupie testować usługę, a General Availability oznacza oficjalną dostępność."
   },
   {
-    id: 4,
-    question: "Funkcja stymulacyjna podatku ma na celu:",
-    options: [
-      "Zapewnienie dochodów gminie",
-      "Wywoływanie pożądanych zachowań (np. inwestycji) lub hamowanie szkodliwych",
-      "Kontrolę nad podatnikami",
-      "Przesuwanie majątku od bogatych do biednych"
+    "id": 4,
+    "question": "Which cloud deployment model describes using Azure as an extension of your on‑premises data center to provide additional storage or services while most resources remain on‑premises?",
+    "options": [
+      {
+        "text": "Public cloud",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Hybrid cloud. Hybrid cloud łączy środowisko lokalne z usługami chmury publicznej, na przykład Azure. Pasuje tu najlepiej, bo większość zasobów pozostaje on-premises, a Azure rozszerza centrum danych o dodatkowe usługi lub pojemność."
+      },
+      {
+        "text": "Hybrid cloud",
+        "explanation": "To poprawna odpowiedź. Hybrid cloud łączy środowisko lokalne z usługami chmury publicznej, na przykład Azure. Pasuje tu najlepiej, bo większość zasobów pozostaje on-premises, a Azure rozszerza centrum danych o dodatkowe usługi lub pojemność."
+      },
+      {
+        "text": "Private cloud",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Hybrid cloud. Hybrid cloud łączy środowisko lokalne z usługami chmury publicznej, na przykład Azure. Pasuje tu najlepiej, bo większość zasobów pozostaje on-premises, a Azure rozszerza centrum danych o dodatkowe usługi lub pojemność."
+      }
     ],
-    correctAnswer: "Wywoływanie pożądanych zachowań (np. inwestycji) lub hamowanie szkodliwych"
+    "correctAnswer": "Hybrid cloud",
+    "generalExplanation": "Hybrid cloud łączy środowisko lokalne z usługami chmury publicznej, na przykład Azure. Pasuje tu najlepiej, bo większość zasobów pozostaje on-premises, a Azure rozszerza centrum danych o dodatkowe usługi lub pojemność."
   },
   {
-    id: 5,
-    question: "Zgodnie z Konstytucją RP, nakładanie podatków następuje w drodze:",
-    options: [
-      "Rozporządzenia Ministra Finansów",
-      "Ustawy",
-      "Zarządzenia Prezydenta",
-      "Umowy międzynarodowej bez ratyfikacji"
+    "id": 5,
+    "question": "You plan to deploy a critical application on Azure and must design for high availability and reliability. Which of the following statements about Azure Service Level Agreements (SLAs) is correct and should be considered when designing your solution?",
+    "options": [
+      {
+        "text": "SLAs vary by service and can include guarantees for uptime, performance, and connectivity.",
+        "explanation": "To poprawna odpowiedź. Umowy SLA w Azure zależą od konkretnej usługi i mogą obejmować dostępność, wydajność oraz łączność. Przy projektowaniu rozwiązania trzeba sprawdzać SLA każdej użytej usługi, bo Azure nie daje jednej gwarancji 99,9% ani 100% dla wszystkiego."
+      },
+      {
+        "text": "You do not need to consider SLAs when designing your solution, as Azure automatically ensures the highest availability.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: SLAs vary by service and can include guarantees for uptime, performance, and connectivity.. Umowy SLA w Azure zależą od konkretnej usługi i mogą obejmować dostępność, wydajność oraz łączność. Przy projektowaniu rozwiązania trzeba sprawdzać SLA każdej użytej usługi, bo Azure nie daje jednej gwarancji 99,9% ani 100% dla wszystkiego."
+      },
+      {
+        "text": "The SLA guarantees that the service will be available 99.9% of the time for all Azure services.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: SLAs vary by service and can include guarantees for uptime, performance, and connectivity.. Umowy SLA w Azure zależą od konkretnej usługi i mogą obejmować dostępność, wydajność oraz łączność. Przy projektowaniu rozwiązania trzeba sprawdzać SLA każdej użytej usługi, bo Azure nie daje jednej gwarancji 99,9% ani 100% dla wszystkiego."
+      },
+      {
+        "text": "Azure provides a 100% SLA for all services.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: SLAs vary by service and can include guarantees for uptime, performance, and connectivity.. Umowy SLA w Azure zależą od konkretnej usługi i mogą obejmować dostępność, wydajność oraz łączność. Przy projektowaniu rozwiązania trzeba sprawdzać SLA każdej użytej usługi, bo Azure nie daje jednej gwarancji 99,9% ani 100% dla wszystkiego."
+      }
     ],
-    correctAnswer: "Ustawy"
+    "correctAnswer": "SLAs vary by service and can include guarantees for uptime, performance, and connectivity.",
+    "generalExplanation": "Umowy SLA w Azure zależą od konkretnej usługi i mogą obejmować dostępność, wydajność oraz łączność. Przy projektowaniu rozwiązania trzeba sprawdzać SLA każdej użytej usługi, bo Azure nie daje jednej gwarancji 99,9% ani 100% dla wszystkiego."
   },
   {
-    id: 6,
-    question: "Płatnikiem jest podmiot zobowiązany do:",
-    options: [
-      "Ponoszenia ciężaru ekonomicznego podatku",
-      "Obliczenia, pobrania podatku od podatnika i wpłacenia go organowi",
-      "Tylko i wyłącznie pobrania gotówki od podatnika",
-      "Wydania decyzji podatkowej"
+    "id": 6,
+    "question": "Which of the following is an essential design principle for achieving high availability in a cloud computing environment?",
+    "options": [
+      {
+        "text": "The system must be designed for resilience, with no single points of failure.",
+        "explanation": "To poprawna odpowiedź. Wysoka dostępność wymaga projektowania odpornego na awarie i eliminowania pojedynczych punktów awarii. Samo użycie dwóch maszyn może pomagać, ale kluczowa jest odporność całej architektury."
+      },
+      {
+        "text": "The system must maintain 100% availability at all times.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: The system must be designed for resilience, with no single points of failure.. Wysoka dostępność wymaga projektowania odpornego na awarie i eliminowania pojedynczych punktów awarii. Samo użycie dwóch maszyn może pomagać, ale kluczowa jest odporność całej architektury."
+      },
+      {
+        "text": "It's impossible to create a highly available system.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: The system must be designed for resilience, with no single points of failure.. Wysoka dostępność wymaga projektowania odpornego na awarie i eliminowania pojedynczych punktów awarii. Samo użycie dwóch maszyn może pomagać, ale kluczowa jest odporność całej architektury."
+      },
+      {
+        "text": "The system must operate on a minimum of two virtual machines.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: The system must be designed for resilience, with no single points of failure.. Wysoka dostępność wymaga projektowania odpornego na awarie i eliminowania pojedynczych punktów awarii. Samo użycie dwóch maszyn może pomagać, ale kluczowa jest odporność całej architektury."
+      }
     ],
-    correctAnswer: "Obliczenia, pobrania podatku od podatnika i wpłacenia go organowi"
+    "correctAnswer": "The system must be designed for resilience, with no single points of failure.",
+    "generalExplanation": "Wysoka dostępność wymaga projektowania odpornego na awarie i eliminowania pojedynczych punktów awarii. Samo użycie dwóch maszyn może pomagać, ale kluczowa jest odporność całej architektury."
   },
   {
-    id: 7,
-    question: "Podmiotem, który tylko pobiera podatek i wpłaca go organowi (np. sołtys), ale go nie oblicza, jest:",
-    options: ["Podatnik", "Płatnik", "Inkasent", "Komornik"],
-    correctAnswer: "Inkasent"
-  },
-  {
-    id: 8,
-    question: "Obowiązek podatkowy to:",
-    options: [
-      "Skonkretyzowane zobowiązanie do zapłaty",
-      "Nieskonkretyzowana powinność świadczenia pieniężnego w związku z zaistnieniem zdarzenia",
-      "Decyzja urzędu skarbowego",
-      "Kwota wpłacana na konto urzędu"
+    "id": 7,
+    "question": "Under typical/default Azure service limits, what is the maximum number of virtual machines that can be included in a single Azure Virtual Machine Scale Set (VMSS)?",
+    "options": [
+      {
+        "text": "10000",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: 1000. Domyślny limit pojedynczego Azure Virtual Machine Scale Set to 1000 instancji maszyn wirtualnych. VMSS pozwala zarządzać i skalować dużą liczbę identycznych maszyn."
+      },
+      {
+        "text": "1000",
+        "explanation": "To poprawna odpowiedź. Domyślny limit pojedynczego Azure Virtual Machine Scale Set to 1000 instancji maszyn wirtualnych. VMSS pozwala zarządzać i skalować dużą liczbę identycznych maszyn."
+      },
+      {
+        "text": "Unlimited",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: 1000. Domyślny limit pojedynczego Azure Virtual Machine Scale Set to 1000 instancji maszyn wirtualnych. VMSS pozwala zarządzać i skalować dużą liczbę identycznych maszyn."
+      },
+      {
+        "text": "500",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: 1000. Domyślny limit pojedynczego Azure Virtual Machine Scale Set to 1000 instancji maszyn wirtualnych. VMSS pozwala zarządzać i skalować dużą liczbę identycznych maszyn."
+      }
     ],
-    correctAnswer:
-      "Nieskonkretyzowana powinność świadczenia pieniężnego w związku z zaistnieniem zdarzenia"
+    "correctAnswer": "1000",
+    "generalExplanation": "Domyślny limit pojedynczego Azure Virtual Machine Scale Set to 1000 instancji maszyn wirtualnych. VMSS pozwala zarządzać i skalować dużą liczbę identycznych maszyn."
   },
   {
-    id: 9,
-    question: "Zobowiązanie podatkowe różni się od obowiązku podatkowego tym, że:",
-    options: [
-      "Jest kategorią abstrakcyjną",
-      "Jest skonkretyzowane co do wysokości, terminu i miejsca",
-      "Nie wymaga zapłaty",
-      "Dotyczy tylko osób prawnych"
+    "id": 8,
+    "question": "Which statement best describes the primary benefit of a Content Delivery Network (CDN) in cloud computing?",
+    "options": [
+      {
+        "text": "For a nominal fee, Azure will manage your virtual machine, perform OS updates, and ensure optimal performance.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: It mitigates server load for static, unchanging files like images, videos, and PDFs by distributing them across a network of servers.. CDN odciąża serwer źródłowy, przechowując kopie statycznych plików na rozproszonej sieci serwerów. Dzięki temu obrazy, filmy czy PDF-y są dostarczane szybciej i z mniejszym obciążeniem głównej infrastruktury."
+      },
+      {
+        "text": "It enables temporary session information storage for web visitors, such as their login ID or name.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: It mitigates server load for static, unchanging files like images, videos, and PDFs by distributing them across a network of servers.. CDN odciąża serwer źródłowy, przechowując kopie statycznych plików na rozproszonej sieci serwerów. Dzięki temu obrazy, filmy czy PDF-y są dostarczane szybciej i z mniejszym obciążeniem głównej infrastruktury."
+      },
+      {
+        "text": "It provides fast and inexpensive data retrieval for later use.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: It mitigates server load for static, unchanging files like images, videos, and PDFs by distributing them across a network of servers.. CDN odciąża serwer źródłowy, przechowując kopie statycznych plików na rozproszonej sieci serwerów. Dzięki temu obrazy, filmy czy PDF-y są dostarczane szybciej i z mniejszym obciążeniem głównej infrastruktury."
+      },
+      {
+        "text": "It mitigates server load for static, unchanging files like images, videos, and PDFs by distributing them across a network of servers.",
+        "explanation": "To poprawna odpowiedź. CDN odciąża serwer źródłowy, przechowując kopie statycznych plików na rozproszonej sieci serwerów. Dzięki temu obrazy, filmy czy PDF-y są dostarczane szybciej i z mniejszym obciążeniem głównej infrastruktury."
+      }
     ],
-    correctAnswer: "Jest skonkretyzowane co do wysokości, terminu i miejsca"
+    "correctAnswer": "It mitigates server load for static, unchanging files like images, videos, and PDFs by distributing them across a network of servers.",
+    "generalExplanation": "CDN odciąża serwer źródłowy, przechowując kopie statycznych plików na rozproszonej sieci serwerów. Dzięki temu obrazy, filmy czy PDF-y są dostarczane szybciej i z mniejszym obciążeniem głównej infrastruktury."
   },
   {
-    id: 10,
-    question: "Zobowiązanie podatkowe powstające z mocy prawa (ex lege) charakteryzuje się tym, że:",
-    options: [
-      "Wymaga doręczenia decyzji organu podatkowego",
-      "Powstaje automatycznie z chwilą zaistnienia zdarzenia (np. uzyskania dochodu)",
-      "Termin płatności wynosi zawsze 14 dni od decyzji",
-      "Organ podatkowy musi obliczyć podatek za podatnika"
+    "id": 9,
+    "question": "Which of the following best describes a Distributed Denial of Service (DDoS) attack?",
+    "options": [
+      {
+        "text": "An attempt to guess a user's password through brute force methods",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: A denial of service attack that sends so much traffic to a network that it cannot respond fast enough; legitimate users become unable to use the service. Atak DDoS polega na zalaniu usługi lub sieci ogromną liczbą żądań albo pakietów, przez co nie może ona obsłużyć prawidłowego ruchu użytkowników. Nie jest to brute force, XSS ani SQL injection."
+      },
+      {
+        "text": "A denial of service attack that sends so much traffic to a network that it cannot respond fast enough; legitimate users become unable to use the service",
+        "explanation": "To poprawna odpowiedź. Atak DDoS polega na zalaniu usługi lub sieci ogromną liczbą żądań albo pakietów, przez co nie może ona obsłużyć prawidłowego ruchu użytkowników. Nie jest to brute force, XSS ani SQL injection."
+      },
+      {
+        "text": "An attempt to read the contents of a web page from another website, thereby stealing the user's private information",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: A denial of service attack that sends so much traffic to a network that it cannot respond fast enough; legitimate users become unable to use the service. Atak DDoS polega na zalaniu usługi lub sieci ogromną liczbą żądań albo pakietów, przez co nie może ona obsłużyć prawidłowego ruchu użytkowników. Nie jest to brute force, XSS ani SQL injection."
+      },
+      {
+        "text": "An attempt to send SQL commands to the server in a way that it will execute them against the database",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: A denial of service attack that sends so much traffic to a network that it cannot respond fast enough; legitimate users become unable to use the service. Atak DDoS polega na zalaniu usługi lub sieci ogromną liczbą żądań albo pakietów, przez co nie może ona obsłużyć prawidłowego ruchu użytkowników. Nie jest to brute force, XSS ani SQL injection."
+      }
     ],
-    correctAnswer:
-      "Powstaje automatycznie z chwilą zaistnienia zdarzenia (np. uzyskania dochodu)"
+    "correctAnswer": "A denial of service attack that sends so much traffic to a network that it cannot respond fast enough; legitimate users become unable to use the service",
+    "generalExplanation": "Atak DDoS polega na zalaniu usługi lub sieci ogromną liczbą żądań albo pakietów, przez co nie może ona obsłużyć prawidłowego ruchu użytkowników. Nie jest to brute force, XSS ani SQL injection."
   },
   {
-    id: 11,
-    question: "Decyzja ustalająca wysokość zobowiązania (np. podatek od nieruchomości dla osób fizycznych) ma charakter:",
-    options: [
-      "Deklaratoryjny (potwierdza stan istniejący)",
-      "Konstytutywny (tworzy nowe zobowiązanie)",
-      "Egzekucyjny",
-      "Opiniodawczy"
+    "id": 10,
+    "question": "Which Azure service provides a managed Apache Hadoop-based platform for big data analytics?",
+    "options": [
+      {
+        "text": "Azure Hadoop Services",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: HDInsight. HDInsight to zarządzana usługa Azure dla platform i narzędzi Apache Hadoop oraz innych frameworków big data. Azure Data Factory służy głównie do integracji danych, a AKS do orkiestracji kontenerów."
+      },
+      {
+        "text": "HDInsight",
+        "explanation": "To poprawna odpowiedź. HDInsight to zarządzana usługa Azure dla platform i narzędzi Apache Hadoop oraz innych frameworków big data. Azure Data Factory służy głównie do integracji danych, a AKS do orkiestracji kontenerów."
+      },
+      {
+        "text": "Azure Data Factory",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: HDInsight. HDInsight to zarządzana usługa Azure dla platform i narzędzi Apache Hadoop oraz innych frameworków big data. Azure Data Factory służy głównie do integracji danych, a AKS do orkiestracji kontenerów."
+      },
+      {
+        "text": "Azure Kubernetes Services",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: HDInsight. HDInsight to zarządzana usługa Azure dla platform i narzędzi Apache Hadoop oraz innych frameworków big data. Azure Data Factory służy głównie do integracji danych, a AKS do orkiestracji kontenerów."
+      }
     ],
-    correctAnswer: "Konstytutywny (tworzy nowe zobowiązanie)"
+    "correctAnswer": "HDInsight",
+    "generalExplanation": "HDInsight to zarządzana usługa Azure dla platform i narzędzi Apache Hadoop oraz innych frameworków big data. Azure Data Factory służy głównie do integracji danych, a AKS do orkiestracji kontenerów."
   },
   {
-    id: 12,
-    question: "Termin płatności podatku ustalanego w drodze decyzji konstytutywnej wynosi:",
-    options: [
-      "7 dni od doręczenia",
-      "14 dni od doręczenia",
-      "30 dni od wydania decyzji",
-      "Do końca roku podatkowego"
+    "id": 11,
+    "question": "Which Azure service provides a centralized security dashboard that consolidates cloud security posture, recommendations, and threat protection for Azure resources?",
+    "options": [
+      {
+        "text": "Azure Portal Dashboard",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Microsoft Defender for Cloud. Microsoft Defender for Cloud zapewnia scentralizowany widok stanu bezpieczeństwa, rekomendacje i ochronę przed zagrożeniami dla zasobów Azure. Pozostałe usługi mają inne role, na przykład monitoring ogólny albo przechowywanie sekretów."
+      },
+      {
+        "text": "Microsoft Defender for Cloud",
+        "explanation": "To poprawna odpowiedź. Microsoft Defender for Cloud zapewnia scentralizowany widok stanu bezpieczeństwa, rekomendacje i ochronę przed zagrożeniami dla zasobów Azure. Pozostałe usługi mają inne role, na przykład monitoring ogólny albo przechowywanie sekretów."
+      },
+      {
+        "text": "Azure Monitor",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Microsoft Defender for Cloud. Microsoft Defender for Cloud zapewnia scentralizowany widok stanu bezpieczeństwa, rekomendacje i ochronę przed zagrożeniami dla zasobów Azure. Pozostałe usługi mają inne role, na przykład monitoring ogólny albo przechowywanie sekretów."
+      },
+      {
+        "text": "Azure Key Vault",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Microsoft Defender for Cloud. Microsoft Defender for Cloud zapewnia scentralizowany widok stanu bezpieczeństwa, rekomendacje i ochronę przed zagrożeniami dla zasobów Azure. Pozostałe usługi mają inne role, na przykład monitoring ogólny albo przechowywanie sekretów."
+      }
     ],
-    correctAnswer: "14 dni od doręczenia"
+    "correctAnswer": "Microsoft Defender for Cloud",
+    "generalExplanation": "Microsoft Defender for Cloud zapewnia scentralizowany widok stanu bezpieczeństwa, rekomendacje i ochronę przed zagrożeniami dla zasobów Azure. Pozostałe usługi mają inne role, na przykład monitoring ogólny albo przechowywanie sekretów."
   },
   {
-    id: 13,
-    question: "Efektywnym sposobem wygaśnięcia zobowiązania podatkowego jest:",
-    options: ["Przedawnienie", "Umorzenie", "Potrącenie", "Zaniechanie poboru"],
-    correctAnswer: "Potrącenie"
-  },
-  {
-    id: 14,
-    question: "Nieefektywnym sposobem wygaśnięcia zobowiązania (bez zaspokojenia wierzyciela) jest:",
-    options: ["Zapłata", "Przeniesienie własności rzeczy", "Przedawnienie", "Zaliczenie nadpłaty"],
-    correctAnswer: "Przedawnienie"
-  },
-  {
-    id: 15,
-    question: "Standardowy termin przedawnienia zobowiązania podatkowego wynosi:",
-    options: [
-      "3 lata od końca roku kalendarzowego",
-      "5 lat od daty wydania decyzji",
-      "5 lat, licząc od końca roku kalendarzowego, w którym upłynął termin płatności",
-      "10 lat od powstania obowiązku"
+    "id": 12,
+    "question": "Which statement correctly describes the difference between the public cloud and the private cloud deployment models?",
+    "options": [
+      {
+        "text": "Both public and private clouds are owned and operated by a single organization for exclusive use.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: A public cloud is available to the general public or a large industry group and is owned by a cloud service provider, while a private cloud is owned and operated by a single organization for exclusive use.. Chmura publiczna jest dostępna dla wielu klientów i należy do dostawcy chmury, natomiast chmura prywatna jest przeznaczona do wyłącznego użycia jednej organizacji. To podstawowa różnica między tymi modelami wdrożenia."
+      },
+      {
+        "text": "Both public and private clouds are available to the general public and are owned by a cloud service provider.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: A public cloud is available to the general public or a large industry group and is owned by a cloud service provider, while a private cloud is owned and operated by a single organization for exclusive use.. Chmura publiczna jest dostępna dla wielu klientów i należy do dostawcy chmury, natomiast chmura prywatna jest przeznaczona do wyłącznego użycia jednej organizacji. To podstawowa różnica między tymi modelami wdrożenia."
+      },
+      {
+        "text": "A public cloud is owned and operated by a single organization for exclusive use, while a private cloud is available to the general public or a large industry group and is owned by a cloud service provider.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: A public cloud is available to the general public or a large industry group and is owned by a cloud service provider, while a private cloud is owned and operated by a single organization for exclusive use.. Chmura publiczna jest dostępna dla wielu klientów i należy do dostawcy chmury, natomiast chmura prywatna jest przeznaczona do wyłącznego użycia jednej organizacji. To podstawowa różnica między tymi modelami wdrożenia."
+      },
+      {
+        "text": "A public cloud is available to the general public or a large industry group and is owned by a cloud service provider, while a private cloud is owned and operated by a single organization for exclusive use.",
+        "explanation": "To poprawna odpowiedź. Chmura publiczna jest dostępna dla wielu klientów i należy do dostawcy chmury, natomiast chmura prywatna jest przeznaczona do wyłącznego użycia jednej organizacji. To podstawowa różnica między tymi modelami wdrożenia."
+      }
     ],
-    correctAnswer:
-      "5 lat, licząc od końca roku kalendarzowego, w którym upłynął termin płatności"
+    "correctAnswer": "A public cloud is available to the general public or a large industry group and is owned by a cloud service provider, while a private cloud is owned and operated by a single organization for exclusive use.",
+    "generalExplanation": "Chmura publiczna jest dostępna dla wielu klientów i należy do dostawcy chmury, natomiast chmura prywatna jest przeznaczona do wyłącznego użycia jednej organizacji. To podstawowa różnica między tymi modelami wdrożenia."
   },
   {
-    id: 16,
-    question: "Zastosowanie środka egzekucyjnego, o którym podatnik został zawiadomiony, powoduje:",
-    options: [
-      "Zawieszenie biegu przedawnienia",
-      "Przerwanie biegu przedawnienia (biegnie na nowo)",
-      "Umorzenie zaległości",
-      "Skrócenie terminu przedawnienia"
+    "id": 13,
+    "question": "Which Azure service should an IT administrator use to enforce multi-factor authentication (MFA) and control access to an application?",
+    "options": [
+      {
+        "text": "Azure Authentication",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Microsoft Entra ID. Microsoft Entra ID odpowiada za tożsamość, uwierzytelnianie, MFA i kontrolę dostępu do aplikacji oraz zasobów. Azure Authorization czy Azure Functions nie są usługami do egzekwowania MFA dla aplikacji."
+      },
+      {
+        "text": "Microsoft Entra ID",
+        "explanation": "To poprawna odpowiedź. Microsoft Entra ID odpowiada za tożsamość, uwierzytelnianie, MFA i kontrolę dostępu do aplikacji oraz zasobów. Azure Authorization czy Azure Functions nie są usługami do egzekwowania MFA dla aplikacji."
+      },
+      {
+        "text": "Azure Authorization",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Microsoft Entra ID. Microsoft Entra ID odpowiada za tożsamość, uwierzytelnianie, MFA i kontrolę dostępu do aplikacji oraz zasobów. Azure Authorization czy Azure Functions nie są usługami do egzekwowania MFA dla aplikacji."
+      },
+      {
+        "text": "Azure Function",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Microsoft Entra ID. Microsoft Entra ID odpowiada za tożsamość, uwierzytelnianie, MFA i kontrolę dostępu do aplikacji oraz zasobów. Azure Authorization czy Azure Functions nie są usługami do egzekwowania MFA dla aplikacji."
+      }
     ],
-    correctAnswer: "Przerwanie biegu przedawnienia (biegnie na nowo)"
+    "correctAnswer": "Microsoft Entra ID",
+    "generalExplanation": "Microsoft Entra ID odpowiada za tożsamość, uwierzytelnianie, MFA i kontrolę dostępu do aplikacji oraz zasobów. Azure Authorization czy Azure Functions nie są usługami do egzekwowania MFA dla aplikacji."
   },
   {
-    id: 17,
-    question: "Wniesienie skargi do sądu administracyjnego powoduje:",
-    options: [
-      "Przerwanie biegu przedawnienia",
-      "Zawieszenie biegu przedawnienia",
-      "Wygaśnięcie zobowiązania",
-      "Naliczanie opłaty prolongacyjnej"
+    "id": 14,
+    "question": "Which Azure website tool lets you estimate future costs by adding Azure products and services to a shopping cart and calculating the pricing?",
+    "options": [
+      {
+        "text": "Azure Pricing Calculator",
+        "explanation": "To poprawna odpowiedź. Azure Pricing Calculator pozwala dobrać usługi Azure, skonfigurować ich parametry i oszacować przyszły koszt. Azure Advisor daje rekomendacje, ale nie działa jak kalkulator koszyka usług."
+      },
+      {
+        "text": "Azure Advisor",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure Pricing Calculator. Azure Pricing Calculator pozwala dobrać usługi Azure, skonfigurować ich parametry i oszacować przyszły koszt. Azure Advisor daje rekomendacje, ale nie działa jak kalkulator koszyka usług."
+      },
+      {
+        "text": "Microsoft Docs",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure Pricing Calculator. Azure Pricing Calculator pozwala dobrać usługi Azure, skonfigurować ich parametry i oszacować przyszły koszt. Azure Advisor daje rekomendacje, ale nie działa jak kalkulator koszyka usług."
+      }
     ],
-    correctAnswer: "Zawieszenie biegu przedawnienia"
+    "correctAnswer": "Azure Pricing Calculator",
+    "generalExplanation": "Azure Pricing Calculator pozwala dobrać usługi Azure, skonfigurować ich parametry i oszacować przyszły koszt. Azure Advisor daje rekomendacje, ale nie działa jak kalkulator koszyka usług."
   },
   {
-    id: 18,
-    question: "Odsetki za zwłokę od zaległości podatkowych naliczane są:",
-    options: [
-      "Tylko na wezwanie organu",
-      "Z mocy samej ustawy, bez względu na winę podatnika",
-      "Tylko w przypadku popełnienia przestępstwa skarbowego",
-      "Tylko przez sąd"
+    "id": 15,
+    "question": "Which Azure feature provides a basic, per-subnet method to protect an Azure Virtual Network subnet by controlling inbound and outbound network traffic?",
+    "options": [
+      {
+        "text": "Azure Firewall",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Network Security Group. Network Security Group pozwala definiować podstawowe reguły ruchu przychodzącego i wychodzącego dla podsieci lub interfejsów sieciowych. Jest to prosty mechanizm kontroli ruchu w Virtual Network."
+      },
+      {
+        "text": "Network Security Group",
+        "explanation": "To poprawna odpowiedź. Network Security Group pozwala definiować podstawowe reguły ruchu przychodzącego i wychodzącego dla podsieci lub interfejsów sieciowych. Jest to prosty mechanizm kontroli ruchu w Virtual Network."
+      },
+      {
+        "text": "Application Gateway with WAF",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Network Security Group. Network Security Group pozwala definiować podstawowe reguły ruchu przychodzącego i wychodzącego dla podsieci lub interfejsów sieciowych. Jest to prosty mechanizm kontroli ruchu w Virtual Network."
+      },
+      {
+        "text": "Azure DDos Standard protection",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Network Security Group. Network Security Group pozwala definiować podstawowe reguły ruchu przychodzącego i wychodzącego dla podsieci lub interfejsów sieciowych. Jest to prosty mechanizm kontroli ruchu w Virtual Network."
+      }
     ],
-    correctAnswer: "Z mocy samej ustawy, bez względu na winę podatnika"
+    "correctAnswer": "Network Security Group",
+    "generalExplanation": "Network Security Group pozwala definiować podstawowe reguły ruchu przychodzącego i wychodzącego dla podsieci lub interfejsów sieciowych. Jest to prosty mechanizm kontroli ruchu w Virtual Network."
   },
   {
-    id: 19,
-    question: "Podstawowa stawka odsetek za zwłokę to:",
-    options: [
-      "Stopa lombardowa + 2%",
-      "200% stopy lombardowej NBP + 2%, nie mniej niż 8%",
-      "Stałe 10%",
-      "Stopa referencyjna NBP"
+    "id": 16,
+    "question": "In the Azure shared responsibility model, who is responsible for securing the access keys (account keys) for your Azure Storage account?",
+    "options": [
+      {
+        "text": "I am responsible for securing the access keys",
+        "explanation": "To poprawna odpowiedź. W modelu współodpowiedzialności klient odpowiada za zabezpieczenie kluczy dostępu do własnego konta Storage. Jeśli klucze zostaną ujawnione, klient powinien je chronić i regenerować."
+      },
+      {
+        "text": "Azure is responsible for securing the access keys",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: I am responsible for securing the access keys. W modelu współodpowiedzialności klient odpowiada za zabezpieczenie kluczy dostępu do własnego konta Storage. Jeśli klucze zostaną ujawnione, klient powinien je chronić i regenerować."
+      }
     ],
-    correctAnswer: "200% stopy lombardowej NBP + 2%, nie mniej niż 8%"
+    "correctAnswer": "I am responsible for securing the access keys",
+    "generalExplanation": "W modelu współodpowiedzialności klient odpowiada za zabezpieczenie kluczy dostępu do własnego konta Storage. Jeśli klucze zostaną ujawnione, klient powinien je chronić i regenerować."
   },
   {
-    id: 20,
-    question: "Obniżona stawka odsetek (50%) przysługuje, gdy podatnik:",
-    options: [
-      "Złoży korektę deklaracji w ciągu 6 miesięcy i zapłaci zaległość w ciągu 7 dni",
-      "Napisze wniosek o umorzenie",
-      "Jest małym podatnikiem",
-      "Zapłaci podatek przed terminem"
+    "id": 17,
+    "question": "In the context of Azure cloud services, which statement best defines 'compute resources'?",
+    "options": [
+      {
+        "text": "They encompass Virtual Machines, Storage Accounts, and Virtual Networks.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: They are resources that execute tasks requiring CPU cycles.. Compute resources to zasoby wykonujące pracę obliczeniową wymagającą cykli CPU, na przykład maszyny wirtualne lub usługi uruchamiające kod. Nie obejmuje to automatycznie wszystkich zasobów Azure Marketplace."
+      },
+      {
+        "text": "They are resources that execute tasks requiring CPU cycles.",
+        "explanation": "To poprawna odpowiedź. Compute resources to zasoby wykonujące pracę obliczeniową wymagającą cykli CPU, na przykład maszyny wirtualne lub usługi uruchamiające kod. Nie obejmuje to automatycznie wszystkich zasobów Azure Marketplace."
+      },
+      {
+        "text": "They refer exclusively to Virtual Machines.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: They are resources that execute tasks requiring CPU cycles.. Compute resources to zasoby wykonujące pracę obliczeniową wymagającą cykli CPU, na przykład maszyny wirtualne lub usługi uruchamiające kod. Nie obejmuje to automatycznie wszystkich zasobów Azure Marketplace."
+      },
+      {
+        "text": "They include all resources listed in the Azure Marketplace.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: They are resources that execute tasks requiring CPU cycles.. Compute resources to zasoby wykonujące pracę obliczeniową wymagającą cykli CPU, na przykład maszyny wirtualne lub usługi uruchamiające kod. Nie obejmuje to automatycznie wszystkich zasobów Azure Marketplace."
+      }
     ],
-    correctAnswer:
-      "Złoży korektę deklaracji w ciągu 6 miesięcy i zapłaci zaległość w ciągu 7 dni"
+    "correctAnswer": "They are resources that execute tasks requiring CPU cycles.",
+    "generalExplanation": "Compute resources to zasoby wykonujące pracę obliczeniową wymagającą cykli CPU, na przykład maszyny wirtualne lub usługi uruchamiające kod. Nie obejmuje to automatycznie wszystkich zasobów Azure Marketplace."
   },
   {
-    id: 21,
-    question: "Opłata prolongacyjna jest naliczana w związku z:",
-    options: [
-      "Kontrolą podatkową",
-      "Wydaniem decyzji o odroczeniu terminu płatności lub rozłożeniu na raty",
-      "Korektą deklaracji",
-      "Niezłożeniem deklaracji w terminie"
+    "id": 18,
+    "question": "Your company wants employees to sign in once and then access multiple Microsoft 365 and Azure applications without re-entering their credentials. Which Azure feature should the company implement?",
+    "options": [
+      {
+        "text": "Microsoft Defender for Cloud",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Microsoft Entra ID Single Sign-On (SSO). Microsoft Entra ID Single Sign-On pozwala użytkownikom zalogować się raz i korzystać z wielu aplikacji Microsoft 365 oraz Azure bez ponownego podawania poświadczeń. Defender for Cloud, Key Vault i Azure Policy pełnią inne funkcje."
+      },
+      {
+        "text": "Azure Key Vault",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Microsoft Entra ID Single Sign-On (SSO). Microsoft Entra ID Single Sign-On pozwala użytkownikom zalogować się raz i korzystać z wielu aplikacji Microsoft 365 oraz Azure bez ponownego podawania poświadczeń. Defender for Cloud, Key Vault i Azure Policy pełnią inne funkcje."
+      },
+      {
+        "text": "Microsoft Entra ID Single Sign-On (SSO)",
+        "explanation": "To poprawna odpowiedź. Microsoft Entra ID Single Sign-On pozwala użytkownikom zalogować się raz i korzystać z wielu aplikacji Microsoft 365 oraz Azure bez ponownego podawania poświadczeń. Defender for Cloud, Key Vault i Azure Policy pełnią inne funkcje."
+      },
+      {
+        "text": "Azure Policy",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Microsoft Entra ID Single Sign-On (SSO). Microsoft Entra ID Single Sign-On pozwala użytkownikom zalogować się raz i korzystać z wielu aplikacji Microsoft 365 oraz Azure bez ponownego podawania poświadczeń. Defender for Cloud, Key Vault i Azure Policy pełnią inne funkcje."
+      }
     ],
-    correctAnswer: "Wydaniem decyzji o odroczeniu terminu płatności lub rozłożeniu na raty"
+    "correctAnswer": "Microsoft Entra ID Single Sign-On (SSO)",
+    "generalExplanation": "Microsoft Entra ID Single Sign-On pozwala użytkownikom zalogować się raz i korzystać z wielu aplikacji Microsoft 365 oraz Azure bez ponownego podawania poświadczeń. Defender for Cloud, Key Vault i Azure Policy pełnią inne funkcje."
   },
   {
-    id: 22,
-    question: "Podatnik odpowiada za zobowiązania podatkowe:",
-    options: [
-      "Tylko majątkiem firmowym",
-      "Tylko do wysokości kapitału zakładowego",
-      "Całym swoim majątkiem (odpowiedzialność osobista i nieograniczona)",
-      "Tylko do wysokości dochodu"
+    "id": 19,
+    "question": "Which of the following methods can you use to deploy resources with the Azure Resource Manager (ARM) deployment model? Select all that apply.",
+    "options": [
+      {
+        "text": "CLI",
+        "explanation": "To jedna z poprawnych odpowiedzi. Azure Resource Manager umożliwia wdrażanie zasobów na wiele sposobów: przez Azure Portal, PowerShell, Azure CLI oraz REST API/SDK. Wszystkie te metody korzystają z warstwy zarządzania ARM. W tym pytaniu trzeba zaznaczyć wszystkie poprawne metody, więc ta opcja należy do pełnego zestawu odpowiedzi."
+      },
+      {
+        "text": "Powershell",
+        "explanation": "To jedna z poprawnych odpowiedzi. Azure Resource Manager umożliwia wdrażanie zasobów na wiele sposobów: przez Azure Portal, PowerShell, Azure CLI oraz REST API/SDK. Wszystkie te metody korzystają z warstwy zarządzania ARM. W tym pytaniu trzeba zaznaczyć wszystkie poprawne metody, więc ta opcja należy do pełnego zestawu odpowiedzi."
+      },
+      {
+        "text": "REST API / SDK",
+        "explanation": "To jedna z poprawnych odpowiedzi. Azure Resource Manager umożliwia wdrażanie zasobów na wiele sposobów: przez Azure Portal, PowerShell, Azure CLI oraz REST API/SDK. Wszystkie te metody korzystają z warstwy zarządzania ARM. W tym pytaniu trzeba zaznaczyć wszystkie poprawne metody, więc ta opcja należy do pełnego zestawu odpowiedzi."
+      },
+      {
+        "text": "Azure Portal",
+        "explanation": "To jedna z poprawnych odpowiedzi. Azure Resource Manager umożliwia wdrażanie zasobów na wiele sposobów: przez Azure Portal, PowerShell, Azure CLI oraz REST API/SDK. Wszystkie te metody korzystają z warstwy zarządzania ARM. W tym pytaniu trzeba zaznaczyć wszystkie poprawne metody, więc ta opcja należy do pełnego zestawu odpowiedzi."
+      }
     ],
-    correctAnswer:
-      "Całym swoim majątkiem (odpowiedzialność osobista i nieograniczona)"
-  },
-  {
-    id: 23,
-    question: "Odpowiedzialność osoby trzeciej za zaległości podatnika ma charakter:",
-    options: ["Główny i samoistny", "Posiłkowy i subsydiarny", "Karny", "Wyłączny"],
-    correctAnswer: "Posiłkowy i subsydiarny"
-  },
-  {
-    id: 24,
-    question: "Rozwiedziony małżonek podatnika odpowiada za zaległości powstałe w czasie trwania wspólności:",
-    options: [
-      "Tylko do wysokości udziału w majątku wspólnym",
-      "Solidarnie z byłym małżonkiem całym swoim majątkiem",
-      "Nie odpowiada w ogóle",
-      "Tylko jeśli prowadził sprawy firmy"
+    "correctAnswer": [
+      "CLI",
+      "Powershell",
+      "REST API / SDK",
+      "Azure Portal"
     ],
-    correctAnswer: "Solidarnie z byłym małżonkiem całym swoim majątkiem"
+    "generalExplanation": "Azure Resource Manager umożliwia wdrażanie zasobów na wiele sposobów: przez Azure Portal, PowerShell, Azure CLI oraz REST API/SDK. Wszystkie te metody korzystają z warstwy zarządzania ARM."
   },
   {
-    id: 25,
-    question: "Członkowie zarządu spółki z o.o. odpowiadają za zaległości podatkowe spółki:",
-    options: [
-      "Zawsze i bezwarunkowo",
-      "Tylko jeśli posiadają udziały w spółce",
-      "Jako osoby trzecie (subsydiarnie), gdy egzekucja z majątku spółki jest bezskuteczna",
-      "Tylko prezes zarządu"
+    "id": 20,
+    "question": "Your company uses Microsoft Entra ID (tenant) to manage access to Azure resources. The IT department wants to separate billing, permissions, and resource limits for different business units within the same organization. What should they do?",
+    "options": [
+      {
+        "text": "Create separate Azure tenants for each business unit.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Create multiple subscriptions under the same tenant.. Wiele subskrypcji pod jednym tenantem pozwala rozdzielić rozliczenia, uprawnienia i limity dla jednostek biznesowych, zachowując wspólne zarządzanie tożsamością w Microsoft Entra ID."
+      },
+      {
+        "text": "Create multiple management groups under one subscription.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Create multiple subscriptions under the same tenant.. Wiele subskrypcji pod jednym tenantem pozwala rozdzielić rozliczenia, uprawnienia i limity dla jednostek biznesowych, zachowując wspólne zarządzanie tożsamością w Microsoft Entra ID."
+      },
+      {
+        "text": "Create multiple subscriptions under the same tenant.",
+        "explanation": "To poprawna odpowiedź. Wiele subskrypcji pod jednym tenantem pozwala rozdzielić rozliczenia, uprawnienia i limity dla jednostek biznesowych, zachowując wspólne zarządzanie tożsamością w Microsoft Entra ID."
+      },
+      {
+        "text": "Use Azure Resource Groups to isolate billing and limits.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Create multiple subscriptions under the same tenant.. Wiele subskrypcji pod jednym tenantem pozwala rozdzielić rozliczenia, uprawnienia i limity dla jednostek biznesowych, zachowując wspólne zarządzanie tożsamością w Microsoft Entra ID."
+      }
     ],
-    correctAnswer:
-      "Jako osoby trzecie (subsydiarnie), gdy egzekucja z majątku spółki jest bezskuteczna"
+    "correctAnswer": "Create multiple subscriptions under the same tenant.",
+    "generalExplanation": "Wiele subskrypcji pod jednym tenantem pozwala rozdzielić rozliczenia, uprawnienia i limity dla jednostek biznesowych, zachowując wspólne zarządzanie tożsamością w Microsoft Entra ID."
   },
   {
-    id: 26,
-    question: "Do form opodatkowania działalności gospodarczej podatkiem dochodowym NIE należy:",
-    options: ["Skala progresywna", "Podatek liniowy", "Podatek obrotowy", "Ryczałt od przychodów ewidencjonowanych"],
-    correctAnswer: "Podatek obrotowy"
-  },
-  {
-    id: 27,
-    question: "Opodatkowanie na zasadach ogólnych (skala podatkowa) przewiduje stawki:",
-    options: ["18% i 32%", "12% i 32%", "19% stałe", "10% i 20%"],
-    correctAnswer: "12% i 32%"
-  },
-  {
-    id: 28,
-    question: "Stawka podatku liniowego wynosi:",
-    options: ["15%", "17%", "19%", "32%"],
-    correctAnswer: "19%"
-  },
-  {
-    id: 29,
-    question: "Kwota wolna od podatku w skali podatkowej (kwota dochodu niepodlegająca opodatkowaniu) wynosi:",
-    options: ["3091 zł", "8000 zł", "30 000 zł", "85 528 zł"],
-    correctAnswer: "30 000 zł"
-  },
-  {
-    id: 30,
-    question: "Główną wadą podatku liniowego jest:",
-    options: [
-      "Wyższa stawka niż w pierwszym progu skali",
-      "Brak możliwości wspólnego rozliczenia z małżonkiem i brak ulgi na dzieci (co do zasady)",
-      "Konieczność prowadzenia pełnej księgowości",
-      "Limit przychodów 2 mln euro"
+    "id": 21,
+    "question": "Azure Logic Apps and Azure Functions are examples of which compute model in Azure?",
+    "options": [
+      {
+        "text": "SaaS model",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Serverless model. Azure Logic Apps i Azure Functions są przykładami modelu serverless. Dostawca obsługuje infrastrukturę, a użytkownik koncentruje się na logice, przepływach i zdarzeniach."
+      },
+      {
+        "text": "IaaS model",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Serverless model. Azure Logic Apps i Azure Functions są przykładami modelu serverless. Dostawca obsługuje infrastrukturę, a użytkownik koncentruje się na logice, przepływach i zdarzeniach."
+      },
+      {
+        "text": "Serverless model",
+        "explanation": "To poprawna odpowiedź. Azure Logic Apps i Azure Functions są przykładami modelu serverless. Dostawca obsługuje infrastrukturę, a użytkownik koncentruje się na logice, przepływach i zdarzeniach."
+      },
+      {
+        "text": "App Services Model",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Serverless model. Azure Logic Apps i Azure Functions są przykładami modelu serverless. Dostawca obsługuje infrastrukturę, a użytkownik koncentruje się na logice, przepływach i zdarzeniach."
+      }
     ],
-    correctAnswer:
-      "Brak możliwości wspólnego rozliczenia z małżonkiem i brak ulgi na dzieci (co do zasady)"
+    "correctAnswer": "Serverless model",
+    "generalExplanation": "Azure Logic Apps i Azure Functions są przykładami modelu serverless. Dostawca obsługuje infrastrukturę, a użytkownik koncentruje się na logice, przepływach i zdarzeniach."
   },
   {
-    id: 31,
-    question: "Wybór podatku liniowego jest niemożliwy, jeśli podatnik:",
-    options: [
-      "Świadczy usługi na rzecz byłego pracodawcy odpowiadające czynnościom wykonywanym na etacie",
-      "Zatrudnia pracowników",
-      "Prowadzi spółkę cywilną",
-      "Osiąga przychody z najmu"
+    "id": 22,
+    "question": "Which Azure service is the primary identity and authentication platform?",
+    "options": [
+      {
+        "text": "Live Connect",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Microsoft Entra ID (formerly Azure Active Directory). Microsoft Entra ID, dawniej Azure Active Directory, jest główną usługą tożsamości i uwierzytelniania w Azure. To ona odpowiada za logowanie, użytkowników, grupy i kontrolę dostępu."
+      },
+      {
+        "text": "Network Security Group",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Microsoft Entra ID (formerly Azure Active Directory). Microsoft Entra ID, dawniej Azure Active Directory, jest główną usługą tożsamości i uwierzytelniania w Azure. To ona odpowiada za logowanie, użytkowników, grupy i kontrolę dostępu."
+      },
+      {
+        "text": "Microsoft Entra ID (formerly Azure Active Directory)",
+        "explanation": "To poprawna odpowiedź. Microsoft Entra ID, dawniej Azure Active Directory, jest główną usługą tożsamości i uwierzytelniania w Azure. To ona odpowiada za logowanie, użytkowników, grupy i kontrolę dostępu."
+      },
+      {
+        "text": "Facebook Connect",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Microsoft Entra ID (formerly Azure Active Directory). Microsoft Entra ID, dawniej Azure Active Directory, jest główną usługą tożsamości i uwierzytelniania w Azure. To ona odpowiada za logowanie, użytkowników, grupy i kontrolę dostępu."
+      }
     ],
-    correctAnswer:
-      "Świadczy usługi na rzecz byłego pracodawcy odpowiadające czynnościom wykonywanym na etacie"
+    "correctAnswer": "Microsoft Entra ID (formerly Azure Active Directory)",
+    "generalExplanation": "Microsoft Entra ID, dawniej Azure Active Directory, jest główną usługą tożsamości i uwierzytelniania w Azure. To ona odpowiada za logowanie, użytkowników, grupy i kontrolę dostępu."
   },
   {
-    id: 32,
-    question: "Podstawą opodatkowania w ryczałcie od przychodów ewidencjonowanych jest:",
-    options: ["Dochód (przychód minus koszty)", "Przychód (bez pomniejszania o koszty uzyskania)", "Zysk brutto", "Obrót netto"],
-    correctAnswer: "Przychód (bez pomniejszania o koszty uzyskania)"
-  },
-  {
-    id: 33,
-    question: "Obowiązek prowadzenia ksiąg rachunkowych (pełna księgowość) dotyczy osób fizycznych, których przychody przekroczyły:",
-    options: ["1,2 mln euro", "2 mln euro", "2,5 mln euro", "500 tys. zł"],
-    correctAnswer: "2,5 mln euro"
-  },
-  {
-    id: 34,
-    question: "Podatkowa Księga Przychodów i Rozchodów (KPiR) jest urządzeniem księgowym dla:",
-    options: [
-      "Spółek z o.o.",
-      "Osób fizycznych opodatkowanych na zasadach ogólnych lub liniowo (poniżej limitu ksiąg rachunkowych)",
-      "Ryczałtowców",
-      "Rolników"
+    "id": 23,
+    "question": "Which Microsoft service provides 'Pipelines' to automate building, running tests, and deploying code from a repository to Azure?",
+    "options": [
+      {
+        "text": "Azure Monitor",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure DevOps. Azure DevOps zawiera usługę Pipelines, która automatyzuje budowanie, testowanie i wdrażanie kodu. Służy do tworzenia procesów CI/CD dla aplikacji i infrastruktury."
+      },
+      {
+        "text": "GitHub",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure DevOps. Azure DevOps zawiera usługę Pipelines, która automatyzuje budowanie, testowanie i wdrażanie kodu. Służy do tworzenia procesów CI/CD dla aplikacji i infrastruktury."
+      },
+      {
+        "text": "Virtual Machines",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure DevOps. Azure DevOps zawiera usługę Pipelines, która automatyzuje budowanie, testowanie i wdrażanie kodu. Służy do tworzenia procesów CI/CD dla aplikacji i infrastruktury."
+      },
+      {
+        "text": "Azure DevOps",
+        "explanation": "To poprawna odpowiedź. Azure DevOps zawiera usługę Pipelines, która automatyzuje budowanie, testowanie i wdrażanie kodu. Służy do tworzenia procesów CI/CD dla aplikacji i infrastruktury."
+      }
     ],
-    correctAnswer:
-      "Osób fizycznych opodatkowanych na zasadach ogólnych lub liniowo (poniżej limitu ksiąg rachunkowych)"
+    "correctAnswer": "Azure DevOps",
+    "generalExplanation": "Azure DevOps zawiera usługę Pipelines, która automatyzuje budowanie, testowanie i wdrażanie kodu. Służy do tworzenia procesów CI/CD dla aplikacji i infrastruktury."
   },
   {
-    id: 35,
-    question: "Za przychód z działalności gospodarczej uważa się kwoty:",
-    options: ["Tylko faktycznie otrzymane", "Należne, choćby nie zostały faktycznie otrzymane", "Wpłacone na konto prywatne", "Brutto (z VAT)"],
-    correctAnswer: "Należne, choćby nie zostały faktycznie otrzymane"
-  },
-  {
-    id: 36,
-    question: "Czy otrzymana zaliczka na poczet dostawy towaru jest przychodem podatkowym w momencie otrzymania?",
-    options: [
-      "Tak, zawsze",
-      "Tak, jeśli przekracza 1000 zł",
-      "Nie, zaliczki nie są przychodem (chyba że są zewidencjonowane na kasie, ale co do zasady w PIT nie są)",
-      "Tak, ale tylko w ryczałcie"
+    "id": 24,
+    "question": "Which cloud service model is a virtual machine (VM) most directly an example of?",
+    "options": [
+      {
+        "text": "Infrastructure as a Service (IaaS)",
+        "explanation": "To poprawna odpowiedź. Maszyna wirtualna jest klasycznym przykładem Infrastructure as a Service, bo klient zarządza systemem operacyjnym i oprogramowaniem, a dostawca zapewnia infrastrukturę bazową."
+      },
+      {
+        "text": "Software as a Service (SaaS)",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Infrastructure as a Service (IaaS). Maszyna wirtualna jest klasycznym przykładem Infrastructure as a Service, bo klient zarządza systemem operacyjnym i oprogramowaniem, a dostawca zapewnia infrastrukturę bazową."
+      },
+      {
+        "text": "Platform as a Service (PaaS)",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Infrastructure as a Service (IaaS). Maszyna wirtualna jest klasycznym przykładem Infrastructure as a Service, bo klient zarządza systemem operacyjnym i oprogramowaniem, a dostawca zapewnia infrastrukturę bazową."
+      }
     ],
-    correctAnswer:
-      "Nie, zaliczki nie są przychodem (chyba że są zewidencjonowane na kasie, ale co do zasady w PIT nie są)"
+    "correctAnswer": "Infrastructure as a Service (IaaS)",
+    "generalExplanation": "Maszyna wirtualna jest klasycznym przykładem Infrastructure as a Service, bo klient zarządza systemem operacyjnym i oprogramowaniem, a dostawca zapewnia infrastrukturę bazową."
   },
   {
-    id: 37,
-    question: "Datą powstania przychodu jest co do zasady:",
-    options: [
-      "Dzień zapłaty",
-      "Dzień wydania rzeczy/wykonania usługi, nie później niż dzień wystawienia faktury lub uregulowania należności",
-      "Ostatni dzień miesiąca",
-      "Dzień złożenia zeznania"
+    "id": 25,
+    "question": "When creating a Site-to-Site VPN between Azure and your on-premises network, what type of device must be present in your on-premises infrastructure to terminate the VPN connection?",
+    "options": [
+      {
+        "text": "A dedicated virtual machine",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: A compatible VPN Gateway device. Połączenie Site-to-Site VPN wymaga zgodnego urządzenia VPN Gateway po stronie lokalnej, które zakończy tunel VPN. Sama aplikacja, maszyna wirtualna czy sieć wirtualna nie zastępują tego urządzenia."
+      },
+      {
+        "text": "An Application Gateway",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: A compatible VPN Gateway device. Połączenie Site-to-Site VPN wymaga zgodnego urządzenia VPN Gateway po stronie lokalnej, które zakończy tunel VPN. Sama aplikacja, maszyna wirtualna czy sieć wirtualna nie zastępują tego urządzenia."
+      },
+      {
+        "text": "A compatible VPN Gateway device",
+        "explanation": "To poprawna odpowiedź. Połączenie Site-to-Site VPN wymaga zgodnego urządzenia VPN Gateway po stronie lokalnej, które zakończy tunel VPN. Sama aplikacja, maszyna wirtualna czy sieć wirtualna nie zastępują tego urządzenia."
+      },
+      {
+        "text": "An Azure Virtual Network",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: A compatible VPN Gateway device. Połączenie Site-to-Site VPN wymaga zgodnego urządzenia VPN Gateway po stronie lokalnej, które zakończy tunel VPN. Sama aplikacja, maszyna wirtualna czy sieć wirtualna nie zastępują tego urządzenia."
+      }
     ],
-    correctAnswer:
-      "Dzień wydania rzeczy/wykonania usługi, nie później niż dzień wystawienia faktury lub uregulowania należności"
+    "correctAnswer": "A compatible VPN Gateway device",
+    "generalExplanation": "Połączenie Site-to-Site VPN wymaga zgodnego urządzenia VPN Gateway po stronie lokalnej, które zakończy tunel VPN. Sama aplikacja, maszyna wirtualna czy sieć wirtualna nie zastępują tego urządzenia."
   },
   {
-    id: 38,
-    question: "Kosztem uzyskania przychodów są koszty poniesione w celu:",
-    options: [
-      "Osiągnięcia przychodów lub zachowania albo zabezpieczenia źródła przychodów",
-      "Zaspokojenia potrzeb osobistych podatnika",
-      "Uniknięcia zapłaty podatku",
-      "Spłaty kredytu (kapitału)"
+    "id": 26,
+    "question": "Which Azure service centralizes telemetry and log data from multiple resources so you can run queries, visualize results, and create alerts on events?",
+    "options": [
+      {
+        "text": "Azure Monitor",
+        "explanation": "To poprawna odpowiedź. Azure Monitor centralizuje metryki, logi i zdarzenia z wielu zasobów. Umożliwia zapytania, wizualizacje i alerty na podstawie telemetrii."
+      },
+      {
+        "text": "Microsoft Defender for Cloud",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure Monitor. Azure Monitor centralizuje metryki, logi i zdarzenia z wielu zasobów. Umożliwia zapytania, wizualizacje i alerty na podstawie telemetrii."
+      },
+      {
+        "text": "Azure Portal Dashboard",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure Monitor. Azure Monitor centralizuje metryki, logi i zdarzenia z wielu zasobów. Umożliwia zapytania, wizualizacje i alerty na podstawie telemetrii."
+      },
+      {
+        "text": "Storage Account or Event Hub",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure Monitor. Azure Monitor centralizuje metryki, logi i zdarzenia z wielu zasobów. Umożliwia zapytania, wizualizacje i alerty na podstawie telemetrii."
+      }
     ],
-    correctAnswer:
-      "Osiągnięcia przychodów lub zachowania albo zabezpieczenia źródła przychodów"
+    "correctAnswer": "Azure Monitor",
+    "generalExplanation": "Azure Monitor centralizuje metryki, logi i zdarzenia z wielu zasobów. Umożliwia zapytania, wizualizacje i alerty na podstawie telemetrii."
   },
   {
-    id: 39,
-    question: "Kosztem podatkowym (KUP) NIE są:",
-    options: ["Wynagrodzenia pracowników", "Wydatki na reprezentację (np. okazałe kolacje dla wizerunku)", "Amortyzacja maszyn", "Czynsz za biuro"],
-    correctAnswer: "Wydatki na reprezentację (np. okazałe kolacje dla wizerunku)"
-  },
-  {
-    id: 40,
-    question: "Czy praca własna małżonka podatnika jest kosztem uzyskania przychodu?",
-    options: [
-      "Tak, zawsze",
-      "Tak, jeśli jest to umowa o pracę",
-      "Nie, wartość własnej pracy małżonka i dzieci małoletnich jest wyłączona z kosztów (jako praca własna), ale wynagrodzenie wypłacane im na umowę jest kosztem",
-      "Nie, nigdy, nawet przy umowie o pracę"
+    "id": 27,
+    "question": "Which Azure feature lets you organize multiple subscriptions into a hierarchy for centralized governance, policy enforcement, and access management?",
+    "options": [
+      {
+        "text": "Resource Groups",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Management Groups. Management Groups pozwalają organizować wiele subskrypcji w hierarchię i stosować centralnie polityki, zgodność oraz uprawnienia. Resource Groups działają niżej, wewnątrz subskrypcji."
+      },
+      {
+        "text": "Microsoft Entra ID",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Management Groups. Management Groups pozwalają organizować wiele subskrypcji w hierarchię i stosować centralnie polityki, zgodność oraz uprawnienia. Resource Groups działają niżej, wewnątrz subskrypcji."
+      },
+      {
+        "text": "Management Groups",
+        "explanation": "To poprawna odpowiedź. Management Groups pozwalają organizować wiele subskrypcji w hierarchię i stosować centralnie polityki, zgodność oraz uprawnienia. Resource Groups działają niżej, wewnątrz subskrypcji."
+      },
+      {
+        "text": "RBAC (Role-Based Access Control)",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Management Groups. Management Groups pozwalają organizować wiele subskrypcji w hierarchię i stosować centralnie polityki, zgodność oraz uprawnienia. Resource Groups działają niżej, wewnątrz subskrypcji."
+      }
     ],
-    correctAnswer:
-      "Nie, wartość własnej pracy małżonka i dzieci małoletnich jest wyłączona z kosztów (jako praca własna), ale wynagrodzenie wypłacane im na umowę jest kosztem"
+    "correctAnswer": "Management Groups",
+    "generalExplanation": "Management Groups pozwalają organizować wiele subskrypcji w hierarchię i stosować centralnie polityki, zgodność oraz uprawnienia. Resource Groups działają niżej, wewnątrz subskrypcji."
   },
   {
-    id: 41,
-    question: "Amortyzacja samochodu osobowego jest kosztem tylko do wartości samochodu:",
-    options: ["20 000 euro", "150 000 zł (225 000 zł dla elektrycznych)", "100 000 zł", "Bez limitu"],
-    correctAnswer: "150 000 zł (225 000 zł dla elektrycznych)"
-  },
-  {
-    id: 42,
-    question: "Ulga na złe długi pozwala wierzycielowi na:",
-    options: [
-      "Umorzenie długu",
-      "Zmniejszenie podstawy opodatkowania o wartość nieuregulowanej wierzytelności po 90 dniach od terminu płatności",
-      "Sprzedaż długu bez podatku",
-      "Odliczenie 100% VAT"
+    "id": 28,
+    "question": "For the highest SLA/availability for Azure virtual machines, which deployment strategy is best?",
+    "options": [
+      {
+        "text": "Deploying a single virtual machine.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Deploying two or more virtual machines across different availability zones within the same region.. Najwyższą dostępność dla maszyn wirtualnych daje rozmieszczenie co najmniej dwóch VM w różnych Availability Zones w tym samym regionie. Strefy dostępności chronią przed awarią pojedynczego centrum danych."
+      },
+      {
+        "text": "Deploying two or more virtual machines within the same data center.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Deploying two or more virtual machines across different availability zones within the same region.. Najwyższą dostępność dla maszyn wirtualnych daje rozmieszczenie co najmniej dwóch VM w różnych Availability Zones w tym samym regionie. Strefy dostępności chronią przed awarią pojedynczego centrum danych."
+      },
+      {
+        "text": "Deploying two or more virtual machines across different availability zones within the same region.",
+        "explanation": "To poprawna odpowiedź. Najwyższą dostępność dla maszyn wirtualnych daje rozmieszczenie co najmniej dwóch VM w różnych Availability Zones w tym samym regionie. Strefy dostępności chronią przed awarią pojedynczego centrum danych."
+      },
+      {
+        "text": "Deploying two or more virtual machines within an availability set.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Deploying two or more virtual machines across different availability zones within the same region.. Najwyższą dostępność dla maszyn wirtualnych daje rozmieszczenie co najmniej dwóch VM w różnych Availability Zones w tym samym regionie. Strefy dostępności chronią przed awarią pojedynczego centrum danych."
+      }
     ],
-    correctAnswer:
-      "Zmniejszenie podstawy opodatkowania o wartość nieuregulowanej wierzytelności po 90 dniach od terminu płatności"
+    "correctAnswer": "Deploying two or more virtual machines across different availability zones within the same region.",
+    "generalExplanation": "Najwyższą dostępność dla maszyn wirtualnych daje rozmieszczenie co najmniej dwóch VM w różnych Availability Zones w tym samym regionie. Strefy dostępności chronią przed awarią pojedynczego centrum danych."
   },
   {
-    id: 43,
-    question: "Składnik majątku uznaje się za środek trwały podlegający amortyzacji, jeśli jego przewidywany okres używania wynosi:",
-    options: ["Co najmniej 6 miesięcy", "Co najmniej rok", "Co najmniej 3 lata", "Dowolny okres"],
-    correctAnswer: "Co najmniej rok"
-  },
-  {
-    id: 44,
-    question: "Dolny limit wartości środka trwałego, od którego obowiązkowa jest amortyzacja (zamiast jednorazowego zaliczenia w koszty), to:",
-    options: ["3 500 zł", "10 000 zł", "15 000 zł", "50 000 zł"],
-    correctAnswer: "10 000 zł"
-  },
-  {
-    id: 45,
-    question: "Metoda amortyzacji liniowej polega na:",
-    options: [
-      "Odpisach od wartości początkowej malejącej co rok",
-      "Odpisach stałą stawką przez cały okres użytkowania",
-      "Jednorazowym odpisie w miesiącu zakupu",
-      "Dowolnym ustalaniu stawek co miesiąc"
+    "id": 29,
+    "question": "What is a primary benefit of choosing a consumption-based (pay-per-use) pricing model instead of a time-based (hourly or always-on) pricing model for cloud services?",
+    "options": [
+      {
+        "text": "The ability to easily predict the future cost of the service.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Significant cost savings when the resources aren't needed for constant use.. Model zużyciowy pozwala płacić za realne użycie zasobów, więc daje oszczędności, gdy zasoby nie muszą działać stale. Nie oznacza jednak, że zawsze będzie tańszy w każdej sytuacji."
+      },
+      {
+        "text": "A simpler and easier-to-understand pricing model.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Significant cost savings when the resources aren't needed for constant use.. Model zużyciowy pozwala płacić za realne użycie zasobów, więc daje oszczędności, gdy zasoby nie muszą działać stale. Nie oznacza jednak, że zawsze będzie tańszy w każdej sytuacji."
+      },
+      {
+        "text": "It always being cheaper to pay for consumption rather than paying hourly.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Significant cost savings when the resources aren't needed for constant use.. Model zużyciowy pozwala płacić za realne użycie zasobów, więc daje oszczędności, gdy zasoby nie muszą działać stale. Nie oznacza jednak, że zawsze będzie tańszy w każdej sytuacji."
+      },
+      {
+        "text": "Significant cost savings when the resources aren't needed for constant use.",
+        "explanation": "To poprawna odpowiedź. Model zużyciowy pozwala płacić za realne użycie zasobów, więc daje oszczędności, gdy zasoby nie muszą działać stale. Nie oznacza jednak, że zawsze będzie tańszy w każdej sytuacji."
+      }
     ],
-    correctAnswer: "Odpisach stałą stawką przez cały okres użytkowania"
+    "correctAnswer": "Significant cost savings when the resources aren't needed for constant use.",
+    "generalExplanation": "Model zużyciowy pozwala płacić za realne użycie zasobów, więc daje oszczędności, gdy zasoby nie muszą działać stale. Nie oznacza jednak, że zawsze będzie tańszy w każdej sytuacji."
   },
   {
-    id: 46,
-    question: "Metoda amortyzacji degresywnej zakłada zastosowanie współczynnika podwyższającego stawkę, maksymalnie:",
-    options: ["1,5", "2,0", "3,0", "4,0"],
-    correctAnswer: "2,0"
-  },
-  {
-    id: 47,
-    question: "Jednorazowa amortyzacja (pomoc de minimis) ma limit roczny:",
-    options: ["100 000 zł", "50 000 euro", "150 000 zł", "2 mln euro"],
-    correctAnswer: "50 000 euro"
-  },
-  {
-    id: 48,
-    question: "Jednorazowa amortyzacja dla fabrycznie nowych środków trwałych (bez statusu małego podatnika) ma limit:",
-    options: ["50 000 zł", "100 000 zł", "10 000 euro", "Nie ma limitu"],
-    correctAnswer: "100 000 zł"
-  },
-  {
-    id: 49,
-    question: "Ulga B+R (badawczo-rozwojowa) pozwala odliczyć od podstawy opodatkowania:",
-    options: [
-      "50% kosztów kwalifikowanych",
-      "100% (lub 200% dla CBR/pracowników) kosztów kwalifikowanych",
-      "Tylko koszty wynagrodzeń",
-      "Cały dochód firmy"
+    "id": 30,
+    "question": "Your organization has specific compliance requirements that are not covered by Azure’s built-in policy definitions. What should you do to enforce your organization’s own rules?",
+    "options": [
+      {
+        "text": "Use Azure Resource Locks to prevent changes that violate your rules.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Create and assign a custom policy definition in Azure Policy.. Jeśli wbudowane definicje Azure Policy nie obejmują wymagań organizacji, należy utworzyć i przypisać własną definicję polityki. Resource Locks blokują zmiany, ale nie wyrażają niestandardowych reguł zgodności."
+      },
+      {
+        "text": "Create and assign a custom policy definition in Azure Policy.",
+        "explanation": "To poprawna odpowiedź. Jeśli wbudowane definicje Azure Policy nie obejmują wymagań organizacji, należy utworzyć i przypisać własną definicję polityki. Resource Locks blokują zmiany, ale nie wyrażają niestandardowych reguł zgodności."
+      },
+      {
+        "text": "Open a Microsoft support request to add a new built-in policy.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Create and assign a custom policy definition in Azure Policy.. Jeśli wbudowane definicje Azure Policy nie obejmują wymagań organizacji, należy utworzyć i przypisać własną definicję polityki. Resource Locks blokują zmiany, ale nie wyrażają niestandardowych reguł zgodności."
+      },
+      {
+        "text": "Deploy resources only in regions with default compliance controls.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Create and assign a custom policy definition in Azure Policy.. Jeśli wbudowane definicje Azure Policy nie obejmują wymagań organizacji, należy utworzyć i przypisać własną definicję polityki. Resource Locks blokują zmiany, ale nie wyrażają niestandardowych reguł zgodności."
+      }
     ],
-    correctAnswer: "100% (lub 200% dla CBR/pracowników) kosztów kwalifikowanych"
+    "correctAnswer": "Create and assign a custom policy definition in Azure Policy.",
+    "generalExplanation": "Jeśli wbudowane definicje Azure Policy nie obejmują wymagań organizacji, należy utworzyć i przypisać własną definicję polityki. Resource Locks blokują zmiany, ale nie wyrażają niestandardowych reguł zgodności."
   },
   {
-    id: 50,
-    question: "IP Box pozwala na opodatkowanie dochodów z kwalifikowanych praw własności intelektualnej stawką:",
-    options: ["19%", "9%", "5%", "0%"],
-    correctAnswer: "5%"
-  },
-  {
-    id: 51,
-    question: "Ulga dla młodych (zerowy PIT) dotyczy osób, które nie ukończyły:",
-    options: ["18 roku życia", "25 roku życia", "26 roku życia", "30 roku życia"],
-    correctAnswer: "26 roku życia"
-  },
-  {
-    id: 52,
-    question: "Limit przychodów w uldze dla młodych wynosi:",
-    options: ["30 000 zł", "85 528 zł", "120 000 zł", "Bez limitu"],
-    correctAnswer: "85 528 zł"
-  },
-  {
-    id: 53,
-    question: "Ulga abolicyjna (dotycząca pracy za granicą) jest limitowana do kwoty:",
-    options: ["1360 zł", "2280 zł", "8000 zł", "Nie jest limitowana"],
-    correctAnswer: "1360 zł"
-  },
-  {
-    id: 54,
-    question: "Ulga na Internet pozwala odliczyć maksymalnie:",
-    options: ["500 zł", "760 zł", "Pełną kwotę faktur", "1000 zł"],
-    correctAnswer: "760 zł"
-  },
-  {
-    id: 55,
-    question: "Darowizny na cele kultu religijnego można odliczyć od dochodu do wysokości:",
-    options: ["10% dochodu", "6% dochodu", "Bez limitu", "1000 zł"],
-    correctAnswer: "6% dochodu"
-  },
-  {
-    id: 56,
-    question: "Ulga na robotyzację pozwala odliczyć dodatkowo:",
-    options: [
-      "100% kosztów robotów",
-      "50% kosztów kwalifikowanych poniesionych na robotyzację",
-      "30% kosztów",
-      "Nic, to tylko koszt uzyskania przychodu"
+    "id": 31,
+    "question": "Which of the following is something that Azure AI Services can currently do?",
+    "options": [
+      {
+        "text": "All of these! Azure can do it all!",
+        "explanation": "To poprawna odpowiedź. Azure AI Services obejmują między innymi mowę syntetyczną, rozpoznawanie tekstu na obrazach, tłumaczenie i transkrypcję audio. Dlatego poprawna jest odpowiedź, że Azure potrafi wykonać wszystkie wymienione działania."
+      },
+      {
+        "text": "Speak text in an extremely realistic way",
+        "explanation": "Ta opcja opisuje prawdziwą możliwość, ale nie jest najlepszą odpowiedzią samodzielnie, bo pytanie obejmuje cały zestaw możliwości. Najlepsza odpowiedź to: All of these! Azure can do it all!. Azure AI Services obejmują między innymi mowę syntetyczną, rozpoznawanie tekstu na obrazach, tłumaczenie i transkrypcję audio. Dlatego poprawna jest odpowiedź, że Azure potrafi wykonać wszystkie wymienione działania."
+      },
+      {
+        "text": "Recognize text in an image",
+        "explanation": "Ta opcja opisuje prawdziwą możliwość, ale nie jest najlepszą odpowiedzią samodzielnie, bo pytanie obejmuje cały zestaw możliwości. Najlepsza odpowiedź to: All of these! Azure can do it all!. Azure AI Services obejmują między innymi mowę syntetyczną, rozpoznawanie tekstu na obrazach, tłumaczenie i transkrypcję audio. Dlatego poprawna jest odpowiedź, że Azure potrafi wykonać wszystkie wymienione działania."
+      },
+      {
+        "text": "Translate text from one language to another",
+        "explanation": "Ta opcja opisuje prawdziwą możliwość, ale nie jest najlepszą odpowiedzią samodzielnie, bo pytanie obejmuje cały zestaw możliwości. Najlepsza odpowiedź to: All of these! Azure can do it all!. Azure AI Services obejmują między innymi mowę syntetyczną, rozpoznawanie tekstu na obrazach, tłumaczenie i transkrypcję audio. Dlatego poprawna jest odpowiedź, że Azure potrafi wykonać wszystkie wymienione działania."
+      },
+      {
+        "text": "Create text from audio",
+        "explanation": "Ta opcja opisuje prawdziwą możliwość, ale nie jest najlepszą odpowiedzią samodzielnie, bo pytanie obejmuje cały zestaw możliwości. Najlepsza odpowiedź to: All of these! Azure can do it all!. Azure AI Services obejmują między innymi mowę syntetyczną, rozpoznawanie tekstu na obrazach, tłumaczenie i transkrypcję audio. Dlatego poprawna jest odpowiedź, że Azure potrafi wykonać wszystkie wymienione działania."
+      }
     ],
-    correctAnswer: "50% kosztów kwalifikowanych poniesionych na robotyzację"
+    "correctAnswer": "All of these! Azure can do it all!",
+    "generalExplanation": "Azure AI Services obejmują między innymi mowę syntetyczną, rozpoznawanie tekstu na obrazach, tłumaczenie i transkrypcję audio. Dlatego poprawna jest odpowiedź, że Azure potrafi wykonać wszystkie wymienione działania."
   },
   {
-    id: 57,
-    question: "Danina solidarnościowa wynosi:",
-    options: [
-      "4% od nadwyżki dochodów ponad 1 mln zł",
-      "5% od całego dochodu",
-      "19% od dywidend",
-      "2% od przychodu"
+    "id": 32,
+    "question": "When you sign up for a new Azure Free account, how much initial credit (USD) does Microsoft provide for use during the trial period?",
+    "options": [
+      {
+        "text": "Azure does not give you any free credits when you create a free account",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: The default is US$200. Nowe konto Azure Free standardowo dostaje 200 USD kredytu na okres próbny. Oprócz tego mogą być dostępne wybrane bezpłatne usługi, ale pytanie dotyczy początkowego kredytu."
+      },
+      {
+        "text": "You are given $50 per month, for one year towards Azure services",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: The default is US$200. Nowe konto Azure Free standardowo dostaje 200 USD kredytu na okres próbny. Oprócz tego mogą być dostępne wybrane bezpłatne usługi, ale pytanie dotyczy początkowego kredytu."
+      },
+      {
+        "text": "The default is US$200",
+        "explanation": "To poprawna odpowiedź. Nowe konto Azure Free standardowo dostaje 200 USD kredytu na okres próbny. Oprócz tego mogą być dostępne wybrane bezpłatne usługi, ale pytanie dotyczy początkowego kredytu."
+      },
+      {
+        "text": "You can create 1 Linux VM, 1 Windows VM, and a number of other free services for the first year.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: The default is US$200. Nowe konto Azure Free standardowo dostaje 200 USD kredytu na okres próbny. Oprócz tego mogą być dostępne wybrane bezpłatne usługi, ale pytanie dotyczy początkowego kredytu."
+      }
     ],
-    correctAnswer: "4% od nadwyżki dochodów ponad 1 mln zł"
+    "correctAnswer": "The default is US$200",
+    "generalExplanation": "Nowe konto Azure Free standardowo dostaje 200 USD kredytu na okres próbny. Oprócz tego mogą być dostępne wybrane bezpłatne usługi, ale pytanie dotyczy początkowego kredytu."
   },
   {
-    id: 58,
-    question: "Kwota ulgi na jedno dziecko (przy spełnieniu kryteriów) wynosi miesięcznie:",
-    options: ["500 zł", "92,67 zł", "150 zł", "300 zł"],
-    correctAnswer: "92,67 zł"
-  },
-  {
-    id: 59,
-    question: "Stawka ryczałtu dla wolnych zawodów (wg prezentacji) wynosi:",
-    options: ["19%", "17%", "15%", "12%"],
-    correctAnswer: "17%"
-  },
-  {
-    id: 60,
-    question: "Stawka ryczałtu dla działalności handlowej wynosi:",
-    options: ["8,5%", "5,5%", "3,0%", "2,0%"],
-    correctAnswer: "3,0%"
-  },
-  {
-    id: 61,
-    question: "Stawka ryczałtu od przychodów z najmu prywatnego powyżej 100 000 zł wynosi:",
-    options: ["8,5%", "10%", "12,5%", "19%"],
-    correctAnswer: "12,5%"
-  },
-  {
-    id: 62,
-    question: "Sankcyjna stawka ryczałtu za nieprowadzenie ewidencji wynosi:",
-    options: [
-      "75% przychodu",
-      "5-krotność stawki podstawowej (max 75%)",
-      "50% przychodu",
-      "32% dochodu"
+    "id": 33,
+    "question": "A company is moving from on-premises servers to Azure. They want to avoid large upfront hardware purchases and only pay for the resources they actually use. Which benefit of cloud computing does this describe?",
+    "options": [
+      {
+        "text": "Fault tolerance",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Capital expenditure reduction (CapEx to OpEx). Przejście z dużych zakupów sprzętu na płatność za faktyczne użycie opisuje redukcję nakładów kapitałowych i przejście z CapEx na OpEx. To jedna z podstawowych korzyści chmury."
+      },
+      {
+        "text": "Elasticity",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Capital expenditure reduction (CapEx to OpEx). Przejście z dużych zakupów sprzętu na płatność za faktyczne użycie opisuje redukcję nakładów kapitałowych i przejście z CapEx na OpEx. To jedna z podstawowych korzyści chmury."
+      },
+      {
+        "text": "High availability",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Capital expenditure reduction (CapEx to OpEx). Przejście z dużych zakupów sprzętu na płatność za faktyczne użycie opisuje redukcję nakładów kapitałowych i przejście z CapEx na OpEx. To jedna z podstawowych korzyści chmury."
+      },
+      {
+        "text": "Capital expenditure reduction (CapEx to OpEx)",
+        "explanation": "To poprawna odpowiedź. Przejście z dużych zakupów sprzętu na płatność za faktyczne użycie opisuje redukcję nakładów kapitałowych i przejście z CapEx na OpEx. To jedna z podstawowych korzyści chmury."
+      }
     ],
-    correctAnswer: "5-krotność stawki podstawowej (max 75%)"
+    "correctAnswer": "Capital expenditure reduction (CapEx to OpEx)",
+    "generalExplanation": "Przejście z dużych zakupów sprzętu na płatność za faktyczne użycie opisuje redukcję nakładów kapitałowych i przejście z CapEx na OpEx. To jedna z podstawowych korzyści chmury."
   },
   {
-    id: 63,
-    question: "Przy ryczałcie nie można odliczyć od przychodu:",
-    options: ["Składek ZUS", "Kosztów uzyskania przychodów", "Darowizn", "Ulgi na Internet"],
-    correctAnswer: "Kosztów uzyskania przychodów"
-  },
-  {
-    id: 64,
-    question: "Interpretacja przepisów \"in dubio pro tributario\" oznacza:",
-    options: [
-      "Wątpliwości rozstrzyga się na korzyść organu",
-      "Niedające się usunąć wątpliwości rozstrzyga się na korzyść podatnika",
-      "Podatnik zawsze ma rację",
-      "Sąd decyduje dowolnie"
+    "id": 34,
+    "question": "Which Azure service provides a fully managed, hosted relational SQL database (Platform as a Service)?",
+    "options": [
+      {
+        "text": "Table Storage",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure SQL Database. Azure SQL Database to w pełni zarządzana relacyjna baza SQL w modelu PaaS. SQL Server w maszynie wirtualnej jest bliższy IaaS, a Cosmos DB jest bazą NoSQL."
+      },
+      {
+        "text": "SQL Server in a VM",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure SQL Database. Azure SQL Database to w pełni zarządzana relacyjna baza SQL w modelu PaaS. SQL Server w maszynie wirtualnej jest bliższy IaaS, a Cosmos DB jest bazą NoSQL."
+      },
+      {
+        "text": "Azure SQL Database",
+        "explanation": "To poprawna odpowiedź. Azure SQL Database to w pełni zarządzana relacyjna baza SQL w modelu PaaS. SQL Server w maszynie wirtualnej jest bliższy IaaS, a Cosmos DB jest bazą NoSQL."
+      },
+      {
+        "text": "Cosmos DB",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure SQL Database. Azure SQL Database to w pełni zarządzana relacyjna baza SQL w modelu PaaS. SQL Server w maszynie wirtualnej jest bliższy IaaS, a Cosmos DB jest bazą NoSQL."
+      }
     ],
-    correctAnswer: "Niedające się usunąć wątpliwości rozstrzyga się na korzyść podatnika"
+    "correctAnswer": "Azure SQL Database",
+    "generalExplanation": "Azure SQL Database to w pełni zarządzana relacyjna baza SQL w modelu PaaS. SQL Server w maszynie wirtualnej jest bliższy IaaS, a Cosmos DB jest bazą NoSQL."
   },
   {
-    id: 65,
-    question: "Wykładnia językowa w prawie podatkowym:",
-    options: ["Ma charakter pomocniczy", "Ma prymat (pierwszeństwo)", "Nie jest stosowana", "Jest podrzędna wobec celowościowej"],
-    correctAnswer: "Ma prymat (pierwszeństwo)"
-  },
-  {
-    id: 66,
-    question: "Metoda unikania podwójnego opodatkowania \"wyłączenie z progresją\" polega na:",
-    options: [
-      "Zwolnieniu dochodu zagranicznego w Polsce, ale uwzględnieniu go przy ustalaniu stopy procentowej",
-      "Opodatkowaniu dochodu zagranicznego i odliczeniu podatku zapłaconego za granicą",
-      "Całkowitym braku obowiązku wykazywania tego dochodu",
-      "Zapłacie podwójnego podatku"
+    "id": 35,
+    "question": "Which of the following Azure actions is most likely to produce the most immediate reduction in your Azure costs?",
+    "options": [
+      {
+        "text": "Using Azure Policy to restrict the use of expensive VM SKUs",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Using Azure Reserved Instances for most of your virtual machines. Reserved Instances mogą znacząco obniżyć koszt maszyn wirtualnych przy przewidywalnym, dłuższym użyciu. To zwykle daje szybszą i większą oszczędność niż same ograniczenia polityką czy zmiana redundancji storage."
+      },
+      {
+        "text": "Changing your storage accounts from globally redundant (GRS) to locally redundant (LRS)",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Using Azure Reserved Instances for most of your virtual machines. Reserved Instances mogą znacząco obniżyć koszt maszyn wirtualnych przy przewidywalnym, dłuższym użyciu. To zwykle daje szybszą i większą oszczędność niż same ograniczenia polityką czy zmiana redundancji storage."
+      },
+      {
+        "text": "Auto shutdown of development and QA servers over night and on weekends",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Using Azure Reserved Instances for most of your virtual machines. Reserved Instances mogą znacząco obniżyć koszt maszyn wirtualnych przy przewidywalnym, dłuższym użyciu. To zwykle daje szybszą i większą oszczędność niż same ograniczenia polityką czy zmiana redundancji storage."
+      },
+      {
+        "text": "Using Azure Reserved Instances for most of your virtual machines",
+        "explanation": "To poprawna odpowiedź. Reserved Instances mogą znacząco obniżyć koszt maszyn wirtualnych przy przewidywalnym, dłuższym użyciu. To zwykle daje szybszą i większą oszczędność niż same ograniczenia polityką czy zmiana redundancji storage."
+      }
     ],
-    correctAnswer:
-      "Zwolnieniu dochodu zagranicznego w Polsce, ale uwzględnieniu go przy ustalaniu stopy procentowej"
+    "correctAnswer": "Using Azure Reserved Instances for most of your virtual machines",
+    "generalExplanation": "Reserved Instances mogą znacząco obniżyć koszt maszyn wirtualnych przy przewidywalnym, dłuższym użyciu. To zwykle daje szybszą i większą oszczędność niż same ograniczenia polityką czy zmiana redundancji storage."
   },
   {
-    id: 67,
-    question: "Ulga na terminal płatniczy dotyczy wydatków na:",
-    options: [
-      "Tylko nabycie terminala",
-      "Nabycie terminala i wydatki związane z obsługą transakcji",
-      "Tylko prowizje bankowe",
-      "Zakup kasy fiskalnej"
+    "id": 36,
+    "question": "Your organization has an Azure Policy that restricts which virtual machine SKUs/sizes can be deployed. Which of the following actions would allow you to create a VM that the policy currently blocks?",
+    "options": [
+      {
+        "text": "Subscription Owners (Administrators) can create resources regardless of what the policy restricts",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: The only way is to remove the policy, create the resource and add the policy back. Azure Policy egzekwuje reguły niezależnie od standardowych ról, więc nie wystarczy być właścicielem lub kontrybutorem. Aby utworzyć zasób blokowany przez politykę, trzeba zmienić lub usunąć tę politykę."
+      },
+      {
+        "text": "Use an account that has Contributor or above permissions to the resource group",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: The only way is to remove the policy, create the resource and add the policy back. Azure Policy egzekwuje reguły niezależnie od standardowych ról, więc nie wystarczy być właścicielem lub kontrybutorem. Aby utworzyć zasób blokowany przez politykę, trzeba zmienić lub usunąć tę politykę."
+      },
+      {
+        "text": "The only way is to remove the policy, create the resource and add the policy back",
+        "explanation": "To poprawna odpowiedź. Azure Policy egzekwuje reguły niezależnie od standardowych ról, więc nie wystarczy być właścicielem lub kontrybutorem. Aby utworzyć zasób blokowany przez politykę, trzeba zmienić lub usunąć tę politykę."
+      }
     ],
-    correctAnswer: "Nabycie terminala i wydatki związane z obsługą transakcji"
+    "correctAnswer": "The only way is to remove the policy, create the resource and add the policy back",
+    "generalExplanation": "Azure Policy egzekwuje reguły niezależnie od standardowych ról, więc nie wystarczy być właścicielem lub kontrybutorem. Aby utworzyć zasób blokowany przez politykę, trzeba zmienić lub usunąć tę politykę."
   },
   {
-    id: 68,
-    question: "Ewidencja przychodów przy ryczałcie musi być prowadzona:",
-    options: [
-      "Tylko elektronicznie",
-      "W formie zbroszurowanej z ponumerowanymi kartami (lub odpowiednio komputerowo) od dnia wyboru opodatkowania",
-      "Tylko przez biuro rachunkowe",
-      "Raz na rok"
+    "id": 37,
+    "question": "Which Microsoft Entra ID feature provides an additional sign-in factor - often using a mobile phone (for example, the Microsoft Authenticator app) - to verify a user's identity when they sign in?",
+    "options": [
+      {
+        "text": "Multi-Factor Authentication",
+        "explanation": "To poprawna odpowiedź. Multi-Factor Authentication wymaga dodatkowego czynnika logowania poza hasłem, często przez telefon lub aplikację Microsoft Authenticator. Zmniejsza to ryzyko przejęcia konta samym hasłem."
+      },
+      {
+        "text": "Advanced Threat Protection (ATP)",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Multi-Factor Authentication. Multi-Factor Authentication wymaga dodatkowego czynnika logowania poza hasłem, często przez telefon lub aplikację Microsoft Authenticator. Zmniejsza to ryzyko przejęcia konta samym hasłem."
+      },
+      {
+        "text": "Azure Information Protection (AIP)",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Multi-Factor Authentication. Multi-Factor Authentication wymaga dodatkowego czynnika logowania poza hasłem, często przez telefon lub aplikację Microsoft Authenticator. Zmniejsza to ryzyko przejęcia konta samym hasłem."
+      },
+      {
+        "text": "Microsoft Defender for Cloud",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Multi-Factor Authentication. Multi-Factor Authentication wymaga dodatkowego czynnika logowania poza hasłem, często przez telefon lub aplikację Microsoft Authenticator. Zmniejsza to ryzyko przejęcia konta samym hasłem."
+      }
     ],
-    correctAnswer:
-      "W formie zbroszurowanej z ponumerowanymi kartami (lub odpowiednio komputerowo) od dnia wyboru opodatkowania"
+    "correctAnswer": "Multi-Factor Authentication",
+    "generalExplanation": "Multi-Factor Authentication wymaga dodatkowego czynnika logowania poza hasłem, często przez telefon lub aplikację Microsoft Authenticator. Zmniejsza to ryzyko przejęcia konta samym hasłem."
   },
   {
-    id: 69,
-    question: "Limit przychodów uprawniający do kwartalnego wpłacania ryczałtu to równowartość:",
-    options: ["2 mln euro", "200 tys. euro", "100 tys. zł", "50 tys. euro"],
-    correctAnswer: "200 tys. euro"
-  },
-  {
-    id: 70,
-    question: "Kredyt podatkowy (zwolnienie z zaliczek) przysługuje:",
-    options: [
-      "Każdemu podatnikowi raz na 5 lat",
-      "Podatnikom po raz pierwszy rozpoczynającym działalność (i spełniającym inne warunki)",
-      "Spółkom z o.o.",
-      "Tylko rolnikom"
+    "id": 38,
+    "question": "A company is migrating its workloads to Azure to reduce the risk of downtime caused by hardware failures. Which benefit of cloud computing does this scenario demonstrate?",
+    "options": [
+      {
+        "text": "Rapid deployment",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: High availability and fault tolerance. Migracja do Azure w celu ograniczenia przestojów po awariach sprzętu dotyczy wysokiej dostępności i odporności na błędy. Chmura pozwala projektować rozwiązania z redundancją i szybszym przełączaniem."
+      },
+      {
+        "text": "High availability and fault tolerance",
+        "explanation": "To poprawna odpowiedź. Migracja do Azure w celu ograniczenia przestojów po awariach sprzętu dotyczy wysokiej dostępności i odporności na błędy. Chmura pozwala projektować rozwiązania z redundancją i szybszym przełączaniem."
+      },
+      {
+        "text": "Elasticity",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: High availability and fault tolerance. Migracja do Azure w celu ograniczenia przestojów po awariach sprzętu dotyczy wysokiej dostępności i odporności na błędy. Chmura pozwala projektować rozwiązania z redundancją i szybszym przełączaniem."
+      },
+      {
+        "text": "Capital expenditure reduction (CapEx to OpEx)",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: High availability and fault tolerance. Migracja do Azure w celu ograniczenia przestojów po awariach sprzętu dotyczy wysokiej dostępności i odporności na błędy. Chmura pozwala projektować rozwiązania z redundancją i szybszym przełączaniem."
+      }
     ],
-    correctAnswer:
-      "Podatnikom po raz pierwszy rozpoczynającym działalność (i spełniającym inne warunki)"
+    "correctAnswer": "High availability and fault tolerance",
+    "generalExplanation": "Migracja do Azure w celu ograniczenia przestojów po awariach sprzętu dotyczy wysokiej dostępności i odporności na błędy. Chmura pozwala projektować rozwiązania z redundancją i szybszym przełączaniem."
   },
   {
-    id: 71,
-    question: "Wpłaty na IKZE można odliczyć od dochodu do limitu:",
-    options: [
-      "3000 zł",
-      "1,2-krotności przeciętnego wynagrodzenia (ok. 6-7 tys. zł)",
-      "10 000 zł",
-      "Nie ma limitu"
+    "id": 39,
+    "question": "An administrator prefers to manage Azure resources through a web-based graphical interface rather than using command-line tools. Which tool should they use?",
+    "options": [
+      {
+        "text": "Azure Command-Line Interface (CLI)",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure Portal. Azure Portal jest webowym, graficznym interfejsem do zarządzania zasobami Azure. CLI, Cloud Shell i PowerShell są narzędziami wiersza poleceń lub skryptowymi."
+      },
+      {
+        "text": "Azure Cloud Shell",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure Portal. Azure Portal jest webowym, graficznym interfejsem do zarządzania zasobami Azure. CLI, Cloud Shell i PowerShell są narzędziami wiersza poleceń lub skryptowymi."
+      },
+      {
+        "text": "Azure PowerShell",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure Portal. Azure Portal jest webowym, graficznym interfejsem do zarządzania zasobami Azure. CLI, Cloud Shell i PowerShell są narzędziami wiersza poleceń lub skryptowymi."
+      },
+      {
+        "text": "Azure Portal",
+        "explanation": "To poprawna odpowiedź. Azure Portal jest webowym, graficznym interfejsem do zarządzania zasobami Azure. CLI, Cloud Shell i PowerShell są narzędziami wiersza poleceń lub skryptowymi."
+      }
     ],
-    correctAnswer: "1,2-krotności przeciętnego wynagrodzenia (ok. 6-7 tys. zł)"
+    "correctAnswer": "Azure Portal",
+    "generalExplanation": "Azure Portal jest webowym, graficznym interfejsem do zarządzania zasobami Azure. CLI, Cloud Shell i PowerShell są narzędziami wiersza poleceń lub skryptowymi."
   },
   {
-    id: 72,
-    question: "Koszty reprezentacji (np. okazałe obiady dla kontrahentów) w świetle przepisów i orzecznictwa:",
-    options: [
-      "Są zawsze KUP",
-      "Są wyłączone z KUP (Art. 23), chyba że to drobny poczęstunek (kawą, ciastka) podczas rozmów",
-      "Są KUP do 50%",
-      "Są KUP tylko dla spółek"
+    "id": 40,
+    "question": "You discover an Azure service labeled 'private preview'. Which of the following statements about services in private preview is true?",
+    "options": [
+      {
+        "text": "All Azure customers automatically have access to services in private preview mode.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Access to services in private preview mode is limited and usually requires approval from Microsoft or an invitation.. Private preview oznacza ograniczony dostęp, zwykle przez zaproszenie albo zgodę Microsoft. Taka usługa nie jest jeszcze ogólnie dostępna i nie ma standardowych gwarancji jak GA."
+      },
+      {
+        "text": "Services in private preview mode are generally available (GA) and can be used in production environments.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Access to services in private preview mode is limited and usually requires approval from Microsoft or an invitation.. Private preview oznacza ograniczony dostęp, zwykle przez zaproszenie albo zgodę Microsoft. Taka usługa nie jest jeszcze ogólnie dostępna i nie ma standardowych gwarancji jak GA."
+      },
+      {
+        "text": "Services in private preview mode have the same level of support and SLA guarantees as generally available services.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Access to services in private preview mode is limited and usually requires approval from Microsoft or an invitation.. Private preview oznacza ograniczony dostęp, zwykle przez zaproszenie albo zgodę Microsoft. Taka usługa nie jest jeszcze ogólnie dostępna i nie ma standardowych gwarancji jak GA."
+      },
+      {
+        "text": "Access to services in private preview mode is limited and usually requires approval from Microsoft or an invitation.",
+        "explanation": "To poprawna odpowiedź. Private preview oznacza ograniczony dostęp, zwykle przez zaproszenie albo zgodę Microsoft. Taka usługa nie jest jeszcze ogólnie dostępna i nie ma standardowych gwarancji jak GA."
+      }
     ],
-    correctAnswer:
-      "Są wyłączone z KUP (Art. 23), chyba że to drobny poczęstunek (kawą, ciastka) podczas rozmów"
+    "correctAnswer": "Access to services in private preview mode is limited and usually requires approval from Microsoft or an invitation.",
+    "generalExplanation": "Private preview oznacza ograniczony dostęp, zwykle przez zaproszenie albo zgodę Microsoft. Taka usługa nie jest jeszcze ogólnie dostępna i nie ma standardowych gwarancji jak GA."
   },
   {
-    id: 73,
-    question: "Odpisów amortyzacyjnych dokonuje się:",
-    options: ["Od wartości rynkowej", "Od wartości początkowej", "Od wartości netto", "Od wartości odtworzeniowej"],
-    correctAnswer: "Od wartości początkowej"
-  },
-  {
-    id: 74,
-    question: "Strata z działalności gospodarczej nie może być odliczona od:",
-    options: ["Dochodów z tej samej działalności w latach przyszłych", "Dochodów ze stosunku pracy", "Dochodów z najmu prywatnego (jeśli to to samo źródło, ale tu inne)", "Zysków z tej samej firmy"],
-    correctAnswer: "Dochodów ze stosunku pracy"
-  },
-  {
-    id: 75,
-    question: "Zaliczki na podatek dochodowy (skala/liniowy) płatne są do:",
-    options: ["10 dnia miesiąca", "20 dnia następnego miesiąca", "25 dnia miesiąca", "Ostatniego dnia miesiąca"],
-    correctAnswer: "20 dnia następnego miesiąca"
-  },
-  {
-    id: 76,
-    question: "Podatnik, który poniósł stratę, może ją rozliczyć w ciągu:",
-    options: ["2 lat", "3 lat", "5 lat", "10 lat"],
-    correctAnswer: "5 lat"
-  },
-  {
-    id: 77,
-    question: "Jednorazowe obniżenie dochodu o stratę (do 5 mln zł) jest możliwe:",
-    options: ["W każdym roku", "W jednym z najbliższych 5 lat podatkowych", "Tylko w roku poniesienia straty", "Nie jest możliwe"],
-    correctAnswer: "W jednym z najbliższych 5 lat podatkowych"
-  },
-  {
-    id: 78,
-    question: "Koszty kwalifikowane w uldze B+R to m.in.:",
-    options: ["Wynagrodzenia pracowników B+R", "Koszty wynajmu biura księgowości", "Zakup samochodu osobowego", "Reklama w telewizji"],
-    correctAnswer: "Wynagrodzenia pracowników B+R"
-  },
-  {
-    id: 79,
-    question: "Ulga na powrót (\"na start\" po powrocie z zagranicy) zwalnia przychody do kwoty:",
-    options: ["30 000 zł", "85 528 zł", "100 000 zł", "Całość przychodów"],
-    correctAnswer: "85 528 zł"
-  },
-  {
-    id: 80,
-    question: "Ryczałt od przychodów ewidencjonowanych wyklucza wspólne rozliczenie z małżonkiem:",
-    options: ["Nie, można się łączyć", "Tak, chyba że dotyczy tylko najmu prywatnego", "Tak, w każdym przypadku", "Zależy od decyzji naczelnika US"],
-    correctAnswer: "Tak, chyba że dotyczy tylko najmu prywatnego"
-  },
-  {
-    id: 81,
-    question: "Stawka ryczałtu 10% dotyczy:",
-    options: ["Usług budowlanych", "Kupna i sprzedaży nieruchomości na własny rachunek", "Wolnych zawodów", "Usług IT"],
-    correctAnswer: "Kupna i sprzedaży nieruchomości na własny rachunek"
-  },
-  {
-    id: 82,
-    question: "Podatnik prowadzący działalność gospodarczą w domu może zaliczyć do kosztów wydatki na Internet:",
-    options: [
-      "W całości",
-      "W ramach ulgi na Internet (do 760 zł), jeśli nie zaliczył do kosztów firmowych",
-      "Nie może",
-      "Tylko 50%"
+    "id": 41,
+    "question": "Which type of container does Azure Monitor use to collect and store log (telemetry) data from multiple Azure resources?",
+    "options": [
+      {
+        "text": "Append Blob Storage",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Log Analytics Workspace. Log Analytics Workspace jest kontenerem, w którym Azure Monitor zbiera i przechowuje dane telemetryczne oraz logi. Umożliwia analizę danych z wielu zasobów."
+      },
+      {
+        "text": "Managed Storage",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Log Analytics Workspace. Log Analytics Workspace jest kontenerem, w którym Azure Monitor zbiera i przechowuje dane telemetryczne oraz logi. Umożliwia analizę danych z wielu zasobów."
+      },
+      {
+        "text": "Azure Monitor account",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Log Analytics Workspace. Log Analytics Workspace jest kontenerem, w którym Azure Monitor zbiera i przechowuje dane telemetryczne oraz logi. Umożliwia analizę danych z wielu zasobów."
+      },
+      {
+        "text": "Log Analytics Workspace",
+        "explanation": "To poprawna odpowiedź. Log Analytics Workspace jest kontenerem, w którym Azure Monitor zbiera i przechowuje dane telemetryczne oraz logi. Umożliwia analizę danych z wielu zasobów."
+      }
     ],
-    correctAnswer:
-      "W ramach ulgi na Internet (do 760 zł), jeśli nie zaliczył do kosztów firmowych"
+    "correctAnswer": "Log Analytics Workspace",
+    "generalExplanation": "Log Analytics Workspace jest kontenerem, w którym Azure Monitor zbiera i przechowuje dane telemetryczne oraz logi. Umożliwia analizę danych z wielu zasobów."
   },
   {
-    id: 83,
-    question: "Kary umowne i grzywny:",
-    options: ["Są zawsze kosztem podatkowym", "Są kosztem, jeśli wynikają z umowy", "Nie są kosztem uzyskania przychodu (NKUP)", "Są przychodem"],
-    correctAnswer: "Nie są kosztem uzyskania przychodu (NKUP)"
-  },
-  {
-    id: 84,
-    question: "Wartość ulepszenia środka trwałego:",
-    options: ["Jest kosztem jednorazowym", "Powiększa wartość początkową i podlega amortyzacji", "Nie ma znaczenia podatkowego", "Jest odliczana od podatku"],
-    correctAnswer: "Powiększa wartość początkową i podlega amortyzacji"
-  },
-  {
-    id: 85,
-    question: "Podatek leśny powstaje:",
-    options: ["Z mocy prawa", "Z dniem doręczenia decyzji organu (zobowiązanie)", "W momencie zakupu lasu", "Raz na 5 lat"],
-    correctAnswer: "Z dniem doręczenia decyzji organu (zobowiązanie)"
-  },
-  {
-    id: 86,
-    question: "Odpowiedzialność spadkobierców za długi podatkowe spadkodawcy jest:",
-    options: ["Wyłączona", "Ograniczona tylko do podatku dochodowego", "Regulowana przepisami Kodeksu cywilnego o przyjęciu spadku", "Zawsze pełna"],
-    correctAnswer: "Regulowana przepisami Kodeksu cywilnego o przyjęciu spadku"
-  },
-  {
-    id: 87,
-    question: "Zastaw skarbowy to forma:",
-    options: ["Zapłaty podatku", "Zabezpieczenia zobowiązania podatkowego", "Wygaśnięcia zobowiązania", "Kary dla podatnika"],
-    correctAnswer: "Zabezpieczenia zobowiązania podatkowego"
-  },
-  {
-    id: 88,
-    question: "Interpretacja indywidualna chroni podatnika, jeśli:",
-    options: ["Zastosował się do niej", "Tylko ją otrzymał", "Nie zgadza się z nią", "Została wydana dla innego podatnika"],
-    correctAnswer: "Zastosował się do niej"
-  },
-  {
-    id: 89,
-    question: "Stawka amortyzacji dla budynków i budowli może być podwyższona (współczynnik), jeśli:",
-    options: ["Są nowe", "Są używane w warunkach pogorszonych lub złych", "Podatnik tak zdecyduje", "Przynoszą duży dochód"],
-    correctAnswer: "Są używane w warunkach pogorszonych lub złych"
-  },
-  {
-    id: 90,
-    question: "Status \"małego podatnika\" w PIT/CIT (do amortyzacji jednorazowej) zależy od limitu przychodów:",
-    options: ["1,2 mln euro", "2 mln euro", "5 mln zł", "10 mln euro"],
-    correctAnswer: "2 mln euro"
-  },
-  {
-    id: 91,
-    question: "Danina solidarnościowa dotyczy dochodów przekraczających:",
-    options: ["500 000 zł", "1 000 000 zł", "2 000 000 zł", "85 528 zł"],
-    correctAnswer: "1 000 000 zł"
-  },
-  {
-    id: 92,
-    question: "Dochody z pracy w państwie, z którym Polska ma umowę o \"proporcjonalnym odliczeniu\", należy:",
-    options: [
-      "Pominąć w polskim zeznaniu",
-      "Wykazać w polskim zeznaniu i dopłacić różnicę podatku",
-      "Wykazać tylko dla stopy procentowej",
-      "Opodatkować ryczałtem"
+    "id": 42,
+    "question": "Which Azure service provides personalized recommendations to help you reduce costs on your subscription?",
+    "options": [
+      {
+        "text": "Azure Dashboard",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure Advisor. Azure Advisor analizuje użycie subskrypcji i daje spersonalizowane rekomendacje, w tym dotyczące redukcji kosztów. Azure Dashboard jest tylko widokiem, a Service Health informuje o stanie usług."
+      },
+      {
+        "text": "Azure Advisor",
+        "explanation": "To poprawna odpowiedź. Azure Advisor analizuje użycie subskrypcji i daje spersonalizowane rekomendacje, w tym dotyczące redukcji kosztów. Azure Dashboard jest tylko widokiem, a Service Health informuje o stanie usług."
+      },
+      {
+        "text": "Microsoft Defender for Cloud",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure Advisor. Azure Advisor analizuje użycie subskrypcji i daje spersonalizowane rekomendacje, w tym dotyczące redukcji kosztów. Azure Dashboard jest tylko widokiem, a Service Health informuje o stanie usług."
+      },
+      {
+        "text": "Azure Service Health",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure Advisor. Azure Advisor analizuje użycie subskrypcji i daje spersonalizowane rekomendacje, w tym dotyczące redukcji kosztów. Azure Dashboard jest tylko widokiem, a Service Health informuje o stanie usług."
+      }
     ],
-    correctAnswer: "Wykazać w polskim zeznaniu i dopłacić różnicę podatku"
+    "correctAnswer": "Azure Advisor",
+    "generalExplanation": "Azure Advisor analizuje użycie subskrypcji i daje spersonalizowane rekomendacje, w tym dotyczące redukcji kosztów. Azure Dashboard jest tylko widokiem, a Service Health informuje o stanie usług."
   },
   {
-    id: 93,
-    question: "Jeżeli małżonkowie chcą rozliczyć się wspólnie, wniosek składają:",
-    options: ["Do 20 stycznia", "W zeznaniu rocznym (PIT-36/37)", "Przed rozpoczęciem roku", "Nie muszą składać wniosku"],
-    correctAnswer: "W zeznaniu rocznym (PIT-36/37)"
-  },
-  {
-    id: 94,
-    question: "Prowadzenie apteki wyklucza opodatkowanie w formie:",
-    options: ["Skali podatkowej", "Podatku liniowego", "Ryczałtu od przychodów ewidencjonowanych", "Karty podatkowej"],
-    correctAnswer: "Ryczałtu od przychodów ewidencjonowanych"
-  },
-  {
-    id: 95,
-    question: "Stawka 5,5% w ryczałcie dotyczy:",
-    options: ["Działalności wytwórczej i robót budowlanych", "Lekarzy", "Handlu", "Wynajmu"],
-    correctAnswer: "Działalności wytwórczej i robót budowlanych"
-  },
-  {
-    id: 96,
-    question: "Ulga na ekspansję pozwala odliczyć koszty do wysokości:",
-    options: ["100 000 zł", "1 000 000 zł", "50% dochodu", "200 000 zł"],
-    correctAnswer: "1 000 000 zł"
-  },
-  {
-    id: 97,
-    question: "Kaucja zwrotna otrzymana przez przedsiębiorcę:",
-    options: ["Jest przychodem", "Nie jest przychodem (brak definitywności)", "Jest kosztem", "Jest dochodem"],
-    correctAnswer: "Nie jest przychodem (brak definitywności)"
-  },
-  {
-    id: 98,
-    question: "Odsetki od środków na rachunku firmowym:",
-    options: ["Są zwolnione z podatku", "Są przychodem z działalności gospodarczej", "Są opodatkowane ryczałtem", "Nie podlegają opodatkowaniu"],
-    correctAnswer: "Są przychodem z działalności gospodarczej"
-  },
-  {
-    id: 99,
-    question: "Ryczałt płatny kwartalnie jest możliwy, gdy przychody nie przekroczyły:",
-    options: ["200 000 euro", "2 000 000 euro", "100 000 zł", "50 000 euro"],
-    correctAnswer: "200 000 euro"
-  },
-  {
-    id: 100,
-    question: "W przypadku spółki cywilnej, limit przychodów do prowadzenia KPiR (2 mln euro) odnosi się do:",
-    options: ["Każdego wspólnika osobno", "Przychodów całej spółki", "Zysku spółki", "Obrotu brutto"],
-    correctAnswer: "Przychodów całej spółki"
-  },
-
-  // 101-200
-  {
-    id: 101,
-    question: "Wykładnia autentyczna to interpretacja przepisu dokonywana przez:",
-    options: ["Sąd Najwyższy", "Organ, który dany przepis ustanowił", "Profesora prawa (doktrynę)", "Organ stosujący prawo (np. Naczelnika Urzędu Skarbowego) w konkretnej sprawie"],
-    correctAnswer: "Organ, który dany przepis ustanowił"
-  },
-  {
-    id: 102,
-    question: "Zasada Clara non sunt interpretanda oznacza, że:",
-    options: ["Wszystko wymaga interpretacji", "Jasne przepisy nie wymagają interpretacji", "Należy interpretować tylko przepisy niekorzystne", "Wykładnia jest zawsze zakazana"],
-    correctAnswer: "Jasne przepisy nie wymagają interpretacji"
-  },
-  {
-    id: 103,
-    question: "Wykładnia operatywna ma charakter:",
-    options: ["Powszechnie obowiązujący", "Abstrakcyjny i generalny", "Wiążący jedynie organ ją wydający oraz strony w konkretnej sprawie", "Naukowy"],
-    correctAnswer: "Wiążący jedynie organ ją wydający oraz strony w konkretnej sprawie"
-  },
-  {
-    id: 104,
-    question: "Reguła kolizyjna Lex superior derogat legi inferior oznacza, że:",
-    options: ["Norma późniejsza uchyla normę wcześniejszą", "Norma szczególna uchyla normę ogólną", "Norma wyższej rangi uchyla normę niższej rangi", "Prawo nie działa wstecz"],
-    correctAnswer: "Norma wyższej rangi uchyla normę niższej rangi"
-  },
-  {
-    id: 105,
-    question: "Wnioskowanie a maiori ad minus oznacza:",
-    options: [
-      "Jeśli komuś nie wolno mniej, to tym bardziej nie wolno mu więcej",
-      "Jeśli komuś wolno więcej, to tym bardziej wolno mu mniej",
-      "Przepis szczególny uchyla ogólny",
-      "Wyjątków nie interpretuje się rozszerzająco"
+    "id": 43,
+    "question": "In Azure high-availability design, what is the primary purpose of Availability Zones?",
+    "options": [
+      {
+        "text": "They represent certain server racks within individual data centers, specifically designed by Azure for higher uptime.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: They allow manual selection of data centers for virtual machine placement to achieve superior availability compared to other options.. Availability Zones pozwalają świadomie rozmieszczać zasoby w oddzielnych centrach danych w ramach regionu, aby zwiększyć dostępność. Nie są folderem zasobów ani synonimem regionu."
+      },
+      {
+        "text": "They allow manual selection of data centers for virtual machine placement to achieve superior availability compared to other options.",
+        "explanation": "To poprawna odpowiedź. Availability Zones pozwalają świadomie rozmieszczać zasoby w oddzielnych centrach danych w ramach regionu, aby zwiększyć dostępność. Nie są folderem zasobów ani synonimem regionu."
+      },
+      {
+        "text": "They are synonymous with an Azure region.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: They allow manual selection of data centers for virtual machine placement to achieve superior availability compared to other options.. Availability Zones pozwalają świadomie rozmieszczać zasoby w oddzielnych centrach danych w ramach regionu, aby zwiększyć dostępność. Nie są folderem zasobów ani synonimem regionu."
+      },
+      {
+        "text": "They serve as a folder structure in Azure used for organizing resources such as databases, virtual machines, and virtual networks.",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: They allow manual selection of data centers for virtual machine placement to achieve superior availability compared to other options.. Availability Zones pozwalają świadomie rozmieszczać zasoby w oddzielnych centrach danych w ramach regionu, aby zwiększyć dostępność. Nie są folderem zasobów ani synonimem regionu."
+      }
     ],
-    correctAnswer: "Jeśli komuś wolno więcej, to tym bardziej wolno mu mniej"
+    "correctAnswer": "They allow manual selection of data centers for virtual machine placement to achieve superior availability compared to other options.",
+    "generalExplanation": "Availability Zones pozwalają świadomie rozmieszczać zasoby w oddzielnych centrach danych w ramach regionu, aby zwiększyć dostępność. Nie są folderem zasobów ani synonimem regionu."
   },
   {
-    id: 106,
-    question: "Dyrektywa zakładająca racjonalność językową prawodawcy oznacza, że:",
-    options: [
-      "Nie wolno interpretować przepisów tak, aby pewne ich fragmenty okazały się zbędne",
-      "Należy zawsze stosować język potoczny",
-      "Każde słowo ma inne znaczenie w każdej ustawie",
-      "Przepisy są zawsze logiczne"
+    "id": 44,
+    "question": "Can you grant someone access to your Azure subscription without sharing your username and password (for example, by assigning them a role through Azure Active Directory/role-based access control)?",
+    "options": [
+      {
+        "text": "YES",
+        "explanation": "To poprawna odpowiedź. Dostęp do subskrypcji można nadać innym osobom przez role i RBAC bez udostępniania loginu ani hasła. To standardowy sposób bezpiecznego delegowania uprawnień."
+      },
+      {
+        "text": "NO",
+        "explanation": "Ta odpowiedź jest niepoprawna w tym scenariuszu. Poprawna odpowiedź to: YES. Dostęp do subskrypcji można nadać innym osobom przez role i RBAC bez udostępniania loginu ani hasła. To standardowy sposób bezpiecznego delegowania uprawnień."
+      }
     ],
-    correctAnswer: "Nie wolno interpretować przepisów tak, aby pewne ich fragmenty okazały się zbędne"
-  },
-  {
-    id: 107,
-    question: "Czy wydatki na ulepszenie środka trwałego są zaliczane bezpośrednio do kosztów uzyskania przychodów?",
-    options: ["Tak, zawsze w dacie poniesienia", "Tak, jeśli nie przekraczają 100 000 zł", "Nie, powiększają one wartość początkową środka trwałego i są rozliczane przez odpisy amortyzacyjne", "Nie, są to wydatki na reprezentację"],
-    correctAnswer: "Nie, powiększają one wartość początkową środka trwałego i są rozliczane przez odpisy amortyzacyjne"
-  },
-  {
-    id: 108,
-    question: "Amortyzacja samochodu osobowego nie jest kosztem podatkowym w części ustalonej od wartości samochodu przewyższającej:",
-    options: ["20 000 euro", "150 000 zł (dla aut spalinowych/hybrydowych)", "100 000 zł", "30 000 zł"],
-    correctAnswer: "150 000 zł (dla aut spalinowych/hybrydowych)"
-  },
-  {
-    id: 109,
-    question: "Wydatki na \"drobne poczęstunki\" (kawa, ciastka) podczas rozmów z kontrahentami:",
-    options: ["Są zawsze wyłączone z kosztów jako reprezentacja", "Są kosztem uzyskania przychodu, jeśli nie mają charakteru okazałości i służą celom biznesowym", "Są kosztem tylko do wysokości 50%", "Są kosztem tylko dla spółek z o.o."],
-    correctAnswer: "Są kosztem uzyskania przychodu, jeśli nie mają charakteru okazałości i służą celom biznesowym"
-  },
-  {
-    id: 110,
-    question: "Wynagrodzenie wypłacane małżonkowi podatnika z tytułu umowy o pracę w jego firmie:",
-    options: ["Nie jest kosztem podatkowym (praca własna małżonka)", "Jest kosztem uzyskania przychodu", "Jest kosztem tylko do wysokości minimalnego wynagrodzenia", "Jest zwolnione z opodatkowania"],
-    correctAnswer: "Jest kosztem uzyskania przychodu"
-  },
-  {
-    id: 111,
-    question: "Wartość własnej pracy małżonka podatnika (bez umowy) pomagającego w firmie:",
-    options: ["Jest kosztem uzyskania przychodu", "Jest kosztem niepotrącalnym (NKUP)", "Podlega amortyzacji", "Jest odliczana od dochodu"],
-    correctAnswer: "Jest kosztem niepotrącalnym (NKUP)"
-  },
-  {
-    id: 112,
-    question: "Kary i grzywny nakładane na przedsiębiorcę:",
-    options: ["Są kosztem uzyskania przychodu", "Są kosztem, jeśli dotyczą działalności gospodarczej", "Znajdują się w katalogu wyłączeń (NKUP) i nie są kosztem", "Pomniejszają przychód"],
-    correctAnswer: "Znajdują się w katalogu wyłączeń (NKUP) i nie są kosztem"
-  },
-  {
-    id: 113,
-    question: "Składki na ubezpieczenie samochodów ciężarowych (koszt pośredni) opłacone za okres przekraczający rok podatkowy (np. 18 miesięcy):",
-    options: ["Są kosztem jednorazowym w dacie zapłaty", "Należy podzielić proporcjonalnie do długości okresów w każdym roku podatkowym", "Są kosztem dopiero po zakończeniu polisy", "Nie są kosztem podatkowym"],
-    correctAnswer: "Należy podzielić proporcjonalnie do długości okresów w każdym roku podatkowym"
-  },
-  {
-    id: 114,
-    question: "Odpisy amortyzacyjne od środków trwałych sfinansowanych dotacją (zwróconych podatnikowi):",
-    options: ["Są kosztem podatkowym w całości", "Nie stanowią kosztów uzyskania przychodów", "Są kosztem w 50%", "Są kosztem po 5 latach"],
-    correctAnswer: "Nie stanowią kosztów uzyskania przychodów"
-  },
-  {
-    id: 115,
-    question: "Metoda memoriałowa rozliczania kosztów (u podatników prowadzących księgi rachunkowe) oznacza, że za dzień poniesienia kosztu uważa się:",
-    options: ["Dzień zapłaty (kasowo)", "Dzień, na który ujęto koszt w księgach rachunkowych na podstawie faktury", "Ostatni dzień roku", "Dzień złożenia zeznania"],
-    correctAnswer: "Dzień, na który ujęto koszt w księgach rachunkowych na podstawie faktury"
-  },
-  {
-    id: 116,
-    question: "Metoda amortyzacji, w której stawka procentowa jest stała przez cały okres, to metoda:",
-    options: ["Degresywna", "Liniowa", "Jednorazowa", "Indywidualna"],
-    correctAnswer: "Liniowa"
-  },
-  {
-    id: 117,
-    question: "Metoda degresywna amortyzacji zakłada, że w pierwszych latach odpisy są:",
-    options: ["Niższe niż przy metodzie liniowej", "Wyższe (podwyższona stawka)", "Równe zeru", "Stałe"],
-    correctAnswer: "Wyższe (podwyższona stawka)"
-  },
-  {
-    id: 118,
-    question: "Współczynnik podwyższający stawkę amortyzacyjną przy metodzie degresywnej nie może przekroczyć:",
-    options: ["1,2", "1,4", "2,0", "3,0"],
-    correctAnswer: "2,0"
-  },
-  {
-    id: 119,
-    question: "Metodę degresywną można stosować do:",
-    options: ["Wszystkich środków trwałych", "Samochodów osobowych", "Maszyn i urządzeń z grup 3-6 i 8 KŚT oraz środków transportu (bez osobowych)", "Budynków i budowli"],
-    correctAnswer: "Maszyn i urządzeń z grup 3-6 i 8 KŚT oraz środków transportu (bez osobowych)"
-  },
-  {
-    id: 120,
-    question: "Limit jednorazowej amortyzacji \"de minimis\" (dla małych podatników i rozpoczynających działalność) wynosi:",
-    options: ["10 000 zł", "100 000 zł", "50 000 euro", "150 000 zł"],
-    correctAnswer: "50 000 euro"
-  },
-  {
-    id: 121,
-    question: "Jednorazowa amortyzacja fabrycznie nowych środków trwałych (do 100 tys. zł):",
-    options: ["Dotyczy tylko małych podatników", "Dotyczy wszystkich podatników prowadzących działalność gospodarczą", "Dotyczy tylko samochodów osobowych", "Wymaga zgody Naczelnika US"],
-    correctAnswer: "Dotyczy wszystkich podatników prowadzących działalność gospodarczą"
-  },
-  {
-    id: 122,
-    question: "Podwyższony współczynnik amortyzacji dla budynków używanych w warunkach złych wynosi:",
-    options: ["1,2", "1,4", "2,0", "1,5"],
-    correctAnswer: "1,4"
-  },
-  {
-    id: 123,
-    question: "Minimalny okres amortyzacji dla środków transportu przy metodzie indywidualnej (używanych) wynosi:",
-    options: ["12 miesięcy", "24 miesiące", "30 miesięcy", "60 miesięcy"],
-    correctAnswer: "30 miesięcy"
-  },
-  {
-    id: 124,
-    question: "Środek trwały uznaje się za \"ulepszony\", jeśli wydatki na ulepszenie przekroczyły:",
-    options: ["3500 zł", "10 000 zł", "20% wartości początkowej (dla środków transportu i maszyn)", "50% wartości rynkowej"],
-    correctAnswer: "20% wartości początkowej (dla środków transportu i maszyn)"
-  },
-  {
-    id: 125,
-    question: "Kosztem kwalifikowanym w uldze B+R NIE są:",
-    options: ["Wynagrodzenia pracowników B+R", "Koszty nabycia materiałów i surowców do B+R", "Wydatki na samochody osobowe", "Odpisy amortyzacyjne od sprzętu laboratoryjnego"],
-    correctAnswer: "Wydatki na samochody osobowe"
-  },
-  {
-    id: 126,
-    question: "Wysokość odliczenia kosztów kwalifikowanych w uldze B+R dla standardowego podatnika (nie CBR) wynosi:",
-    options: ["50%", "100%", "150%", "20%"],
-    correctAnswer: "100%"
-  },
-  {
-    id: 127,
-    question: "Ulga IP Box pozwala opodatkować dochód stawką:",
-    options: ["19%", "12%", "9%", "5%"],
-    correctAnswer: "5%"
-  },
-  {
-    id: 128,
-    question: "Czy można łączyć ulgę B+R z ulgą IP Box?",
-    options: ["Nie, nigdy", "Tak, zastosowanie IP Box nie wyklucza korzystania z ulgi B+R (wobec kosztów poniesionych na wytworzenie IP)", "Tak, ale tylko dla dużych firm", "Nie, trzeba wybrać jedną"],
-    correctAnswer: "Tak, zastosowanie IP Box nie wyklucza korzystania z ulgi B+R (wobec kosztów poniesionych na wytworzenie IP)"
-  },
-  {
-    id: 129,
-    question: "Ulga na robotyzację pozwala odliczyć od dochodu:",
-    options: ["100% kosztów robotów", "50% kosztów kwalifikowanych poniesionych na robotyzację", "Całą wartość amortyzacji", "Koszty serwisu przez 10 lat"],
-    correctAnswer: "50% kosztów kwalifikowanych poniesionych na robotyzację"
-  },
-  {
-    id: 130,
-    question: "Limit odliczenia w ramach ulgi na terminal płatniczy dla podatnika zwolnionego z kas fiskalnych wynosi:",
-    options: ["1000 zł", "2500 zł", "5000 zł", "Pełną kwotę wydatków"],
-    correctAnswer: "2500 zł"
-  },
-  {
-    id: 131,
-    question: "Ulga na ekspansję (zwiększenie przychodów) ma limit:",
-    options: ["100 000 zł", "200 000 zł", "1 000 000 zł", "Bez limitu"],
-    correctAnswer: "1 000 000 zł"
-  },
-  {
-    id: 132,
-    question: "Ulga dla pracujących seniorów (PIT-0) dotyczy:",
-    options: ["Kobiet 60+ i mężczyzn 65+, którzy nie pobierają emerytury mimo nabycia uprawnień", "Wszystkich emerytów, którzy dorabiają", "Osób po 70 roku życia", "Tylko osób na etacie"],
-    correctAnswer: "Kobiet 60+ i mężczyzn 65+, którzy nie pobierają emerytury mimo nabycia uprawnień"
-  },
-  {
-    id: 133,
-    question: "Limit przychodów zwolnionych w ramach \"Ulgi dla młodych\" oraz \"Ulgi na powrót\" wynosi:",
-    options: ["30 000 zł", "85 528 zł", "120 000 zł", "1 mln zł"],
-    correctAnswer: "85 528 zł"
-  },
-  {
-    id: 134,
-    question: "Ulga dla rodzin 4+ zwalnia z podatku przychody rodziców wychowujących co najmniej:",
-    options: ["3 dzieci", "4 dzieci", "5 dzieci", "Nie ma takiej ulgi"],
-    correctAnswer: "4 dzieci"
-  },
-  {
-    id: 135,
-    question: "Limit wpłat na IKZE podlegających odliczeniu w 2020 r. wynosił:",
-    options: ["3000 zł", "6 272,40 zł", "10 000 zł", "1,2 średniej krajowej brutto"],
-    correctAnswer: "6 272,40 zł"
-  },
-  {
-    id: 136,
-    question: "Wydatki na cele rehabilitacyjne (np. leki) można odliczyć:",
-    options: ["W pełnej wysokości", "W wysokości różnicy między wydatkami w danym miesiącu a kwotą 100 zł", "Do limitu 2280 zł", "Nie podlegają odliczeniu"],
-    correctAnswer: "W wysokości różnicy między wydatkami w danym miesiącu a kwotą 100 zł"
-  },
-  {
-    id: 137,
-    question: "Limit odliczenia wydatków na używanie samochodu osobowego dla osoby niepełnosprawnej wynosi:",
-    options: ["2280 zł", "760 zł", "5000 zł", "Pełne koszty paliwa"],
-    correctAnswer: "2280 zł"
-  },
-  {
-    id: 138,
-    question: "Ulga na internet pozwala odliczyć maksymalnie:",
-    options: ["500 zł", "760 zł", "1000 zł", "Koszty instalacji"],
-    correctAnswer: "760 zł"
-  },
-  {
-    id: 139,
-    question: "Darowizny na cele kultu religijnego są limitowane (łącznie z innymi darowiznami) do:",
-    options: ["10% dochodu", "6% dochodu", "Bez limitu", "1000 zł"],
-    correctAnswer: "6% dochodu"
-  },
-  {
-    id: 140,
-    question: "Ekwiwalent za oddanie 1 litra krwi dla celów podatkowych wynosi:",
-    options: ["130 zł", "100 zł", "60 zł", "200 zł"],
-    correctAnswer: "130 zł"
-  },
-  {
-    id: 141,
-    question: "Kwota ulgi na trzecie dziecko wynosi miesięcznie:",
-    options: ["92,67 zł", "166,67 zł", "225,00 zł", "500 zł"],
-    correctAnswer: "166,67 zł"
-  },
-  {
-    id: 142,
-    question: "Aby skorzystać z ulgi prorodzinnej na jedno dziecko, łączne dochody małżonków nie mogą przekroczyć:",
-    options: ["56 000 zł", "85 528 zł", "112 000 zł", "Nie ma limitu"],
-    correctAnswer: "112 000 zł"
-  },
-  {
-    id: 143,
-    question: "\"Podatek negatywny\" (zwrot niewykorzystanej ulgi na dzieci) jest limitowany do wysokości:",
-    options: ["Zapłaconych składek na ubezpieczenia społeczne i zdrowotne", "Podatku należnego", "5000 zł", "Kwoty wolnej od podatku"],
-    correctAnswer: "Zapłaconych składek na ubezpieczenia społeczne i zdrowotne"
-  },
-  {
-    id: 144,
-    question: "Termin wpłaty zaliczki na podatek dochodowy (skala/liniowy) za miesiąc grudzień upływa:",
-    options: ["20 grudnia", "20 stycznia następnego roku", "30 kwietnia następnego roku", "Nie wpłaca się zaliczki za grudzień"],
-    correctAnswer: "20 stycznia następnego roku"
-  },
-  {
-    id: 145,
-    question: "\"Kredyt podatkowy\" (zwolnienie z zaliczek dla początkujących) spłaca się przez:",
-    options: ["2 lata", "3 lata", "5 kolejnych lat podatkowych (po 20% dochodu)", "Nie trzeba spłacać"],
-    correctAnswer: "5 kolejnych lat podatkowych (po 20% dochodu)"
-  },
-  {
-    id: 146,
-    question: "Zaliczki kwartalne mogą wpłacać:",
-    options: ["Wszyscy podatnicy", "Tylko duże firmy", "Małe podmioty (przychody < 2 mln euro) oraz rozpoczynający działalność", "Tylko spółki z o.o."],
-    correctAnswer: "Małe podmioty (przychody < 2 mln euro) oraz rozpoczynający działalność"
-  },
-  {
-    id: 147,
-    question: "O wyborze podatku liniowego należy zawiadomić naczelnika US:",
-    options: ["Do 30 kwietnia", "Do 20. dnia miesiąca następującego po miesiącu osiągnięcia pierwszego przychodu (zazwyczaj do 20 lutego)", "Przed rozpoczęciem roku", "W zeznaniu rocznym"],
-    correctAnswer: "Do 20. dnia miesiąca następującego po miesiącu osiągnięcia pierwszego przychodu (zazwyczaj do 20 lutego)"
-  },
-  {
-    id: 148,
-    question: "Stawka ryczałtu 17% dotyczy:",
-    options: ["Handlu", "Usług budowlanych", "Wolnych zawodów (np. prawnik, lekarz)", "Produkcji"],
-    correctAnswer: "Wolnych zawodów (np. prawnik, lekarz)"
-  },
-  {
-    id: 149,
-    question: "Stawka ryczałtu 8,5% (do 100 tys. zł) dotyczy m.in.:",
-    options: ["Przychodów z najmu prywatnego", "Usług budowlanych", "Wolnych zawodów", "Sprzedaży towarów"],
-    correctAnswer: "Przychodów z najmu prywatnego"
-  },
-  {
-    id: 150,
-    question: "Jeśli podatnik na ryczałcie nie prowadzi ewidencji przychodów, organ może nałożyć stawkę sankcyjną:",
-    options: ["75%", "5-krotność stawki podstawowej (ale max 75%)", "50%", "32%"],
-    correctAnswer: "5-krotność stawki podstawowej (ale max 75%)"
-  },
-  {
-    id: 151,
-    question: "Ryczałt płatny jest do:",
-    options: ["10. dnia następnego miesiąca", "20. dnia następnego miesiąca", "25. dnia następnego miesiąca", "Końca miesiąca"],
-    correctAnswer: "20. dnia następnego miesiąca"
-  },
-  {
-    id: 152,
-    question: "Podatnik na ryczałcie może odliczyć od przychodu:",
-    options: ["Koszty uzyskania przychodu", "Składki społeczne i ulgę na internet", "Amortyzację", "Ulgę na dzieci"],
-    correctAnswer: "Składki społeczne i ulgę na internet"
-  },
-  {
-    id: 153,
-    question: "Metoda unikania podwójnego opodatkowania \"odliczenia proporcjonalnego\" oznacza, że:",
-    options: ["Dochód zagraniczny jest zwolniony w Polsce", "Podatek zapłacony za granicą odlicza się od podatku w Polsce (do limitu)", "Nie płaci się podatku nigdzie", "Płaci się podwójny podatek"],
-    correctAnswer: "Podatek zapłacony za granicą odlicza się od podatku w Polsce (do limitu)"
-  },
-  {
-    id: 154,
-    question: "Konwencja MLI wprowadza zmianę metody unikania podwójnego opodatkowania w wielu umowach na:",
-    options: ["Wyłączenie z progresją", "Odliczenie proporcjonalne", "Całkowite zwolnienie", "Raj podatkowy"],
-    correctAnswer: "Odliczenie proporcjonalne"
-  },
-  {
-    id: 155,
-    question: "Ulga abolicyjna służy:",
-    options: ["Umorzeniu zaległości", "Wyrównaniu różnic podatkowych przy metodzie odliczenia proporcjonalnego (dla pracujących za granicą)", "Zwolnieniu firm z VAT", "Likwidacji podatku Belki"],
-    correctAnswer: "Wyrównaniu różnic podatkowych przy metodzie odliczenia proporcjonalnego (dla pracujących za granicą)"
-  },
-  {
-    id: 156,
-    question: "Limit ulgi abolicyjnej (od 2021 r.) wynosi:",
-    options: ["1360 zł", "8000 zł", "Bez limitu", "4000 zł"],
-    correctAnswer: "1360 zł"
-  },
-  {
-    id: 157,
-    question: "Dieta za każdy dzień pobytu za granicą pomniejszająca przychód (dla pracowników) wynosi:",
-    options: ["100% diety", "30% diety", "50% diety", "Nie ma odliczenia"],
-    correctAnswer: "30% diety"
-  },
-  {
-    id: 158,
-    question: "Bieg terminu przedawnienia ulega zawieszeniu w przypadku:",
-    options: ["Wniesienia skargi do sądu administracyjnego", "Zwykłego wezwania do zapłaty", "Zmiany adresu podatnika", "Wyjazdu za granicę"],
-    correctAnswer: "Wniesienia skargi do sądu administracyjnego"
-  },
-  {
-    id: 159,
-    question: "Przerwanie biegu przedawnienia (liczenie od nowa) następuje wskutek:",
-    options: ["Zastosowania środka egzekucyjnego, o którym podatnik został zawiadomiony", "Wniesienia odwołania od decyzji", "Złożenia korekty deklaracji", "Choroby podatnika"],
-    correctAnswer: "Zastosowania środka egzekucyjnego, o którym podatnik został zawiadomiony"
-  },
-  {
-    id: 160,
-    question: "Odsetki za zwłokę nalicza się:",
-    options: ["Od dnia doręczenia decyzji", "Od dnia następującego po dniu upływu terminu płatności", "Tylko na wniosek organu", "Tylko przy kwotach powyżej 1000 zł"],
-    correctAnswer: "Od dnia następującego po dniu upływu terminu płatności"
-  },
-  {
-    id: 161,
-    question: "Stawka odsetek za zwłokę (podstawowa) to:",
-    options: ["200% stopy lombardowej NBP + 2%", "Stopa referencyjna", "Stałe 8%", "Inflacja + 2%"],
-    correctAnswer: "200% stopy lombardowej NBP + 2%"
-  },
-  {
-    id: 162,
-    question: "Opłata prolongacyjna dotyczy:",
-    options: ["Odroczenia terminu płatności lub rozłożenia na raty", "Zapłaty po terminie bez zgody organu", "Kosztów egzekucji", "Wydania zaświadczenia"],
-    correctAnswer: "Odroczenia terminu płatności lub rozłożenia na raty"
-  },
-  {
-    id: 163,
-    question: "Hipoteka przymusowa na nieruchomości podatnika powoduje, że:",
-    options: ["Zobowiązanie nigdy się nie przedawnia (można egzekwować z przedmiotu hipoteki)", "Zobowiązanie wygasa", "Podatnik traci własność", "Odsetki przestają biec"],
-    correctAnswer: "Zobowiązanie nigdy się nie przedawnia (można egzekwować z przedmiotu hipoteki)"
-  },
-  {
-    id: 164,
-    question: "Zastaw skarbowy przysługuje na:",
-    options: ["Nieruchomościach", "Ruchomościach i zbywalnych prawach majątkowych o wartości > 15 500 zł", "Wynagrodzeniu za pracę", "Rachunku bankowym"],
-    correctAnswer: "Ruchomościach i zbywalnych prawach majątkowych o wartości > 15 500 zł"
-  },
-  {
-    id: 165,
-    question: "Decyzja o odpowiedzialności osoby trzeciej (np. członka zarządu) może być wydana:",
-    options: ["Zawsze", "Dopiero gdy egzekucja z majątku podatnika (spółki) jest bezskuteczna", "Zamiast decyzji wobec spółki", "Tylko za zgodą sądu"],
-    correctAnswer: "Dopiero gdy egzekucja z majątku podatnika (spółki) jest bezskuteczna"
-  },
-  {
-    id: 166,
-    question: "Członek zarządu spółki z o.o. może uwolnić się od odpowiedzialności, jeśli:",
-    options: ["Pokaże, że nie miał pieniędzy", "Wskaże mienie spółki, z którego egzekucja jest możliwa, lub zgłosił wniosek o upadłość we właściwym czasie", "Zrezygnował z funkcji w trakcie kadencji (bez wpisu w KRS)", "Nie pobierał wynagrodzenia"],
-    correctAnswer: "Wskaże mienie spółki, z którego egzekucja jest możliwa, lub zgłosił wniosek o upadłość we właściwym czasie"
-  },
-  {
-    id: 167,
-    question: "Banki mają obowiązek informować Szefa KAS o:",
-    options: ["Każdym przelewie powyżej 100 zł", "Założonych i zlikwidowanych rachunkach firmowych", "Stanie konta każdego obywatela", "Wydatkach kartą kredytową"],
-    correctAnswer: "Założonych i zlikwidowanych rachunkach firmowych"
-  },
-  {
-    id: 168,
-    question: "Rachunek (zamiast faktury) wystawia się:",
-    options: ["Na żądanie kupującego, jeśli sprzedawca nie jest VAT-owcem", "Zawsze przy sprzedaży detalicznej", "Tylko dla firm", "Nigdy, rachunki zlikwidowano"],
-    correctAnswer: "Na żądanie kupującego, jeśli sprzedawca nie jest VAT-owcem"
-  },
-  {
-    id: 169,
-    question: "Termin wystawienia rachunku na żądanie to co do zasady:",
-    options: ["7 dni", "14 dni", "30 dni", "Niezwłocznie"],
-    correctAnswer: "7 dni"
-  },
-  {
-    id: 170,
-    question: "Interpretacja indywidualna chroni podatnika:",
-    options: ["W zakresie wszystkich podatków", "Tylko jeśli się do niej zastosował", "Nawet jeśli stan faktyczny był inny", "Tylko przed odpowiedzialnością karną"],
-    correctAnswer: "Tylko jeśli się do niej zastosował"
-  },
-  {
-    id: 171,
-    question: "Danina solidarnościowa (4%) dotyczy nadwyżki dochodów ponad:",
-    options: ["500 tys. zł", "1 mln zł", "2 mln zł", "85 tys. zł"],
-    correctAnswer: "1 mln zł"
-  },
-  {
-    id: 172,
-    question: "Za małego podatnika (dla celów amortyzacji jednorazowej) uważa się firmę, której przychody nie przekroczyły:",
-    options: ["1,2 mln euro", "2 mln euro", "5 mln zł", "10 mln zł"],
-    correctAnswer: "2 mln euro"
-  },
-  {
-    id: 173,
-    question: "Strata z działalności gospodarczej nie może być rozliczona z:",
-    options: ["Dochodami z tej działalności w latach następnych", "Dochodami z umowy o pracę", "Dochodami z najmu (jeśli to działalność)", "Zyskiem z tej samej firmy"],
-    correctAnswer: "Dochodami z umowy o pracę"
-  },
-  {
-    id: 174,
-    question: "Aby skorzystać z 50% stawki odsetek za zwłokę, należy:",
-    options: ["Złożyć korektę deklaracji i zapłacić zaległość w ciągu 7 dni", "Napisać pismo z prośbą", "Być emerytem", "Zapłacić połowę długu"],
-    correctAnswer: "Złożyć korektę deklaracji i zapłacić zaległość w ciągu 7 dni"
-  },
-  {
-    id: 175,
-    question: "Limit zwolnienia z PIT dla osób do 26 r.ż. (85 528 zł) dotyczy przychodów z:",
-    options: ["Umowy o pracę i zlecenia", "Działalności gospodarczej", "Dywidend", "Umowy o dzieło"],
-    correctAnswer: "Umowy o pracę i zlecenia"
-  },
-  {
-    id: 176,
-    question: "Czy emerytura zagraniczna podlega uldze abolicyjnej?",
-    options: ["Tak", "Nie, ulga ta nie obejmuje emerytur", "Tak, jeśli jest wysoka", "Zależy od kraju"],
-    correctAnswer: "Nie, ulga ta nie obejmuje emerytur"
-  },
-  {
-    id: 177,
-    question: "Płatność ryczałtu za grudzień następuje w terminie:",
-    options: ["Do 20 stycznia", "Do 31 stycznia (termin złożenia zeznania)", "Do 30 kwietnia", "Do 20 grudnia"],
-    correctAnswer: "Do 31 stycznia (termin złożenia zeznania)"
-  },
-  {
-    id: 178,
-    question: "Czy przy ryczałcie ewidencjonowanym można rozliczyć się wspólnie z małżonkiem?",
-    options: ["Tak, zawsze", "Nie (chyba że dotyczy tylko najmu prywatnego)", "Tak, jeśli małżonek nie pracuje", "Zależy od decyzji naczelnika US"],
-    correctAnswer: "Nie (chyba że dotyczy tylko najmu prywatnego)"
-  },
-  {
-    id: 179,
-    question: "Stawka 12% w ryczałcie (nadwyżka ponad 100 tys. zł) dotyczy:",
-    options: ["Najmu prywatnego", "Usług IT", "Lekarzy", "Robót budowlanych"],
-    correctAnswer: "Najmu prywatnego"
-  },
-  {
-    id: 180,
-    question: "Kto NIE może wybrać ryczałtu?",
-    options: ["Lekarz", "Prowadzący aptekę", "Budowlaniec", "Tłumacz"],
-    correctAnswer: "Prowadzący aptekę"
-  },
-  {
-    id: 181,
-    question: "Kaucja zwrotna:",
-    options: ["Jest przychodem", "Jest kosztem", "Jest neutralna podatkowo (nie jest przychodem ani kosztem, chyba że przepada)", "Jest opodatkowana VAT"],
-    correctAnswer: "Jest neutralna podatkowo (nie jest przychodem ani kosztem, chyba że przepada)"
-  },
-  {
-    id: 182,
-    question: "Odsetki od lokat firmowych:",
-    options: ["Są przychodem z działalności gospodarczej", "Są zwolnione", "Są opodatkowane ryczałtem 19% (Belka) poza działalnością", "Nie podlegają opodatkowaniu"],
-    correctAnswer: "Są przychodem z działalności gospodarczej"
-  },
-  {
-    id: 183,
-    question: "Różnice kursowe:",
-    options: ["Mogą być przychodem lub kosztem podatkowym", "Są obojętne podatkowo", "Dotyczą tylko dużych firm", "Są opodatkowane stawką 0%"],
-    correctAnswer: "Mogą być przychodem lub kosztem podatkowym"
-  },
-  {
-    id: 184,
-    question: "Termin wpłaty zaliczki na podatek liniowy to:",
-    options: ["10. dzień miesiąca", "20. dzień miesiąca", "Ostatni dzień miesiąca", "Raz na rok"],
-    correctAnswer: "20. dzień miesiąca"
-  },
-  {
-    id: 185,
-    question: "Czy podatnik na podatku liniowym może odliczyć ulgę na dziecko?",
-    options: ["Tak", "Nie", "Tak, jeśli dziecko jest niepełnosprawne", "Tak, ale tylko połowę"],
-    correctAnswer: "Nie"
-  },
-  {
-    id: 186,
-    question: "Składka zdrowotna przy podatku liniowym (od 2022 r.):",
-    options: ["Jest nieodliczalna", "Może być odliczona od dochodu do limitu (11 600 zł)", "Jest odliczana od podatku w całości", "Jest kosztem bez limitu"],
-    correctAnswer: "Może być odliczona od dochodu do limitu (11 600 zł)"
-  },
-  {
-    id: 187,
-    question: "\"Ulga na start\" (kredyt podatkowy - zwolnienie z zaliczek) jest dostępna dla:",
-    options: ["Każdego", "Firm działających min. 2 lata", "Podatników rozpoczynających działalność po raz pierwszy (po spełnieniu warunków)", "Spółek akcyjnych"],
-    correctAnswer: "Podatników rozpoczynających działalność po raz pierwszy (po spełnieniu warunków)"
-  },
-  {
-    id: 188,
-    question: "Warunkiem skorzystania z kredytu podatkowego jest m.in.:",
-    options: ["Osiąganie przychodów min. 1000 euro miesięcznie przed rokiem zwolnienia", "Zatrudnianie 50 osób", "Prowadzenie pełnej księgowości", "Brak dochodów"],
-    correctAnswer: "Osiąganie przychodów min. 1000 euro miesięcznie przed rokiem zwolnienia"
-  },
-  {
-    id: 189,
-    question: "Spłata kredytu podatkowego następuje:",
-    options: ["Jednorazowo po roku", "Przez 5 lat (doliczanie 20% dochodu z roku zwolnienia)", "Jest umarzana", "Przez 10 lat"],
-    correctAnswer: "Przez 5 lat (doliczanie 20% dochodu z roku zwolnienia)"
-  },
-  {
-    id: 190,
-    question: "Zaliczkę uproszczoną (1/12) ustala się na podstawie:",
-    options: ["Dochodów z bieżącego roku", "Dochodu z zeznania za rok poprzedni", "Prognozy podatnika", "Średniej krajowej"],
-    correctAnswer: "Dochodu z zeznania za rok poprzedni"
-  },
-  {
-    id: 191,
-    question: "O wyborze zaliczek uproszczonych informuje się urząd:",
-    options: ["Do 20 lutego", "W zeznaniu rocznym", "Nie trzeba informować", "Do 30 kwietnia"],
-    correctAnswer: "Do 20 lutego"
-  },
-  {
-    id: 192,
-    question: "Przychód z działalności przy metodzie kasowej (KPiR) powstaje w dniu:",
-    options: ["Wpływu środków na konto", "Wydania rzeczy/wykonania usługi, nie później niż wystawienia faktury", "Zaksięgowania faktury", "Podpisania umowy"],
-    correctAnswer: "Wydania rzeczy/wykonania usługi, nie później niż wystawienia faktury"
-  },
-  {
-    id: 193,
-    question: "Wpłaty na PFRON (Państwowy Fundusz Rehabilitacji Osób Niepełnosprawnych):",
-    options: ["Są kosztem podatkowym", "Nie są kosztem podatkowym (NKUP)", "Są odliczane od podatku", "Są przychodem"],
-    correctAnswer: "Nie są kosztem podatkowym (NKUP)"
-  },
-  {
-    id: 194,
-    question: "Podatnik rozliczający się ryczałtem ewidencjonuje:",
-    options: ["Przychody i koszty", "Tylko przychody", "Tylko koszty", "Tylko dochód"],
-    correctAnswer: "Tylko przychody"
-  },
-  {
-    id: 195,
-    question: "Stawka ryczałtu dla usług budowlanych to:",
-    options: ["8,5%", "5,5%", "3,0%", "15%"],
-    correctAnswer: "5,5%"
-  },
-  {
-    id: 196,
-    question: "Stawka ryczałtu dla handlu to:",
-    options: ["3,0%", "5,5%", "10%", "17%"],
-    correctAnswer: "3,0%"
-  },
-  {
-    id: 197,
-    question: "Czy rolnik sprzedający przetworzone produkty (dżemy) może płacić ryczałt?",
-    options: ["Tak, stawkę 2%", "Nie, musi być na zasadach ogólnych", "Tak, stawkę 10%", "Nie, to działalność rolnicza zwolniona"],
-    correctAnswer: "Tak, stawkę 2%"
-  },
-  {
-    id: 198,
-    question: "Jeśli podatnik nie zgłosi wyboru formy opodatkowania, to z mocy prawa jest opodatkowany:",
-    options: ["Ryczałtem", "Podatkiem liniowym", "Skalą podatkową (zasady ogólne)", "Kartą podatkową"],
-    correctAnswer: "Skalą podatkową (zasady ogólne)"
-  },
-  {
-    id: 199,
-    question: "Limit przychodów uprawniający do statusu małego podatnika (wg prezentacji w kontekście zaliczek kwartalnych) to:",
-    options: ["1,2 mln euro", "2 mln euro", "5 mln zł", "200 tys. euro"],
-    correctAnswer: "2 mln euro"
-  },
-  {
-    id: 200,
-    question: "Ulga na nabycie terminala płatniczego przysługuje:",
-    options: ["W roku nabycia i roku następnym", "Tylko w roku nabycia", "Przez 5 lat", "Bezterminowo"],
-    correctAnswer: "W roku nabycia i roku następnym"
+    "correctAnswer": "YES",
+    "generalExplanation": "Dostęp do subskrypcji można nadać innym osobom przez role i RBAC bez udostępniania loginu ani hasła. To standardowy sposób bezpiecznego delegowania uprawnień."
+  },
+  {
+    "id": 45,
+    "question": "Your company stores data in Azure Blob Storage and wants to ensure that this data is automatically encrypted when saved and decrypted only when accessed by authorized users. Which Azure feature provides this capability by default?",
+    "options": [
+      {
+        "text": "Azure Storage Service Encryption (SSE)",
+        "explanation": "To poprawna odpowiedź. Azure Storage Service Encryption domyślnie szyfruje dane zapisywane w Azure Storage i odszyfrowuje je przy autoryzowanym dostępie. Key Vault zarządza sekretami i kluczami, ale nie jest samą domyślną funkcją szyfrowania Blob Storage."
+      },
+      {
+        "text": "Azure Key Vault",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure Storage Service Encryption (SSE). Azure Storage Service Encryption domyślnie szyfruje dane zapisywane w Azure Storage i odszyfrowuje je przy autoryzowanym dostępie. Key Vault zarządza sekretami i kluczami, ale nie jest samą domyślną funkcją szyfrowania Blob Storage."
+      },
+      {
+        "text": "Azure Disk Encryption",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure Storage Service Encryption (SSE). Azure Storage Service Encryption domyślnie szyfruje dane zapisywane w Azure Storage i odszyfrowuje je przy autoryzowanym dostępie. Key Vault zarządza sekretami i kluczami, ale nie jest samą domyślną funkcją szyfrowania Blob Storage."
+      },
+      {
+        "text": "Azure Information Protection",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure Storage Service Encryption (SSE). Azure Storage Service Encryption domyślnie szyfruje dane zapisywane w Azure Storage i odszyfrowuje je przy autoryzowanym dostępie. Key Vault zarządza sekretami i kluczami, ale nie jest samą domyślną funkcją szyfrowania Blob Storage."
+      }
+    ],
+    "correctAnswer": "Azure Storage Service Encryption (SSE)",
+    "generalExplanation": "Azure Storage Service Encryption domyślnie szyfruje dane zapisywane w Azure Storage i odszyfrowuje je przy autoryzowanym dostępie. Key Vault zarządza sekretami i kluczami, ale nie jest samą domyślną funkcją szyfrowania Blob Storage."
+  },
+  {
+    "id": 46,
+    "question": "Which of the following major cloud providers has the largest global footprint in terms of publicly available regions where customers can provision virtual machines and other infrastructure?",
+    "options": [
+      {
+        "text": "Amazon AWS",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Microsoft Azure. Microsoft Azure ma bardzo szeroki globalny zasięg regionów, w których klienci mogą uruchamiać infrastrukturę. W kontekście tego pytania poprawną odpowiedzią jest Azure."
+      },
+      {
+        "text": "Google Cloud Platform",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Microsoft Azure. Microsoft Azure ma bardzo szeroki globalny zasięg regionów, w których klienci mogą uruchamiać infrastrukturę. W kontekście tego pytania poprawną odpowiedzią jest Azure."
+      },
+      {
+        "text": "Microsoft Azure",
+        "explanation": "To poprawna odpowiedź. Microsoft Azure ma bardzo szeroki globalny zasięg regionów, w których klienci mogą uruchamiać infrastrukturę. W kontekście tego pytania poprawną odpowiedzią jest Azure."
+      }
+    ],
+    "correctAnswer": "Microsoft Azure",
+    "generalExplanation": "Microsoft Azure ma bardzo szeroki globalny zasięg regionów, w których klienci mogą uruchamiać infrastrukturę. W kontekście tego pytania poprawną odpowiedzią jest Azure."
+  },
+  {
+    "id": 47,
+    "question": "Which of the following is the primary graphical user interface for managing Azure resources?",
+    "options": [
+      {
+        "text": "PowerShell",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure Portal. Azure Portal jest podstawowym graficznym interfejsem do zarządzania zasobami Azure. PowerShell jest narzędziem skryptowym, Storage Explorer służy głównie do storage, a RDP do zdalnego pulpitu."
+      },
+      {
+        "text": "Azure Portal",
+        "explanation": "To poprawna odpowiedź. Azure Portal jest podstawowym graficznym interfejsem do zarządzania zasobami Azure. PowerShell jest narzędziem skryptowym, Storage Explorer służy głównie do storage, a RDP do zdalnego pulpitu."
+      },
+      {
+        "text": "Azure Storage Explorer",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure Portal. Azure Portal jest podstawowym graficznym interfejsem do zarządzania zasobami Azure. PowerShell jest narzędziem skryptowym, Storage Explorer służy głównie do storage, a RDP do zdalnego pulpitu."
+      },
+      {
+        "text": "Remote Desktop Protocol (RDP)",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Azure Portal. Azure Portal jest podstawowym graficznym interfejsem do zarządzania zasobami Azure. PowerShell jest narzędziem skryptowym, Storage Explorer służy głównie do storage, a RDP do zdalnego pulpitu."
+      }
+    ],
+    "correctAnswer": "Azure Portal",
+    "generalExplanation": "Azure Portal jest podstawowym graficznym interfejsem do zarządzania zasobami Azure. PowerShell jest narzędziem skryptowym, Storage Explorer służy głównie do storage, a RDP do zdalnego pulpitu."
+  },
+  {
+    "id": 48,
+    "question": "A developer wants to deploy a custom web application without managing the underlying operating system or web server. Which Azure service model best meets this requirement?",
+    "options": [
+      {
+        "text": "Platform as a Service (PaaS)",
+        "explanation": "To poprawna odpowiedź. PaaS jest najlepszym modelem dla własnej aplikacji webowej bez zarządzania systemem operacyjnym i serwerem WWW. Dostawca obsługuje platformę, a deweloper wdraża aplikację."
+      },
+      {
+        "text": "Software as a Service (SaaS)",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Platform as a Service (PaaS). PaaS jest najlepszym modelem dla własnej aplikacji webowej bez zarządzania systemem operacyjnym i serwerem WWW. Dostawca obsługuje platformę, a deweloper wdraża aplikację."
+      },
+      {
+        "text": "Functions as a Service (FaaS)",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Platform as a Service (PaaS). PaaS jest najlepszym modelem dla własnej aplikacji webowej bez zarządzania systemem operacyjnym i serwerem WWW. Dostawca obsługuje platformę, a deweloper wdraża aplikację."
+      },
+      {
+        "text": "Infrastructure as a Service (IaaS)",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Platform as a Service (PaaS). PaaS jest najlepszym modelem dla własnej aplikacji webowej bez zarządzania systemem operacyjnym i serwerem WWW. Dostawca obsługuje platformę, a deweloper wdraża aplikację."
+      }
+    ],
+    "correctAnswer": "Platform as a Service (PaaS)",
+    "generalExplanation": "PaaS jest najlepszym modelem dla własnej aplikacji webowej bez zarządzania systemem operacyjnym i serwerem WWW. Dostawca obsługuje platformę, a deweloper wdraża aplikację."
+  },
+  {
+    "id": 49,
+    "question": "Which of the following is a characteristic of the Azure Blob Storage cool access tier?",
+    "options": [
+      {
+        "text": "Cheapest option when it comes to bandwidth costs to access your files",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Much cheaper to store your files than the hot access tier. Cool access tier w Azure Blob Storage obniża koszt przechowywania danych, które są rzadko odczytywane. Dostęp nie jest tak tani jak w hot tier, ale samo magazynowanie jest tańsze."
+      },
+      {
+        "text": "Significant delays in accessing your data, up to several hours",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Much cheaper to store your files than the hot access tier. Cool access tier w Azure Blob Storage obniża koszt przechowywania danych, które są rzadko odczytywane. Dostęp nie jest tak tani jak w hot tier, ale samo magazynowanie jest tańsze."
+      },
+      {
+        "text": "Most expensive option when it comes to bandwidth cost to access your files",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Much cheaper to store your files than the hot access tier. Cool access tier w Azure Blob Storage obniża koszt przechowywania danych, które są rzadko odczytywane. Dostęp nie jest tak tani jak w hot tier, ale samo magazynowanie jest tańsze."
+      },
+      {
+        "text": "Much cheaper to store your files than the hot access tier",
+        "explanation": "To poprawna odpowiedź. Cool access tier w Azure Blob Storage obniża koszt przechowywania danych, które są rzadko odczytywane. Dostęp nie jest tak tani jak w hot tier, ale samo magazynowanie jest tańsze."
+      }
+    ],
+    "correctAnswer": "Much cheaper to store your files than the hot access tier",
+    "generalExplanation": "Cool access tier w Azure Blob Storage obniża koszt przechowywania danych, które są rzadko odczytywane. Dostęp nie jest tak tani jak w hot tier, ale samo magazynowanie jest tańsze."
+  },
+  {
+    "id": 50,
+    "question": "You subscribe to Azure DDoS Protection at the IP protection tier (DDoS Protection Standard), which provides advanced protection for public IPs. Which type of DDoS attack is NOT mitigated by this service?",
+    "options": [
+      {
+        "text": "Network (L3) level attacks",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Application (L7) level attacks. Azure DDoS Protection na poziomie IP chroni przed atakami sieciowymi i transportowymi L3/L4. Nie mityguje ataków aplikacyjnych L7, które wymagają innych mechanizmów ochrony."
+      },
+      {
+        "text": "Transport (L4) level attacks",
+        "explanation": "To nie jest najlepsza odpowiedź w kontekście tego pytania. Poprawna odpowiedź to: Application (L7) level attacks. Azure DDoS Protection na poziomie IP chroni przed atakami sieciowymi i transportowymi L3/L4. Nie mityguje ataków aplikacyjnych L7, które wymagają innych mechanizmów ochrony."
+      },
+      {
+        "text": "Application (L7) level attacks",
+        "explanation": "To poprawna odpowiedź. Azure DDoS Protection na poziomie IP chroni przed atakami sieciowymi i transportowymi L3/L4. Nie mityguje ataków aplikacyjnych L7, które wymagają innych mechanizmów ochrony."
+      }
+    ],
+    "correctAnswer": "Application (L7) level attacks",
+    "generalExplanation": "Azure DDoS Protection na poziomie IP chroni przed atakami sieciowymi i transportowymi L3/L4. Nie mityguje ataków aplikacyjnych L7, które wymagają innych mechanizmów ochrony."
   }
 ];
 
@@ -1464,35 +1188,44 @@ export interface QuestionRange {
 }
 
 export const questionRanges: QuestionRange[] = [
-  { id: 1, label: "Pytania 1 - 10", startId: 1, endId: 10 },
-  { id: 2, label: "Pytania 11 - 20", startId: 11, endId: 20 },
-  { id: 3, label: "Pytania 21 - 30", startId: 21, endId: 30 },
-  { id: 4, label: "Pytania 31 - 40", startId: 31, endId: 40 },
-  { id: 5, label: "Pytania 41 - 50", startId: 41, endId: 50 },
-  { id: 6, label: "Pytania 51 - 60", startId: 51, endId: 60 },
-  { id: 7, label: "Pytania 61 - 70", startId: 61, endId: 70 },
-  { id: 8, label: "Pytania 71 - 80", startId: 71, endId: 80 },
-  { id: 9, label: "Pytania 81 - 90", startId: 81, endId: 90 },
-  { id: 10, label: "Pytania 91 - 100", startId: 91, endId: 100 },
-  { id: 11, label: "Pytania 101 - 110", startId: 101, endId: 110 },
-  { id: 12, label: "Pytania 111 - 120", startId: 111, endId: 120 },
-  { id: 13, label: "Pytania 121 - 130", startId: 121, endId: 130 },
-  { id: 14, label: "Pytania 131 - 140", startId: 131, endId: 140 },
-  { id: 15, label: "Pytania 141 - 150", startId: 141, endId: 150 },
-  { id: 16, label: "Pytania 151 - 160", startId: 151, endId: 160 },
-  { id: 17, label: "Pytania 161 - 170", startId: 161, endId: 170 },
-  { id: 18, label: "Pytania 171 - 180", startId: 171, endId: 180 },
-  { id: 19, label: "Pytania 181 - 190", startId: 181, endId: 190 },
-  { id: 20, label: "Pytania 191 - 200", startId: 191, endId: 200 }
+  {
+    "id": 1,
+    "label": "Questions 1 - 10",
+    "startId": 1,
+    "endId": 10
+  },
+  {
+    "id": 2,
+    "label": "Questions 11 - 20",
+    "startId": 11,
+    "endId": 20
+  },
+  {
+    "id": 3,
+    "label": "Questions 21 - 30",
+    "startId": 21,
+    "endId": 30
+  },
+  {
+    "id": 4,
+    "label": "Questions 31 - 40",
+    "startId": 31,
+    "endId": 40
+  },
+  {
+    "id": 5,
+    "label": "Questions 41 - 50",
+    "startId": 41,
+    "endId": 50
+  }
 ];
 
 export const getQuestionsFromRanges = (selectedRangeIds: number[]): QuizQuestion[] => {
-  // Jeśli nie ma wybranych zakresów, zwróć wszystkie pytania
   if (selectedRangeIds.length === 0) return questions;
 
   const selectedRanges = questionRanges.filter(range => selectedRangeIds.includes(range.id));
 
-  return questions.filter(q =>
-    selectedRanges.some(range => q.id >= range.startId && q.id <= range.endId)
+  return questions.filter(question =>
+    selectedRanges.some(range => question.id >= range.startId && question.id <= range.endId)
   );
 };
