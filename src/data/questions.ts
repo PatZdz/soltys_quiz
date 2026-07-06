@@ -1177,6 +1177,1201 @@ export const questions: QuizQuestion[] = [
     ],
     "correctAnswer": "Application (L7) level attacks",
     "generalExplanation": "Azure DDoS Protection na poziomie IP chroni przed atakami sieciowymi i transportowymi L3/L4. Nie mityguje ataków aplikacyjnych L7, które wymagają innych mechanizmów ochrony."
+  },
+  {
+    "id": 51,
+    "question": "What would be a good reason to have multiple Azure subscriptions?",
+    "options": [
+      {
+        "text": "There is one person/credit card paying for resources, but many people who have accounts in Azure, and you need to separate out resources between clients so that there is absolutely no chance of resources being exposed between them.",
+        "explanation": "Wiele subskrypcji ma sens, gdy trzeba twardo rozdzielić zasoby, dostęp i ryzyko między klientami. Osobne subskrypcje zmniejszają szansę przypadkowego ujawnienia zasobów jednego klienta drugiemu."
+      },
+      {
+        "text": "There is one person/credit card paying for resources, and only one person who logs into Azure to manage the resources, but you want to be able to know which resources are used for which client project.",
+        "explanation": "Do samego oznaczania, które zasoby należą do którego projektu, zwykle wystarczą resource groups, tagi i dobre nazewnictwo. Osobna subskrypcja jest mocniejszym mechanizmem, używanym głównie przy rozdzieleniu dostępu, odpowiedzialności lub billingu."
+      }
+    ],
+    "correctAnswer": "There is one person/credit card paying for resources, but many people who have accounts in Azure, and you need to separate out resources between clients so that there is absolutely no chance of resources being exposed between them.",
+    "generalExplanation": "Wiele subskrypcji ma sens, gdy trzeba twardo rozdzielić zasoby, dostęp i ryzyko między klientami. Osobne subskrypcje zmniejszają szansę przypadkowego ujawnienia zasobów jednego klienta drugiemu."
+  },
+  {
+    "id": 52,
+    "question": "Your organization has several teams deploying resources in Azure. You need a way to apply consistent naming conventions and restrict which regions resources can be created in. Which Azure feature should you use?",
+    "options": [
+      {
+        "text": "Azure Policy",
+        "explanation": "Azure Policy egzekwuje reguły dla zasobów, np. wymagane nazwy, tagi, dozwolone regiony albo typy zasobów. To właściwe narzędzie do narzucania standardów organizacji."
+      },
+      {
+        "text": "Microsoft Purview Compliance Manager",
+        "explanation": "Microsoft Purview Compliance Manager pomaga oceniać zgodność i zarządzać wymaganiami compliance, ale nie blokuje tworzenia zasobów w złych regionach ani nie wymusza nazw zasobów."
+      },
+      {
+        "text": "Azure Advisor",
+        "explanation": "Azure Advisor daje rekomendacje optymalizacyjne, np. kosztowe, wydajnościowe i bezpieczeństwa. Nie służy do egzekwowania reguł podczas tworzenia zasobów."
+      },
+      {
+        "text": "Azure Resource Locks",
+        "explanation": "Azure Resource Locks chronią zasób przed usunięciem lub zmianą. Nie wymuszają konwencji nazw ani listy dozwolonych regionów."
+      }
+    ],
+    "correctAnswer": "Azure Policy",
+    "generalExplanation": "Azure Policy egzekwuje reguły dla zasobów, np. wymagane nazwy, tagi, dozwolone regiony albo typy zasobów. To właściwe narzędzie do narzucania standardów organizacji."
+  },
+  {
+    "id": 53,
+    "question": "An organization notices that several Azure resources in the West Europe region are unavailable. The administrator wants to: Confirm whether Microsoft is aware of an outage in that region, and Receive alerts automatically if similar incidents occur in the future. Which Azure service should they use?",
+    "options": [
+      {
+        "text": "Azure Service Health",
+        "explanation": "Azure Service Health pokazuje incydenty dotyczące usług Azure, wpływ na Twoje zasoby i pozwala ustawić alerty o podobnych problemach w przyszłości."
+      },
+      {
+        "text": "Microsoft Purview Compliance Manager",
+        "explanation": "Microsoft Purview Compliance Manager dotyczy zgodności i zarządzania ryzykiem compliance. Nie informuje o awariach regionalnych usług Azure."
+      },
+      {
+        "text": "Azure Advisor",
+        "explanation": "Azure Advisor rekomenduje usprawnienia zasobów, ale nie jest kanałem komunikacji o awariach regionów Azure."
+      },
+      {
+        "text": "Azure Monitor",
+        "explanation": "Azure Monitor monitoruje Twoje aplikacje i zasoby, ale nie jest najlepszym miejscem do sprawdzania, czy Microsoft potwierdził regionalny incydent usługi."
+      }
+    ],
+    "correctAnswer": "Azure Service Health",
+    "generalExplanation": "Azure Service Health pokazuje incydenty dotyczące usług Azure, wpływ na Twoje zasoby i pozwala ustawić alerty o podobnych problemach w przyszłości."
+  },
+  {
+    "id": 54,
+    "question": "Which Azure service distributes incoming network traffic across multiple identical virtual machines so they share the workload and respond to requests?",
+    "options": [
+      {
+        "text": "Virtual Network",
+        "explanation": "Virtual Network zapewnia prywatną sieć i izolację zasobów w Azure. Sama VNet nie rozdziela ruchu między wiele maszyn wirtualnych."
+      },
+      {
+        "text": "Load Balancer or Application Gateway",
+        "explanation": "Load Balancer rozdziela ruch na warstwie sieciowej, a Application Gateway na warstwie aplikacyjnej. Obie usługi mogą kierować żądania do wielu instancji, aby dzieliły obciążenie."
+      },
+      {
+        "text": "Azure Logic Apps",
+        "explanation": "Azure Logic Apps automatyzuje procesy i integracje między usługami. Nie służy do równoważenia ruchu sieciowego do maszyn wirtualnych."
+      },
+      {
+        "text": "Azure App Services",
+        "explanation": "Azure App Service hostuje aplikacje webowe jako PaaS. Skaluje aplikacje App Service, ale nie jest usługą do rozdzielania ruchu między identyczne VM."
+      }
+    ],
+    "correctAnswer": "Load Balancer or Application Gateway",
+    "generalExplanation": "Load Balancer rozdziela ruch na warstwie sieciowej, a Application Gateway na warstwie aplikacyjnej. Obie usługi mogą kierować żądania do wielu instancji, aby dzieliły obciążenie."
+  },
+  {
+    "id": 55,
+    "question": "How do you get access to services in Private Preview mode?",
+    "options": [
+      {
+        "text": "You must agree to a terms of use first.",
+        "explanation": "Akceptacja warunków może być elementem używania preview, ale private preview zwykle wymaga najpierw uzyskania dostępu lub zaproszenia."
+      },
+      {
+        "text": "You cannot use private preview services.",
+        "explanation": "Private preview nie jest publicznie dostępne, ale nie oznacza, że nikt nie może go używać. Wybrani klienci mogą otrzymać dostęp po zgłoszeniu."
+      },
+      {
+        "text": "You must apply to use them.",
+        "explanation": "Private preview wymaga zgłoszenia lub zaproszenia. Dostawca kontroluje, kto testuje usługę przed publicznym preview albo general availability."
+      },
+      {
+        "text": "They are available in the marketplace. You simply use them.",
+        "explanation": "Usługi private preview nie są po prostu dostępne w marketplace dla każdego. Dostęp jest ograniczony do wybranych uczestników testów."
+      }
+    ],
+    "correctAnswer": "You must apply to use them.",
+    "generalExplanation": "Private preview wymaga zgłoszenia lub zaproszenia. Dostawca kontroluje, kto testuje usługę przed publicznym preview albo general availability."
+  },
+  {
+    "id": 56,
+    "question": "Which concept describes the ability to run your applications and access data in another environment quickly after an outage or failure?",
+    "options": [
+      {
+        "text": "Azure Devops",
+        "explanation": "Azure DevOps pomaga budować, testować i wdrażać oprogramowanie. Może wspierać procesy recovery, ale nie jest samą koncepcją odzyskiwania działania po awarii."
+      },
+      {
+        "text": "Reproducible deployments",
+        "explanation": "Reproducible deployments oznaczają możliwość odtworzenia takiego samego środowiska wdrożeniowego. To pomaga, ale nie obejmuje całej strategii utrzymania działania biznesu po awarii."
+      },
+      {
+        "text": "Business Continuity / Disaster Recovery (BC/DR)",
+        "explanation": "Business Continuity i Disaster Recovery opisują zdolność utrzymania lub szybkiego odtworzenia działania aplikacji oraz dostępu do danych po awarii."
+      },
+      {
+        "text": "Azure Policy",
+        "explanation": "Azure Policy egzekwuje reguły governance dla zasobów. Nie opisuje zdolności uruchomienia aplikacji w innym środowisku po awarii."
+      }
+    ],
+    "correctAnswer": "Business Continuity / Disaster Recovery (BC/DR)",
+    "generalExplanation": "Business Continuity i Disaster Recovery opisują zdolność utrzymania lub szybkiego odtworzenia działania aplikacji oraz dostępu do danych po awarii."
+  },
+  {
+    "id": 57,
+    "question": "Administrators use Remote Desktop Protocol (RDP) to access Windows VMs and SSH to access Linux VMs. What is the recommended approach to secure these management protocols in Azure?",
+    "options": [
+      {
+        "text": "Ensure strong passwords on your Windows admin accounts",
+        "explanation": "Silne hasła są ważne, ale publicznie otwarte RDP nadal jest dużym ryzykiem. Ataki brute force i skanowanie internetu często celują właśnie w takie porty."
+      },
+      {
+        "text": "Do not enable SSH access for Linux servers",
+        "explanation": "Wyłączenie SSH całkowicie utrudnia lub uniemożliwia administrację Linux VM. Lepszym podejściem jest bezpieczna ścieżka dostępu, nie ślepe wyłączanie zarządzania."
+      },
+      {
+        "text": "Disable RDP access using the Windows Services control panel admin tool",
+        "explanation": "Wyłączenie usługi RDP może odciąć administrację Windows VM. Zalecenie dotyczy ograniczenia publicznego dostępu, np. przez Bastion, jump box lub ścisłe zakresy IP."
+      },
+      {
+        "text": "Do not allow public Internet access over the RDP and SSH ports directly to the server. Instead use a secure server like Bastion to control access to the servers behind.",
+        "explanation": "Najbezpieczniej nie wystawiać RDP i SSH bezpośrednio do internetu. Azure Bastion lub jump box kontroluje dostęp i ogranicza powierzchnię ataku."
+      }
+    ],
+    "correctAnswer": "Do not allow public Internet access over the RDP and SSH ports directly to the server. Instead use a secure server like Bastion to control access to the servers behind.",
+    "generalExplanation": "Najbezpieczniej nie wystawiać RDP i SSH bezpośrednio do internetu. Azure Bastion lub jump box kontroluje dostęp i ogranicza powierzchnię ataku."
+  },
+  {
+    "id": 58,
+    "question": "A company runs two web servers in Azure across different Availability Zones in the same region. Which benefit does this configuration primarily provide?",
+    "options": [
+      {
+        "text": "Simplified network routing",
+        "explanation": "Availability Zones mogą wymagać przemyślanego routingu, ale ich główna wartość nie polega na uproszczeniu sieci. Chodzi o odporność na awarię lokalizacji."
+      },
+      {
+        "text": "Fault tolerance against datacenter failure",
+        "explanation": "Różne Availability Zones są fizycznie oddzielone w tym samym regionie. Jeśli jedno centrum danych ma awarię, druga strefa może nadal obsługiwać aplikację."
+      },
+      {
+        "text": "Lower latency",
+        "explanation": "Strefy dostępności nie są przede wszystkim mechanizmem obniżania opóźnień. Czasem mogą nawet dodać trochę latencji między strefami."
+      },
+      {
+        "text": "Reduced subscription costs",
+        "explanation": "Uruchamianie zasobów w wielu strefach zwykle nie zmniejsza kosztów subskrypcji. Często płaci się za dodatkową redundancję i większą niezawodność."
+      }
+    ],
+    "correctAnswer": "Fault tolerance against datacenter failure",
+    "generalExplanation": "Różne Availability Zones są fizycznie oddzielone w tym samym regionie. Jeśli jedno centrum danych ma awarię, druga strefa może nadal obsługiwać aplikację."
+  },
+  {
+    "id": 59,
+    "question": "Your organization needs to ensure that all Azure resources comply with internal naming conventions and can only be deployed in approved regions. Which Azure service should you use?",
+    "options": [
+      {
+        "text": "Azure Resource Manager (ARM)",
+        "explanation": "Azure Resource Manager zarządza wdrażaniem i cyklem życia zasobów, ale sam nie jest mechanizmem wymuszania polityk nazw i regionów."
+      },
+      {
+        "text": "Microsoft Purview Governance Portal",
+        "explanation": "Microsoft Purview Governance Portal dotyczy zarządzania danymi i ich ładem. Nie egzekwuje reguł tworzenia zasobów Azure, takich jak nazwy i regiony."
+      },
+      {
+        "text": "Microsoft Defender for Cloud",
+        "explanation": "Microsoft Defender for Cloud skupia się na bezpieczeństwie, rekomendacjach i ochronie przed zagrożeniami. Nie jest narzędziem governance do wymuszania naming convention."
+      },
+      {
+        "text": "Azure Policy",
+        "explanation": "Azure Policy pozwala wymuszać reguły zgodności dla zasobów, np. dozwolone regiony, wymagane tagi i standardy konfiguracji."
+      }
+    ],
+    "correctAnswer": "Azure Policy",
+    "generalExplanation": "Azure Policy pozwala wymuszać reguły zgodności dla zasobów, np. dozwolone regiony, wymagane tagi i standardy konfiguracji."
+  },
+  {
+    "id": 60,
+    "question": "Which of the following scenarios would Azure Policy be a recommended method for enforcement?",
+    "options": [
+      {
+        "text": "Require a virtual machine to always update to the latest security patches",
+        "explanation": "Aktualizacje poprawek bezpieczeństwa VM lepiej obsługują narzędzia patch management, Azure Update Manager lub automatyzacja. Azure Policy może audytować stan, ale nie jest głównym mechanizmem samego patchowania."
+      },
+      {
+        "text": "Allow only one specific roles of users to have access to a resource group",
+        "explanation": "Dostęp użytkowników do resource group powinien być kontrolowany przez RBAC. Azure Policy dotyczy zgodności zasobów, a nie przypisywania ról użytkownikom."
+      },
+      {
+        "text": "Add an additional prompt when creating a resource without a specific tag to ask the user if they are really sure they want to continue?",
+        "explanation": "Azure Policy nie wyświetla interaktywnych pytań użytkownikowi podczas tworzenia zasobu. Może blokować, audytować albo modyfikować wdrożenie zgodnie z regułami."
+      },
+      {
+        "text": "Prevent certain Azure Virtual Machine instance types from being used in a resource group",
+        "explanation": "Azure Policy dobrze nadaje się do blokowania niedozwolonych typów i rozmiarów VM w resource group lub subskrypcji."
+      }
+    ],
+    "correctAnswer": "Prevent certain Azure Virtual Machine instance types from being used in a resource group",
+    "generalExplanation": "Azure Policy dobrze nadaje się do blokowania niedozwolonych typów i rozmiarów VM w resource group lub subskrypcji."
+  },
+  {
+    "id": 61,
+    "question": "What is the Azure Service Level Agreement (SLA) uptime guarantee for two or more Virtual Machines deployed in the same Availability Set?",
+    "options": [
+      {
+        "text": "99.95%",
+        "explanation": "Dwie lub więcej VM w tym samym Availability Set mają SLA 99,95%. Availability Set rozdziela VM na domeny awarii i aktualizacji."
+      },
+      {
+        "text": "99.99%",
+        "explanation": "99,99% dotyczy scenariusza z maszynami rozłożonymi między Availability Zones, a nie tylko Availability Set."
+      },
+      {
+        "text": "99.90%",
+        "explanation": "99,90% jest niższą wartością niż SLA dla co najmniej dwóch VM w Availability Set."
+      },
+      {
+        "text": "100%",
+        "explanation": "100% SLA nie jest oferowane dla tego scenariusza. Azure podaje konkretne procenty i warunki SLA."
+      }
+    ],
+    "correctAnswer": "99.95%",
+    "generalExplanation": "Dwie lub więcej VM w tym samym Availability Set mają SLA 99,95%. Availability Set rozdziela VM na domeny awarii i aktualizacji."
+  },
+  {
+    "id": 62,
+    "question": "What is a primary benefit of using a command-line tool (PowerShell or the Azure CLI) instead of the Azure portal?",
+    "options": [
+      {
+        "text": "Automation",
+        "explanation": "Największą zaletą CLI i PowerShell jest automatyzacja. Skrypty pozwalają powtarzać te same operacje szybko i spójnie."
+      },
+      {
+        "text": "Quicker to deploy VMs",
+        "explanation": "CLI może przyspieszyć wdrożenia po przygotowaniu skryptu, ale samo jednorazowe kliknięcie VM w portalu bywa podobnie szybkie. Kluczowa przewaga to powtarzalność i automatyzacja."
+      },
+      {
+        "text": "Cheaper",
+        "explanation": "Użycie CLI nie sprawia, że Azure jest tańszy. Koszt zależy od zasobów, regionów, SKU i czasu użycia."
+      }
+    ],
+    "correctAnswer": "Automation",
+    "generalExplanation": "Największą zaletą CLI i PowerShell jest automatyzacja. Skrypty pozwalają powtarzać te same operacje szybko i spójnie."
+  },
+  {
+    "id": 63,
+    "question": "Your company hosts a global web application that serves large media files and static website assets. Users in different regions report slow loading times. How can Azure Content Delivery Network (CDN) improve performance for these users?",
+    "options": [
+      {
+        "text": "By encrypting traffic between users and Azure Storage",
+        "explanation": "Szyfrowanie ruchu jest ważne, ale nie jest podstawowym mechanizmem CDN poprawiającym szybkość ładowania statycznych plików."
+      },
+      {
+        "text": "By caching static content such as images, videos, and scripts at edge locations closer to users",
+        "explanation": "CDN cacheuje statyczne treści na edge locations bliżej użytkowników. Dzięki temu obrazy, filmy i skrypty są pobierane szybciej z najbliższego punktu."
+      },
+      {
+        "text": "By increasing the virtual machine size that hosts the web application",
+        "explanation": "Zwiększenie rozmiaru VM może poprawić moc serwera źródłowego, ale nie skraca dystansu geograficznego między użytkownikiem a treścią."
+      },
+      {
+        "text": "By moving the application’s compute resources into each user’s local region",
+        "explanation": "Przeniesienie compute do każdego regionu byłoby kosztowne i złożone. CDN rozwiązuje problem statycznych zasobów przez dystrybucję cache bez kopiowania całej aplikacji."
+      }
+    ],
+    "correctAnswer": "By caching static content such as images, videos, and scripts at edge locations closer to users",
+    "generalExplanation": "CDN cacheuje statyczne treści na edge locations bliżej użytkowników. Dzięki temu obrazy, filmy i skrypty są pobierane szybciej z najbliższego punktu."
+  },
+  {
+    "id": 64,
+    "question": "A company needs secure, private communication between its virtual machines in different subnets within the same Azure region. Which Azure component enables this?",
+    "options": [
+      {
+        "text": "Public IP addresses",
+        "explanation": "Public IP umożliwia dostęp z internetu. Nie jest mechanizmem prywatnej komunikacji między VM w subnets."
+      },
+      {
+        "text": "Virtual Network (VNet)",
+        "explanation": "Virtual Network zapewnia prywatną przestrzeń sieciową w Azure, w której VM w różnych podsieciach mogą komunikować się bez wychodzenia do publicznego internetu."
+      },
+      {
+        "text": "ExpressRoute",
+        "explanation": "ExpressRoute łączy sieć lokalną z Azure prywatnym połączeniem operatorskim. Nie jest potrzebny do komunikacji VM między subnetami w tym samym regionie."
+      },
+      {
+        "text": "VPN Gateway",
+        "explanation": "VPN Gateway łączy sieci przez tunel VPN, np. on-premises z Azure. Nie jest podstawowym elementem komunikacji między subnetami w jednej VNet."
+      }
+    ],
+    "correctAnswer": "Virtual Network (VNet)",
+    "generalExplanation": "Virtual Network zapewnia prywatną przestrzeń sieciową w Azure, w której VM w różnych podsieciach mogą komunikować się bez wychodzenia do publicznego internetu."
+  },
+  {
+    "id": 65,
+    "question": "Your company operates in the European Union and must ensure that customer data stored in Azure meets strict privacy and data protection requirements. Which Azure tool or resource helps you understand how Microsoft services comply with global standards such as GDPR and ISO 27001?",
+    "options": [
+      {
+        "text": "Microsoft Defender for Cloud",
+        "explanation": "Microsoft Defender for Cloud ocenia bezpieczeństwo i chroni zasoby, ale nie jest głównym narzędziem do śledzenia zgodności z GDPR czy ISO 27001."
+      },
+      {
+        "text": "Microsoft Purview Compliance Manager",
+        "explanation": "Microsoft Purview Compliance Manager pomaga zrozumieć i śledzić zgodność z regulacjami oraz standardami, takimi jak GDPR i ISO 27001."
+      },
+      {
+        "text": "Azure Monitor",
+        "explanation": "Azure Monitor zbiera metryki i logi. Nie służy do interpretowania zgodności usług Microsoft z globalnymi standardami prywatności."
+      },
+      {
+        "text": "Azure Policy",
+        "explanation": "Azure Policy wymusza reguły na zasobach Azure. Może wspierać compliance technicznie, ale nie jest narzędziem do analizowania zgodności Microsoft z normami."
+      }
+    ],
+    "correctAnswer": "Microsoft Purview Compliance Manager",
+    "generalExplanation": "Microsoft Purview Compliance Manager pomaga zrozumieć i śledzić zgodność z regulacjami oraz standardami, takimi jak GDPR i ISO 27001."
+  },
+  {
+    "id": 66,
+    "question": "A startup is experimenting with Azure but wants to avoid unexpected costs while testing services. They plan to deploy and delete resources frequently. Which statement best describes how Azure charges for resource usage?",
+    "options": [
+      {
+        "text": "Azure charges only for the resources that are provisioned and running.",
+        "explanation": "Azure nalicza opłaty za używane i zaalokowane zasoby zgodnie z ich modelem rozliczania. Jeśli zasób działa lub jest provisioned, zwykle generuje koszt."
+      },
+      {
+        "text": "Azure charges for inactive virtual machines at a reduced rate.",
+        "explanation": "Nieaktywne VM mogą nadal generować koszty, zwłaszcza za dyski i zasoby zarezerwowane. Samo wyłączenie z poziomu OS nie zawsze zatrzymuje billing compute."
+      },
+      {
+        "text": "Azure requires a one-time setup fee when creating a new account.",
+        "explanation": "Standardowo Azure nie wymaga jednorazowej opłaty za utworzenie konta. Koszty wynikają z użycia usług."
+      },
+      {
+        "text": "Azure bills a fixed monthly fee for each subscription, even if no resources are used.",
+        "explanation": "Subskrypcja sama w sobie zwykle nie ma stałej miesięcznej opłaty tylko za istnienie. Płaci się za utworzone i używane zasoby."
+      }
+    ],
+    "correctAnswer": "Azure charges only for the resources that are provisioned and running.",
+    "generalExplanation": "Azure nalicza opłaty za używane i zaalokowane zasoby zgodnie z ich modelem rozliczania. Jeśli zasób działa lub jest provisioned, zwykle generuje koszt."
+  },
+  {
+    "id": 67,
+    "question": "What is the primary purpose of Microsoft Purview in Azure?",
+    "options": [
+      {
+        "text": "To offer a unified data governance solution for managing on-premises, multi-cloud, and SaaS data.",
+        "explanation": "Microsoft Purview zapewnia ujednolicone zarządzanie danymi, katalogowanie, klasyfikację i governance dla danych on-premises, multi-cloud i SaaS."
+      },
+      {
+        "text": "To enable real-time data analytics and visualization.",
+        "explanation": "Analiza i wizualizacja danych w czasie rzeczywistym to raczej domena narzędzi analitycznych, takich jak Power BI, Synapse lub usługi streamingowe."
+      },
+      {
+        "text": "To automate the deployment of infrastructure as code (IaC).",
+        "explanation": "Infrastructure as Code automatyzuje wdrażanie infrastruktury przez szablony i kod, np. ARM/Bicep/Terraform. To nie jest główny cel Purview."
+      },
+      {
+        "text": "To provide virtual machine scalability and performance monitoring.",
+        "explanation": "Skalowanie VM i monitorowanie wydajności dotyczy usług compute oraz monitoringu. Purview koncentruje się na danych i ich governance."
+      }
+    ],
+    "correctAnswer": "To offer a unified data governance solution for managing on-premises, multi-cloud, and SaaS data.",
+    "generalExplanation": "Microsoft Purview zapewnia ujednolicone zarządzanie danymi, katalogowanie, klasyfikację i governance dla danych on-premises, multi-cloud i SaaS."
+  },
+  {
+    "id": 68,
+    "question": "Which of the following is a disadvantage of using capital expenditures (CapEx) instead of operating expenditures (OpEx)?",
+    "options": [
+      {
+        "text": "You must wait over a period of years to depreciate that investment on your taxes",
+        "explanation": "CapEx oznacza duży zakup inwestycyjny, którego koszt księgowo rozlicza się i amortyzuje przez lata, zamiast odliczać natychmiast jako bieżący wydatek."
+      },
+      {
+        "text": "You are not guaranteed to make a profit",
+        "explanation": "Brak gwarancji zysku dotyczy prawie każdej inwestycji i działalności. Nie jest specyficzną wadą CapEx względem OpEx."
+      },
+      {
+        "text": "It does not require a lot of up front money",
+        "explanation": "CapEx zwykle wymaga dużych pieniędzy z góry, np. zakup sprzętu. Stwierdzenie, że nie wymaga dużego wkładu początkowego, jest odwrotnością typowej cechy CapEx."
+      },
+      {
+        "text": "You can deduct expenses as they occur",
+        "explanation": "Możliwość odliczania wydatków na bieżąco jest cechą OpEx, a nie CapEx. Dlatego to nie jest wada CapEx, tylko zaleta modelu operacyjnego."
+      }
+    ],
+    "correctAnswer": "You must wait over a period of years to depreciate that investment on your taxes",
+    "generalExplanation": "CapEx oznacza duży zakup inwestycyjny, którego koszt księgowo rozlicza się i amortyzuje przez lata, zamiast odliczać natychmiast jako bieżący wydatek."
+  },
+  {
+    "id": 69,
+    "question": "Besides Azure Service Health, where else can you find out any issues that affect the Azure global network that affect you?",
+    "options": [
+      {
+        "text": "Azure will email you",
+        "explanation": "Azure może wysyłać powiadomienia, jeśli skonfigurujesz alerty, ale nie jest to osobne miejsce do samodzielnego sprawdzania stanu konkretnej VM."
+      },
+      {
+        "text": "Install the Azure app on your phone",
+        "explanation": "Aplikacja mobilna Azure może pomagać w zarządzaniu i powiadomieniach, ale nie jest głównym miejscem diagnostyki stanu zasobu."
+      },
+      {
+        "text": "Azure Updates Blog",
+        "explanation": "Azure Updates Blog informuje o nowościach i zmianach w usługach, ale nie jest najlepszym miejscem do sprawdzania bieżącego wpływu incydentu na konkretną VM."
+      },
+      {
+        "text": "Each Virtual Machine has a Resource Health blade",
+        "explanation": "Resource Health dla VM pokazuje stan zdrowia konkretnego zasobu i informuje, czy problem platformy Azure wpływa na tę maszynę."
+      }
+    ],
+    "correctAnswer": "Each Virtual Machine has a Resource Health blade",
+    "generalExplanation": "Resource Health dla VM pokazuje stan zdrowia konkretnego zasobu i informuje, czy problem platformy Azure wpływa na tę maszynę."
+  },
+  {
+    "id": 70,
+    "question": "Which Azure pricing model allows you to pay for compute resources by the second, with no long-term commitment?",
+    "options": [
+      {
+        "text": "Spot Pricing",
+        "explanation": "Spot Pricing pozwala tanio używać niewykorzystanej pojemności, ale VM mogą zostać odebrane przez Azure. Nie jest to podstawowy model bez zobowiązań dla stabilnego compute."
+      },
+      {
+        "text": "Enterprise Agreement",
+        "explanation": "Enterprise Agreement to umowa zakupowa dla organizacji. Nie opisuje płatności za compute co sekundę bez długoterminowego zobowiązania."
+      },
+      {
+        "text": "Pay-As-You-Go",
+        "explanation": "Pay-As-You-Go pozwala płacić za faktyczne użycie zasobów bez długoterminowej rezerwacji, często z rozliczaniem bardzo granularnym."
+      },
+      {
+        "text": "Reserved Instances",
+        "explanation": "Reserved Instances wymagają zobowiązania na 1 lub 3 lata w zamian za zniżkę. To przeciwieństwo braku długoterminowego zobowiązania."
+      }
+    ],
+    "correctAnswer": "Pay-As-You-Go",
+    "generalExplanation": "Pay-As-You-Go pozwala płacić za faktyczne użycie zasobów bez długoterminowej rezerwacji, często z rozliczaniem bardzo granularnym."
+  },
+  {
+    "id": 71,
+    "question": "Which of the following is a good example of a Hybrid cloud?",
+    "options": [
+      {
+        "text": "Your code is a mobile app that runs on iOS and Android phones, but it uses a database in the cloud.",
+        "explanation": "Aplikacja mobilna korzystająca z bazy w chmurze używa chmury, ale nie opisuje połączenia prywatnej infrastruktury organizacji z public cloud."
+      },
+      {
+        "text": "Technology that allows you to grow living tissue on top of an exoskeleton, making Terminators impossible to spot among humans.",
+        "explanation": "To żartobliwy opis z science fiction, a nie model wdrożenia chmurowego. Hybrid cloud dotyczy mieszania środowisk lokalnych i public cloud."
+      },
+      {
+        "text": "Your users are inside your corporate network but your applications and data are in the cloud.",
+        "explanation": "Użytkownicy w sieci firmowej i aplikacje w chmurze mogą oznaczać cloud-hosted app, ale samo to nie pokazuje, że lokalne serwery lub zasoby współpracują z chmurą jako jedno rozwiązanie."
+      },
+      {
+        "text": "A server runs in your own environment, but places files in the cloud so that it can extend the amount of storage it has access to.",
+        "explanation": "Serwer lokalny rozszerzający storage przez chmurę to dobry przykład hybrid cloud: część rozwiązania działa on-premises, a część korzysta z public cloud."
+      }
+    ],
+    "correctAnswer": "A server runs in your own environment, but places files in the cloud so that it can extend the amount of storage it has access to.",
+    "generalExplanation": "Serwer lokalny rozszerzający storage przez chmurę to dobry przykład hybrid cloud: część rozwiązania działa on-premises, a część korzysta z public cloud."
+  },
+  {
+    "id": 72,
+    "question": "A company hosts a web application on Azure App Service (PaaS). They’re unsure which security tasks are their responsibility and which are Microsoft’s. Which action is the company responsible for?",
+    "options": [
+      {
+        "text": "Maintaining physical security of Azure datacenters",
+        "explanation": "Fizyczne bezpieczeństwo centrów danych Azure jest odpowiedzialnością Microsoft. Klient korzystający z App Service nie zarządza budynkami ani kontrolą dostępu do data center."
+      },
+      {
+        "text": "Patching the underlying operating system",
+        "explanation": "W modelu PaaS Microsoft zarządza bazowym systemem operacyjnym i jego patchowaniem. Klient nie aktualizuje OS pod App Service."
+      },
+      {
+        "text": "Securing the application code from vulnerabilities",
+        "explanation": "Kod aplikacji należy do klienta, więc klient odpowiada za podatności, walidację danych, sekrety, zależności i bezpieczne praktyki programistyczne."
+      },
+      {
+        "text": "Applying network isolation between Azure tenants",
+        "explanation": "Izolacja sieci między tenantami Azure jest odpowiedzialnością platformy Microsoft. Klient nie zarządza izolacją infrastruktury wielu tenantów."
+      }
+    ],
+    "correctAnswer": "Securing the application code from vulnerabilities",
+    "generalExplanation": "Kod aplikacji należy do klienta, więc klient odpowiada za podatności, walidację danych, sekrety, zależności i bezpieczne praktyki programistyczne."
+  },
+  {
+    "id": 73,
+    "question": "In what way does Multi-Factor Authentication (MFA) increase the security of a user account?",
+    "options": [
+      {
+        "text": "It requires the user to possess something like their phone to read an SMS, use a mobile app, or biometric identification.",
+        "explanation": "MFA wzmacnia logowanie, wymagając dodatkowego czynnika, np. telefonu, aplikacji Authenticator, SMS lub biometrii. Samo hasło nie wystarcza."
+      },
+      {
+        "text": "It requires users to be approved before they can log in for the first time.",
+        "explanation": "Zatwierdzenie użytkownika przed pierwszym logowaniem to proces administracyjny lub access workflow. Nie jest definicją MFA."
+      },
+      {
+        "text": "It requires single sign-on functionality",
+        "explanation": "Single Sign-On upraszcza dostęp do wielu aplikacji po jednym logowaniu. MFA dotyczy dodatkowej weryfikacji tożsamości, a nie samego SSO."
+      },
+      {
+        "text": "It doesn't. Multi-Factor Authentication is more about access and authentication than account security.",
+        "explanation": "MFA bezpośrednio zwiększa bezpieczeństwo konta, bo utrudnia przejęcie dostępu nawet przy znanym haśle."
+      }
+    ],
+    "correctAnswer": "It requires the user to possess something like their phone to read an SMS, use a mobile app, or biometric identification.",
+    "generalExplanation": "MFA wzmacnia logowanie, wymagając dodatkowego czynnika, np. telefonu, aplikacji Authenticator, SMS lub biometrii. Samo hasło nie wystarcza."
+  },
+  {
+    "id": 74,
+    "question": "Which of the following is NOT a typical characteristic of Azure Functions?",
+    "options": [
+      {
+        "text": "They are designed for long-running backend batch applications that run continuously",
+        "explanation": "Azure Functions są przeznaczone głównie do krótkich, zdarzeniowych zadań. Długotrwale działające backendy batch są typowo lepsze dla innych usług."
+      },
+      {
+        "text": "On the consumption plan, there is a monthly free grant, so small workloads can potentially cost nothing",
+        "explanation": "Plan consumption ma darmową pulę miesięczną i płatność za wykonania oraz czas działania, więc małe workloady mogą kosztować bardzo mało albo nic."
+      },
+      {
+        "text": "You can edit function code directly in the Azure portal for quick testing and troubleshooting",
+        "explanation": "Funkcje można szybko edytować i testować w portalu, co jest wygodne do prostych zmian i diagnostyki."
+      },
+      {
+        "text": "Functions can be triggered by Azure events (for example, when a new file is added to a Storage blob container)",
+        "explanation": "Azure Functions mogą być wyzwalane zdarzeniami, np. dodaniem pliku do Blob Storage, wiadomością w kolejce albo wywołaniem HTTP."
+      }
+    ],
+    "correctAnswer": "They are designed for long-running backend batch applications that run continuously",
+    "generalExplanation": "Azure Functions są przeznaczone głównie do krótkich, zdarzeniowych zadań. Długotrwale działające backendy batch są typowo lepsze dla innych usług."
+  },
+  {
+    "id": 75,
+    "question": "Which optional security feature does Azure Application Gateway provide that the Azure Load Balancer does not?",
+    "options": [
+      {
+        "text": "Web Application Firewall (or WAF)",
+        "explanation": "Application Gateway może mieć Web Application Firewall, który chroni aplikacje HTTP/HTTPS przed atakami webowymi. Azure Load Balancer nie oferuje WAF."
+      },
+      {
+        "text": "Azure AD Advanced Information Protection",
+        "explanation": "Azure Information Protection dotyczy klasyfikowania i ochrony informacji. Nie jest funkcją Application Gateway."
+      },
+      {
+        "text": "Advanced DDoS Protection",
+        "explanation": "Advanced DDoS Protection chroni przed atakami DDoS i jest osobną usługą/warstwą ochrony. Nie jest specyficzną funkcją Application Gateway względem Load Balancer."
+      },
+      {
+        "text": "Multi-Factor Authentication",
+        "explanation": "Multi-Factor Authentication dotyczy logowania użytkowników. Nie jest funkcją sieciowego Application Gateway."
+      }
+    ],
+    "correctAnswer": "Web Application Firewall (or WAF)",
+    "generalExplanation": "Application Gateway może mieć Web Application Firewall, który chroni aplikacje HTTP/HTTPS przed atakami webowymi. Azure Load Balancer nie oferuje WAF."
+  },
+  {
+    "id": 76,
+    "question": "A development team runs test environments in Azure that are used only eight hours per day, Monday through Friday. They want to minimize cost while keeping the environments available during working hours. Which combination of pricing and resource management practices should they use?",
+    "options": [
+      {
+        "text": "Reserved Instances with 3-year terms",
+        "explanation": "Reserved Instances na 3 lata są dobre dla stabilnych, stale używanych zasobów. Dla środowisk testowych działających tylko w godzinach pracy mogą być zbyt sztywne."
+      },
+      {
+        "text": "Spot VMs for all environments",
+        "explanation": "Spot VMs mogą być tanie, ale mogą zostać odebrane, gdy Azure potrzebuje pojemności. To ryzykowne dla środowisk, które mają być dostępne w ustalonych godzinach."
+      },
+      {
+        "text": "Premium-tier virtual machines with continuous operation",
+        "explanation": "Premium-tier VM działające bez przerwy zwiększą koszt, a scenariusz wymaga oszczędzania przez wyłączanie poza godzinami pracy."
+      },
+      {
+        "text": "Pay-as-you-go pricing with automation to stop VMs after hours",
+        "explanation": "Pay-as-you-go z automatycznym zatrzymywaniem VM po godzinach pozwala płacić za realny czas użycia i ograniczyć koszt środowisk testowych."
+      }
+    ],
+    "correctAnswer": "Pay-as-you-go pricing with automation to stop VMs after hours",
+    "generalExplanation": "Pay-as-you-go z automatycznym zatrzymywaniem VM po godzinach pozwala płacić za realny czas użycia i ograniczyć koszt środowisk testowych."
+  },
+  {
+    "id": 77,
+    "question": "Your company requires a disaster recovery strategy ensuring that if one Azure region becomes unavailable, resources and data remain accessible. How does Azure help meet this requirement?",
+    "options": [
+      {
+        "text": "By requiring customers to manually copy data between regions",
+        "explanation": "Ręczne kopiowanie danych między regionami jest możliwe, ale nie jest główną zaletą Azure w DR. Azure oferuje usługi replikacji i region pairs."
+      },
+      {
+        "text": "By providing unlimited storage replication across any global region",
+        "explanation": "Azure nie zapewnia dowolnej, nieograniczonej replikacji storage do każdego regionu bez ograniczeń. Replikacja ma konkretne typy, koszty i zasady."
+      },
+      {
+        "text": "By replicating data automatically to a paired region within the same geography",
+        "explanation": "Azure używa par regionów w tej samej geografii i oferuje mechanizmy replikacji danych, co wspiera dostępność oraz disaster recovery."
+      },
+      {
+        "text": "By mirroring resources between different tenants",
+        "explanation": "Mirroring między różnymi tenantami nie jest standardowym mechanizmem regionalnego disaster recovery dla zasobów i danych."
+      }
+    ],
+    "correctAnswer": "By replicating data automatically to a paired region within the same geography",
+    "generalExplanation": "Azure używa par regionów w tej samej geografii i oferuje mechanizmy replikacji danych, co wspiera dostępność oraz disaster recovery."
+  },
+  {
+    "id": 78,
+    "question": "Which free Azure network security feature evaluates traffic entering or leaving a subnet against rule-based filters and allows or denies it?",
+    "options": [
+      {
+        "text": "Azure Firewall",
+        "explanation": "Azure Firewall to płatna, zarządzana zapora z bardziej zaawansowanymi funkcjami. Pytanie mówi o darmowym, regułowym filtrowaniu subnet traffic."
+      },
+      {
+        "text": "Azure DDoS Protection",
+        "explanation": "Azure DDoS Protection chroni przed atakami DDoS, ale nie jest podstawową listą reguł allow/deny dla ruchu subnetu."
+      },
+      {
+        "text": "Advanced Threat Protection (ARP)",
+        "explanation": "Advanced Threat Protection nie jest właściwą usługą filtrowania ruchu subnetu, a skrót ARP w tej odpowiedzi dodatkowo nie pasuje do usługi Azure."
+      },
+      {
+        "text": "Network Security Group",
+        "explanation": "Network Security Group to darmowy mechanizm reguł inbound/outbound przypisywany do subnetów lub NIC, pozwalający dopuszczać albo blokować ruch."
+      }
+    ],
+    "correctAnswer": "Network Security Group",
+    "generalExplanation": "Network Security Group to darmowy mechanizm reguł inbound/outbound przypisywany do subnetów lub NIC, pozwalający dopuszczać albo blokować ruch."
+  },
+  {
+    "id": 79,
+    "question": "Your company manages access to several Software-as-a-Service (SaaS) applications like Salesforce and ServiceNow. They want employees to sign in once and then access all apps without re-entering passwords. Which Microsoft Entra ID feature should the company implement?",
+    "options": [
+      {
+        "text": "Privileged Identity Management",
+        "explanation": "Privileged Identity Management zarządza podwyższonymi uprawnieniami i dostępem czasowym. Nie jest mechanizmem jednego logowania do wielu aplikacji SaaS."
+      },
+      {
+        "text": "Conditional Access",
+        "explanation": "Conditional Access wymusza warunki dostępu, np. MFA lub zgodne urządzenie. Może wspierać bezpieczeństwo SSO, ale nie jest samą funkcją SSO."
+      },
+      {
+        "text": "Single Sign-On (SSO)",
+        "explanation": "Single Sign-On pozwala pracownikom zalogować się raz i korzystać z wielu aplikacji SaaS bez ponownego wpisywania haseł."
+      },
+      {
+        "text": "Identity Protection",
+        "explanation": "Identity Protection wykrywa ryzykowne logowania i użytkowników. Nie zapewnia samego jednokrotnego logowania do wielu aplikacji."
+      }
+    ],
+    "correctAnswer": "Single Sign-On (SSO)",
+    "generalExplanation": "Single Sign-On pozwala pracownikom zalogować się raz i korzystać z wielu aplikacji SaaS bez ponownego wpisywania haseł."
+  },
+  {
+    "id": 80,
+    "question": "Why is Azure App Services considered Platform as a Service?",
+    "options": [
+      {
+        "text": "Azure App Services is not PaaS, it's Software as a Service.",
+        "explanation": "Azure App Service nie jest SaaS, bo klient wdraża własny kod aplikacji. SaaS to gotowa aplikacja, a App Service jest platformą do hostingu aplikacji."
+      },
+      {
+        "text": "You are responsible for keeping the operating system up to date with the latest patches",
+        "explanation": "W PaaS Microsoft zarządza bazowym systemem operacyjnym i patchami. Klient nie utrzymuje OS pod App Service."
+      },
+      {
+        "text": "You give Azure the code and configuration, and you have no access to the underlying hardware",
+        "explanation": "App Service jest PaaS, bo przekazujesz kod i konfigurację, a Azure zarządza infrastrukturą, runtime i skalowaniem platformy."
+      },
+      {
+        "text": "You can decide on what type of virtual machine it runs - A-series, or D-series, or even H-series",
+        "explanation": "W App Service nie wybierasz konkretnej serii VM ani nie zarządzasz hardware. Dobierasz plan App Service, ale infrastruktura jest ukryta."
+      }
+    ],
+    "correctAnswer": "You give Azure the code and configuration, and you have no access to the underlying hardware",
+    "generalExplanation": "App Service jest PaaS, bo przekazujesz kod i konfigurację, a Azure zarządza infrastrukturą, runtime i skalowaniem platformy."
+  },
+  {
+    "id": 81,
+    "question": "A company needs to deploy Azure resources in a specific country to meet local data residency laws while maintaining low latency for users in that area. Which Azure concept allows them to choose the best location for deployment?",
+    "options": [
+      {
+        "text": "Availability Zones",
+        "explanation": "Availability Zones pomagają rozłożyć zasoby w obrębie regionu dla wysokiej dostępności. Nie wybierają kraju ani lokalizacji geograficznej jako takiej."
+      },
+      {
+        "text": "Management Groups",
+        "explanation": "Management Groups organizują subskrypcje do governance. Nie decydują o fizycznej lokalizacji wdrożenia zasobów."
+      },
+      {
+        "text": "Azure Regions",
+        "explanation": "Azure Regions pozwalają wybrać geograficzną lokalizację wdrożenia, co pomaga spełnić wymagania data residency i obniżyć opóźnienia dla lokalnych użytkowników."
+      },
+      {
+        "text": "Resource Groups",
+        "explanation": "Resource Groups są logicznym kontenerem zasobów. Mają lokalizację metadanych, ale nie są głównym pojęciem wyboru kraju lub regionu wdrożenia usługi."
+      }
+    ],
+    "correctAnswer": "Azure Regions",
+    "generalExplanation": "Azure Regions pozwalają wybrać geograficzną lokalizację wdrożenia, co pomaga spełnić wymagania data residency i obniżyć opóźnienia dla lokalnych użytkowników."
+  },
+  {
+    "id": 82,
+    "question": "A company wants to forecast its future Azure spending based on planned usage before actually deploying any resources. Which Azure tool should they use?",
+    "options": [
+      {
+        "text": "Azure Cost Management + Billing",
+        "explanation": "Azure Cost Management + Billing analizuje i kontroluje koszty istniejącego użycia. Do prognozy przed wdrożeniem lepszy jest kalkulator cen."
+      },
+      {
+        "text": "Azure Advisor",
+        "explanation": "Azure Advisor daje rekomendacje dla istniejących zasobów. Nie służy głównie do planowania kosztu przyszłego środowiska przed wdrożeniem."
+      },
+      {
+        "text": "Azure Pricing Calculator",
+        "explanation": "Azure Pricing Calculator pozwala oszacować przyszły koszt planowanych usług jeszcze przed ich utworzeniem."
+      },
+      {
+        "text": "Azure Portal Dashboard",
+        "explanation": "Azure Portal Dashboard pokazuje wybrane widoki i kafelki w portalu. Nie jest narzędziem do kalkulacji przyszłych kosztów."
+      }
+    ],
+    "correctAnswer": "Azure Pricing Calculator",
+    "generalExplanation": "Azure Pricing Calculator pozwala oszacować przyszły koszt planowanych usług jeszcze przed ich utworzeniem."
+  },
+  {
+    "id": 83,
+    "question": "A company wants to run seasonal workloads in Azure where capacity can automatically expand during peak demand and shrink afterward. Which benefit of cloud computing provides this capability?",
+    "options": [
+      {
+        "text": "Fault tolerance",
+        "explanation": "Fault tolerance oznacza odporność na awarie komponentów. Sezonowe zwiększanie i zmniejszanie pojemności dotyczy skalowania, nie samej odporności na awarie."
+      },
+      {
+        "text": "Disaster recovery",
+        "explanation": "Disaster recovery dotyczy odtwarzania działania po awarii. Sezonowe workloady wymagają raczej dynamicznej pojemności."
+      },
+      {
+        "text": "Elasticity",
+        "explanation": "Elasticity oznacza automatyczne rozszerzanie zasobów przy wzroście popytu i zmniejszanie ich, gdy obciążenie spada."
+      },
+      {
+        "text": "High availability",
+        "explanation": "High availability oznacza utrzymanie dostępności usługi. Nie jest tym samym co automatyczne skalowanie pojemności sezonowej."
+      }
+    ],
+    "correctAnswer": "Elasticity",
+    "generalExplanation": "Elasticity oznacza automatyczne rozszerzanie zasobów przy wzroście popytu i zmniejszanie ich, gdy obciążenie spada."
+  },
+  {
+    "id": 84,
+    "question": "Which Azure database service is specifically designed to provide extremely low-latency responses for small, frequent read/write requests?",
+    "options": [
+      {
+        "text": "Cosmos DB",
+        "explanation": "Cosmos DB jest zaprojektowany pod bardzo niskie opóźnienia i częste operacje read/write na małych porcjach danych, często w skali globalnej."
+      },
+      {
+        "text": "SQL Database",
+        "explanation": "Azure SQL Database jest relacyjną bazą SQL. Może być szybka, ale nie jest usługą specjalnie wskazywaną do ekstremalnie niskich opóźnień małych, częstych operacji w tym pytaniu."
+      },
+      {
+        "text": "Synapse Analytics",
+        "explanation": "Synapse Analytics służy do analityki dużych zbiorów danych i hurtowni danych. Nie jest zoptymalizowany pod małe, częste transakcje o minimalnej latencji."
+      },
+      {
+        "text": "SQL Server in a VM",
+        "explanation": "SQL Server w VM daje kontrolę nad bazą na maszynie wirtualnej, ale wymaga zarządzania infrastrukturą i nie jest wyspecjalizowaną usługą low-latency NoSQL."
+      }
+    ],
+    "correctAnswer": "Cosmos DB",
+    "generalExplanation": "Cosmos DB jest zaprojektowany pod bardzo niskie opóźnienia i częste operacje read/write na małych porcjach danych, często w skali globalnej."
+  },
+  {
+    "id": 85,
+    "question": "If you are a US federal, state, local, or tribal government entities and their solution providers, which Azure option should you be looking to register for?",
+    "options": [
+      {
+        "text": "Azure Public Portal",
+        "explanation": "Azure Public Portal to standardowe środowisko public Azure. Instytucje rządowe USA zwykle powinny patrzeć na dedykowane Azure Government."
+      },
+      {
+        "text": "Azure Department of Defence",
+        "explanation": "Azure Department of Defence nie jest właściwą nazwą ogólnej opcji rejestracji dla administracji publicznej. Istnieją specjalne chmury i regiony dla rządu, ale odpowiedź brzmi Azure Government."
+      },
+      {
+        "text": "Azure Government",
+        "explanation": "Azure Government jest przeznaczony dla amerykańskich jednostek federalnych, stanowych, lokalnych, tribal oraz ich dostawców, z wymaganiami regulacyjnymi sektora publicznego."
+      },
+      {
+        "text": "Azure is not available for government officials",
+        "explanation": "Azure jest dostępny dla podmiotów rządowych przez odpowiednie oferty, w tym Azure Government, więc twierdzenie o braku dostępności jest nieprawdziwe."
+      }
+    ],
+    "correctAnswer": "Azure Government",
+    "generalExplanation": "Azure Government jest przeznaczony dla amerykańskich jednostek federalnych, stanowych, lokalnych, tribal oraz ich dostawców, z wymaganiami regulacyjnymi sektora publicznego."
+  },
+  {
+    "id": 86,
+    "question": "What is the service level agreement for two or more Azure Virtual Machines that have been manually placed into different Availability Zones in the same region?",
+    "options": [
+      {
+        "text": "99.90%",
+        "explanation": "99,90% jest niższe niż SLA dla co najmniej dwóch VM rozmieszczonych ręcznie w różnych Availability Zones."
+      },
+      {
+        "text": "99.99%",
+        "explanation": "Dwie lub więcej VM w różnych Availability Zones w tym samym regionie mają SLA 99,99%, jeśli spełniają warunki usługi."
+      },
+      {
+        "text": "99.95%",
+        "explanation": "99,95% dotyczy typowo co najmniej dwóch VM w Availability Set, a nie scenariusza różnych Availability Zones."
+      },
+      {
+        "text": "100%",
+        "explanation": "100% SLA nie jest oferowane dla tego scenariusza. Azure podaje 99,99%, a nie absolutną gwarancję."
+      }
+    ],
+    "correctAnswer": "99.99%",
+    "generalExplanation": "Dwie lub więcej VM w różnych Availability Zones w tym samym regionie mają SLA 99,99%, jeśli spełniają warunki usługi."
+  },
+  {
+    "id": 87,
+    "question": "An administrator wants to manage Azure resources from a browser without installing any tools locally. They prefer using command-line interfaces like Bash or PowerShell. Which Azure tool should they use?",
+    "options": [
+      {
+        "text": "Azure Cloud Shell",
+        "explanation": "Azure Cloud Shell działa w przeglądarce i daje dostęp do Bash oraz PowerShell bez instalowania narzędzi lokalnie."
+      },
+      {
+        "text": "Azure PowerShell module",
+        "explanation": "Azure PowerShell module wymaga instalacji lub środowiska, w którym moduł jest dostępny. Sam moduł lokalny nie spełnia warunku pracy bez instalacji."
+      },
+      {
+        "text": "Azure Portal Dashboard",
+        "explanation": "Azure Portal Dashboard jest graficznym widokiem, ale użytkownik preferuje interfejs command-line, czyli Bash lub PowerShell."
+      },
+      {
+        "text": "Azure CLI locally installed",
+        "explanation": "Lokalnie zainstalowany Azure CLI wymaga instalacji na komputerze. Pytanie mówi o pracy z przeglądarki bez lokalnych narzędzi."
+      }
+    ],
+    "correctAnswer": "Azure Cloud Shell",
+    "generalExplanation": "Azure Cloud Shell działa w przeglądarce i daje dostęp do Bash oraz PowerShell bez instalowania narzędzi lokalnie."
+  },
+  {
+    "id": 88,
+    "question": "Which Microsoft cloud service provides Identity-as-a-Service (IDaaS) for authentication, single sign-on, and identity management in Azure?",
+    "options": [
+      {
+        "text": "Azure Front Door",
+        "explanation": "Azure Front Door jest usługą globalnego routingu i akceleracji aplikacji webowych. Nie jest usługą tożsamości."
+      },
+      {
+        "text": "Azure Portal",
+        "explanation": "Azure Portal jest interfejsem zarządzania Azure. Nie jest usługą Identity-as-a-Service dla aplikacji."
+      },
+      {
+        "text": "Microsoft Entra ID",
+        "explanation": "Microsoft Entra ID zapewnia tożsamość jako usługę: uwierzytelnianie, SSO, zarządzanie użytkownikami i integrację aplikacji."
+      },
+      {
+        "text": "Identity and Access Management (IAM)",
+        "explanation": "IAM to ogólne pojęcie zarządzania tożsamością i dostępem oraz sekcje uprawnień w Azure. Pytanie pyta o konkretną usługę Microsoft, czyli Entra ID."
+      }
+    ],
+    "correctAnswer": "Microsoft Entra ID",
+    "generalExplanation": "Microsoft Entra ID zapewnia tożsamość jako usługę: uwierzytelnianie, SSO, zarządzanie użytkownikami i integrację aplikacji."
+  },
+  {
+    "id": 89,
+    "question": "In the Azure portal, where do you browse and acquire third-party virtual machine images and other third-party offers?",
+    "options": [
+      {
+        "text": "Choose an image when creating a VM",
+        "explanation": "Wybór obrazu podczas tworzenia VM może pokazywać część obrazów, ale miejscem przeglądania ofert firm trzecich w Azure jest Marketplace."
+      },
+      {
+        "text": "Bing",
+        "explanation": "Bing jest wyszukiwarką internetową. Nie jest miejscem nabywania ofert i obrazów VM w portalu Azure."
+      },
+      {
+        "text": "Azure mobile app",
+        "explanation": "Azure mobile app służy do podstawowego zarządzania i monitorowania. Nie jest głównym katalogiem ofert firm trzecich."
+      },
+      {
+        "text": "Azure Marketplace",
+        "explanation": "Azure Marketplace zawiera obrazy VM, aplikacje i usługi firm trzecich oraz Microsoft, które można wdrażać lub kupować w Azure."
+      }
+    ],
+    "correctAnswer": "Azure Marketplace",
+    "generalExplanation": "Azure Marketplace zawiera obrazy VM, aplikacje i usługi firm trzecich oraz Microsoft, które można wdrażać lub kupować w Azure."
+  },
+  {
+    "id": 90,
+    "question": "You're using the Azure CLI from a command prompt to manage Azure resources. Which command do you run to sign in interactively to your Azure account using the Azure CLI?",
+    "options": [
+      {
+        "text": "az connect",
+        "explanation": "az connect nie jest poprawną komendą logowania w Azure CLI."
+      },
+      {
+        "text": "az account connect",
+        "explanation": "az account connect nie jest poprawną składnią logowania interaktywnego w Azure CLI."
+      },
+      {
+        "text": "az account login",
+        "explanation": "az account login wygląda prawdopodobnie, ale nie jest właściwą komendą. Grupa az account służy m.in. do zarządzania subskrypcjami po zalogowaniu."
+      },
+      {
+        "text": "az login",
+        "explanation": "az login uruchamia interaktywne logowanie do konta Azure, zwykle przez przeglądarkę, i zapisuje sesję dla Azure CLI."
+      }
+    ],
+    "correctAnswer": "az login",
+    "generalExplanation": "az login uruchamia interaktywne logowanie do konta Azure, zwykle przez przeglądarkę, i zapisuje sesję dla Azure CLI."
+  },
+  {
+    "id": 91,
+    "question": "Which cloud service model places the greatest responsibility on the customer for managing the operating system and underlying infrastructure?",
+    "options": [
+      {
+        "text": "SaaS",
+        "explanation": "SaaS daje najmniej odpowiedzialności klientowi, bo dostawca zarządza aplikacją, platformą i infrastrukturą. Klient głównie korzysta z gotowej usługi."
+      },
+      {
+        "text": "PaaS",
+        "explanation": "PaaS przenosi na dostawcę zarządzanie systemem operacyjnym i platformą. Klient odpowiada bardziej za aplikację i dane niż za infrastrukturę."
+      },
+      {
+        "text": "IaaS",
+        "explanation": "IaaS daje klientowi największą kontrolę i odpowiedzialność za system operacyjny, patchowanie, konfigurację serwera, porty i zabezpieczenia."
+      },
+      {
+        "text": "FaaS",
+        "explanation": "FaaS ukrywa serwery i uruchamia funkcje zdarzeniowo. Klient nie zarządza bazowym systemem operacyjnym tak jak w IaaS."
+      }
+    ],
+    "correctAnswer": "IaaS",
+    "generalExplanation": "IaaS daje klientowi największą kontrolę i odpowiedzialność za system operacyjny, patchowanie, konfigurację serwera, porty i zabezpieczenia."
+  },
+  {
+    "id": 92,
+    "question": "An analytics team needs to process and visualize petabytes of structured and unstructured data from IoT devices in near real time. Which Azure service is most appropriate for this scenario?",
+    "options": [
+      {
+        "text": "Microsoft Power BI",
+        "explanation": "Power BI służy głównie do raportowania i wizualizacji. Może prezentować dane, ale nie jest platformą do przetwarzania petabajtów danych IoT w near real time."
+      },
+      {
+        "text": "Azure App Service",
+        "explanation": "Azure App Service hostuje aplikacje webowe i API. Nie jest usługą big data analytics do przetwarzania petabajtów danych."
+      },
+      {
+        "text": "Azure Synapse Analytics",
+        "explanation": "Azure Synapse Analytics łączy hurtownię danych, big data i analitykę, nadając się do przetwarzania oraz analizowania bardzo dużych zbiorów danych."
+      },
+      {
+        "text": "Azure SQL Database",
+        "explanation": "Azure SQL Database to relacyjna baza PaaS dla aplikacji. Nie jest najlepszym wyborem do petabajtowej analityki IoT near real time."
+      }
+    ],
+    "correctAnswer": "Azure Synapse Analytics",
+    "generalExplanation": "Azure Synapse Analytics łączy hurtownię danych, big data i analitykę, nadając się do przetwarzania oraz analizowania bardzo dużych zbiorów danych."
+  },
+  {
+    "id": 93,
+    "question": "Which Azure service lets you automatically scale a group of identical virtual machines (auto-scale from a single instance to many instances) and provides built-in load balancing for those VMs?",
+    "options": [
+      {
+        "text": "Azure App Services",
+        "explanation": "Azure App Service skaluje aplikacje webowe PaaS, ale nie zarządza grupą identycznych maszyn wirtualnych jako VM."
+      },
+      {
+        "text": "Application Gateway",
+        "explanation": "Application Gateway rozdziela ruch aplikacyjny, ale sam nie tworzy ani automatycznie nie skaluje grupy identycznych VM."
+      },
+      {
+        "text": "Virtual Machine Scale Sets",
+        "explanation": "Virtual Machine Scale Sets zarządzają grupą identycznych VM, obsługują autoscaling i integrację z load balancingiem."
+      },
+      {
+        "text": "Azure Virtual Machines",
+        "explanation": "Pojedyncze Azure Virtual Machines nie zapewniają same z siebie automatycznego skalowania grupy identycznych instancji. Do tego służy VMSS."
+      }
+    ],
+    "correctAnswer": "Virtual Machine Scale Sets",
+    "generalExplanation": "Virtual Machine Scale Sets zarządzają grupą identycznych VM, obsługują autoscaling i integrację z load balancingiem."
+  },
+  {
+    "id": 94,
+    "question": "Which Azure Storage service is best suited for storing unstructured data such as text or binary data?",
+    "options": [
+      {
+        "text": "Azure Queue Storage",
+        "explanation": "Azure Queue Storage przechowuje komunikaty do asynchronicznej komunikacji między komponentami. Nie jest magazynem plików binarnych i tekstowych jako obiektów."
+      },
+      {
+        "text": "Azure Table Storage",
+        "explanation": "Azure Table Storage przechowuje dane NoSQL w formie tabelarycznej key-value. Nie jest najlepszym wyborem dla nieustrukturyzowanych blobów."
+      },
+      {
+        "text": "Azure Blob Storage",
+        "explanation": "Azure Blob Storage służy do przechowywania nieustrukturyzowanych danych, takich jak tekst, obrazy, backupy, filmy i pliki binarne."
+      },
+      {
+        "text": "Azure File Storage",
+        "explanation": "Azure File Storage udostępnia współdzielone pliki SMB/NFS. To dobry wybór dla udziałów plikowych, ale nie podstawowa odpowiedź dla object/blob storage."
+      }
+    ],
+    "correctAnswer": "Azure Blob Storage",
+    "generalExplanation": "Azure Blob Storage służy do przechowywania nieustrukturyzowanych danych, takich jak tekst, obrazy, backupy, filmy i pliki binarne."
+  },
+  {
+    "id": 95,
+    "question": "Which of the following is an example of a perimeter (network-boundary) security control?",
+    "options": [
+      {
+        "text": "Locks on the data center doors",
+        "explanation": "Zamki w drzwiach data center są fizyczną kontrolą bezpieczeństwa, a nie kontrolą perimeter na granicy sieci."
+      },
+      {
+        "text": "Keep operating systems up to date with patches",
+        "explanation": "Aktualizowanie systemów to kontrola hosta i hardening. Nie jest zabezpieczeniem granicy sieci."
+      },
+      {
+        "text": "Separate servers into distinct subnets by role",
+        "explanation": "Dzielenie serwerów na subnets według roli pomaga segmentować sieć, ale przykładem klasycznej kontroli perimeter jest firewall."
+      },
+      {
+        "text": "Use a firewall",
+        "explanation": "Firewall kontroluje ruch na granicy sieci lub segmentu, dopuszczając lub blokując pakiety według reguł. To typowa kontrola perimeter security."
+      }
+    ],
+    "correctAnswer": "Use a firewall",
+    "generalExplanation": "Firewall kontroluje ruch na granicy sieci lub segmentu, dopuszczając lub blokując pakiety według reguł. To typowa kontrola perimeter security."
+  },
+  {
+    "id": 96,
+    "question": "Which Azure pricing option provides significant discounts for committing to a specific amount of resource usage for a 1-year or 3-year term?",
+    "options": [
+      {
+        "text": "Reserved Instances",
+        "explanation": "Reserved Instances dają znaczące zniżki za zobowiązanie użycia określonych zasobów przez 1 lub 3 lata."
+      },
+      {
+        "text": "Pay-As-You-Go",
+        "explanation": "Pay-As-You-Go nie wymaga zobowiązania, ale zwykle nie daje takich zniżek jak rezerwacje długoterminowe."
+      },
+      {
+        "text": "Spot Pricing",
+        "explanation": "Spot Pricing daje bardzo niskie ceny za niewykorzystaną pojemność, ale zasoby mogą zostać odebrane. Nie jest zobowiązaniem 1 lub 3-letnim."
+      },
+      {
+        "text": "Free Tier",
+        "explanation": "Free Tier daje ograniczone darmowe usługi lub limity, ale nie jest modelem rabatu za długoterminowe zobowiązanie użycia."
+      }
+    ],
+    "correctAnswer": "Reserved Instances",
+    "generalExplanation": "Reserved Instances dają znaczące zniżki za zobowiązanie użycia określonych zasobów przez 1 lub 3 lata."
+  },
+  {
+    "id": 97,
+    "question": "An organization wants to strengthen sign-in security. They decide that users can log in from managed corporate devices without extra verification, but all other sign-ins must require Multi-Factor Authentication (MFA). Which Microsoft Entra ID feature should they configure?",
+    "options": [
+      {
+        "text": "Privileged Identity Management (PIM)",
+        "explanation": "PIM zarządza dostępem uprzywilejowanym, np. aktywacją ról administratora na czas. Nie decyduje bezpośrednio o MFA na podstawie stanu urządzenia dla zwykłego logowania."
+      },
+      {
+        "text": "Identity Protection risk policies",
+        "explanation": "Identity Protection risk policies reagują na ryzyko użytkownika lub logowania. Tutaj warunkiem jest stan urządzenia, więc lepiej pasuje Conditional Access."
+      },
+      {
+        "text": "Access Reviews for user groups",
+        "explanation": "Access Reviews pomagają okresowo sprawdzać członkostwo i dostęp do grup lub aplikacji. Nie wymuszają MFA zależnie od urządzenia przy logowaniu."
+      },
+      {
+        "text": "Conditional Access policies based on device state",
+        "explanation": "Conditional Access może wymagać MFA tylko dla logowań niespełniających warunku, np. spoza zarządzanego urządzenia firmowego."
+      }
+    ],
+    "correctAnswer": "Conditional Access policies based on device state",
+    "generalExplanation": "Conditional Access może wymagać MFA tylko dla logowań niespełniających warunku, np. spoza zarządzanego urządzenia firmowego."
+  },
+  {
+    "id": 98,
+    "question": "An IT administrator wants to ensure that only users in the HR department can access a payroll app registered in Microsoft Entra ID. Which feature should the administrator use?",
+    "options": [
+      {
+        "text": "Multi-Factor Authentication",
+        "explanation": "MFA wzmacnia proces logowania, ale samo nie decyduje, że wyłącznie dział HR może używać aplikacji."
+      },
+      {
+        "text": "Conditional Access",
+        "explanation": "Conditional Access pozwala tworzyć zasady dostępu do aplikacji na podstawie użytkownika, grupy, lokalizacji, urządzenia i innych warunków, np. tylko HR."
+      },
+      {
+        "text": "Application Proxy",
+        "explanation": "Application Proxy publikuje aplikacje lokalne przez Microsoft Entra ID. Nie jest główną funkcją ograniczenia dostępu aplikacji do działu HR."
+      },
+      {
+        "text": "Role-Based Access Control (RBAC)",
+        "explanation": "RBAC służy głównie do uprawnień do zasobów Azure. Dostęp do aplikacji Entra ID dla grup użytkowników zwykle kontroluje się przypisaniami aplikacji i Conditional Access."
+      }
+    ],
+    "correctAnswer": "Conditional Access",
+    "generalExplanation": "Conditional Access pozwala tworzyć zasady dostępu do aplikacji na podstawie użytkownika, grupy, lokalizacji, urządzenia i innych warunków, np. tylko HR."
+  },
+  {
+    "id": 99,
+    "question": "What two types (tiers) of Azure DDoS protection are available? Select two.",
+    "options": [
+      {
+        "text": "DDoS Network Protection",
+        "explanation": "DDoS Network Protection chroni zasoby w virtual networks przed atakami wolumetrycznymi i protokołowymi na poziomie sieci. To jedna z dostępnych warstw ochrony."
+      },
+      {
+        "text": "DDoS Premium Protection",
+        "explanation": "DDoS Premium Protection nie jest nazwą aktualnej warstwy Azure DDoS Protection w tym pytaniu."
+      },
+      {
+        "text": "DDoS Advanced Protection",
+        "explanation": "DDoS Advanced Protection nie jest właściwą nazwą typu ochrony Azure DDoS w tym zestawie odpowiedzi."
+      },
+      {
+        "text": "DDoS IP Protection",
+        "explanation": "DDoS IP Protection chroni konkretne publiczne adresy IP i jest drugą wskazaną warstwą ochrony obok Network Protection."
+      }
+    ],
+    "correctAnswer": [
+      "DDoS Network Protection",
+      "DDoS IP Protection"
+    ],
+    "generalExplanation": "DDoS Network Protection chroni zasoby w virtual networks przed atakami wolumetrycznymi i protokołowymi na poziomie sieci. To jedna z dostępnych warstw ochrony. DDoS IP Protection chroni konkretne publiczne adresy IP i jest drugą wskazaną warstwą ochrony obok Network Protection."
+  },
+  {
+    "id": 100,
+    "question": "Which of the following is NOT an example of Infrastructure as a Service (IaaS) in Azure?",
+    "options": [
+      {
+        "text": "Azure SQL Database",
+        "explanation": "Azure SQL Database nie jest IaaS, bo Microsoft zarządza infrastrukturą, systemem i platformą bazy danych. To usługa PaaS."
+      },
+      {
+        "text": "Virtual Network",
+        "explanation": "Virtual Network jest zasobem sieciowym infrastruktury Azure, często zaliczanym do obszaru IaaS, bo zapewnia podstawową warstwę sieci dla zasobów."
+      },
+      {
+        "text": "Virtual Machine Scale Sets",
+        "explanation": "Virtual Machine Scale Sets zarządzają grupą maszyn wirtualnych, więc należą do obszaru IaaS."
+      },
+      {
+        "text": "Virtual Machine",
+        "explanation": "Virtual Machine to klasyczny przykład IaaS: klient zarządza systemem operacyjnym i aplikacjami na wynajętej infrastrukturze."
+      },
+      {
+        "text": "SQL Server in a VM",
+        "explanation": "SQL Server uruchomiony w VM jest IaaS, bo baza działa na maszynie wirtualnej, którą klient administruje razem z systemem operacyjnym."
+      }
+    ],
+    "correctAnswer": "Azure SQL Database",
+    "generalExplanation": "Azure SQL Database nie jest IaaS, bo Microsoft zarządza infrastrukturą, systemem i platformą bazy danych. To usługa PaaS."
   }
 ];
 
@@ -1217,6 +2412,36 @@ export const questionRanges: QuestionRange[] = [
     "label": "Questions 41 - 50",
     "startId": 41,
     "endId": 50
+  },
+  {
+    "id": 6,
+    "label": "Questions 51 - 60",
+    "startId": 51,
+    "endId": 60
+  },
+  {
+    "id": 7,
+    "label": "Questions 61 - 70",
+    "startId": 61,
+    "endId": 70
+  },
+  {
+    "id": 8,
+    "label": "Questions 71 - 80",
+    "startId": 71,
+    "endId": 80
+  },
+  {
+    "id": 9,
+    "label": "Questions 81 - 90",
+    "startId": 81,
+    "endId": 90
+  },
+  {
+    "id": 10,
+    "label": "Questions 91 - 100",
+    "startId": 91,
+    "endId": 100
   }
 ];
 
